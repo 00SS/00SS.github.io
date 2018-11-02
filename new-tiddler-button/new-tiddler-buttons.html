@@ -9146,10 +9146,10 @@ Calls the macro `&lt;&lt;button-new&gt;&gt;` located at: $:/_/macro/button-new
 <div created="20181101151028864" modified="20181101155709742" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20181101142035812" modified="20181101142035812" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/System</pre>
+<div created="20181101142035812" modified="20181102021531092" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20181101142024088" modified="20181102020213820" title="$:/state/tab/sidebar--1835078512">
+<div created="20181101142024088" modified="20181102021541350" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div list="[[Buttons for Making New Tiddlers]]" title="$:/StoryList">
@@ -9168,19 +9168,19 @@ Calls the macro `&lt;&lt;button-new&gt;&gt;` located at: $:/_/macro/button-new
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://00ss.github.io/new-tiddler-button/new-tiddler-buttons.html&quot;
+            &quot;text&quot;: &quot;file:///D:/Programs/tiddlywiki/help%20files/github/new-tiddler-buttons.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;00ss.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;00ss.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -9188,7 +9188,7 @@ Calls the macro `&lt;&lt;button-new&gt;&gt;` located at: $:/_/macro/button-new
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/new-tiddler-button/new-tiddler-buttons.html&quot;
+            &quot;text&quot;: &quot;/D:/Programs/tiddlywiki/help%20files/github/new-tiddler-buttons.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9196,7 +9196,7 @@ Calls the macro `&lt;&lt;button-new&gt;&gt;` located at: $:/_/macro/button-new
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://00ss.github.io&quot;
+            &quot;text&quot;: &quot;null&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -9436,10 +9436,12 @@ Next, follow the instructions here: $:/_/macro/button-new</pre>
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>
-<div created="20181101154746414" modified="20181101182417702" tags="" title="What needs to be Configured?">
+<div created="20181101154746414" modified="20181102021434678" tags="" title="What needs to be Configured?">
 <pre>You will be choosing Primary TAG names for each template you want. New Tiddlers created using the drop down menu will automatically be tagged with the Primary TAG associated with the template.
 
 As presently designed if you do not want to have your new Tiddlers tagged with your chosen Primary TAG, in any tiddler created using the new custom tiddler buttons, you will have to delete that tag manually.
+
+&lt;hr&gt;
 
 You will need to make templates for each TAG using the tiddler name format:
 
@@ -9450,7 +9452,12 @@ You do not need to include any tags in the templates. These will be added from D
 As a guide, see the list of pre-defined templates here: [[Pre-defined Templates]]
 
 ---
-Next, follow the instructions here: $:/_/macro/button-new
+You will need to add the TAG names to two Data tiddlers 
+
+* $:/_/data/new-buttons-central
+* $:/_/data/new-buttons-central-tags 
+&lt;hr&gt;
+To accomplish this, follow the instructions here: $:/_/macro/button-new
 </pre>
 </div>
 
