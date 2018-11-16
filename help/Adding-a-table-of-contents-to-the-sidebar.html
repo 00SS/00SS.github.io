@@ -195,6 +195,8 @@ Error message and password prompt
 
 <li>How to change the sort order of sub-branches in a TOC macro</li>
 
+<li>Linking in WikiText</li>
+
 <li>Macros</li>
 
 <li>Making Toc Tutorial - Default Tiddlers</li>
@@ -8906,7 +8908,7 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Filters]]</pre>
+# [[Linking in WikiText]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9319,6 +9321,84 @@ The downside to this trick is that you can't apply a reverse sort based on just 
 
 </pre>
 </div>
+<div caption="Linking" created="20131205155230596" modified="20160607095245257" tags="WikiText" title="Linking in WikiText" type="text/vnd.tiddlywiki">
+<pre>A key capability of WikiText is the ability to make links to other tiddlers or to external websites.
+
+! Manual Links
+
+Link to a tiddler by title:
+
+```
+[[Tiddler Title]]
+```
+
+To link to a tiddler and specify the text of the link:
+
+```
+[[Displayed Link Title|Tiddler Title]]
+```
+
+You can also create a link from the editor toolbar. Click ''link'' ({{$:/core/images/link}}), and search and select a tiddler.
+
+! ~CamelCase Links
+
+For tiddler titles that match the CamelCase rules, just typing the title without double square brackets will automatically create a link.
+
+You can suppress a link from being recognised by preceding it with `~`. For example:
+
+&lt;&lt;wikitext-example src:&quot;* ~HelloThere is not a link
+* ~http://google.com/ is not a link&quot;&gt;&gt;
+
+! External Links
+
+To link to an external [[resource|https://en.wikipedia.org/wiki/Web_resource]] such as a website or a file, type its //full// [[URL|https://en.wikipedia.org/wiki/URL]], including the [[URI scheme|https://en.wikipedia.org/wiki/URI_scheme]] such as a protocol (e.g. `http://`, `file://`) or `mailto`:
+
+```
+https://tiddlywiki.com/
+
+[[TW5|https://tiddlywiki.com/]]
+
+[[Mail me|mailto:me@where.net]]
+
+[[Open file|file:///c:/users/me/index.html]]
+```
+
+For this syntax to work, the URL has to be recognisable as a URL. Otherwise, it is treated as a tiddler title. As a result, in case you want to link to a resource locatable using a relative path, use the extended syntax:
+
+```
+[ext[Open file|index.html]]
+
+[ext[Open file|./index.html]]
+
+[ext[Open file|../README.md]]
+
+[ext[Open file|c:\users\me\index.html]]
+```
+
+The extended syntax still works with full URLs, although in that case it is not necessary:
+
+```
+[ext[https://tiddlywiki.com]]
+
+[ext[TW5|https://tiddlywiki.com]]
+
+[ext[Mail me|mailto:me@where.net]]
+
+[ext[Open file|file:///c:/users/me/index.html]]
+```
+
+You can also use the extended syntax to force an external link:
+
+```
+[ext[Donate|bitcoin:1aabbdd....?amount=0.001]]
+```
+
+! Customising Tiddler Links
+
+See the LinkWidget for details of the underlying widget used to implement tiddler links, including macros that can be used to customise its behaviour.
+
+</pre>
+</div>
 <div created="20140211171341271" modified="20150228114909000" tags="Concepts Reference" title="Macros" type="text/vnd.tiddlywiki">
 <pre>A &lt;&lt;.def macro&gt;&gt; is a named snippet of text. WikiText can use the name as a shorthand way of [[transcluding|Transclusion]] the snippet. Such transclusions are known as &lt;&lt;.def &quot;macro calls&quot;&gt;&gt;, and each call can supply a different set of parameters that get substituted for special placeholders within the snippet.
 
@@ -9422,7 +9502,7 @@ TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressi
 
 As presently shown, it contains Page Control buttons, a search bar, and a row of tabs that contain lists of links or buttons.</pre>
 </div>
-<div created="20181107082426215" modified="20181116084947646" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
+<div created="20181107082426215" modified="20181116091619562" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
 <pre>On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
 This ''&lt;&lt;.toc-tab&gt;&gt;'' area has been used as an effective method of presenting organised links for navigating through this ~TiddlyWiki.
 
@@ -9515,7 +9595,7 @@ Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... 
 
 So create some tiddlers and tag them &lt;&lt;tag TableOfContents''&gt;&gt;
 
-Watch the the sidebar as you do this. Look at the TableOfContents tiddler. Note that as soon as you save a tiddler with the tag &lt;&lt;tag TableOfContents&gt;&gt;, it appears in your TableOfContents tiddler, and therefore also under the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar.
+Watch the the sidebar as you do this. Look at the TableOfContents tiddler. Note that as soon as you save a tiddler with the tag &lt;&lt;tag TableOfContents&gt;&gt;, it appears in your ''~TableOfContents'' tiddler, and therefore also under the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar.
 
 !!Add an Organizing header to your Table of Contents
 
@@ -9558,7 +9638,7 @@ You may use any ''tag'' name to place tiddlers in the Table of Contents. This ''
 &lt;/div&gt;
 ```
 
-Any tiddler that has that a tag with that same name will appear within the top level of the table of contents.
+Any tiddler that has a tag with that same name ( ex. &lt;&lt;tag ToC&gt;&gt;) will appear within the top level of the table of contents.
 
 Any tiddler which has a ''tag'' that matches the ''Title'' of a tiddler in a higher level will appear below that higher level tiddler in the Table of Contents.
 
@@ -9572,6 +9652,8 @@ In that field you can specify the order that they appear in the Table of Content
 Give the &lt;&lt;.field list&gt;&gt; field this value: `[[HelloThere]] [[About This Place]] [[Contact]]`
 
 Save your [[About]] tiddler, and notice the order of those 3 items are the same as the order you gave in its `list` field.
+
+Note: [[Linking in WikiText]] helps explain what those `[[` and `]]` brackets are doing.
 
 !!Sort the Results
 The below example sorts the displayed list by the tiddler's title name.
