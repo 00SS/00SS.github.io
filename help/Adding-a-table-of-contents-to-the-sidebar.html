@@ -44,7 +44,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Table of Contents Help — a non-linear personal web notebook</title>
+<title>Beginners Help — for First Time and New Users</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -139,33 +139,107 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/editions/tw5.com/doc-macros</li>
+
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
+<li>$:/SiteSubtitle</li>
+
 <li>$:/SiteTitle</li>
+
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/tab--1498284803</li>
+
+<li>$:/state/tab/moresidebar-401116514</li>
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/tabSample-1067554119</li>
+
 <li>$:/StoryList</li>
 
+<li>$:/temp/advancedsearch</li>
+
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/search</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>Adding a table of contents to the sidebar</li>
+<li>captionField</li>
 
-<li>CaptionField</li>
+<li>Creating and editing tiddlers</li>
+
+<li>Difficulties with TiddlyWiki</li>
+
+<li>Documentation Macros Request</li>
+
+<li>Documentation Tiddlers Request</li>
 
 <li>Field</li>
 
-<li>SideBar</li>
+<li>Filters</li>
+
+<li>Google Groups - other ToC mentions</li>
+
+<li>Google Groups - ToC mentions</li>
+
+<li>How I found this place</li>
+
+<li>How to add a new tab to the sidebar</li>
+
+<li>How to change the sort order of sub-branches in a TOC macro</li>
+
+<li>Macros</li>
+
+<li>Making Toc Tutorial - Default Tiddlers</li>
+
+<li>Making ToC Tutorial - tiddlers needed</li>
+
+<li>My First Encounter</li>
+
+<li>Philosophy of Tiddlers</li>
+
+<li>SampleTabFour</li>
+
+<li>SampleTabOne</li>
+
+<li>SampleTabThree</li>
+
+<li>SampleTabTwo</li>
+
+<li>Sidebar</li>
+
+<li>Table of Contents for Beginners</li>
+
+<li>Table-of-Contents Macros</li>
+
+<li>Table-of-Contents Macros (Examples)</li>
+
+<li>TableOfContents</li>
+
+<li>Tabs</li>
+
+<li>tabs Macro</li>
+
+<li>Tagging</li>
 
 <li>Tiddler</li>
 
-<li>TitleField</li>
+<li>Tiddler Title Policy</li>
+
+<li>TiddlerFields</li>
+
+<li>Tiddlers</li>
+
+<li>Tiddlers for Beginners</li>
+
+<li>titleField</li>
 
 </ul>
 </p>
@@ -8714,25 +8788,154 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20181112103147346" modified="20181112103437830" title="$:/DefaultTiddlers">
-<pre>[[Adding a table of contents to the sidebar]] [[Tiddler]] [[SideBar]] [[Field]] [[TitleField]] [[CaptionField]]
-</pre>
+<div created="20181112103147346" modified="20181116043506326" title="$:/DefaultTiddlers">
+<pre>[[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[Field]] [[titleField]] [[captionField]] [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]</pre>
+</div>
+<div created="20150117152607000" modified="20181114055600440" tags="$:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
+<pre>\define .concat(1,2,3,4,5) $1$$2$$3$$4$$5$
+
+\define .def(_) &lt;dfn class=&quot;doc-def&quot;&gt;$_$&lt;/dfn&gt;
+\define .em(_) &lt;em class=&quot;doc-em&quot;&gt;$_$&lt;/em&gt;
+\define .strong(_) &lt;strong class=&quot;doc-strong&quot;&gt;$_$&lt;/strong&gt;
+\define .place(_) &lt;code class=&quot;doc-place&quot;&gt;$_$&lt;/code&gt;
+\define .word(_) &quot;$_$&quot;
+
+\define .preamble(_) :.doc-preamble $_$
+\define .note(_)
+@@.doc-note
+;Note
+: $_$
+@@
+\end
+
+\define .tid(_) &lt;code class=&quot;doc-tiddler&quot;&gt;$_$&lt;/code&gt;
+\define .tag(_) &lt;code class=&quot;doc-tag&quot;&gt;$_$&lt;/code&gt;
+\define .field(_) &lt;code class=&quot;doc-field&quot;&gt;$_$&lt;/code&gt;
+\define .value(_) &lt;code class=&quot;doc-value&quot;&gt;$_$&lt;/code&gt;
+\define .op(_) &lt;code class=&quot;doc-operator&quot;&gt;$_$&lt;/code&gt;
+\define .var(_) &lt;code class=&quot;doc-var&quot;&gt;$_$&lt;/code&gt;
+\define .wid(_) &lt;code class=&quot;doc-widget&quot;&gt;$$_$&lt;/code&gt;
+\define .attr(_) &lt;code class=&quot;doc-attr&quot;&gt;$_$&lt;/code&gt;
+\define .param(_) &lt;code class=&quot;doc-param&quot;&gt;$_$&lt;/code&gt;
+
+\define .mtitle(_) $_$ Macro
+\define .otitle(_) $_$ Operator
+\define .vtitle(_) $_$ Variable
+
+\define .link(_,to) &lt;$link to=&quot;$to$&quot;&gt;$_$&lt;/$link&gt;
+\define .clink(_,to) &lt;span class=&quot;doc-clink&quot;&gt;&lt;&lt;.link &quot;&quot;&quot;$_$&quot;&quot;&quot; &quot;$to$&quot;&gt;&gt;&lt;/span&gt;
+\define .dlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.def &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;&gt;/&gt;
+\define .dlink-ex(_,to) &lt;a href=&quot;$to$&quot; class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;&lt;.def &quot;$_$&quot;&gt;&gt;&lt;/a&gt;
+\define .flink(to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.field {{$to$!!caption}}&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .mlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.mtitle &quot;$_$&quot;&gt;&gt;/&gt;
+\define .mlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .olink(_) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.op &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.otitle &quot;$_$&quot;&gt;&gt;/&gt;
+\define .olink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.op &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.otitle &quot;$to$&quot;&gt;&gt;/&gt;
+\define .vlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.vtitle &quot;$_$&quot;&gt;&gt;/&gt;
+\define .vlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .wlink(to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.wid {{$to$!!caption}}&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .wlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&quot;$_$&quot; to=&quot;$to$&quot;/&gt;
+
+\define .key(_) &lt;span class=&quot;doc-key&quot;&gt;$_$&lt;/span&gt;
+\define .combokey(_) &lt;$macrocall $name=&quot;.if&quot; cond=&quot;$_$&quot; then=&lt;&lt;.key '$_$'&gt;&gt;/&gt;
+\define .keycombo(1,2,3,4) &lt;&lt;.combokey &quot;$1$&quot;&gt;&gt;&lt;&lt;.if &quot;$2$&quot; +&gt;&gt;&lt;&lt;.combokey &quot;$2$&quot;&gt;&gt;&lt;&lt;.if &quot;$3$&quot; +&gt;&gt;&lt;&lt;.combokey &quot;$3$&quot;&gt;&gt;&lt;&lt;.if &quot;$4$&quot; +&gt;&gt;&lt;&lt;.combokey &quot;$4$&quot;&gt;&gt;
+
+\define .tab(_) &lt;span class=&quot;doc-tab&quot;&gt;{{$_$!!caption}}&lt;/span&gt;
+\define .sidebar-tab(_) &lt;&lt;.tab &quot;$:/core/ui/SideBar/$_$&quot;&gt;&gt;
+\define .more-tab(_) &lt;&lt;.tab &quot;$:/core/ui/MoreSideBar/$_$&quot;&gt;&gt;
+\define .info-tab(_) &lt;&lt;.tab &quot;$:/core/ui/TiddlerInfo/$_$&quot;&gt;&gt;
+\define .controlpanel-tab(_) &lt;&lt;.tab &quot;$:/core/ui/ControlPanel/$_$&quot;&gt;&gt;
+\define .advancedsearch-tab(_) &lt;&lt;.tab &quot;$:/core/ui/AdvancedSearch/$_$&quot;&gt;&gt;
+\define .toc-tab() &lt;&lt;.tab &quot;TableOfContents&quot;&gt;&gt;
+\define .example-tab(_) &lt;span class=&quot;doc-tab&quot;&gt;$_$&lt;/span&gt;
+
+\define .button(_) &lt;span class=&quot;doc-button&quot;&gt;{{$:/core/ui/Buttons/$_$!!caption}}&lt;/span&gt;
+
+\define .button-small(_) &lt;span class=&quot;doc-button&quot;&gt;{{$:/core/ui/Buttons/$_$}}&lt;/span&gt;
+
+\define .tip(_) &lt;div class=&quot;doc-icon-block&quot;&gt;&lt;div class=&quot;doc-block-icon&quot;&gt;{{$:/core/images/tip}}&lt;/div&gt; $_$&lt;/div&gt;
+\define .warning(_) &lt;div class=&quot;doc-icon-block&quot;&gt;&lt;div class=&quot;doc-block-icon&quot;&gt;{{$:/core/images/warning}}&lt;/div&gt; $_$&lt;/div&gt;
+
+\define .state-prefix() $:/state/editions/tw5.com/
+
+\define .lorem()
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end
+
+\define .toc-lorem()
+This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
+
+&lt;&lt;.lorem&gt;&gt;
+\end
+
+\define .example(n,eg,egvar:NO-SUCH-VAR)
+&lt;div class=&quot;doc-example&quot;&gt;
+&lt;$reveal default=&quot;$egvar$&quot; type=&quot;match&quot; text=&quot;NO-SUCH-VAR&quot;&gt;
+	&lt;$macrocall $name=&quot;copy-to-clipboard-above-right&quot; src=&quot;&quot;&quot;$eg$&quot;&quot;&quot;/&gt;
+	&lt;$codeblock code=&quot;&quot;&quot;$eg$&quot;&quot;&quot;/&gt;
+&lt;/$reveal&gt;
+&lt;$reveal default=&quot;$egvar$&quot; type=&quot;nomatch&quot; text=&quot;NO-SUCH-VAR&quot;&gt;
+	&lt;!-- allow an example to contain &quot;&quot;&quot; --&gt;
+	&lt;$macrocall $name=&quot;copy-to-clipboard-above-right&quot; src=&lt;&lt;$egvar$&gt;&gt;/&gt;
+	&lt;$codeblock code=&lt;&lt;$egvar$&gt;&gt;/&gt;
+&lt;/$reveal&gt;
+&lt;$list filter=&quot;[title&lt;.state-prefix&gt;addsuffix{!!title}addsuffix[/]addsuffix[$n$]]&quot; variable=&quot;.state&quot;&gt;
+&lt;$reveal state=&lt;&lt;.state&gt;&gt; type=&quot;nomatch&quot; text=&quot;show&quot;&gt;
+	&lt;dl&gt;
+	&lt;dd&gt;&lt;$button set=&lt;&lt;.state&gt;&gt; setTo=&quot;show&quot;&gt;Try it&lt;/$button&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&lt;&lt;.state&gt;&gt; type=&quot;match&quot; text=&quot;show&quot;&gt;
+	&lt;dl&gt;
+	&lt;dd&gt;&lt;$button set=&lt;&lt;.state&gt;&gt; setTo=&quot;&quot;&gt;Hide&lt;/$button&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;blockquote class=&quot;doc-example-result&quot;&gt;
+	&lt;$reveal default=&quot;$egvar$&quot; type=&quot;match&quot; text=&quot;NO-SUCH-VAR&quot;&gt;
+		$eg$
+	&lt;/$reveal&gt;
+	&lt;$reveal default=&quot;$egvar$&quot; type=&quot;nomatch&quot; text=&quot;NO-SUCH-VAR&quot;&gt;
+		&lt;&lt;$egvar$&gt;&gt;
+	&lt;/$reveal&gt;
+	&lt;/blockquote&gt;
+&lt;/$reveal&gt;
+&lt;/$list&gt;
+\end
+
+&lt;pre&gt;&lt;$view field=&quot;text&quot;/&gt;&lt;/pre&gt;</pre>
 </div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Adding a table of contents to the sidebar]]</pre>
+# [[Filters]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20181112101707036" modified="20181112101737616" title="$:/SiteTitle">
-<pre>Table of Contents Help</pre>
+<div created="20181116043839574" modified="20181116043839574" title="$:/SiteSubtitle">
+<pre>for First Time and New Users</pre>
 </div>
-<div created="20181112101913034" modified="20181112103332380" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20181112101707036" modified="20181116043837204" title="$:/SiteTitle">
+<pre>Beginners Help</pre>
 </div>
-<div list="[[Adding a table of contents to the sidebar]] Tiddler SideBar Field TitleField CaptionField" title="$:/StoryList">
+<div created="20181114083608188" modified="20181114083608188" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20181114083617198" modified="20181114084151264" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
+</div>
+<div created="20181116042215658" modified="20181116042215658" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/Missing</pre>
+</div>
+<div created="20181112101913034" modified="20181116052534470" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Open</pre>
+</div>
+<div created="20181115150403170" modified="20181116021715986" title="$:/state/tabSample-1067554119">
+<pre>SampleTabFour</pre>
+</div>
+<div list="[[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
+<pre></pre>
+</div>
+<div created="20181114083614858" modified="20181114084154386" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8748,7 +8951,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///D:/My%20Documents/GitHub/00SS.github.io/help/Adding-a-table-of-contents-to-the-sidebar.html&quot;
+            &quot;text&quot;: &quot;file:///D:/Programs/tiddlywiki/help%20files/github/help/Adding-a-table-of-contents-to-the-sidebar.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8768,7 +8971,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/D:/My%20Documents/GitHub/00SS.github.io/help/Adding-a-table-of-contents-to-the-sidebar.html&quot;
+            &quot;text&quot;: &quot;/D:/Programs/tiddlywiki/help%20files/github/help/Adding-a-table-of-contents-to-the-sidebar.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8788,6 +8991,9 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20181116021426288" modified="20181116052106498" title="$:/temp/search">
+<pre>macro</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
 <pre>{
@@ -8898,30 +9104,352 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20181107082426215" modified="20181112122835353" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddler]] [[SideBar]] [[TitleField]] [[Field]] [[captionField]]" tags="[[Customise TiddlyWiki]]" title="Adding a table of contents to the sidebar">
-<pre>
-On the SideBar (the menu on the right), you may have noticed a tab named ''Contents''&lt;br&gt;
-This area has been used as an effective method of presenting organised links for navigating through this ~TiddlyWiki.
+<div caption="caption Field" created="20181111140233892" modified="20181116043557950" tags="Concepts todo" title="captionField">
+<pre>A ''caption'' [[field|Field]] is one of a tiddler's standard [[Tiddler Fields|TiddlerFields]]
 
-This ''Contents'' tab is really just a properly configured [[Tiddler|Tiddlers]].
+When you give a tiddler a ''caption'' field ... 
 
-Here are  instructions to help you create your own properly configured Table of Contents tiddler and for adding this as a  ''Contents'' tab to the ~SideBar of your own ~TiddlyWiki. The detailed step by step style may hopefully allow you to better understand how the changes take effect.
+It is used in Table of Contents
+
+There are various ways that you may display the caption field instead of the Title</pre>
+</div>
+<div created="20140904140300000" modified="20160607153747195" tags="[[Working with TiddlyWiki]]" title="Creating and editing tiddlers" type="text/vnd.tiddlywiki">
+<pre>! Creating tiddlers
+
+You create a tiddler either by clicking the {{$:/core/images/new-button}} button in the sidebar, or by clicking on a link to a missing tiddler. Links to missing tiddlers are shown in [[blue italics]].
+
+See also:
+
+* [[Creating journal tiddlers]]
+
+! Editing tiddlers
+
+To edit an existing tiddler, click the {{$:/core/images/edit-button}} button at the top right of the tiddler.
+
+!! Draft mode
+
+When you create a new tiddler or edit an existing one, the tiddler will go into draft mode. This presents a control panel for modifying the tiddler in various ways. It has several parts, from top to bottom:
+
+*''The title field'' - Use this to change the title of the tiddler
+*''The tag selector'' - Use this to add or remove tags. As you type a tag name in the box, a dropdown list will show you any existing tags that match. You can pick from this list or create a completely new tag. Then click the ''add'' button or hit the &lt;kbd&gt;Enter&lt;/kbd&gt; key to add the tag to the tiddler. Each tag is shown as a coloured pill. Click the &quot;×&quot; on a pill to remove that tag
+*''The text area'' - Use this to edit the main content of the tiddler. Click the ''preview'' button ({{$:/core/images/preview-closed}} / {{$:/core/images/preview-open}}) to see what your changes will look like
+*''The type selector'' - Use this when a tiddler needs to be displayed in a special way, such as an image. See ContentType for a list of the options. The default is `text/vnd.tiddlywiki`, which means the tiddler contains WikiText
+*''The field selector'' - Use this to add or remove fields on the tiddler. For example, if you are editing a tiddler that's being used to tag other tiddlers, you can add a [[''list'' field|ListField]] to change the order in which those tiddlers will be listed
+
+! Save, cancel or delete
+
+When you have finished editing, click a button at the top right of the tiddler:
+
+*The ''ok'' button ({{$:/core/images/done-button}}) stores your changes to this one tiddler and leaves draft mode. If your wiki is configured to [[AutoSave]], your changes will be permanently saved. Otherwise they will only be stored temporarily in your web browser, and you will lose them if you close your ~TiddlyWiki page without first clicking the master ''save changes'' button ({{$:/core/images/save-button}}) in the sidebar.
+*The ''cancel'' button ({{$:/core/images/cancel-button}}) discards your changes (after asking you to confirm) and leaves draft mode.
+*The ''delete'' button ({{$:/core/images/delete-button}}) deletes the entire tiddler (after asking you to confirm).
+</pre>
+</div>
+<div created="20170110075337776" modified="20170113105625208" tags="" title="Difficulties with TiddlyWiki">
+<pre>I am a new uesr of TiddyWiki, I decided that the software looked interesting to keep track of extensive notes and lists I have made over the years.
+
+I want to get on and organize my work.
+
+Yet I find it surprisingly difficult to easily find answers to so many simple tasks I wish to perform.
+
+For example, just knowing how to see the Version number of TiddlyWiki you are using is not so intuitive. Even though it is on the Control Panel page, if it isn't noticed before closing the Control Panel, where does one look for it later? A Search yeilds nothing.
+
+
+ linking using field values, making links of a field value, transcluding using field values - all took some hours and multiple searches of google groups and TiddlyWikis linked to from those groups posts, along with the TiddlyWiki.com site.
+
+Listing all Custom Fields of a tiddler along with their values.
+
+Searching for Field names - not case sensitive
+
+Searching for field values
+
+When adding a new Field, the list of choices does not filter down as you type the first few letters, the way the Tag dropdown does.
+
+Using sliders</pre>
+</div>
+<div created="20181114055704028" modified="20181114085311688" tags="Making-ToC-Tutorial todo" title="Documentation Macros Request">
+<pre>In the Documentation Help Macro tiddler: $:/editions/tw5.com/doc-macros
+
+There exists a macro: &lt;br&gt;
+ 
+`\define .button(_) &lt;span class=&quot;doc-button&quot;&gt;{{$:/core/ui/Buttons/$_$!!caption}}&lt;/span&gt;`
+
+This is a request to include a macro to display small buttons that also do not add any text after the icon: &lt;br&gt;
+Example `&lt;&lt;.button save&gt;&gt;` gives :  &lt;&lt;.button save&gt;&gt;
+
+Whereas  `&lt;&lt;.button-small save&gt;&gt;` would give : &lt;&lt;.button-small save&gt;&gt;
+
+---
+`\define .button-small(_) &lt;span class=&quot;doc-button&quot;&gt;{{$:/core/ui/Buttons/$_$}}&lt;/span&gt;`</pre>
+</div>
+<div created="20181114070246867" modified="20181115151001898" tags="Making-ToC-Tutorial todo" title="Documentation Tiddlers Request">
+<pre>This tiddler - [[TiddlerFields]] - to be amended so that ALL field tiddler references follow the required naming policy of field names being lowercase.
+
+Example:
+
+* [[titleField]] instead of [[TitleField]]
+
+Then making tiddlers for all those references.
+
+---
+Creating the following Tiddlers may help with clearer ''beginner's'' level documentation.
+
+* [[Tiddlers for Beginners]]
+* [[Field]]
+* [[Sidebar]]
+* [[Tabs]]
+* [[titleField]]
+* [[captionField]]
+
+
+
+</pre>
+</div>
+<div created="20181109054928786" modified="20181116043621502" tags="todo Concepts" title="Field">
+<pre>What is a field?
+
+See [[TiddlerFields]]</pre>
+</div>
+<div created="20130827080000000" list="[[Introduction to filter notation]] [[Filter Syntax]]" modified="20150221225414000" tags="Reference Concepts" title="Filters" type="text/vnd.tiddlywiki">
+<pre>You can think of TiddlyWiki as a database in which the records are tiddlers. A database typically provides a way of discovering which records match a given pattern, and in ~TiddlyWiki this is done with filters.
+
+A &lt;&lt;.def filter&gt;&gt; is a concise notation for selecting a particular [[set of tiddlers|Title Selection]], known as its &lt;&lt;.def &quot;output&quot;&gt;&gt;. Whenever ~TiddlyWiki encounters a filter, it calculates the output. Further work can then be done with just those tiddlers, such as [[counting|CountWidget]] or [[listing|ListWidget]] them.
+
+The following example passes a filter to the &lt;&lt;.mlink list-links&gt;&gt; macro to display a list of all tiddlers whose titles start with the letter H:
+
+&gt; `&lt;&lt;list-links &quot;[prefix[H]]&quot;&gt;&gt;`
+
+A filter's output can change as tiddlers are added and deleted in the wiki. ~TiddlyWiki recalculates on the fly, automatically updating any filter-based counts or lists as well.
+
+[[Advanced Search|$:/AdvancedSearch]] has a &lt;&lt;.advancedsearch-tab Filter&gt;&gt; tab that makes it easy to experiment with filters.
+
+;Find out more:
+* [[Introduction to filter notation]] -- a step-by-step walkthrough
+* [[Filter Syntax]] -- the detailed technical rules
+* [[Filter Operators]] -- the available methods of filtering
+</pre>
+</div>
+<div created="20181116040145746" modified="20181116040207357" tags="" title="Google Groups - other ToC mentions">
+<pre>[[Introducing TW5 to a beginner|https://groups.google.com/forum/?hl=en&amp;#!msg/tiddlywiki/dsUa74dAQ-c/QeUI0sjpCAAJ]]  - ~TiddlyWiki Google Groups -  2018-02-19 by Joe Armstrong
+
+[[Please Help! We need instructions for creating a table of contents|https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA]] - ~TiddlyWikiDocs Google Groups - 2014-06-12 by Jeremy Ruston
+
+[[How to create a Sidebar Table of Contents|http://toc-tutorial.tiddlyspot.com/]] - 
+a beginner's level tutorial - 2014-07-12 by Stephen Kimmel</pre>
+</div>
+<div created="20181115111552104" modified="20181116052925888" tags="" title="Google Groups - ToC mentions">
+<pre>When I [[first found TiddlyWiki|How I found this place]] at the end of 2016, I was quite frustrated at the difficulty of finding beginner level instructions.
+
+I've seen a lot of [[discussion about this|Google Groups - other ToC mentions]] issue in TW's Google Group.
+
+During the recent posts on GG : [[Why is there no table of content in the empty wiki?|https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywiki/y7THOx9VJtQ]] - ~TiddlyWiki Google Groups - 2018-11-03 by bimlas
+
+This update of the ~ToC help tiddler was a quick result: [[Pull Request 3518|https://github.com/Jermolene/TiddlyWiki5/pull/3518/]] - github - 2018-11-07 by Mark S.
+
+I felt it was time to attempt to perhaps contribute in some small way to filling in some gaps.
+
+I worked on a [[Table of Contents for Beginners]] which is a blend of Stephen Kimmel's [[How to create a Sidebar Table of Contents|http://toc-tutorial.tiddlyspot.com/]] tutorial and the Mark S.'s pull request shown above, and my own additions.
+
+This compelled me to also attempt [[Tiddlers for Beginners]] , [[Sidebar]] &amp; [[Tabs]].
+
+Before I continue, I would appreciate some guidance and opinions if this kind of long-winded &quot;//very basic step by step style//&quot; can be useful on tiddlywiki.com
+
+
+
+
+
+</pre>
+</div>
+<div created="20170113023157119" modified="20170313131716955" next="My First Encounter" tags="[[Just Starting]] Introduction" title="How I found this place">
+<pre>As I write this, it was just 6 weeks ago that I first glimpsed the strange word - TiddlyWiki
+
+While randomly looking at what was new in the world of computers, I reached a March 2016 article on infoworld.com about [[hot programming trends|http://www.infoworld.com/article/3039935/application-development/21-hot-programming-trends-and-21-going-cold.html?page=2]] where there was a mention of node.js.
+
+I'd never heard of node.js, [[so I had a look|http://www.infoworld.com/article/2606986/application-development/application-development-131906-beyond-the-web-10-surprising-node-js-projects.html]]. It was not till the 11th and last slide of that presentation that TiddlyWiki was mentioned.
+
+Here is what the Dec 2013 article said:
+
+&lt;h2&gt;TiddlyWiki5&lt;/h2&gt;
+
+&lt;h3&gt;A personal favorite project, the cumbersomely named but endlessly versatile [[TiddlyWiki|http://five.tiddlywiki.com]] is a wiki system that runs from a single HTML file and can work either locally, without any network connection at all, or on a Web server. 
+&lt;br&gt;&lt;br&gt;
+The completely redesigned version 5 can integrate directly with Node.js to unlock a whole slew of features not available when running in stand-alone mode. 
+&lt;br&gt;&lt;br&gt;
+TiddlyWiki5 is still in beta as of this writing, but it's set to make point release by the end of the year.&lt;/h3&gt;
+
+[[Next|My First Encounter]]
+
+
+
+</pre>
+</div>
+<div created="20141117000000000" modified="20150221193924000" tags="Learning [[Customise TiddlyWiki]]" title="How to add a new tab to the sidebar" type="text/vnd.tiddlywiki">
+<pre>To create a new tab in the sidebar menu:
+
+# Create a tiddler and tag it with the [[SystemTag|SystemTags]] tag [[$:/tags/SideBar]]
+#* To create a table of contents you can populate the new tab tiddler using the [[table-of-contents macros|Table-of-Contents Macros]]. For example, see the [[TableOfContents]] used here
+# By default, the tiddler title is used as the tab title but you can override it using the `caption` field
+# To define the tab ordering, use the `list-after` or `list-before` fields as discussed in [[Tagging]]
+#* For example: set `list-after` to [[$:/core/ui/SideBar/Open]] to place a sidebar tab immediately after the &quot;Open&quot; tab
+
+Note that you can create new tabs under the &quot;More&quot; tab in the same way by using the tag `$:/tags/MoreSideBar`.
+</pre>
+</div>
+<div created="20161209172820513" modified="20161209174234840" tags="Learning" title="How to change the sort order of sub-branches in a TOC macro" type="text/vnd.tiddlywiki">
+<pre>Imagine that you are using a [[Table of Contents|Table-of-Contents Macros]] macro similar to this:
+
+```
+&lt;&lt;toc-selective-expandable  &quot;TableOfContents&quot; &quot;sort[title]&quot; &gt;&gt;
+```
+
+The sorting is fine for most cases, but you would like all your items tagged `Journal` to be sorted by the `created` field. How can you apply a separate sort order to just those sub-items tagged `Journal`?
+
+The trick is to add a field to the parent tagging tiddler (i.e. `Journal`) that points to a different sort criteria. Let's call the field `fuzzy`, and populate it with the value `created` (`created `is the name of the field that contains a tiddler's creation date).
+
+Now change your [[Table of Contents|Table-of-Contents Macros]] to look like this:
+
+```
+&lt;&lt;toc-selective-expandable  &quot;TableOfContents&quot; &quot;sort{fuzzy}&quot; &gt;&gt;
+```
+
+Now your Table of Contents will sort by title everywhere, except for the children of the `Journal` tiddler, which will sort by the `created `date.
+
+The downside to this trick is that you can't apply a reverse sort based on just one special field. If you reverse the sort order, it will be reversed everywhere.
+
+
+</pre>
+</div>
+<div created="20140211171341271" modified="20150228114909000" tags="Concepts Reference" title="Macros" type="text/vnd.tiddlywiki">
+<pre>A &lt;&lt;.def macro&gt;&gt; is a named snippet of text. WikiText can use the name as a shorthand way of [[transcluding|Transclusion]] the snippet. Such transclusions are known as &lt;&lt;.def &quot;macro calls&quot;&gt;&gt;, and each call can supply a different set of parameters that get substituted for special placeholders within the snippet.
+
+For the syntax, see [[Macros in WikiText]].
+
+Most macros are in fact just parameterised [[variables|Variables]].
+
+They are created using the `\define` [[pragma|Pragma]]. (Behind the scenes, this is transformed into a &lt;&lt;.wlink SetWidget&gt;&gt;, i.e. macros and variables are two sides of the same coin.)
+
+The snippet and its incoming parameter values are treated as simple strings of characters with no WikiText meaning, at least until the placeholders have been filled in and the macro call has returned. This means that a macro can assemble and return the complete syntax of a ~WikiText component, such as a [[link|Linking in WikiText]]. (See [[Transclusion and Substitution]] for further discussion of this.)
+
+The string returned by a macro call is parsed separately from any surrounding ~WikiText components. So a safe way to insert a special character sequence (such as `[[` or `&lt;`) without triggering its normal ~WikiText meaning is to wrap it in a macro.
+
+Within a snippet itself, the only markup detected is `$name$` (a placeholder for a macro parameter) and `$(name)$` (a placeholder for a [[variable|Variables]]).
+
+The &lt;&lt;.mlink dumpvariables&gt;&gt; macro lists all variables (including macros) that are available at that position in the widget tree.
+
+An &lt;&lt;.wlink ImportVariablesWidget&gt;&gt; widget can be used to copy macro definitions to another branch of the [[widget tree|Widgets]]. ~TiddlyWiki uses this technique internally to implement global macros -- namely any macros defined in tiddlers with the &lt;&lt;.tag $:/tags/Macro&gt;&gt; tag.
+
+For maximum flexibility, macros can also be &lt;&lt;.js-macro-link &quot;written as JavaScript modules&quot;&gt;&gt;.
+
+A similar effect to a parameterised macro call can be produced by setting [[variables|Variables]] around a [[transclusion|Transclusion]].
+
+~TiddlyWiki's core has [[several macros|Core Macros]] built in.
+</pre>
+</div>
+<div created="20181114090256210" modified="20181116043453270" tags="" title="Making Toc Tutorial - Default Tiddlers">
+<pre>&lt;$list filter=&quot;[[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[Field]] [[titleField]] [[captionField]] [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]&quot;/&gt;
+</pre>
+</div>
+<div created="20181114085402616" modified="20181116021420342" tags="Making-ToC-Tutorial" title="Making ToC Tutorial - tiddlers needed">
+<pre>* [[Table of Contents for Beginners]]
+* [[$:/editions/tw5.com/doc-macros]]
+* [[Documentation Macros Request]]
+&lt;p/&gt;
+
+*[[Documentation Tiddlers Request]]
+&lt;p/&gt;
+
+** [[SampleTabOne]]
+** [[SampleTabTwo]]
+** [[SampleTabThree]]
+** [[SampleTabFour]]
+** [[TableOfContents]]
+
+
+---
+{{Documentation Tiddlers Request}}
+
+Other Related info tiddlers
+
+* [[Making ToC Tutorial - tiddlers needed]]
+* [[Making Toc Tutorial - Default Tiddlers]]
+
+</pre>
+</div>
+<div created="20170113030842601" modified="20181114082215224" next="" previous="How I found this place" tags="" title="My First Encounter">
+<pre>!!!!!Created {{!!created}}
+
+This led me to watching these 3 vidoes:
+
+[[Jeremy Ruston's page on youtube|https://www.youtube.com/c/JeremyRuston]]
+
+[[Introduction to TiddlyWili|https://www.youtube.com/watch?v=KtCUr83XgyE&amp;index=4&amp;list=PLVT_2PPd-1p1LKTMMgFVxfkM1zicd3f7p]]
+
+[[Getting Started with TiddlyWiki5|https://www.youtube.com/watch?v=1g66s7UbyuU&amp;index=3&amp;list=PLVT_2PPd-1p1LKTMMgFVxfkM1zicd3f7p]]
+
+</pre>
+</div>
+<div created="20131128075743966" modified="20140919160655340" tags="Learning" title="Philosophy of Tiddlers" type="text/vnd.tiddlywiki">
+<pre>The purpose of recording and organising information is so that it can be used again. The value of recorded information is directly proportional to the ease with which it can be re-used.
+
+The philosophy of [[tiddlers|Tiddlers]] is that we maximise the possibilities for re-use by slicing information up into the smallest semantically meaningful units with [[rich modelling of relationships between them|Structuring TiddlyWiki]]. Then we use aggregation and composition to weave the fragments together to present narrative stories.
+
+TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressing and exploring the relationships between items of information.
+</pre>
+</div>
+<div caption="Four" created="20150221211420000" modified="20150221211613000" order="4" tags="sampletab" title="SampleTabFour" tooltip="This tab specifies both a caption and a tooltip">
+<pre>This is the fourth of our sample tabs.
+</pre>
+</div>
+<div created="20150221211544000" order="1" tags="sampletab" title="SampleTabOne">
+<pre>This is the first of our sample tabs.
+</pre>
+</div>
+<div created="20150221211557000" order="3" tags="sampletab" title="SampleTabThree" tooltip="This tab specifies a tooltip only">
+<pre>This is the third of our sample tabs.
+</pre>
+</div>
+<div created="20150221211552000" order="2" tags="sampletab" title="SampleTabTwo">
+<pre>This is the second of our sample tabs.
+</pre>
+</div>
+<div created="20181109052603101" modified="20181116040039976" tags="Beginners Reference" title="Sidebar">
+<pre>The ''sidebar'' is the menu on the right hand side of this page that has the header:
+&lt;p&gt; &lt;/p&gt;
+&lt;div&gt;
+&lt;h1 class=&quot;tc-site-title&quot;&gt;{{$:/SiteTitle}}&lt;/h1&gt;
+&lt;div class=&quot;tc-site-subtitle&quot;&gt;{{$:/SiteSubtitle}}&lt;/div&gt;
+&lt;/div&gt;
+
+As presently shown, it contains Page Control buttons, a search bar, and a row of tabs that contain lists of links or buttons.</pre>
+</div>
+<div created="20181107082426215" modified="20181116052718560" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
+<pre>On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
+This ''&lt;&lt;.toc-tab&gt;&gt;'' area has been used as an effective method of presenting organised links for navigating through this ~TiddlyWiki.
+
+The ''&lt;&lt;.toc-tab&gt;&gt;'' tab is really just a properly configured [[Tiddler|Tiddlers for Beginners]].
+
+These  instructions should help you to:
+
+* Create your own properly configured Table of Contents tiddler.
+* Add it as a  ''&lt;&lt;.toc-tab&gt;&gt;'' [[tab|Tabs]] to the sidebar of your own ~TiddlyWiki. 
+
+The detailed step by step style may hopefully allow you to better understand how each change is made and takes effect.
 
 !!Create a Tiddler for your Table of Contents
 
-__The first step__ is to create a [[Tiddler]] that will be your Table of Contents.
+__The first step__ is to create a [[tiddler|Tiddlers for Beginners]] that will be your Table of Contents.
 
 Create a new tiddler with any new title. By convention, this title can be: ''~TableOfContents''&lt;br&gt;
-[[Creating and editing tiddlers]] gives instructions on how to create a tiddler, give it a [[Title|TitleField]], give it [[Tags|Tagging]], and how to add [[Fields|Field]].
+[[Creating and editing tiddlers]] gives instructions on how to create a tiddler, give it a [[Title|titleField]], give it [[Tags|Tagging]], and how to add [[Fields|Field]].
 
 
 !!Show the tiddler in the sidebar area
 
-__The next step__ is to make the tiddler show up in the correct place on the SideBar.
+__The next step__ is to make the tiddler show up in the correct place on the [[sidebar|Sidebar]].
 
-To put your new tiddler in the ~SideBar, add this exact tag to the tiddler: &lt;&lt;tag $:/tags/SideBar&gt;&gt;
+To put your new tiddler in the sidebar, add this exact tag to the tiddler: &lt;&lt;tag $:/tags/SideBar&gt;&gt;
 
-Tags are used extensively in ~TiddlyWikis as a means of creating relationships, so if this concept is new to you, at some point you may want to read up on [[Tagging]] 
+Tags are used extensively in ~TiddlyWikis as a means of creating relationships, so if this concept is new to you, at some point you may want to read up on [[Tagging]].
 
 !!Add text to your Table of Contents tiddler
 
@@ -8931,40 +9459,40 @@ Type in some text for this new tiddler, for example:
 My first Table of Contents!
 ```
 
-Save the tiddler by clicking the //Save this tiddler// {{$:/core/ui/Buttons/save}} icon on the top right of the new tiddler.&lt;br&gt;
-Note what happens in the SideBar area.
+Save the tiddler by clicking the //Save this tiddler// {{$:/core/ui/Buttons/save}} &lt;!-- NOTE: REPLACE WITH &lt;&lt;.button-small save&gt;&gt; --&gt; icon on the top right of the new tiddler.&lt;br&gt;
+Note what happens in the sidebar area.
 
-You now have a new tab in the ~SideBar area called ''~TableOfContents''. Click on this new tab to verify that it contains the text of the tiddler you just created.
+You now have a new tab in the sidebar area called ''~TableOfContents''. Click on this new tab to verify that it contains the text of the tiddler you just created.
 
 !!Change the label that appears on the tab
 
-__Next__: You may want to change the name that appears on the tab label to be more concise, say from ''~TableOfContents'' to ''Contents''
+__Next__: You may want to change the name that appears on the tab label to be more concise, say from ''~TableOfContents'' to ''&lt;&lt;.toc-tab&gt;&gt;''
 
-By default, the tiddler title is used as the tab title but you can override it using a `caption` field
+By default, the tiddler title is used as the tab title but you can override it using a &lt;&lt;.field caption&gt;&gt; field
 
-Reopen the '' ~TableOfContents '' tiddler for editing by clicking its {{$:/core/ui/Buttons/edit}} icon, and towards the bottom of the tiddler, add a new field name called:  `caption`
+Reopen the '' ~TableOfContents '' tiddler for editing by clicking its {{$:/core/ui/Buttons/edit}} &lt;!-- NOTE: &lt;&lt;.button-small edit&gt;&gt; --&gt; icon, and towards the bottom of the tiddler, add a new field name called:  &lt;&lt;.field caption&gt;&gt;
 
-Fields are used extensively in ~TiddlyWikis for many reasons. The [[caption Field|CaptionField]] is a special field that can be used in some places to display an alternate name for a tiddler instead of its Title. Give the  `caption` field's value the text that you want to show as the label in the SideBar. By convention, type in the text: ''Contents''
+Fields are used extensively in ~TiddlyWikis for many reasons. The [[caption Field|captionField]] is a special field that can be used in some places to display an alternate name for a tiddler instead of its Title. Give the  &lt;&lt;.field caption&gt;&gt; field's value the text that you want to show as the label in the sidebar. By convention, type in the text: ''&lt;&lt;.toc-tab&gt;&gt;''
 
-Save the tiddler, and notice on the ~SideBar that the tab entry ( which in reality is still the tiddler titled // ~TableOfContents //), now shows up with the new label, ''Contents''
+Save the tiddler, and notice on the sidebar that the tab entry ( which in reality is still the tiddler titled // ~TableOfContents //), now shows up with the new label, ''&lt;&lt;.toc-tab&gt;&gt;''
 
-!!Change the tab's position in the ~SideBar tab area
+!!Change the tab's position in the sidebar tab area
 
-This new tab was placed as the last tab on the ~SideBar. You may want to change its position to just after the tab named ''Open'', just like on this page's ~SideBar.
+This new tab was placed as the last tab on the sidebar. You may want to change its position to just after the tab named ''Open'', just like on this page's sidebar.
 
 Reopen the ~TableOfContents tiddler for editing, and add a new field name: ''list-after''&lt;br&gt;
 Give this new field name the exact text: ''~$:/core/ui/SideBar/Open''
 
 :There are actually two choices for Field Names for positioning the tab:
-::`list-before`
-::`list-after`
+::&lt;&lt;.field list-before&gt;&gt;
+::&lt;&lt;.field list-after&gt;&gt;
 :You may use either one but you should not use both.
 
-Note: The tiddler titled $:/core/ui/SideBar/Open has a tag ''~$:/tags/SideBar'' and a //caption// field with the text ''Open'' - which is why and how it appears on the ~SideBar Tab area. You are giving instructions for your ''Contents'' tab to appear &quot;after&quot; this tab. See the information under [[Tagging]] for more details on defining the tab ordering.
+Note: The tiddler titled $:/core/ui/SideBar/Open has a tag ''~$:/tags/SideBar'' and a //caption// field with the text ''Open'' - which is why and how it appears on the sidebar tab area. You are giving instructions for your ''&lt;&lt;.toc-tab&gt;&gt;'' tab to appear &quot;after&quot; this tab. See the information under [[Tagging]] for more details on defining the tab ordering.
 
-Save your tiddler and note what happened on the ~SideBar. Instead of the ''Contents'' tab being the last tab, it is now just after the ''Open'' tab.
+Save your tiddler and note what happened on the sidebar. Instead of the ''Contents'' tab being the last tab, it is now just after the ''Open'' tab.
 
-!!Automating the Table of Contents
+!!Automate the Table of Contents
 
 __Next__: we will begin automating the TableOfContents tiddler. We have a few pre-made styles for how a Table of Contents can be laid out and displayed. Full details can be seen here: [[Table-of-Contents Macros]] and examples of how they work are here: [[Table-of-Contents Macros (Examples)]].
 
@@ -8976,9 +9504,9 @@ For this guide we will choose the //Selective Expandable// style. To do this, ad
 &lt;/div&gt;
 ```
 
-Save your &quot;~TableOfContents&quot; tiddler and note that on the ''Contents'' tab on the ~SideBar, nothing has changed. Neither does your saved TableOfContents tiddler show a visible change.
+Save your &quot;~TableOfContents&quot; tiddler and note that on the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar, nothing has changed. Neither does your saved TableOfContents tiddler show a visible change.
 
-The key word in the above section of code is the word &quot;~TableOfContents&quot;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear on your ''Contents'' tab on the SideBar. Since currently nothing has the tag &quot;~TableOfContents&quot; nothing has appeared there.
+The key word in the above section of code is the word &quot;~TableOfContents&quot;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear on your ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar. Since currently nothing has the tag &quot;~TableOfContents&quot; nothing has appeared there.
 
 Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... &gt;&gt;` in the code above refers to by reading about [[macros|Macros]]. ~TiddlyWiki has an inbuilt collection of these [[macros for making Table of Contents|Table-of-Contents Macros]].
 
@@ -8986,9 +9514,9 @@ Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... 
 
 So create some tiddlers and tag them &lt;&lt;tag TableOfContents''&gt;&gt;
 
-Watch the the ~SideBar as you do this. Look at the TableOfContents tiddler. Note that as soon as you save a tiddler with the tag &lt;&lt;tag TableOfContents&gt;&gt;, it appears in your TableOfContents tiddler, and therefore also under the ''Contents'' tab on the ~SideBar.
+Watch the the sidebar as you do this. Look at the TableOfContents tiddler. Note that as soon as you save a tiddler with the tag &lt;&lt;tag TableOfContents&gt;&gt;, it appears in your TableOfContents tiddler, and therefore also under the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar.
 
-!!Adding an Organizing header to your Table of Contents
+!!Add an Organizing header to your Table of Contents
 
 Compared to the Contents you see on this page, your Table of Contents is quite meager.
 
@@ -8999,25 +9527,25 @@ Give it the tag: &lt;&lt;tag TableOfContents&gt;&gt;
 
 This [[About]] tiddler will be a &quot;Header&quot; or &quot;Organizing&quot; tiddler, and does not need to display any actual content, but just serve as a section header in the Table of Contents.
 
-To obtain this effect, in the [[About]] tiddler,create a field: ''toc-link''&lt;br&gt;
+To obtain this effect, in the [[About]] tiddler,create a field: &lt;&lt;.field toc-link&gt;&gt;&lt;br&gt;
 Give the field a value of: ''no''
 
 That will tell ~TiddlyWiki that clicking on that Table of Contents link does not open that tiddler.
 
-When you save this [[About]] tiddler, it appears on your TableOfContents tiddler, and thus also under the ''Contents'' tab on the SideBar.
+When you save this [[About]] tiddler, it appears on your TableOfContents tiddler, and thus also under the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar.
 
-!!Adding Subitems to your Table of Contents
+!!Add Subitems to your Table of Contents
 
 Add another few tiddlers. Name them whatever you like, perhaps something like:&lt;br&gt;
 [[HelloThere]] and [[About This Place]] and [[Contact]]
 
 Tag them all with: &lt;&lt;tag About&gt;&gt;
 
-After you have saved them, under your ''Contents'' tab, click on the menu item ''About''. You will see all these new tiddler links listed. Clicking on any of them will take you to those tiddlers.
+After you have saved them, under your ''&lt;&lt;.toc-tab&gt;&gt;'' tab, click on the menu item ''About''. You will see all these new tiddler links listed. Clicking on any of them will take you to those tiddlers.
 
 !!A Concept to Understand
 
-You have seen how to create your own Table of Contents by using the special code given as text within a tiddler, and to place it in the SideBar by giving that tiddler a special tag.
+You have seen how to create your own Table of Contents by using the special code given as text within a tiddler, and to place it in the sidebar by giving that tiddler a special tag.
 
 Here is the concept you should remember:
 
@@ -9033,6 +9561,31 @@ Any tiddler that has that a tag with that same name will appear within the top l
 
 Any tiddler which has a ''tag'' that matches the ''Title'' of a tiddler in a higher level will appear below that higher level tiddler in the Table of Contents.
 
+!!Order the Table of Contents Display
+
+If you followed the above example, you will have created the following Subitem tiddlers: [[About This Place]] , [[Contact]] and [[HelloThere]] , each one tagged with &lt;&lt;tag About&gt;&gt;
+
+It is often desirable to have these display in a pre-determined order. Open your [[About]] tiddler and add a field: &lt;&lt;.field list&gt;&gt;
+
+In that field you can specify the order that they appear in the Table of Contents.&lt;br&gt;
+Give the &lt;&lt;.field list&gt;&gt; field this value: `[[HelloThere]] [[About This Place]] [[Contact]]`
+
+Save your [[About]] tiddler, and notice the order of those 3 items are the same as the order you gave in its `list` field.
+
+!!Sort the Results
+The below example sorts the displayed list by the tiddler's title name.
+
+```
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable tag:&quot;ToC&quot; sort:&quot;sort[title]&quot;&gt;&gt;
+&lt;/div&gt;
+```
+
+Simple sorting is not difficult to implement, but sometimes sorting requirements can get quite complex. For this you will need to learn about [[Filters]] and how [[Macros]] work.
+
+An example of advanced sorting can be seen here: 
+[[How to change the sort order of sub-branches in a TOC macro]] 
+
 !!Final Notes
 
 There are different ways of displaying a Table of Contents, and of Sorting the links that are shown.
@@ -9040,32 +9593,202 @@ There are different ways of displaying a Table of Contents, and of Sorting the l
 The [[Table-of-Contents Macros]] gives details of the many more options available, as well as a link to [[Examples|Table-of-Contents Macros (Examples)]]
 </pre>
 </div>
-<div caption="caption Field" created="20181111140233892" modified="20181111201449623" tags="Concepts" title="CaptionField">
-<pre>A ''caption'' [[field|Field]] is one of a tiddler's standard [[Tiddler Fields|TiddlerFields]]
+<div created="20140919155729620" modified="20150221224034000" tags="Macros [[Core Macros]]" title="Table-of-Contents Macros" type="text/vnd.tiddlywiki">
+<pre>~TiddlyWiki provides several macros for generating a tree of tiddler links by analysing [[tags|Tagging]]:
 
-When you give a tiddler a ''caption'' field ... 
+;&lt;&lt;.var toc&gt;&gt;
+: A simple tree
+;&lt;&lt;.var toc-expandable&gt;&gt;
+: A tree in which all the branches can be expanded and collapsed
+;&lt;&lt;.var toc-selective-expandable&gt;&gt;
+: A tree in which the non-empty branches can be expanded and collapsed
+;&lt;&lt;.var toc-tabbed-internal-nav&gt;&gt; and &lt;&lt;.var toc-tabbed-external-nav&gt;&gt;
+: A two-panel browser:
+:* on the left, a selectively expandable tree that behaves like a set of vertical tabs
+:* on the right, the content of whichever tiddler the user selects in the tree
 
-It is used in Table of Contents
+The difference between the last two has to do with what happens when the user clicks a link in the right-hand panel:
 
-There are various ways that you may display the caption field instead of the Title</pre>
+;&lt;&lt;.var toc-tabbed-internal-nav&gt;&gt;
+: The target tiddler appears in the right-hand panel, replacing the tiddler that contained the link
+;&lt;&lt;.var toc-tabbed-external-nav&gt;&gt;
+: The target tiddler appears in the normal way (which depends on the user's configured storyview)
+
+!! Structure
+
+The top level of the tree consists of the tiddlers that carry a particular tag, known as the &lt;&lt;.def &quot;root tag&quot;&gt;&gt;. Tiddlers tagged with any of those make up the next level down, and so on.
+
+At each level, the tiddlers can be [[ordered|Order of Tagged Tiddlers]] by means of the &lt;&lt;.field list&gt;&gt; field of the parent tag tiddler. They can also be ordered by the macro's &lt;&lt;.param sort&gt;&gt; parameter.
+
+The tree displays the &lt;&lt;.field caption&gt;&gt; field of a tiddler if it has one, or the tiddler's title otherwise.
+
+Each tiddler in the tree is normally displayed as a link. To suppress this, give the tiddler a &lt;&lt;.field toc-link&gt;&gt; field with the the value &lt;&lt;.value no&gt;&gt;. In the [[examples|Table-of-Contents Macros (Examples)]], the SecondThree tiddler is set up like this. Clicking such a tiddler in the tree causes its branch to expand or collapse.
+
+The table of contents is generated as an HTML ordered list. The `&lt;ol&gt;` elements always have the class `tc-toc`. Expandable trees have the additional class `tc-toc-expandable`. Selectively expandable trees (including those in the two-panel browser) have `tc-toc-selective-expandable`.
+
+To make a table of contents appear in the sidebar, see [[How to add a new tab to the sidebar]].
+
+!! Parameters
+
+;tag
+: The root tag that identifies the top level of the tree
+;sort
+: An optional extra [[filter step|Filter Step]], e.g. `sort[title]`
+
+These two parameters are combined into a single [[filter expression|Filter Expression]] like this:
+
+&gt; `[tag[$tag$]$sort$]`
+
+&lt;&lt;.var toc-tabbed-internal-nav&gt;&gt; and &lt;&lt;.var toc-tabbed-external-nav&gt;&gt; take additional parameters:
+
+;selectedTiddler
+: The title of the [[state tiddler|StateMechanism]] for noting the currently selected tiddler, defaulting to `$:/temp/toc/selectedTiddler`. It is recommended that this be a [[system tiddler|SystemTiddlers]]
+;unselectedText
+: The text to display when no tiddler is selected in the tree
+;missingText
+: The text to display if the selected tiddler doesn't exist
+;template
+: Optionally, the title of a tiddler to use as a [[template|TemplateTiddlers]] for transcluding the selected tiddler into the right-hand panel
+
+[[Examples|Table-of-Contents Macros (Examples)]]
+</pre>
 </div>
-<div created="20181109054928786" modified="20181111201707817" tags="Concepts" title="Field">
-<pre>What is a field?
+<div created="20150221193056000" modified="20150221205038000" tags="[[Table-of-Contents Macros]] [[Macro Examples]]" title="Table-of-Contents Macros (Examples)" type="text/vnd.tiddlywiki">
+<pre>These examples derive tables of contents from the root tag &lt;&lt;.tag Contents&gt;&gt;.
 
-See [[TiddlerFields]]</pre>
-</div>
-<div created="20181109052603101" modified="20181112033244515" tags="Reference" title="SideBar">
-<pre>The SideBar is the menu on the right hand side of this page that has the header:
-&lt;p&gt; &lt;/p&gt;
-&lt;div&gt;
-&lt;h1 class=&quot;tc-site-title&quot;&gt;TiddlyWiki&lt;/h1&gt;
-&lt;div class=&quot;tc-site-subtitle&quot;&gt;a non-linear personal web notebook&lt;/div&gt;
-&lt;/div&gt;
+You can explore the same structure with these clickable tag pills:
 
-As presently shown, it contains Page Control buttons, a search bar, and a row of tabs that contain lists of links or buttons.</pre>
+* {{Contents||$:/core/ui/TagTemplate}}
+** {{First||$:/core/ui/TagTemplate}}
+** {{Second||$:/core/ui/TagTemplate}}
+*** {{SecondThree||$:/core/ui/TagTemplate}}
+** {{Third||$:/core/ui/TagTemplate}}
+** {{Fourth||$:/core/ui/TagTemplate}}
+
+The tabbed example uses the real TableOfContents of this documentation instead.
+
+&lt;&lt;tabs &quot;[tag[table-of-contents-example]nsort[order]]&quot; &quot;Example Table of Contents: Simple&quot;&gt;&gt;
+</pre>
 </div>
-<div created="20181109053759931" modified="20181111201751901" tags="Concepts" title="Tiddler">
-<pre>What is a tiddler?
+<div caption="Contents" created="20181116021043900" modified="20181116021219530" tags="$:/tags/SideBar" title="TableOfContents">
+<pre></pre>
+</div>
+<div created="20181114063054056" modified="20181116022047654" tags="Beginners Concepts" title="Tabs">
+<pre>Tabs are used as a way of moving through and displaying somewhat related items efficiently. 
+
+If you are not familiar with tabs, you might not notice their presence and therefore miss using them to see important information or to configure settings.
+
+The 4 very basic ~SampleTabs below give you a visual idea of what tabs look like and should help you spot them when they appear in a tiddler.
+
+Click on each Sample Tab to get a feel of how they are used.
+
+---
+&lt;&lt;tabs &quot;SampleTabOne SampleTabTwo SampleTabThree SampleTabFour&quot; &quot;SampleTabOne&quot; &quot;$:/state/tabSample&quot;&gt;&gt;
+
+---
+On the [[sidebar|Sidebar]], notice the following tabs under the Search Bar:
+&lt;&lt;.sidebar-tab Open&gt;&gt;, &lt;&lt;.toc-tab&gt;&gt;, &lt;&lt;.sidebar-tab Recent&gt;&gt;, &lt;&lt;.sidebar-tab Tools&gt;&gt;, &lt;&lt;.sidebar-tab More&gt;&gt;
+
+Click on them to get an idea of how useful tabs can be for using a small area of the screen to present many different options.
+
+The [[tabs Macro]] is used for creating tabs in TiddlyWiki.</pre>
+</div>
+<div caption="tabs" created="20131228162203521" modified="20180408084453861" tags="Macros [[Core Macros]]" title="tabs Macro" type="text/vnd.tiddlywiki">
+<pre>The &lt;&lt;.def tabs&gt;&gt; [[macro|Macros]] presents a [[selection of tiddlers|Title Selection]] as a set of tabs that the user can switch between.
+
+The tabs display the &lt;&lt;.field caption&gt;&gt; field of a tiddler if it has one, or the tiddler's title otherwise. If specified, the tabs display the &lt;&lt;.field tooltip&gt;&gt; field of a tiddler as the respective button tooltip.
+
+By default the tabs are arranged horizontally above the content. To get vertical tabs, set the &lt;&lt;.param class&gt;&gt; parameter to &lt;&lt;.value tc-vertical&gt;&gt;.
+
+!! Parameters
+
+;tabsList
+: A [[filter|Filters]] selecting which tiddlers to include
+;default
+: The title of the tiddler whose tab is to be selected by default
+;state
+: The prefix for the title of a [[state tiddler|StateMechanism]] for noting the currently selected tab, defaulting to `$:/state/tab`. It is recommended that this be a [[system tiddler|SystemTiddlers]]
+;class
+: Additional [[CSS|Cascading Style Sheets]] classes for the generated `div` elements. Multiple classes can be separated with spaces
+;template
+: Optionally, the title of a tiddler to use as a [[template|TemplateTiddlers]] for transcluding the content of the selected tab
+;buttonTemplate
+: Optionally, the title of a tiddler to use as a [[template|TemplateTiddlers]] for transcluding the content of the button for the selected tab
+;retain
+: Optionally, &quot;yes&quot; specifies that the content of the tabs should be retained when switching to another tab, avoiding re-rendering it (this can be useful to avoid video or audio sources unexpectedly resetting)
+
+Within the template, the title of the selected tab is available in the &lt;&lt;.var currentTab&gt;&gt; variable.
+
+The &lt;&lt;.vlink currentTiddler&gt;&gt; variable is not affected by the &lt;&lt;.var tabs&gt;&gt; macro. This can put you in trouble if the list of tabs includes tiddlers that depend on the value of the &lt;&lt;.vlink currentTiddler&gt;&gt;, for example tiddlers listing children based on its own name. To overcome this problem you can use a [[TemplateTiddler|TemplateTiddlers]] like the following:
+
+```
+&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;
+&lt;$transclude mode=&quot;block&quot; /&gt;
+&lt;/$tiddler&gt;
+```
+
+&lt;&lt;.macro-examples &quot;tabs&quot;&gt;&gt;
+</pre>
+</div>
+<div created="20140904075400000" modified="20160612132049797" tags="[[Working with TiddlyWiki]] Concepts" title="Tagging" type="text/vnd.tiddlywiki">
+<pre>Tagging is a way of organising tiddlers into categories. For example, if you had tiddlers representing various individuals, you could tag them as ''friend'', ''family'', ''colleague'' etc to indicate these people's relationships to you.
+
+A tag is in fact just a tiddler (or a potential tiddler), and it can have tags of its own. You can add any number of tags to the same tiddler.
+
+See [[Creating and editing tiddlers]] for instructions on how to tag.
+
+By tagging your tiddlers, you can view, navigate and organise your information in numerous additional ways:
+
+* The coloured tag pills on a tiddler give you quick access to all the other tiddlers with the same tag, as well as to the tiddler that represents the tag itself.
+
+* If a tiddler is serving as a tag, then the ''Tagging'' tab in its InfoPanel will show you which tiddlers are currently tagged with it.
+
+* The ''More'' tab of the sidebar has a ''Tags'' tab that presents an overview of all your tags and lets you access all your tagged tiddlers.
+
+* You can use [[filters|Filters]] to create lists of tiddlers based on their tags. You can then display any combination of the [[fields|TiddlerFields]] of those tiddlers. For example, you could build a glossary by listing the title and text of all tiddlers tagged ''Glossary''. Such lists can be formatted in any way you wish: e.g. bulleted, numbered or comma-separated.
+
+* There are a number of special ''system tags'' that control the layout of tiddlers and the entire ~TiddlyWiki page. See [[Page and tiddler layout customisation]] for instructions.
+
+There are two more things you can do with tags:
+
+! Set a tag's colour and icon
+
+You can use the {{$:/core/images/tag-button}} [[tag manager|$:/TagManager]], found on the ''Tags'' tab under ''More'' in the sidebar, to change the colour of a tag's pill or add an icon to the pill.
+
+* To change the colour, click the button in the ''Colour'' column to select from a colour picker. Alternatively, click the icon in the ''Info'' column, then type a [[CSS]] colour value in the ''Colour'' field
+* To change the icon, click the {{$:/core/images/down-arrow}} button in the ''Icon'' column and choose from the list of available icons
+
+! Change the order in which tags are listed
+
+By default, tagged tiddlers are listed in alphabetical order.
+
+If you want any other order, add a &lt;&lt;.flink ListField&gt;&gt; field to the tag tiddler, and set its value to be a [[list of the tiddlers|Title List]] in that order.
+
+The ''list'' field doesn't have to mention all of the tiddlers. See the [[precise rules|Order of Tagged Tiddlers]] ~TiddlyWiki uses to order tagged tiddlers.
+</pre>
+</div>
+<div created="20181109053759931" modified="20181114111957389" tags="Concepts" title="Tiddler">
+<pre>Tiddlers are the fundamental units in TiddlyWiki. 
+
+Tiddlers work most effectively when they are small, and used in such a way as to allow their re-use, so that they can be [[weaved together|Philosophy of Tiddlers]] in different ways.
+
+Internally, a tiddler is stored in plain text, simply containing a set of field names and their values.
+
+When a [[new tiddler is created|Creating and editing tiddlers]], the only field that needs to be given is the [[title field|TitleField]]. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
+
+When a tiddler is first made, some fields are created automatically. Some are visible, like the &lt;&lt;.field title&gt;&gt;, &lt;&lt;.field tag&gt;&gt; and &lt;&lt;.field text&gt;&gt; fields, but others are not, such as the &lt;&lt;.field created&gt;&gt; date.  
+
+Soon you will be adding your own fields to hold the information you want to store. Before you decide on any custom fields you wish to give your tiddlers, it is important that you are aware of the list of standard and other reserved [[tiddler field|TiddlerFields]] names.
+
+A tiddler's &lt;&lt;.field text&gt;&gt; field is the usual one used for displaying information. What you are reading here now is in the text field of a tiddler with a ''title'' named: [[Tiddler]]
+
+&lt;$list filter=&quot;[all[current]tags[]]&quot;&gt;
+A tiddler's &lt;&lt;.field tag&gt;&gt; field will contain a list of tags you choose to give your tiddler. For this tiddler, the list contains the tag(s): &lt;$transclude tiddler=&quot;$:/core/ui/TagTemplate&quot;/&gt;
+&lt;/$list&gt;
+
+Just about everything in ~TiddlyWiki is in tiddlers, from the core javascript programs and features, to the settings and styling, plugins you might add, the interface you use to work with tiddlers, and everything you will be creating within ~TiddlyWiki.
+
+You may be ready to [[create your own tiddlers now|Creating and editing tiddlers]]!
 
 The Concepts of [[Tiddlers]]
 
@@ -9073,9 +9796,133 @@ How to create a new Tiddler
 
 Click the {{$:/core/ui/Buttons/new-tiddler}} icon on the SideBar
 
-For more detailed instructions, see [[Creating and editing tiddlers]]</pre>
+For more detailed instructions, see [[Creating and editing tiddlers]]
+
+[[Philosophy of Tiddlers]]</pre>
 </div>
-<div caption="title Field" created="20181111135617853" modified="20181111201549511" tags="Concepts" title="TitleField">
+<div created="20150110183300000" modified="20150118183633000" tags="[[Improving TiddlyWiki Documentation]]" title="Tiddler Title Policy">
+<pre>Many documentation tiddlers, especially the [[reference ones|Reference Tiddlers]], are concerned with a single concept. Their titles should be succinct noun phrases like &lt;&lt;.tid &quot;List Widget&quot;&gt;&gt; or &lt;&lt;.tid &quot;Tiddler Fields&quot;&gt;&gt;.
+
+Each of the main words of such a title begins with a capital letter. Minor words such as &lt;&lt;.word and&gt;&gt;, &lt;&lt;.word or&gt;&gt;, &lt;&lt;.word the&gt;&gt;, &lt;&lt;.word to&gt;&gt; and &lt;&lt;.word with&gt;&gt; do not.
+
+Tags also follow this pattern.
+
+Titles of this kind are plural if they denote a category of items, e.g. &lt;&lt;.tid &quot;Keyboard Shortcuts&quot;&gt;&gt; or &lt;&lt;.tid &quot;Tiddler Fields&quot;&gt;&gt;. Such titles are used to tag more specific tiddlers within the category.
+
+Where a concept is an item rather than a category, its tiddler has a singular title, e.g. &lt;&lt;.tid &quot;List Widget&quot;&gt;&gt;, &lt;&lt;.tid &quot;tag Operator&quot;&gt;&gt;.
+
+Start a title with its most distinctive part. For instance, the tiddlers documenting the filter operators have titles like &lt;&lt;.tid &quot;addprefix Operator&quot;&gt;&gt;. This helps the reader scan a list of links to find a particular tiddler.
+
+Avoid starting a title with the word &lt;&lt;.word the&gt;&gt;.
+
+In the past, many tiddlers had CamelCase titles. This is gradually being phased out of the documentation to improve readability. ~CamelCase titles should no longer be used, even for tags, except in cases like &lt;&lt;.tid ~JavaScript&gt;&gt; where that is the standard spelling.
+
+[[Instruction tiddlers|Instruction Tiddlers]] often have longer titles that can be more complicated than just a noun phrase, e.g. &lt;&lt;.tid &quot;Ten reasons to switch to ~TiddlyWiki&quot;&gt;&gt;. These titles use sentence case, i.e. only the first word (and any proper names) starts with a capital letter.
+
+How-to tiddlers have titles that begin with &lt;&lt;.word &quot;How to&quot;&gt;&gt;, e.g. &lt;&lt;.tid &quot;How to edit a tiddler&quot;&gt;&gt;. Avoid titles like &lt;&lt;.tid &quot;Editing tiddlers&quot;&gt;&gt;, because a less fluent English speaker could misunderstand that as the name of a category of tiddlers.
+</pre>
+</div>
+<div created="20130825213300000" modified="20160610081054535" tags="Concepts" title="TiddlerFields" type="text/vnd.tiddlywiki">
+<pre>\define lingo-base() $:/language/Docs/Fields/
+TiddlerFields are name:value pairs that make up a [[tiddler|Tiddlers]]. Field names must be lowercase letters, digits or the characters `-` (dash), `_` (underscore) and `.` (period).
+
+The standard fields are:
+
+|!Field Name |!Reference |!Description |
+|`title` |TitleField |&lt;&lt;lingo title&gt;&gt; |
+|`text` |TextField |&lt;&lt;lingo text&gt;&gt; |
+|`modified` |ModifiedField |&lt;&lt;lingo modified&gt;&gt; |
+|`modifier` |ModifierField |&lt;&lt;lingo modifier&gt;&gt; |
+|`created` |CreatedField |&lt;&lt;lingo created&gt;&gt; |
+|`creator` |CreatorField |&lt;&lt;lingo creator&gt;&gt; |
+|`tags` |TagsField |&lt;&lt;lingo tags&gt;&gt; |
+|`type` |TypeField |&lt;&lt;lingo type&gt;&gt; |
+|`list` |ListField |&lt;&lt;lingo list&gt;&gt; |
+|`caption` |CaptionField |&lt;&lt;lingo caption&gt;&gt; |
+
+Other fields used by the core are:
+
+|!Field Name |!Reference |!Description |
+|`class` |ClassField |&lt;&lt;lingo class&gt;&gt; |
+|`color` |ColorField |&lt;&lt;lingo color&gt;&gt; |
+|`description` |DescriptionField |&lt;&lt;lingo description&gt;&gt; |
+|`draft.of` |DraftOfField |&lt;&lt;lingo draft.of&gt;&gt; |
+|`draft.title` |DraftTitleField |&lt;&lt;lingo draft.title&gt;&gt; |
+|`footer` |FooterField |&lt;&lt;lingo footer&gt;&gt; |
+|`icon` |IconField |&lt;&lt;lingo icon&gt;&gt; |
+|`library` |LibraryField |&lt;&lt;lingo library&gt;&gt; |
+|`list-after` |ListAfterField |&lt;&lt;lingo list-after&gt;&gt; |
+|`list-before` |ListBeforeField |&lt;&lt;lingo list-before&gt;&gt; |
+|`name` |NameField |&lt;&lt;lingo name&gt;&gt; |
+|`plugin-priority` |PluginPriorityField |&lt;&lt;lingo plugin-priority&gt;&gt; |
+|`plugin-type` |PluginTypeField |&lt;&lt;lingo plugin-type&gt;&gt; |
+|`source` |SourceField |&lt;&lt;lingo source&gt;&gt; |
+|`subtitle` |SubtitleField |&lt;&lt;lingo subtitle&gt;&gt; |
+
+The TiddlyWebAdaptor uses a few more fields:
+
+|!Field Name |!Reference |!Description |
+|`bag` |BagField |&lt;&lt;lingo bag&gt;&gt; |
+|`revision` |RevisionField |&lt;&lt;lingo revision&gt;&gt; |
+
+See the ''Advanced &gt; Tiddler Fields'' tab of the [[control panel|$:/ControlPanel]] {{$:/core/images/options-button}} for details of the fields used in this wiki.
+</pre>
+</div>
+<div created="20130825213500000" modified="20141121111732959" tags="Concepts" title="Tiddlers" type="text/vnd.tiddlywiki">
+<pre>Tiddlers are the fundamental units of information in TiddlyWiki. Tiddlers work best when they are as small as possible so that they can be reused by weaving them together in different ways.
+
+A &quot;tiddler&quot; is an informal British word meaning a small fish, typically a stickleback or a minnow. Other systems have analogous concepts with generic names like &quot;items&quot;, &quot;entries&quot;, &quot;entities&quot;, &quot;nodes&quot; or &quot;records&quot;. TiddlyWiki takes the view that it is better to be confusingly distinctive than confusingly generic.
+
+Internally, tiddlers are a list of uniquely named values called fields. The only field that is required is the `title` field, but useful tiddlers also have a `text` field, and some or all of the standard fields listed in TiddlerFields.
+
+Tiddlers are ubiquitous in TiddlyWiki. They are used to store everything from JavaScript code modules to the settings and state associated with the user interface.
+</pre>
+</div>
+<div created="20181109053759931" modified="20181116022003968" tags="Beginners" title="Tiddlers for Beginners">
+<pre>!!What is a tiddler?
+Tiddlers are the basic building blocks in ~TiddlyWiki.
+
+You may want to imagine a tiddler as being a note-card in which you can write on.
+
+What you are reading right now is -- the text that is inside a tiddler that has a ''title'' &lt;$link&gt;{{!!title}}&lt;/$link&gt; -- and that tiddler is one of may inside this TiddlyWiki file.
+
+Within a ~TiddlyWiki, a tiddler is stored in plain text, simply containing a set of identifying names (fields) and some text (values).
+
+Just about everything in ~TiddlyWiki is in tiddlers, as will be everything you will be writing and creating. The interface you use to work with your tiddlers is also created by code written in tiddlers!
+
+Since most everything is in tiddlers, they are all accessible to you, including most all of the core programs, features, and settings.
+
+!!When you make a tiddler
+
+
+
+When a [[new tiddler is created|Creating and editing tiddlers]], the only field that needs to be filled in is the ''title'' field. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
+
+When a tiddler is first made, some fields are created automatically. Some are visible for you to put in your text, like the &lt;&lt;.field title&gt;&gt;, &lt;&lt;.field tag&gt;&gt; and &lt;&lt;.field text&gt;&gt; fields, but others are not, such as the &lt;&lt;.field created&gt;&gt; date field.  
+
+At some point, in order to hold information you want to store, you will want to add your own custom fields to your tiddlers. Before you decide on any custom fields you wish to give, it is important that you are aware of the list of standard and other [[reserved field|TiddlerFields]] names.
+
+A tiddler's &lt;&lt;.field text&gt;&gt; field is the usual one used for displaying information. What you are reading here now is in the ''text'' field of a tiddler with a ''title'' filed that contains: &lt;$link&gt;{{!!title}}&lt;/$link&gt;
+
+&lt;$list filter=&quot;[all[current]tags[]]&quot;&gt;
+A tiddler's &lt;&lt;.field tag&gt;&gt; field will contain a list of tags you choose to give your tiddler. For this tiddler, the list contains the tag(s): &lt;$transclude tiddler=&quot;$:/core/ui/TagTemplate&quot;/&gt;
+&lt;/$list&gt;
+
+Ideally, ---
+Tiddlers work most effectively when they are small, and are used in such a way as to allow their re-use, so that they can be [[weaved together|Philosophy of Tiddlers]] in different ways.
+
+You may be ready to [[create your own tiddlers now|Creating and editing tiddlers]]!
+
+!!More on Tiddlers
+
+* [[The Concepts of Tiddlers|Tiddlers]]
+* [[Philosophy of Tiddlers]]
+
+
+
+</pre>
+</div>
+<div caption="title Field" created="20181111135617853" modified="20181116043608710" tags="Concepts todo" title="titleField">
 <pre>A tiddler's title is ...
 
 It is wise to have a [[Tiddler Title Policy]] when choosing title names for your tiddlers.</pre>
