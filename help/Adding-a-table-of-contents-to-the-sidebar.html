@@ -8992,7 +8992,7 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
     }
 }</pre>
 </div>
-<div created="20181116021426288" modified="20181116053502240" title="$:/temp/search">
+<div created="20181116021426288" modified="20181116083410358" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -9422,7 +9422,7 @@ TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressi
 
 As presently shown, it contains Page Control buttons, a search bar, and a row of tabs that contain lists of links or buttons.</pre>
 </div>
-<div created="20181107082426215" modified="20181116082928324" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
+<div created="20181107082426215" modified="20181116084947646" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
 <pre>On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
 This ''&lt;&lt;.toc-tab&gt;&gt;'' area has been used as an effective method of presenting organised links for navigating through this ~TiddlyWiki.
 
@@ -9497,7 +9497,7 @@ Save your tiddler and note what happened on the sidebar. Instead of the ''Conten
 
 __Next__: we will begin automating the TableOfContents tiddler. We have a few pre-made styles for how a Table of Contents can be laid out and displayed. Full details can be seen here: [[Table-of-Contents Macros]] and examples of how they work are here: [[Table-of-Contents Macros (Examples)]].
 
-For this guide we will choose the //Selective Expandable// style. To do this, add the following code at the bottom of your TableOfContents tiddler.
+For this guide we will choose the //Selective Expandable// style. To do this, add the following code below the previous text you put in your ''~TableOfContents'' tiddler.
 
 ```
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -9505,11 +9505,11 @@ For this guide we will choose the //Selective Expandable// style. To do this, ad
 &lt;/div&gt;
 ```
 
-Save your &quot;~TableOfContents&quot; tiddler and note that on the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar, nothing has changed. Neither does your saved TableOfContents tiddler show a visible change.
+Save your ''~TableOfContents'' tiddler and note that on the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar, nothing has changed. Neither does your saved ''~TableOfContents'' tiddler show a visible change.
 
-The key word in the above section of code is the word &quot;~TableOfContents&quot;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear on your ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar. Since currently nothing has the tag &quot;~TableOfContents&quot; nothing has appeared there.
+The key word in the above section of code is: &quot;//~TableOfContents//&quot;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear on your ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar. Since currently nothing has the tag //~TableOfContents// nothing has appeared there.
 
-Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... &gt;&gt;` in the code above refers to by reading about [[macros|Macros]]. ~TiddlyWiki has an inbuilt collection of these [[macros for making Table of Contents|Table-of-Contents Macros]].
+Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... &gt;&gt;` in the code above refers to by reading about the inbuilt collection of these [[macros for making Table of Contents|Table-of-Contents Macros]]. It will also be helpful to read up on [[macros|Macros]]. 
 
 !!Add some items to your Table of Contents
 
@@ -9671,7 +9671,7 @@ The tabbed example uses the real TableOfContents of this documentation instead.
 &lt;&lt;tabs &quot;[tag[table-of-contents-example]nsort[order]]&quot; &quot;Example Table of Contents: Simple&quot;&gt;&gt;
 </pre>
 </div>
-<div caption="Contents" created="20181116021043900" modified="20181116021219530" tags="$:/tags/SideBar" title="TableOfContents">
+<div caption="Contents" created="20181116021043900" list-after="$:/core/ui/SideBar/Open" modified="20181116083400378" tags="$:/tags/SideBar" title="TableOfContents">
 <pre></pre>
 </div>
 <div created="20181114063054056" modified="20181116022047654" tags="Beginners Concepts" title="Tabs">
