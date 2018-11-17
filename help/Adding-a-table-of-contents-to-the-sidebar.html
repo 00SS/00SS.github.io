@@ -135,6 +135,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -185,6 +187,8 @@ Error message and password prompt
 
 <li>captionField</li>
 
+<li>Core</li>
+
 <li>Creating and editing tiddlers</li>
 
 <li>Difficulties with TiddlyWiki</li>
@@ -231,6 +235,8 @@ Error message and password prompt
 
 <li>Sidebar</li>
 
+<li>SystemTiddlers</li>
+
 <li>Table of Contents for Beginners</li>
 
 <li>Table-of-Contents Macros</li>
@@ -247,7 +253,7 @@ Error message and password prompt
 
 <li>The First Rule of Using TiddlyWiki</li>
 
-<li>Tiddler</li>
+<li>Tiddler Title Naming System</li>
 
 <li>Tiddler Title Policy</li>
 
@@ -256,6 +262,8 @@ Error message and password prompt
 <li>Tiddlers</li>
 
 <li>Tiddlers for Beginners</li>
+
+<li>TiddlyWiki</li>
 
 <li>titleField</li>
 
@@ -271,6 +279,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20181112103236036" modified="20181112103236036" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
+</div>
+<div created="20181117065853250" modified="20181117065853250" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.17">
 <pre>{
@@ -8924,7 +8935,7 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[The First Rule of Using TiddlyWiki]]</pre>
+# [[TiddlyWiki]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -8950,19 +8961,19 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
 <div created="20181116104336284" modified="20181116104336284" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20181116042215658" modified="20181116042215658" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/Missing</pre>
+<div created="20181116042215658" modified="20181117073230130" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181112101913034" modified="20181116092926480" title="$:/state/tab/sidebar--1835078512">
+<div created="20181112101913034" modified="20181117074315464" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20181115150403170" modified="20181116021715986" title="$:/state/tabSample-1067554119">
-<pre>SampleTabFour</pre>
+<div created="20181115150403170" modified="20181116104729906" title="$:/state/tabSample-1067554119">
+<pre>SampleTabOne</pre>
 </div>
 <div created="20181116092500248" modified="20181116092500248" title="$:/state/toc/TableOfContents-Beginners--81657105">
 <pre>open</pre>
 </div>
-<div list="[[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
+<div list="$:/Import TiddlyWiki Core SystemTiddlers [[Tiddler Title Naming System]] [[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181114083614858" modified="20181114084154386" title="$:/temp/advancedsearch">
@@ -9022,8 +9033,8 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
     }
 }</pre>
 </div>
-<div created="20181116021426288" modified="20181116083410358" title="$:/temp/search">
-<pre></pre>
+<div created="20181116021426288" modified="20181117074453214" title="$:/temp/search">
+<pre>tiddlywiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
 <pre>{
@@ -9150,6 +9161,9 @@ When you give a tiddler a ''caption'' field ...
 It is used in Table of Contents
 
 There are various ways that you may display the caption field instead of the Title</pre>
+</div>
+<div created="20181117074125856" modified="20181117074242692" tags="todo tiddler-for-adding Concepts" title="Core">
+<pre>This tiddler will explain what is meant in TiddlyWiki by the word Core</pre>
 </div>
 <div created="20140904140300000" modified="20160607153747195" tags="[[Working with TiddlyWiki]]" title="Creating and editing tiddlers" type="text/vnd.tiddlywiki">
 <pre>! Creating tiddlers
@@ -9577,6 +9591,19 @@ Doing this often (at least every few days) is a great way to manually keep archi
 
 As presently shown, it contains Page Control buttons, a search bar, and a row of tabs that contain lists of links or buttons.</pre>
 </div>
+<div created="20180113144350185" modified="20181117074309094" tags="tiddler-modified Concepts" title="SystemTiddlers" type="text/vnd.tiddlywiki">
+<pre>System tiddlers provide a simple way to hide the internal components of TiddlyWiki so that they don't clutter things up, getting in the way of the users content.
+
+Tiddlers are classified as system tiddlers if their title starts with the special string `$:/`. The only difference from ordinary tiddlers is that they are hidden from most searches and lists in the [[sidebar|Sidebar]]. (In particular, system tiddlers are shown on the sidebar, under the ''More'' tab, in the ''System'' sub tab).
+
+Many of the system tiddlers follow the convention of using further slashes to delineate the components of the title. For example: `$:/config/BitmapEditor/LineWidth`.
+
+You don't have to create your own system tiddlers, but it will be useful when customising your TiddlyWiki. For example, if you create a custom colour palette you might call it `$:/_MyPalette` so that (a) it is hidden from searches/lists and (b) it will appear at the top of the system tiddler list for easy reference.
+
+System tiddlers that are provided as part of the [[core|Core]] are named according to the following rules: [[Naming of System Tiddlers]]
+
+</pre>
+</div>
 <div created="20181107082426215" modified="20181116104153482" note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
 <pre>On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
 This ''&lt;&lt;.toc-tab&gt;&gt;'' area has been used as an effective method of presenting organised links for navigating through this ~TiddlyWiki.
@@ -9958,38 +9985,12 @@ The best way to make sure that your data is safe is to practise a rigorous syste
 * Be defensive and redundant: for example, take multiple backups and keep them in separate physical locations
 </pre>
 </div>
-<div created="20181109053759931" modified="20181114111957389" tags="Concepts" title="Tiddler">
-<pre>Tiddlers are the fundamental units in TiddlyWiki. 
+<div created="20181117071716086" modified="20181117072928330" tags="todo Beginners" title="Tiddler Title Naming System">
+<pre>Conventions for Title names for your tiddlers
 
-Tiddlers work most effectively when they are small, and used in such a way as to allow their re-use, so that they can be [[weaved together|Philosophy of Tiddlers]] in different ways.
-
-Internally, a tiddler is stored in plain text, simply containing a set of field names and their values.
-
-When a [[new tiddler is created|Creating and editing tiddlers]], the only field that needs to be given is the [[title field|TitleField]]. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
-
-When a tiddler is first made, some fields are created automatically. Some are visible, like the &lt;&lt;.field title&gt;&gt;, &lt;&lt;.field tag&gt;&gt; and &lt;&lt;.field text&gt;&gt; fields, but others are not, such as the &lt;&lt;.field created&gt;&gt; date.  
-
-Soon you will be adding your own fields to hold the information you want to store. Before you decide on any custom fields you wish to give your tiddlers, it is important that you are aware of the list of standard and other reserved [[tiddler field|TiddlerFields]] names.
-
-A tiddler's &lt;&lt;.field text&gt;&gt; field is the usual one used for displaying information. What you are reading here now is in the text field of a tiddler with a ''title'' named: [[Tiddler]]
-
-&lt;$list filter=&quot;[all[current]tags[]]&quot;&gt;
-A tiddler's &lt;&lt;.field tag&gt;&gt; field will contain a list of tags you choose to give your tiddler. For this tiddler, the list contains the tag(s): &lt;$transclude tiddler=&quot;$:/core/ui/TagTemplate&quot;/&gt;
-&lt;/$list&gt;
-
-Just about everything in ~TiddlyWiki is in tiddlers, from the core javascript programs and features, to the settings and styling, plugins you might add, the interface you use to work with tiddlers, and everything you will be creating within ~TiddlyWiki.
-
-You may be ready to [[create your own tiddlers now|Creating and editing tiddlers]]!
-
-The Concepts of [[Tiddlers]]
-
-How to create a new Tiddler
-
-Click the {{$:/core/ui/Buttons/new-tiddler}} icon on the SideBar
-
-For more detailed instructions, see [[Creating and editing tiddlers]]
-
-[[Philosophy of Tiddlers]]</pre>
+* Shadow Tiddlers
+* System Tiddlers - [[Naming of System Tiddlers]]
+* Your Tiddlers</pre>
 </div>
 <div created="20150110183300000" modified="20150118183633000" tags="[[Improving TiddlyWiki Documentation]]" title="Tiddler Title Policy">
 <pre>Many documentation tiddlers, especially the [[reference ones|Reference Tiddlers]], are concerned with a single concept. Their titles should be succinct noun phrases like &lt;&lt;.tid &quot;List Widget&quot;&gt;&gt; or &lt;&lt;.tid &quot;Tiddler Fields&quot;&gt;&gt;.
@@ -10069,15 +10070,21 @@ Internally, tiddlers are a list of uniquely named values called fields. The only
 Tiddlers are ubiquitous in TiddlyWiki. They are used to store everything from JavaScript code modules to the settings and state associated with the user interface.
 </pre>
 </div>
-<div created="20181109053759931" modified="20181116022003968" tags="Beginners" title="Tiddlers for Beginners">
+<div created="20181109053759931" modified="20181117072841260" tags="Beginners" title="Tiddlers for Beginners">
 <pre>!!What is a tiddler?
 Tiddlers are the basic building blocks in ~TiddlyWiki.
 
 You may want to imagine a tiddler as being a note-card in which you can write on.
 
-What you are reading right now is -- the text that is inside a tiddler that has a ''title'' &lt;$link&gt;{{!!title}}&lt;/$link&gt; -- and that tiddler is one of may inside this TiddlyWiki file.
-
 Within a ~TiddlyWiki, a tiddler is stored in plain text, simply containing a set of identifying names (fields) and some text (values).
+
+;What you are reading right now is --
+:the text (value) that is inside the __''text'' field__ of a //tiddler// 
+:the //tiddler// has a __''title'' field__ with the text (value): &lt;$link&gt;{{!!title}}&lt;/$link&gt;
+:and this //tiddler// is one of many tiddlers inside this TiddlyWiki file.
+
+
+
 
 Just about everything in ~TiddlyWiki is in tiddlers, as will be everything you will be writing and creating. The interface you use to work with your tiddlers is also created by code written in tiddlers!
 
@@ -10088,6 +10095,8 @@ Since most everything is in tiddlers, they are all accessible to you, including 
 
 
 When a [[new tiddler is created|Creating and editing tiddlers]], the only field that needs to be filled in is the ''title'' field. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
+
+Before choosing a title for your tiddler, you may want to read up on [[Tiddler Title Naming System]].
 
 When a tiddler is first made, some fields are created automatically. Some are visible for you to put in your text, like the &lt;&lt;.field title&gt;&gt;, &lt;&lt;.field tag&gt;&gt; and &lt;&lt;.field text&gt;&gt; fields, but others are not, such as the &lt;&lt;.field created&gt;&gt; date field.  
 
@@ -10111,6 +10120,25 @@ You may be ready to [[create your own tiddlers now|Creating and editing tiddlers
 
 
 
+</pre>
+</div>
+<div created="20130822170700000" modified="20181117075139656" tags="todo tiddler-modified Concepts" title="TiddlyWiki" type="text/vnd.tiddlywiki">
+<pre>~TiddlyWiki can be described as:
+
+* a single file program for storing, manipulating and presenting data 
+* allows a user's data to be stored within itself
+*
+*
+*
+
+
+~TiddlyWiki is a rich, interactive tool for manipulating complex data with structure that doesn't easily fit into conventional tools like spreadsheets or wordprocessors.
+
+~TiddlyWiki is designed to fit around your brain, helping you deal with the things that won't fit. The [[fundamental idea|Philosophy of Tiddlers]] is that information is more useful and reusable if we cut it up into the smallest semantically meaningful chunks -- [[tiddlers|Tiddlers]] -- and give them titles so that they can be [[structured|Structuring TiddlyWiki]] with [[links|TiddlerLinks]], [[tags|Tagging]], [[lists|ListField]] and [[macros|Macros]]. Tiddlers use a WikiText notation that concisely represents a wide range of text formatting and hypertext features. ~TiddlyWiki aims to provide a fluid interface for working with tiddlers, allowing them to be aggregated and composed into longer narratives.
+
+People love using ~TiddlyWiki. Because it can be used without any complicated server infrastructure, and because it is [[open source|OpenSource]], it has brought unprecedented freedom to everyone to keep their precious information under their own control.
+
+~TiddlyWiki was originally created by JeremyRuston and is now a thriving [[open source|License]] project with a busy [[Community]] of independent developers.
 </pre>
 </div>
 <div caption="title Field" created="20181111135617853" modified="20181116043608710" tags="Concepts todo" title="titleField">
