@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>Filters</li>
 
+<li>Formatting Text using Markdown</li>
+
 <li>Google Groups - other ToC mentions</li>
 
 <li>Google Groups - ToC mentions</li>
@@ -214,6 +216,8 @@ Error message and password prompt
 <li>Linking in WikiText</li>
 
 <li>Macros</li>
+
+<li>Macros for Beginners</li>
 
 <li>Making Toc Tutorial - Default Tiddlers</li>
 
@@ -232,6 +236,8 @@ Error message and password prompt
 <li>SampleTabTwo</li>
 
 <li>Save Manually and Keep a Back up Version</li>
+
+<li>Save Manually Often as a Habit</li>
 
 <li>Sidebar</li>
 
@@ -8935,7 +8941,7 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[TiddlyWiki]]</pre>
+# [[Formatting Text using Markdown]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -8973,7 +8979,7 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
 <div created="20181116092500248" modified="20181116092500248" title="$:/state/toc/TableOfContents-Beginners--81657105">
 <pre>open</pre>
 </div>
-<div list="$:/Import TiddlyWiki Core SystemTiddlers [[Tiddler Title Naming System]] [[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
+<div list="[[Save Manually and Keep a Back up Version]] [[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181114083614858" modified="20181114084154386" title="$:/temp/advancedsearch">
@@ -9033,8 +9039,8 @@ This is an example tiddler. See [[Table-of-Contents Macros (Examples)]].
     }
 }</pre>
 </div>
-<div created="20181116021426288" modified="20181117074453214" title="$:/temp/search">
-<pre>tiddlywiki</pre>
+<div created="20181116021426288" modified="20181126071536012" title="$:/temp/search">
+<pre>tiddlers</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
 <pre>{
@@ -9281,6 +9287,23 @@ A filter's output can change as tiddlers are added and deleted in the wiki. ~Tid
 * [[Filter Operators]] -- the available methods of filtering
 </pre>
 </div>
+<div created="20181118020053750" modified="20181126091900520" tags="Beginners Definitions" title="Formatting Text using Markdown">
+<pre>See specifically: 
+
+* [[Formatting in WikiText]] 
+* [[Formatting text in TiddlyWiki]]
+* [[Code Blocks in WikiText]]
+* [[Tables in WikiText]]
+* [[Definitions in WikiText]] 
+* [[Dashes in WikiText]] 
+* [[Hard Linebreaks in WikiText]] 
+* [[Headings in WikiText]] 
+* [[Horizontal Rules in WikiText]] 
+* [[Paragraphs in WikiText]]
+
+Below is the full list of ~WikiText related information
+&lt;&lt;list-links [tag[WikiText]]&gt;&gt;</pre>
+</div>
 <div created="20181116040145746" modified="20181116040207357" tags="" title="Google Groups - other ToC mentions">
 <pre>[[Introducing TW5 to a beginner|https://groups.google.com/forum/?hl=en&amp;#!msg/tiddlywiki/dsUa74dAQ-c/QeUI0sjpCAAJ]]  - ~TiddlyWiki Google Groups -  2018-02-19 by Joe Armstrong
 
@@ -9475,6 +9498,44 @@ A similar effect to a parameterised macro call can be produced by setting [[vari
 ~TiddlyWiki's core has [[several macros|Core Macros]] built in.
 </pre>
 </div>
+<div created="20181126093605630" modified="20181126114228732" tags="Beginners" title="Macros for Beginners" type="text/vnd.tiddlywiki">
+<pre>In TiddlyWiki, A &lt;&lt;.def macro&gt;&gt; is special type of variable that is a shortcut to create text. This macro can then be referenced ways to create that text.
+
+referencing the 
+
+a single instruction that expands automatically into a set of instructions to perform a particular task.
+
+can help you automate repetitive tasks.
+
+Macros are an advanced topic and, if you want to become an advanced programmer, you will encounter complex materials. This is why some training resources on this topic are sometimes difficult to follow.
+
+Howe
+
+named snippet of text. WikiText can use the name as a shorthand way of [[transcluding|Transclusion]] the snippet. Such transclusions are known as &lt;&lt;.def &quot;macro calls&quot;&gt;&gt;, and each call can supply a different set of parameters that get substituted for special placeholders within the snippet.
+
+For the syntax, see [[Macros in WikiText]].
+
+Most macros are in fact just parameterised [[variables|Variables]].
+
+They are created using the `\define` [[pragma|Pragma]]. (Behind the scenes, this is transformed into a &lt;&lt;.wlink SetWidget&gt;&gt;, i.e. macros and variables are two sides of the same coin.)
+
+The snippet and its incoming parameter values are treated as simple strings of characters with no WikiText meaning, at least until the placeholders have been filled in and the macro call has returned. This means that a macro can assemble and return the complete syntax of a ~WikiText component, such as a [[link|Linking in WikiText]]. (See [[Transclusion and Substitution]] for further discussion of this.)
+
+The string returned by a macro call is parsed separately from any surrounding ~WikiText components. So a safe way to insert a special character sequence (such as `[[` or `&lt;`) without triggering its normal ~WikiText meaning is to wrap it in a macro.
+
+Within a snippet itself, the only markup detected is `$name$` (a placeholder for a macro parameter) and `$(name)$` (a placeholder for a [[variable|Variables]]).
+
+The &lt;&lt;.mlink dumpvariables&gt;&gt; macro lists all variables (including macros) that are available at that position in the widget tree.
+
+An &lt;&lt;.wlink ImportVariablesWidget&gt;&gt; widget can be used to copy macro definitions to another branch of the [[widget tree|Widgets]]. ~TiddlyWiki uses this technique internally to implement global macros -- namely any macros defined in tiddlers with the &lt;&lt;.tag $:/tags/Macro&gt;&gt; tag.
+
+For maximum flexibility, macros can also be &lt;&lt;.js-macro-link &quot;written as JavaScript modules&quot;&gt;&gt;.
+
+A similar effect to a parameterised macro call can be produced by setting [[variables|Variables]] around a [[transclusion|Transclusion]].
+
+~TiddlyWiki's core has [[several macros|Core Macros]] built in.
+</pre>
+</div>
 <div created="20181114090256210" modified="20181116043453270" tags="" title="Making Toc Tutorial - Default Tiddlers">
 <pre>&lt;$list filter=&quot;[[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[Field]] [[titleField]] [[captionField]] [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]&quot;/&gt;
 </pre>
@@ -9542,7 +9603,7 @@ TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressi
 <pre>This is the second of our sample tabs.
 </pre>
 </div>
-<div created="20181116100642174" modified="20181116104233980" tags="Beginners [[Working with TiddlyWiki]]" title="Save Manually and Keep a Back up Version">
+<div created="20181116100642174" modified="20181128061617046" tags="Beginners [[Working with TiddlyWiki]]" title="Save Manually and Keep a Back up Version">
 <pre>This method is written for Microsoft Windows browsers.
 
 Your ~TiddlyWiki is an html file. Say this file is named: ''~MyTiddlyWiki.html'' and is in a folder called ''TW''
@@ -9571,12 +9632,40 @@ Now, notice that the file name at the bottom of the save dialogue is still ''~My
 
 Click the //Save// button on the browser's save dialogue.
 
-What you have done in the above steps is to have renamed your old ~TiddlyWiki by adding an archived date to the file name, and saved your modified ~TiddlyWiki with its original name.
+What you have done in the above steps is to have renamed your __last saved ''~MyTiddlyWiki.html''__ by adding an archived date to the file name, and saved your __modified ''~MyTiddlyWiki.html''__ with its original name.
 
 Doing this often (at least every few days) is a great way to manually keep archived versions of your ~TiddlyWiki, and to avoid the catastrophe of a hiccup that corrupts your file while saving it.
 
  With a bit of practice, this procedure does not take more than 10 seconds.
 
+
+
+</pre>
+</div>
+<div created="20181121034236092" modified="20181126063619580" tags="Beginners [[Working with TiddlyWiki]]" title="Save Manually Often as a Habit">
+<pre>This saving method is written for Microsoft Windows browsers. It addresses [[The First Rule of Using TiddlyWiki]]!
+
+Your ~TiddlyWiki is an html file. Say this file is named: ''~MyTiddlyWiki.html'' and is in a folder called ''TW''
+
+After making some changes to your ~TiddlyWiki, it is advisable to develop a habit of making a quick &quot;save&quot; similar to a habit of constantly saving a Microsoft &quot;doc&quot; file (done by using  CTRL+S). 
+
+One manual way of doing this &quot;quick save is:
+
+Click on the ''Save changes'' {{$:/core/ui/Buttons/save-wiki}} icon.
+
+Your browser will open a Save dialog. On that dialog, choose to save the file.
+
+Next, the Windows file save dialog should open. Navigate to the ''TW ''folder where your ~TiddlyWiki is located. Most browsers //remember// the last folder used for saving, so when done repeatedly, you won't need to re-navigate to the ''TW'' folder.
+
+At the bottom of the dialog that opens, click the //Save// button. A warning pops up informing you the file already exists, and &quot;//Do you want to replace it.//&quot;
+
+Click on &quot;//Yes//&quot; and you are done. Just four clicks of the mouse, which should take less than 5 seconds.
+
+Doing this often (every time you've made 5 to 10 minutes worth of additions and changes)  ensures your saved copy is up to date.
+
+Before any significant changes, and perhaps once every few days (or less) - remember to [[Save Manually and Keep a Back up Version]] to avoid the catastrophe of a hiccup that corrupts your file while saving it.
+
+There are many other ways of [[Saving]] as well.
 
 
 </pre>
@@ -9860,14 +9949,14 @@ The tabbed example uses the real TableOfContents of this documentation instead.
 &lt;&lt;toc-selective-expandable &quot;TableOfContents&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20181114063054056" modified="20181116022047654" tags="Beginners Concepts" title="Tabs">
-<pre>Tabs are used as a way of moving through and displaying somewhat related items efficiently. 
+<div created="20181114063054056" modified="20181126093548128" tags="Beginners Concepts" title="Tabs">
+<pre>Tabs are used as a way of efficiently moving through and displaying somewhat related items. 
 
-If you are not familiar with tabs, you might not notice their presence and therefore miss using them to see important information or to configure settings.
+If you are not familiar with tabs, you might not notice their presence. This would mean you may miss seeing important information, or not find the areas to configure settings.
 
 The 4 very basic ~SampleTabs below give you a visual idea of what tabs look like and should help you spot them when they appear in a tiddler.
 
-Click on each Sample Tab to get a feel of how they are used.
+Click on each Sample Tab to get a feel of how they are used. Notice how the text right below the tabs changes for each tab.
 
 ---
 &lt;&lt;tabs &quot;SampleTabOne SampleTabTwo SampleTabThree SampleTabFour&quot; &quot;SampleTabOne&quot; &quot;$:/state/tabSample&quot;&gt;&gt;
@@ -9878,7 +9967,7 @@ On the [[sidebar|Sidebar]], notice the following tabs under the Search Bar:
 
 Click on them to get an idea of how useful tabs can be for using a small area of the screen to present many different options.
 
-The [[tabs Macro]] is used for creating tabs in TiddlyWiki.</pre>
+The [[tabs Macro]] is used for creating tabs in TiddlyWiki. Read up first on [[macros|Macros]] if you are not familiar with them.</pre>
 </div>
 <div caption="tabs" created="20131228162203521" modified="20180408084453861" tags="Macros [[Core Macros]]" title="tabs Macro" type="text/vnd.tiddlywiki">
 <pre>The &lt;&lt;.def tabs&gt;&gt; [[macro|Macros]] presents a [[selection of tiddlers|Title Selection]] as a set of tabs that the user can switch between.
@@ -10060,23 +10149,25 @@ The TiddlyWebAdaptor uses a few more fields:
 See the ''Advanced &gt; Tiddler Fields'' tab of the [[control panel|$:/ControlPanel]] {{$:/core/images/options-button}} for details of the fields used in this wiki.
 </pre>
 </div>
-<div created="20130825213500000" modified="20141121111732959" tags="Concepts" title="Tiddlers" type="text/vnd.tiddlywiki">
+<div created="20130825213500000" modified="20181126072028318" tags="Concepts" title="Tiddlers" type="text/vnd.tiddlywiki">
 <pre>Tiddlers are the fundamental units of information in TiddlyWiki. Tiddlers work best when they are as small as possible so that they can be reused by weaving them together in different ways.
 
 A &quot;tiddler&quot; is an informal British word meaning a small fish, typically a stickleback or a minnow. Other systems have analogous concepts with generic names like &quot;items&quot;, &quot;entries&quot;, &quot;entities&quot;, &quot;nodes&quot; or &quot;records&quot;. TiddlyWiki takes the view that it is better to be confusingly distinctive than confusingly generic.
+
+See [[Tiddlers for Beginners]] for a basic overview.
 
 Internally, tiddlers are a list of uniquely named values called fields. The only field that is required is the `title` field, but useful tiddlers also have a `text` field, and some or all of the standard fields listed in TiddlerFields.
 
 Tiddlers are ubiquitous in TiddlyWiki. They are used to store everything from JavaScript code modules to the settings and state associated with the user interface.
 </pre>
 </div>
-<div created="20181109053759931" modified="20181117072841260" tags="Beginners" title="Tiddlers for Beginners">
+<div created="20181109053759931" modified="20181126072247012" tags="Beginners" title="Tiddlers for Beginners">
 <pre>!!What is a tiddler?
 Tiddlers are the basic building blocks in ~TiddlyWiki.
 
 You may want to imagine a tiddler as being a note-card in which you can write on.
 
-Within a ~TiddlyWiki, a tiddler is stored in plain text, simply containing a set of identifying names (fields) and some text (values).
+Within a ~TiddlyWiki, a tiddler is stored in plain text, simply containing a set of identifying names (fields) that have some text (values).
 
 ;What you are reading right now is --
 :the text (value) that is inside the __''text'' field__ of a //tiddler// 
