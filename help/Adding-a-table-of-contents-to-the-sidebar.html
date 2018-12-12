@@ -9220,7 +9220,7 @@ tr.doc-table-subheading {
 <div created="20181209170344264" creator="S" modified="20181209170345986" modifier="S. S" title="$:/status/UserName">
 <pre>S. S.</pre>
 </div>
-<div list="Core [[Core and Shadow Tiddlers for Beginners]] [[Notes within Documentation]] Typography [[Using Github to Help with TiddlyWiki]] [[Google Groups - Documentation mentions]] [[Tags for Beginners - notes]] [[Table of Contents for Beginners - notes]] Notes todo [[Tags for Beginners]] [[ToC - other versions]] [[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
+<div list="Core [[Core and Shadow Tiddlers for Beginners]] [[Notes within Documentation]] Typography [[Using Github to Help with TiddlyWiki]] [[Google Groups - Documentation mentions]] [[Tags for Beginners - notes]] [[Table of Contents for Beginners - notes]] Notes todo [[Tags for Beginners]] [[ToC - other versions]] [[Google Groups - ToC mentions]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181114083614858" modified="20181114084154386" title="$:/temp/advancedsearch">
@@ -9280,8 +9280,8 @@ tr.doc-table-subheading {
     }
 }</pre>
 </div>
-<div created="20181116021426288" creator="S. S." modified="20181212161448774" modifier="S. S." title="$:/temp/search">
-<pre></pre>
+<div created="20181116021426288" creator="S. S." modified="20181212162814620" modifier="S. S." title="$:/temp/search">
+<pre>tabs</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
 <pre>{
@@ -10108,7 +10108,7 @@ System tiddlers that are provided as part of the [[core|Core]] are named accordi
 
 </pre>
 </div>
-<div created="20181107082426215" creator="S. S." modified="20181212153155684" modifier="S. S." note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
+<div created="20181107082426215" creator="S. S." modified="20181212164337326" modifier="S. S." note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
 <pre>&lt;&lt;.preamble &quot;&quot;&quot;In this tutorial, a Table of Contents refers to an automatically created, self updating list of links to selected tiddlers. Selection is done through a &quot;parent-child&quot; -- &quot;title-tag&quot; structure. &quot;&quot;&quot;&gt;&gt;
 
 On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
@@ -10127,7 +10127,7 @@ The detailed step by step style may hopefully allow you to better understand how
 !!What is the structure of a Table of Contents in ~TiddlyWiki?
 
 
-~TiddlyWiki's set of inbuilt Table of Contents used in this tutorial are based on a tag-tree of &lt;&lt;.word parent-child&gt;&gt; tiddlers. This means each parent tiddler is the name of a tag which is used by its &lt;&lt;.word children&gt;&gt; tiddlers. And each of those children in turn are names of tags used by their own &lt;&lt;.word children&gt;&gt;. 
+~TiddlyWiki has inbuilt Table of Contents styles based on a tag-tree of &lt;&lt;.word parent-child&gt;&gt; tiddlers. This means each parent tiddler is the name of a tag which is used by its &lt;&lt;.word children&gt;&gt; tiddlers. And each of those children in turn are names of tags used by their own &lt;&lt;.word children&gt;&gt;. 
 
 These relationships can be formed easily starting from your top tiddler by using the &lt;&lt;.button new-here&gt;&gt; option available from the drop-down  &lt;&lt;.button more-tiddler-actions&gt;&gt; menu of each tiddler. The &lt;&lt;.word &quot;new here&quot;&gt;&gt;  menu item will create a new tiddler tagged with the name of the current tiddler.
 
@@ -10135,7 +10135,7 @@ Don't worry if this does not make sense yet. Read on.
 
 !!Create a Tiddler for your Table of Contents
 
-The first step is to create a tiddler that will be your Table of Contents.
+The first step is to create a tiddler that will be your Table of Contents. This will be what was called above - a &lt;&lt;.word parent&gt;&gt; tiddler.
 
 Create a new tiddler with any new title. By convention, this title can be: ''~TableOfContents''
 
@@ -10222,7 +10222,7 @@ Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... 
 
 !!Add some items to your Table of Contents
 
-So create a few new tiddlers, put in a line or two of text if you want, and tag each one of them &lt;&lt;tag TableOfContents''&gt;&gt;, and save them.
+So create a few new tiddlers, put in a line or two of text if you want, and tag each one of them &lt;&lt;tag TableOfContents''&gt;&gt;, and save them. These are what was referered to at the beginning as &lt;&lt;.word child&gt;&gt; tiddlers - they are children of the &lt;&lt;.tid ~TableOfContents&gt;&gt; tiddler because you have given them a tag with this exact name.
 
 Note: A quick way of creating these &lt;&lt;.word child&gt;&gt; tiddlers is to click on the &lt;&lt;.button more-tiddler-actions&gt;&gt; button on the top right of the &lt;&lt;.tid ~TableOfContents&gt;&gt; tiddler, and select the &lt;&lt;.button new-here&quot;&gt;&gt; button.
 
@@ -10306,7 +10306,7 @@ Choosing appropriate tags is important for effective presentation and navigation
 
 There are different ways of displaying a Table of Contents, and of Sorting the links that are shown.
 
-The [[Table-of-Contents Macros]] gives details of the many more options available, as well as a link to [[Examples|Table-of-Contents Macros (Examples)]]
+The [[Table-of-Contents Macros]] gives details of the many more options available, and the [[Examples|Table-of-Contents Macros (Examples)]] has a row of [[tabs|Tabs]] that reveal the code needed for each  style.
 
 </pre>
 </div>
