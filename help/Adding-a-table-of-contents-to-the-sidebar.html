@@ -9304,7 +9304,7 @@ tr.doc-table-subheading {
     }
 }</pre>
 </div>
-<div created="20181116021426288" creator="S. S." modified="20181213140629800" modifier="S. S." title="$:/temp/search">
+<div created="20181116021426288" creator="S. S." modified="20181214191733882" modifier="S. S." title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -10260,7 +10260,7 @@ System tiddlers that are provided as part of the [[core|Core]] are named accordi
 
 </pre>
 </div>
-<div created="20181107082426215" creator="S. S." modified="20181214081318632" modifier="S. S." note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
+<div created="20181107082426215" creator="S. S." modified="20181214191727132" modifier="S. S." note="http://toc-tutorial.tiddlyspot.com/   https://github.com/Jermolene/TiddlyWiki5/pull/3518/files https://groups.google.com/forum/?hl=en&amp;#!topic/tiddlywikidocs/wfGDPBKTKeA" related="[[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[titleField]] [[Field]] [[captionField]]" tags="Beginners [[Customise TiddlyWiki]]" title="Table of Contents for Beginners">
 <pre>&lt;&lt;.preamble &quot;&quot;&quot;In this tutorial, a Table of Contents refers to a tiddler that displays an automatically created, self updating list of links to our chosen tiddlers. Its structure is created through a &quot;parent-child&quot; -- &quot;title-tag&quot; system. &quot;&quot;&quot;&gt;&gt;
 
 On the [[sidebar|Sidebar]] (the menu on the right), you may have noticed a [[tab|Tabs]] named ''&lt;&lt;.toc-tab&gt;&gt;''.&lt;br&gt;
@@ -10271,7 +10271,7 @@ The ''&lt;&lt;.toc-tab&gt;&gt;'' tab and the list below it is displayed by what 
 These  instructions should help you to:
 
 * Understand how a Table of Contents is structured.
-* Create your own properly configured &lt;&lt;.word parent&gt;&gt;Table of Contents [[tiddler|Tiddlers for Beginners]].
+* Create your own properly configured &lt;&lt;.word parent&gt;&gt; Table of Contents [[tiddler|Tiddlers for Beginners]].
 * Add it as a  ''&lt;&lt;.toc-tab&gt;&gt;'' [[tab|Tabs]] to the [[sidebar|Sidebar]] of your own ~TiddlyWiki.
 * Create &lt;&lt;.word child&gt;&gt; tiddlers to include in the Table of Contents.
 
@@ -10307,7 +10307,7 @@ There is another tiddler (a part of ~TiddlyWiki's [[Core]]) that looks out for t
 
 !!!!! ''Note:'' This other tiddler that looks out for tiddlers tagged with &lt;&lt;.tag ~$:/tags/SideBar&gt;&gt; is a [[Shadow Tiddler|Shadow Tiddlers for Beginners]] which is part of [[TiddlyWiki's Core|TiddlyWiki's Core for Beginners]], and though it is not necessary to be aware of which particuar tiddler,  for your later interest, it is:  $:/core/ui/SideBarLists  
 
-A slightly more detailed description is at [[Adding a table of contents to the sidebar]].
+A more technically worded help tiddler is: [[Adding a table of contents to the sidebar]].
 
 !!Add text to your Table of Contents tiddler
 
@@ -10326,7 +10326,7 @@ You now have a new tab in the sidebar area called ''~TableOfContents''. Click on
 
 Next: You may want to change the name that appears on the tab label to be more concise, say from ''~TableOfContents'' to ''&lt;&lt;.toc-tab&gt;&gt;''
 
-The tiddler's title is used as the tab title but this can be overriden by using a &lt;&lt;.field caption&gt;&gt; field in the tiddler.
+The tiddler's title is used as the label on the tab, but this can be overridden by using a &lt;&lt;.field caption&gt;&gt; field in the tiddler.
 
 Reopen the &lt;&lt;.tid ~TableOfContents&gt;&gt; tiddler for editing by clicking its {{$:/core/ui/Buttons/edit}} &lt;!-- NOTE: &lt;&lt;.button-small edit&gt;&gt; --&gt; icon, and towards the bottom of the tiddler, [[add a new field|Creating and editing tiddlers]] name called:  &lt;&lt;.field caption&gt;&gt;
 
@@ -10369,9 +10369,9 @@ My first Table of Contents!
 
 Save your &lt;&lt;.tid ~TableOfContents&gt;&gt; tiddler and note that – on the ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar, nothing has changed. Neither does your saved &lt;&lt;.word ~TableOfContents&gt;&gt; tiddler show a visible change.
 
-The key word in the above section of code is: &lt;&lt;.word //~TableOfContents//&gt;&gt;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear on your ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar. Since currently nothing has the tag //~TableOfContents// nothing has appeared there.
+The key word in the above section of code is: &lt;&lt;.word //~TableOfContents//&gt;&gt;. Now, any tiddler that has a tag &lt;&lt;tag TableOfContents&gt;&gt; will be noticed by that code, and a link to that tiddler will appear in your &lt;&lt;.tid ~TableOfContents&gt;&gt; tiddler, and thus also on your ''&lt;&lt;.toc-tab&gt;&gt;'' tab on the sidebar. Since currently nothing has the tag //~TableOfContents// nothing has appeared there.
 
-Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... &gt;&gt;` in the code above refers to by reading about the included collection of these [[macros for making Table of Contents|Table-of-Contents Macros]] and the [[examples|Table-of-Contents Macros (Examples)]] linked to therein. At some point later, it will also be helpful to understand what [[macros|Macros]] are.
+Note: Later you can get an idea of what `&lt;&lt;toc-selective-expandable ..... &gt;&gt;` in the code above refers to by reading about the included collection of [[macros for making Table of Contents|Table-of-Contents Macros]] and the [[examples|Table-of-Contents Macros (Examples)]] linked to therein. At some point later, it will also be helpful to understand what [[macros|Macros]] are.
 
 !!Add some items to your Table of Contents
 
@@ -10407,6 +10407,11 @@ Add another few tiddlers. Name them whatever you like, perhaps something like:&l
 Tag them all with: &lt;&lt;tag About&gt;&gt;
 
 After you have saved them, under your ''&lt;&lt;.toc-tab&gt;&gt;'' tab, click on the menu item ''About''. You will see all these new tiddler links listed. Clicking on any of them will take you to those tiddlers.
+
+Note: In this example:
+
+* &lt;&lt;.tid ~TableOfContents&gt;&gt; is the parent tiddler of the &lt;&lt;.tid About&gt;&gt; tiddler
+* &lt;&lt;.tid About&gt;&gt; is the parent tiddler of the &lt;&lt;.tid ~HelloThere&gt;&gt; , &lt;&lt;.tid &quot;About This Place&quot;&gt;&gt; , and &lt;&lt;.tid Contact&gt;&gt; tiddlers
 
 !!A Concept to Understand
 
