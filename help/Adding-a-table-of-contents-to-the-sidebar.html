@@ -9314,10 +9314,10 @@ Download Empty {{$:/core/images/save-button}}
     }
 }</pre>
 </div>
-<div created="20181116021426288" creator="S. S." modified="20181216142554556" modifier="S. S." title="$:/temp/search">
+<div created="20181116021426288" creator="S. S." modified="20181216153822588" modifier="S. S." title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181216122257264" creator="S. S." modified="20181216142608764" modifier="S. S." title="$:/temp/toc/selectedTiddler">
+<div created="20181216122257264" creator="S. S." modified="20181216161500252" modifier="S. S." title="$:/temp/toc/selectedTiddler">
 <pre>Discover TiddlyWiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -9598,8 +9598,7 @@ Next: [[A Gentle Guide to TiddlyWiki]]
 </pre>
 </div>
 <div created="20181213140706352" creator="S. S." modified="20181213140840388" modifier="S. S." tags="Notes" title="Documentation - notes">
-<pre>
-Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
+<pre>Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
 morosanuae opened this Jun 18, 2017</pre>
 </div>
 <div created="20181114055704028" creator="S. S." modified="20181212161426118" modifier="S. S." tags="Making-ToC-Tutorial todo" title="Documentation Macros Request">
@@ -10863,7 +10862,7 @@ Internally, tiddlers are a list of uniquely named values called fields. The only
 Tiddlers are ubiquitous in TiddlyWiki. They are used to store everything from JavaScript code modules to the settings and state associated with the user interface.
 </pre>
 </div>
-<div created="20181109053759931" creator="S. S." modified="20181213050847130" modifier="S. S." tags="Beginners" title="Tiddlers for Beginners">
+<div created="20181109053759931" creator="S. S." modified="20181216155425384" modifier="S. S." tags="Beginners" title="Tiddlers for Beginners">
 <pre>!!What is a tiddler?
 Tiddlers are the basic building blocks in ~TiddlyWiki.
 
@@ -10887,22 +10886,21 @@ Since most everything is in tiddlers, they are all accessible to you, including 
 
 
 
-When a [[new tiddler is created|Creating and editing tiddlers]], the only field that needs to be filled in is the ''title'' field. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
+When a [[new tiddler is created|Creating and editing tiddlers]], the only [[field|Fields for Beginners]] that needs to be filled in is the ''title'' field. This must be a unique name, as it identifies the tiddler. The title can be changed later, but then, any direct reference to that title must also be changed.
 
 Before choosing a title for your tiddler, you may want to read up on [[Tiddler Title Naming Systems]].
 
 When a tiddler is first made, some fields are created automatically. Some are visible for you to put in your text, like the &lt;&lt;.field title&gt;&gt;, &lt;&lt;.field tag&gt;&gt; and &lt;&lt;.field text&gt;&gt; fields, but others are not, such as the &lt;&lt;.field created&gt;&gt; date field.  
 
-At some point, in order to hold information you want to store, you will want to add your own custom fields to your tiddlers. Before you decide on any custom fields you wish to give, it is important that you are aware of the list of standard and other [[reserved field|TiddlerFields]] names.
+At some point, in order to hold information you want to store, you will want to add your own custom fields to your tiddlers. Before you decide on any custom fields you wish to give, it is important that [[you are aware of|TiddlerFields]] field naming rules and the list of standard and other reserved field names.
 
-A tiddler's &lt;&lt;.field text&gt;&gt; field is the usual one used for displaying information. What you are reading here now is in the ''text'' field of a tiddler with a ''title'' filed that contains: &lt;$link&gt;{{!!title}}&lt;/$link&gt;
+A tiddler's &lt;&lt;.field text&gt;&gt; field is the usual one used for displaying information. What you are reading here now is in the ''text'' field of a tiddler with a ''title'' feild that has the value: ''&lt;$text text={{!!title}}/&gt;''
 
-&lt;$list filter=&quot;[all[current]tags[]]&quot;&gt;
-A tiddler's &lt;&lt;.field tag&gt;&gt; field will contain a list of tags you choose to give your tiddler. For this tiddler, the list contains the tag(s): &lt;$transclude tiddler=&quot;$:/core/ui/TagTemplate&quot;/&gt;
-&lt;/$list&gt;
 
-Ideally, ---
-Tiddlers work most effectively when they are small, and are used in such a way as to allow their re-use, so that they can be [[weaved together|Philosophy of Tiddlers]] in different ways.
+A tiddler's &lt;&lt;.field tag&gt;&gt; field will contain a list of tags you choose to give your tiddler. For this tiddler, the list has the text: ''&lt;$text text={{!!tags}}/&gt;''
+
+
+Ideally, Tiddlers work most effectively when they are small, and are used in such a way as to allow their re-use, so that they can be [[weaved together|Philosophy of Tiddlers]] in different ways.
 
 You may be ready to [[create your own tiddlers now|Creating and editing tiddlers]]!
 
@@ -10910,7 +10908,6 @@ You may be ready to [[create your own tiddlers now|Creating and editing tiddlers
 
 * [[The Concepts of Tiddlers|Tiddlers]]
 * [[Philosophy of Tiddlers]]
-
 
 
 </pre>
