@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/editions/tw5.com/doc-styles</li>
 
+<li>$:/editions/tw5.com/snippets/download-empty-button</li>
+
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
@@ -185,6 +187,8 @@ Error message and password prompt
 
 <li>$:/temp/search</li>
 
+<li>$:/temp/toc/selectedTiddler</li>
+
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
@@ -219,7 +223,7 @@ Error message and password prompt
 
 <li>Documentation Tiddlers Request</li>
 
-<li>Draft of 'A Gentle Guide to TiddlyWiki'</li>
+<li>Download and Get TiddlyWiki</li>
 
 <li>Field</li>
 
@@ -346,8 +350,8 @@ Error message and password prompt
 <div created="20181112103236036" modified="20181112103236036" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
-<div created="20181117065853250" creator="S. S." modified="20181213051312026" modifier="S. S." title="$:/config/RelinkOnRename">
-<pre>yes</pre>
+<div created="20181117065853250" creator="S. S." modified="20181216125850574" modifier="S. S." title="$:/config/RelinkOnRename">
+<pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.17">
 <pre>{
@@ -8883,8 +8887,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20181112103147346" creator="S. S." modified="20181212161835448" modifier="S. S." title="$:/DefaultTiddlers">
-<pre>[[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[Field]] [[titleField]] [[captionField]] [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]]  [[How I found this place]] [[My First Encounter]]</pre>
+<div created="20181112103147346" creator="S. S." modified="20181216142536150" modifier="S. S." title="$:/DefaultTiddlers">
+<pre>[[Beginners]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Sidebar]] [[Tabs]] [[Field]] [[titleField]] [[captionField]] [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]]  [[How I found this place]] [[My First Encounter]]</pre>
 </div>
 <div created="20150117152607000" modified="20181114055600440" tags="$:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
 <pre>\define .concat(1,2,3,4,5) $1$$2$$3$$4$$5$
@@ -9194,10 +9198,16 @@ tr.doc-table-subheading {
     vertical-align: text-bottom;
 }</pre>
 </div>
+<div title="$:/editions/tw5.com/snippets/download-empty-button">
+<pre>&lt;$button class=&quot;tc-btn-big-green&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-download-file&quot; $param=&quot;$:/editions/tw5.com/download-empty&quot; filename=&quot;empty.html&quot;/&gt;
+Download Empty {{$:/core/images/save-button}}
+&lt;/$button&gt;</pre>
+</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[TiddlyWiki Prerelease]]</pre>
+# [[$:/editions/tw5.com/snippets/download-empty-button]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9232,7 +9242,7 @@ tr.doc-table-subheading {
 <div created="20181116042215658" creator="S. S." modified="20181213140638452" modifier="S. S." title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20181112101913034" creator="S. S." modified="20181214081714882" modifier="S. S." title="$:/state/tab/sidebar--1835078512">
+<div created="20181112101913034" creator="S. S." modified="20181216140543414" modifier="S. S." title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20181115150403170" modified="20181116104729906" title="$:/state/tabSample-1067554119">
@@ -9244,7 +9254,7 @@ tr.doc-table-subheading {
 <div created="20181209170344264" creator="S" modified="20181209170345986" modifier="S. S" title="$:/status/UserName">
 <pre>S. S.</pre>
 </div>
-<div list="[[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
+<div list="Beginners [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181114083614858" creator="S. S." modified="20181213071808726" modifier="S. S." title="$:/temp/advancedsearch">
@@ -9304,8 +9314,11 @@ tr.doc-table-subheading {
     }
 }</pre>
 </div>
-<div created="20181116021426288" creator="S. S." modified="20181214191733882" modifier="S. S." title="$:/temp/search">
+<div created="20181116021426288" creator="S. S." modified="20181216142554556" modifier="S. S." title="$:/temp/search">
 <pre></pre>
+</div>
+<div created="20181216122257264" creator="S. S." modified="20181216142608764" modifier="S. S." title="$:/temp/toc/selectedTiddler">
+<pre>Discover TiddlyWiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
 <pre>{
@@ -9419,7 +9432,7 @@ tr.doc-table-subheading {
 <div created="20181116104353664" modified="20181116104353664" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20150325170720682" creator="S. S." modified="20181213062949054" modifier="S. S." tags="Beginners HelloThere" title="A Gentle Guide to TiddlyWiki" type="text/vnd.tiddlywiki">
+<div created="20150325170720682" creator="S. S." modified="20181216140614920" modifier="S. S." tags="Beginners HelloThere" title="A Gentle Guide to TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>TiddlyWiki is an incredibly flexible and versatile tool that is conceived and constructed differently than most software. This can make it hard to understand until the moment when it clicks, and becomes a seamless extension of your brain.
 
 Starting with the basics, TiddlyWiki is a note-taking web application you can download for free, store wherever you like and customise however you wish. Use it to capture, organise and share your notes in ways that word processors and other note-taking tools cannot.
@@ -9432,12 +9445,22 @@ How can you make ~TiddlyWiki work for you? We recommend you start with our intro
 
 &lt;&lt;list-links &quot;[tag[HelloThere]]&quot;&gt;&gt;
 
-Also see [[TiddlyWiki Video Tutorials by Francis Meetze]]</pre>
+Also see [[TiddlyWiki Video Tutorials by Francis Meetze]]
+
+Next: [[Some of the things you can do with TiddlyWiki]]</pre>
 </div>
-<div caption="Beginners Help" created="20181116092351996" list="[[Table of Contents for Beginners]]" modified="20181116092914500" tags="TableOfContents" title="Beginners">
+<div caption="Beginners Help" created="20181116092351996" creator="S. S." list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Download and Get TiddlyWiki]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[Tiddlers for Beginners]] [[Tiddler Title Naming Systems]] [[Tags for Beginners]] [[Fields for Beginners]] [[Control Panel for Beginners]] Sidebar [[Save Manually and Keep a Back up Version]] [[Table of Contents for Beginners]]" modified="20181216142149094" modifier="S. S." tags="TableOfContents" title="Beginners">
 <pre>Below are suggested first steps for beginners.
 
-&lt;&lt;list-links filter:&quot;[tag[Beginners]]&quot;&gt;&gt;</pre>
+&lt;$macrocall
+	$name=&quot;toc-tabbed-internal-nav&quot;
+	tag=&quot;Beginners&quot;
+	selectedTiddler=&quot;$:/temp/toc/selectedTiddler&quot;
+	unselectedText=&quot;&lt;p&gt;Select a topic in the table of contents. Click the arrow to expand a topic.&lt;/p&gt;&quot;
+	missingText=&quot;&lt;p&gt;Missing tiddler.&lt;/p&gt;&quot;
+/&gt;
+
+</pre>
 </div>
 <div created="20181213043331744" creator="S. S." list="[[A Gentle Guide to TiddlyWiki]] [[Tiddlers for Beginners]] [[Tiddler Title Naming Systems]] [[Tags for Beginners]] [[Table of Contents for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[Save Manually Often as a Habit]] [[Save Manually and Keep a Back up Version]] Sidebar Tabs [[Control Panel for Beginners]] [[Macros for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]]" modified="20181213051553382" modifier="S. S." tags="" title="Beginners Guide to TiddlyWiki">
 <pre>&lt;&lt;list-links-draggable tiddler:&quot;Beginners Guide to TiddlyWiki&quot; field:&quot;list&quot;&gt;&gt;</pre>
@@ -9537,7 +9560,7 @@ When adding a new Field, the list of choices does not filter down as you type th
 
 Using sliders</pre>
 </div>
-<div created="20140904121000000" creator="S. S." modified="20181213060715912" modifier="S. S." tags="HelloThere" title="Discover TiddlyWiki" type="text/vnd.tiddlywiki">
+<div created="20140904121000000" creator="S. S." modified="20181216131632126" modifier="S. S." tags="Beginners HelloThere" title="Discover TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>You've never seen //anything// like ~TiddlyWiki. 
 
 ;~TiddlyWiki is:
@@ -9571,7 +9594,7 @@ The [[TiddlyWiki philosophy|Philosophy of Tiddlers]] is that the best way to tak
 
 These tiddlers can then be woven together to create longer units: stories, articles, lists, image galleries, and much more. ~TiddlyWiki's features such as tagging, hyperlinking, and filters are specially designed to help you relate and connect tiddlers together in multiple ways, facilitating future retrieval of your notes and even helping you see unexpected relationships among your tiddlers and the information they contain.
 
-Have a look at: [[Some of the things you can do with TiddlyWiki]]
+Next: [[A Gentle Guide to TiddlyWiki]]
 </pre>
 </div>
 <div created="20181213140706352" creator="S. S." modified="20181213140840388" modifier="S. S." tags="Notes" title="Documentation - notes">
@@ -9691,20 +9714,28 @@ etc.
 
 </pre>
 </div>
-<div created="20150325170720682" creator="S. S." draft.of="A Gentle Guide to TiddlyWiki" draft.title="A Gentle Guide to TiddlyWiki" modified="20181213062958130" modifier="S. S." tags="Beginners HelloThere" title="Draft of 'A Gentle Guide to TiddlyWiki'" type="text/vnd.tiddlywiki">
-<pre>TiddlyWiki is an incredibly flexible and versatile tool that is conceived and constructed differently than most software. This can make it hard to understand until the moment when it clicks, and becomes a seamless extension of your brain.
+<div created="20181216122641546" creator="S. S." modified="20181216141056102" modifier="S. S." tags="Beginners" title="Download and Get TiddlyWiki">
+<pre>!!Downloading your copy of ~TiddlyWiki
 
-Starting with the basics, TiddlyWiki is a note-taking web application you can download for free, store wherever you like and customise however you wish. Use it to capture, organise and share your notes in ways that word processors and other note-taking tools cannot.
+Click the button below to download a starter edition of ~TiddlyWiki. This is the file you should use to begin your exploration and work. The file will have the name: ''empty.html'' 
 
-~TiddlyWiki is designed to be non-linear, structuring content with stories, tags, hyperlinks, and other features. You can organise and retrieve your notes in ways that conform to your personal thought patterns, rather than feel chained to one preset organisational structure.
+Save the file in a folder of your choice, and rename the file if you wish, but ensure the file extension is ''.html'' or ''.htm''
 
-You can use ~TiddlyWiki as a single file that you view and edit through any web browser, whether you are online or offline. Or you can use it as a powerful [[Node.js application|TiddlyWiki on Node.js]] that stores each of your notes as a separate file.
+The next step is to locate your saved file and open it in your browser; perhaps in a new browser window (or a new tab) so that you can reference the information here while using your own ~TiddlyWiki.
 
-How can you make ~TiddlyWiki work for you? We recommend you start with our introductory documentation listed below, and then browse the TableOfContents, available in the &lt;&lt;.toc-tab&gt;&gt; tab in the sidebar. Or just [[follow our simple instructions|GettingStarted]] and try it out for yourself!
+ {{$:/editions/tw5.com/snippets/download-empty-button}}
 
-&lt;&lt;list-links &quot;[tag[HelloThere]]&quot;&gt;&gt;
+&lt;&lt;.warning &quot;Do not attempt to use the browser ''File''/''Save'' menu option to save your ~TiddlyWiki, or to save any changes you make to it. ''It will not work''.&quot;&gt;&gt;
 
-Also see [[TiddlyWiki Video Tutorials by Francis Meetze]]</pre>
+
+
+!!More Information
+
+The most common method of downloading the empty starter edition and of saving any changes you make to it is at: [[Saving with the HTML5 fallback saver]]
+
+Information on doing this on various Operating systems and Devices  is here: [[Getting Started|GettingStarted]]
+
+Please do read and follow: [[The First Rule of Using TiddlyWiki]]</pre>
 </div>
 <div created="20181109054928786" modified="20181116043621502" tags="todo Concepts" title="Field">
 <pre>What is a field?
@@ -10171,7 +10202,7 @@ Doing this often (at least every few days) is a great way to manually keep archi
 
 </pre>
 </div>
-<div created="20181121034236092" modified="20181126063619580" tags="Beginners [[Working with TiddlyWiki]]" title="Save Manually Often as a Habit">
+<div created="20181121034236092" creator="S. S." modified="20181216142041386" modifier="S. S." tags="Beginners [[Working with TiddlyWiki]]" title="Save Manually Often as a Habit">
 <pre>This saving method is written for Microsoft Windows browsers. It addresses [[The First Rule of Using TiddlyWiki]]!
 
 Your ~TiddlyWiki is an html file. Say this file is named: ''~MyTiddlyWiki.html'' and is in a folder called ''TW''
@@ -10195,8 +10226,6 @@ Doing this often (every time you've made 5 to 10 minutes worth of additions and 
 Before any significant changes, and perhaps once every few days (or less) - remember to [[Save Manually and Keep a Back up Version]] to avoid the catastrophe of a hiccup that corrupts your file while saving it.
 
 There are many other ways of [[Saving]] as well.
-
-
 </pre>
 </div>
 <div created="20181212171150330" creator="S. S." modified="20181212171842072" modifier="S. S." tags="todo Beginners" title="Shadow Tiddlers for Beginners">
@@ -10229,7 +10258,7 @@ Below that is a search bar, and a row of tabs that contain lists of links or but
 
 </pre>
 </div>
-<div created="20140904090300000" creator="S. S." modified="20181213061801038" modifier="S. S." tags="HelloThere" title="Some of the things you can do with TiddlyWiki" type="text/vnd.tiddlywiki">
+<div created="20140904090300000" creator="S. S." modified="20181216122119246" modifier="S. S." tags="Beginners HelloThere" title="Some of the things you can do with TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>* Take notes, and use tags and hyperlinking to form relationships between your notes
 * Use tabs, tables, tag-based lists, and tables of contents to get organised
 * Bookmark your favorite websites (see an example at http://giffmex.org/experiments/tidmarks.html)
@@ -10691,7 +10720,7 @@ For more, see [[Tagging]].</pre>
 
 * [[Tags-101|http://tobibeer.github.io/tb5/#Tags-101]] on ''tb5 - a pocket full of tips''  by Tobias Beer which was linked to from Google Groups [[List tiddlers by tag in sidebar?|https://groups.google.com/forum/?hl=en&amp;#!msg/tiddlywiki/9Cr9AKYGgVA/nxO6wMy4DwAJ]]</pre>
 </div>
-<div created="20140904085700000" creator="S. S." modified="20181213062700226" modifier="S. S." tags="HelloThere" title="Ten reasons to switch to TiddlyWiki" type="text/vnd.tiddlywiki">
+<div created="20140904085700000" creator="S. S." modified="20181216140744488" modifier="S. S." tags="Beginners HelloThere" title="Ten reasons to switch to TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>@@.tc-double-spaced-list
 # With ~TiddlyWiki you can organise your notes your way, not their way. Your notes conform to your way of thinking rather than being forced into a hierarchical straightjacket of notebooks and tabs
 # ~TiddlyWiki's nonlinear approach will actually make you think about your information in new and helpful ways
@@ -10699,16 +10728,24 @@ For more, see [[Tagging]].</pre>
 # There are many ways to customise and adapt every aspect of ~TiddlyWiki
 # ~TiddlyWiki is free and is compatible with all platforms. Any web browser will open it. You don't need to purchase an expensive program or pay a subscription fee to use it
 # ~TiddlyWiki files promote the free sharing of information. There are many ways you can share your information from ~TiddlyWiki
-# With ~TiddlyWiki, your information is yours, and you store it where you want to - on your device, on a USB stick, in Dropbox, on your server - even in just one single file that includes your data and the program
+# With ~TiddlyWiki, your information is yours, and you store it where you want to - on your device, on a USB stick, in Dropbox, on your server
 # ~TiddlyWiki features an ever-growing number of plugins, themes, widgets, and languages
 # The online ~TiddlyWiki community is friendly and will do their best to give you the help you need
 # If you are a programmer, you have even more ways to play with ~TiddlyWiki. With ~TiddlyWiki, the more you know, the more fun you can have with it
 @@
 
-Here's [[a Gentle Guide to TiddlyWiki|A Gentle Guide to TiddlyWiki]]</pre>
+[[Download and Get TiddlyWiki]]</pre>
 </div>
-<div created="20140419132828051" modified="20140919154434409" tags="[[Working with TiddlyWiki]]" title="The First Rule of Using TiddlyWiki" type="text/vnd.tiddlywiki">
-<pre>! Horror Stories
+<div created="20140419132828051" creator="S. S." modified="20181216142139778" modifier="S. S." tags="Beginners [[Working with TiddlyWiki]]" title="The First Rule of Using TiddlyWiki" type="text/vnd.tiddlywiki">
+<pre>! Back up your data!
+
+Backing up your data  means - backing up your ~TiddlyWiki
+
+~TiddlyWiki is a very flexible, customisable system that puts you firmly in charge of your own data. Every care is taken in ~TiddlyWiki's development to ensure that it is a safe place to preserve your most valuable data but the ultimate responsibility to reduce the risk of data loss falls to users.
+
+It's easy to make a backup.
+
+! Horror Stories
 
 Every so often, TiddlyWiki users report heart-rending tales of personal data loss on the discussion groups:
 
@@ -10724,11 +10761,11 @@ Don't let it happen to you!
 
 !! The first rule of using TiddlyWiki is:
 
-&lt;p style=&quot;font-size:40pt;line-height:48pt;font-weight:700;color:red;&quot;&gt;
+&lt;p style=&quot;font-size:30pt;line-height:48pt;font-weight:700;color:red;&quot;&gt;
 Backup your data!
 &lt;/p&gt;
 
-TiddlyWiki is a very flexible, customisable system that puts you firmly in charge of your own data. Every care is taken in TiddlyWiki's development to ensure that it is a safe place to preserve your most valuable data but the ultimate responsibility to reduce the risk of data loss falls to users.
+
 
 The best way to make sure that your data is safe is to practise a rigorous system of backups:
 
@@ -10736,7 +10773,8 @@ The best way to make sure that your data is safe is to practise a rigorous syste
 * Retain backups before upgrading to a new version of TiddlyWiki
 * Figure out and protect yourself from the worst case scenarios: what if your USB stick or hard drive fails? What if your computer is hit by a ransomeware virus?
 * Be defensive and redundant: for example, take multiple backups and keep them in separate physical locations
-</pre>
+
+Remember: [[Save Manually Often as a Habit]]</pre>
 </div>
 <div created="20181117071716086" modified="20181128073303774" tags="todo Beginners" title="Tiddler Title Naming Systems">
 <pre>Conventions for Title names for your tiddlers
