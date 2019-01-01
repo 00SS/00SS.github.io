@@ -137,7 +137,11 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/_tw5.com-styles</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
+<li>$:/config/peek-stylesheets/open/-947092625$:/themes/tiddlywiki/snowwhite/base</li>
 
 <li>$:/config/RelinkOnRename</li>
 
@@ -170,6 +174,8 @@ Error message and password prompt
 <li>$:/state/SampleReveal2</li>
 
 <li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
 
 <li>$:/state/tab--1498284803</li>
 
@@ -224,6 +230,8 @@ Error message and password prompt
 <li>Core</li>
 
 <li>Core and Shadow Tiddlers for Beginners</li>
+
+<li>CountWidget</li>
 
 <li>Creating and editing tiddlers</li>
 
@@ -329,6 +337,10 @@ Error message and password prompt
 
 <li>Philosophy of Tiddlers</li>
 
+<li>Quote about TiddlyWiki by Joe Armstrong</li>
+
+<li>Quote about TiddlyWiki by Mark Gibbs</li>
+
 <li>Reference Tiddlers</li>
 
 <li>SampleTabFour</li>
@@ -357,9 +369,13 @@ Error message and password prompt
 
 <li>Sidebar</li>
 
+<li>Social Media buttons</li>
+
 <li>Some of the things you can do with TiddlyWiki</li>
 
 <li>Spelling</li>
+
+<li>StateTiddler</li>
 
 <li>Story River</li>
 
@@ -413,6 +429,16 @@ Error message and password prompt
 
 <li>TiddlyWiki</li>
 
+<li>TiddlyWiki on Social Media - Forum button</li>
+
+<li>TiddlyWiki on Social Media - GitHub button</li>
+
+<li>TiddlyWiki on Social Media - Gitter button</li>
+
+<li>TiddlyWiki on Social Media - Twitter button</li>
+
+<li>TiddlyWiki on Social Media - YouTube button</li>
+
 <li>TiddlyWiki Prerelease</li>
 
 <li>TiddlyWiki's Core for Beginners</li>
@@ -447,8 +473,86 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20181231085747720" modified="20181231085911454" tags="$:/tags/Stylesheet" title="$:/_tw5.com-styles">
+<pre>.tc-double-spaced-list li {
+	padding-bottom: .5em;
+	padding-top: .5em;
+}
+
+.tc-link-info-item {
+    border: 1px solid #ebefcd;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: #fcfdf3;
+    font-size: 0.8em;
+    line-height: 1.2;
+}
+
+.tc-link-info-item h1 {
+	font-weight: 500;
+	font-size: 16px;	
+}
+
+.tc-scrollable-demo {
+	border: 1px solid &lt;&lt;colour message-border&gt;&gt;;
+	background-color: &lt;&lt;colour message-background&gt;&gt;;
+	padding: 1em;
+	height: 400px;
+	position: relative;
+	overflow: auto;
+}
+
+.tc-improvement-banner {
+	font-size: 0.7em;
+	background: #fcc;
+	padding-left: 5px;
+	margin-top: 6px;
+	margin-bottom: 12px;
+	&lt;&lt;box-shadow &quot;2px 2px 2px rgba(0,0,0,0.4)&quot;&gt;&gt;
+}
+
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+	
+	.tc-improvement-banner {
+	}
+
+}
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+	.tc-improvement-banner {
+		margin-right: -53px;
+		margin-left: -53px;
+	}
+
+	.tc-improvement-banner:before {
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		content: &quot; &quot;;
+		margin-left: -5px;
+		margin-top: -10px;
+		border-top: 5px solid transparent;
+		border-left: 5px solid transparent;
+		border-right: 5px solid #C07E7E;
+		border-bottom: 5px solid #C07E7E;
+	}
+
+}
+
+.tc-improvement-banner svg {
+	width: 1em;
+	height: 1em;
+}
+
+[data-tags=&quot;TableOfContents&quot;] .tc-tabbed-table-of-contents .tc-table-of-contents { max-width: 30% ; } </pre>
+</div>
 <div created="20181112103236036" modified="20181112103236036" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
+</div>
+<div created="20181230021324204" modified="20181230021324204" title="$:/config/peek-stylesheets/open/-947092625$:/themes/tiddlywiki/snowwhite/base">
+<pre>yes</pre>
 </div>
 <div created="20181117065853250" modified="20181216125850574" title="$:/config/RelinkOnRename">
 <pre>no</pre>
@@ -9699,9 +9803,7 @@ Download Empty {{$:/core/images/save-button}}
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Technical Prose Style]]
-# [[Tiddler Structure]]
-# [[Spelling]]</pre>
+# [[CountWidget]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9724,8 +9826,11 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181221084007454" modified="20181221084007454" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20181229183247608" modified="20181229183319502" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div created="20181230031116820" modified="20181230031128562" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
+<div created="20181229183247608" modified="20181230021248148" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20181229040735462" modified="20181229040750966" title="$:/state/tab-1951067844">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
@@ -9733,7 +9838,7 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181229031704868" modified="20181229183327834" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20181229184040934" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190101163953866" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -9751,11 +9856,11 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20181229134232100" list="[[Documentation Macros]] [[Instruction Tiddlers for Beginners]] [[Tiddler Structure]] [[Reference Tiddlers]] [[Notes within Documentation]] [[Documentation Restructuring Guidelines 2019]] [[Documentation - notes]] Typography [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[When you make a Tiddler]] [[What is a Tiddler?]] [[Download and Get TiddlyWiki]] [[Saving with the HTML5 fallback saver]] [[Make your first Tiddler]] [[Make a tiddler right now, right here]] [[A Gentle Guide to TiddlyWiki]] HelloThere [[Introduction Video]] Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20181229183401862" title="$:/StoryList">
+<div created="20181229134232100" list="[[Documentation Macros]] GettingStarted Saving HelloThere [[Social Media buttons]] [[TiddlyWiki on Social Media - Gitter button]] [[TiddlyWiki on Social Media - GitHub button]] [[TiddlyWiki on Social Media - Twitter button]] [[TiddlyWiki on Social Media - YouTube button]] [[TiddlyWiki on Social Media - Forum button]] [[Quote about TiddlyWiki by Mark Gibbs]] [[Quote about TiddlyWiki by Joe Armstrong]] [[Documentation Style Guide]] $:/_tw5.com-styles StateTiddler [[Structuring TiddlyWiki]] [[Instruction Tiddlers for Beginners]] [[Tiddler Structure]] [[Reference Tiddlers]] [[Notes within Documentation]] [[Documentation Restructuring Guidelines 2019]] [[Documentation - notes]] Typography [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[When you make a Tiddler]] [[What is a Tiddler?]] [[Download and Get TiddlyWiki]] [[Saving with the HTML5 fallback saver]] [[Make your first Tiddler]] [[Make a tiddler right now, right here]] [[A Gentle Guide to TiddlyWiki]] [[Introduction Video]] Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190101163950048" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20181229183311498" title="$:/temp/advancedsearch">
-<pre>docu css</pre>
+<div created="20181229183224518" modified="20181231091352114" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9811,7 +9916,7 @@ Download Empty {{$:/core/images/save-button}}
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20181229183224518" title="$:/temp/search">
+<div created="20181221081025004" modified="20190101163948716" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20181229184043390" title="$:/temp/toc/selectedTiddler">
@@ -10126,6 +10231,30 @@ It is defined in the plugin $:/core
 
 </pre>
 </div>
+<div caption="count" created="20131024141900000" modified="20181231130100000" tags="Widgets" title="CountWidget" type="application/x-tiddler">
+<pre>! Introduction
+
+The count widget displays the number of unique items in the output of specified [[filter expressions|Filters]].
+
+! Content and Attributes
+
+The content of the `&lt;$count&gt;` widget is ignored.
+
+|!Attribute |!Description |
+|filter |The filter expression to count |
+
+! Example
+
+```
+There are &lt;$count filter=&quot;[tag[Examples]]&quot;/&gt; tiddlers tagged with Examples
+```
+Displays as:
+
+&lt;&lt;&lt;
+There are &lt;$count filter=&quot;[tag[Examples]]&quot;/&gt; tiddlers tagged with Examples
+&lt;&lt;&lt;
+</pre>
+</div>
 <div created="20140904140300000" modified="20160607153747195" tags="[[Working with TiddlyWiki]]" title="Creating and editing tiddlers" type="text/vnd.tiddlywiki">
 <pre>! Creating tiddlers
 
@@ -10245,7 +10374,7 @@ Next: [[A Gentle Guide to TiddlyWiki]]
 <pre>Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
 morosanuae opened this Jun 18, 2017</pre>
 </div>
-<div created="20150110182600000" modified="20181229183504710" tags="[[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
+<div created="20150110182600000" modified="20190101094057834" tags="[[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
 <pre>The following macros are used throughout ~TiddlyWiki's documentation. Their names start with a dot to keep them out of the way of names that a user might try experimenting with. The CSS file associated with these macros is [[here|$:/editions/tw5.com/doc-styles]].
 
 !General
@@ -10262,6 +10391,7 @@ morosanuae opened this Jun 18, 2017</pre>
 |!Macro |!Used for |!Example |!Code|
 |^.tip |^hints and tips |&lt;&lt;.tip &quot;Turn your screen on, otherwise&lt;br&gt;you won't be able to see much.&quot;&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;&lt;.tip &quot;Turn your screen on, otherwise&lt;br&gt;you won't be able to see much.&quot;&gt;&gt;&quot;&quot;&quot;/&gt;|
 |^.warning |^warning advice |&lt;&lt;.warning &quot;Make a backup of your file&lt;br&gt;before you upgrade.&quot;&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;&lt;.warning &quot;Make a backup of your file&lt;br&gt;before you upgrade.&quot;&gt;&gt;&quot;&quot;&quot;/&gt;|
+|^.note|^a Note|&lt;&lt;.note &quot;Don't forget to click the Add button.&quot;&gt;&gt;|&lt;$text text=&quot;&quot;&quot;&lt;&lt;.note &quot;Don't forget to click the Add button.&quot;&gt;&gt;&quot;&quot;&quot;/&gt;|
 
 !Blocks
 |!Macro |!Used for |
@@ -10406,7 +10536,7 @@ morosanuae opened this Jun 18, 2017</pre>
 |theme |&lt;&lt;.button &quot;theme&quot;&gt;&gt; |&lt;$text text=&quot;&quot;&quot; &quot;&quot;&quot;/&gt;|
 </pre>
 </div>
-<div created="20181114055704028" modified="20181223011904626" tags="Notes Making-ToC-Tutorial todo" title="Documentation Macros Request">
+<div created="20181114055704028" modified="20181231091331466" tags="Notes Making-ToC-Tutorial todo" title="Documentation Macros Request">
 <pre>In the [[Documentation Macros]] macro tiddler: $:/editions/tw5.com/doc-macros
 
 There exists a macro: &lt;br&gt;
@@ -10531,7 +10661,15 @@ Tiddlers tagged &lt;&lt;tag HelloThumbnail&gt;&gt; need to have a tooltip field 
 
 ---
 Guidance usage of these two macros:
-`&lt;&lt;.example&gt;&gt;` &amp; `&lt;&lt;.operator-example&gt;&gt;`</pre>
+`&lt;&lt;.example&gt;&gt;` &amp; `&lt;&lt;.operator-example&gt;&gt;`
+
+---
+Add this line in [[$:/_tw5.com-styles]] to allow the Internal Tabbed ~ToC to use less space to display the left side Links (originally 50% in [[$:/themes/tiddlywiki/vanilla/base]] - changing to 30% :
+
+```
+[data-tags=&quot;TableOfContents&quot;] .tc-tabbed-table-of-contents .tc-table-of-contents { max-width: 30% ; } 
+
+```</pre>
 </div>
 <div created="20181213092751732" modified="20181213092908500" tags="todo" title="Documentation Observations">
 <pre>[[Saving]] tiddler - shows both SAVING and HOSTING information. It may be better to split these into TWO separate tiddlers.</pre>
@@ -10574,7 +10712,7 @@ Guidance usage of these two macros:
 : What's where
 : Learning</pre>
 </div>
-<div created="20140904164608166" modified="20181229172523854" tags="[[Improving TiddlyWiki Documentation]]" title="Documentation Style Guide" type="text/vnd.tiddlywiki">
+<div created="20140904164608166" modified="20181231100249640" tags="[[Improving TiddlyWiki Documentation]]" title="Documentation Style Guide" type="text/vnd.tiddlywiki">
 <pre>The documentation for ~TiddlyWiki tries to follow a consistent editorial style. It has two main areas, each with its own tone and audience:
 
 * [[Instruction Tiddlers]]
@@ -10591,6 +10729,12 @@ Additional topics:
 * [[Typography]]
 * [[Documentation Macros]]
 * [[Technical Prose Style]]
+
+Location of Documentation Macros, CSS, tweaks:
+
+* [[$:/editions/tw5.com/doc-macros]] - macro definitions for documentation
+* [[$:/_tw5.com-styles]] - CSS file for macro definitions
+* [[$:/_tw5.com-styles]] - CSS tweaks related to documentation
 </pre>
 </div>
 <div created="20181114070246867" modified="20181229161645212" tags="Making-ToC-Tutorial todo" title="Documentation Tiddlers Request">
@@ -10793,10 +10937,19 @@ Before I continue, I would appreciate some guidance and opinions if this kind of
 
 </pre>
 </div>
-<div created="20130822170200000" list="[[A Gentle Guide to TiddlyWiki]] [[Discover TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] Examples [[What happened to the original TiddlyWiki?]] [[HelloThumbnail - TWEUM2017]]" modified="20181229133145552" tags="TableOfContents" title="HelloThere" type="text/vnd.tiddlywiki">
-<pre>!! This website is a single file ~TiddlyWiki!
+<div created="20130822170200000" list="[[A Gentle Guide to TiddlyWiki]] [[Discover TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] Examples [[What happened to the original TiddlyWiki?]] [[HelloThumbnail - TWEUM2017]]" modified="20181231112954838" tags="todo TableOfContents" title="HelloThere" type="text/vnd.tiddlywiki">
+<pre>''Have you ever had the feeling that your head is not quite big enough to hold everything you need to remember?''
 
-You can download this website exactly how you see it now and use it privately in your browser (though its not the recommended way to make your own ~TiddlyWiki).
+Welcome to TiddlyWiki, a unique [[non-linear|Philosophy of Tiddlers]] notebook for [[capturing|Creating and editing tiddlers]], [[organising|Structuring TiddlyWiki]] and [[sharing|Sharing your tiddlers with others]] complex information.
+
+Use it to keep your [[to-do list|TaskManagementExample]], to plan an [[essay or novel|&quot;TiddlyWiki for Scholars&quot; by Alberto Molina]], or to organise your wedding. Record every thought that crosses your mind, or build a flexible and responsive website.
+
+
+Unlike conventional online services, TiddlyWiki lets you choose where to keep your data, guaranteeing that in the decades to come you will [[still be able to use|Future Proof]] the notes you take today.
+
+!! This website is a single file ~TiddlyWiki!
+
+You can download this website exactly how you see it now and use it privately in your browser (though this is not the recommended way to make your own ~TiddlyWiki).
 
 Better is to download a ready to use empty ~TiddlyWiki and create your own peronalised version.
 
@@ -10806,50 +10959,28 @@ But first, watch the short introduction video. Then read the beginner's guide.
 &lt;&lt;list-thumbnails filter:&quot;[tag[HelloThumbnail]limit[3]]&quot; width:&quot;168&quot; height:&quot;95&quot;&gt;&gt;
 &lt;/div&gt;
 
-''Have you ever had the feeling that your head is not quite big enough to hold everything you need to remember?''
-
-Welcome to TiddlyWiki, a unique [[non-linear|Philosophy of Tiddlers]] notebook for [[capturing|Creating and editing tiddlers]], [[organising|Structuring TiddlyWiki]] and [[sharing|Sharing your tiddlers with others]] complex information.
-
-Use it to keep your [[to-do list|TaskManagementExample]], to plan an [[essay or novel|&quot;TiddlyWiki for Scholars&quot; by Alberto Molina]], or to organise your wedding. Record every thought that crosses your mind, or build a flexible and responsive website.
 
 
-Unlike conventional online services, TiddlyWiki lets you choose where to keep your data, guaranteeing that in the decades to come you will [[still be able to use|Future Proof]] the notes you take today.
+
 
 &lt;div style=&quot;font-size:0.9em;text-align:center;margin-top:2em;margin-bottom:2em;&quot;&gt;
 &lt;&lt;list-thumbnails filter:&quot;[tag[HelloThumbnail]!limit[4]]&quot; width:&quot;168&quot; height:&quot;95&quot;&gt;&gt;
 &lt;/div&gt;
 
-
-
 &lt;div style=&quot;font-size:0.em;text-align:center;margin:3em auto;&quot;&gt;
-&lt;a href=&quot;http://groups.google.com/group/TiddlyWiki&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#FF8C19;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-{{$:/core/images/help}} Forum
-&lt;/a&gt;
-&lt;a href=&quot;https://www.youtube.com/c/JeremyRuston&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#e52d27;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-{{$:/core/images/video}} ~YouTube
-&lt;/a&gt;
-&lt;a href=&quot;https://twitter.com/TiddlyWiki&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#5E9FCA;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-{{$:/core/images/twitter}} Twitter
-&lt;/a&gt;
-&lt;a href=&quot;https://github.com/Jermolene/TiddlyWiki5&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#444;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-{{$:/core/images/github}} ~GitHub
-&lt;/a&gt;
-&lt;a href=&quot;https://gitter.im/TiddlyWiki/public&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#753a88;background-image:linear-gradient(to left,#cc2b5e,#753a88);&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-{{$:/core/images/gitter}} Gitter
-&lt;/a&gt;
+{{Social Media buttons}}
 &lt;/div&gt;
 
-&lt;&lt;&lt;.tc-big-quote
-''The ~TiddlyWiki is the best software I've ever found for organising my ideas.''
-
-It's well worth spending an hour or so playing with it to see how it can help you. This will be time well-spent and will change how you think and how you organise your ideas.
-&lt;&lt;&lt; [[Joe Armstrong, Co-inventor of Erlang|https://joearms.github.io/]]
-
-&lt;&lt;&lt;.tc-big-quote
-''~TiddlyWiki gets a Gearhead rating of 6 out of 5 (it's that good).''
-
-Finding code that works flawlessly after just two or three years is magical enough but after seven years?!
-&lt;&lt;&lt; [[Mark Gibbs, Network World|http://www.networkworld.com/article/3028098/open-source-tools/tiddlywiki-a-free-open-source-wiki-revisited.html]]
+&lt;$list filter=&quot;[tag[Quote about TiddlyWiki]]&quot;&gt;
+&lt;blockquote class=&quot;tc-big-quote&quot;&gt;
+&lt;p&gt;
+{{!!text}}
+ &lt;/p&gt;
+&lt;cite&gt;
+&lt;a href={{!!link}} class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;{{!!description}}&lt;/a&gt;
+&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;/$list&gt;
 </pre>
 </div>
 <div created="20150414070451144" list="[[HelloThumbnail - Introduction Video]] [[HelloThumbnail - Beginners Guide]] [[HelloThumbnail - Latest Version]] [[HelloThumbnail - HelpingTiddlyWiki]] [[HelloThumbnail - TiddlyMap]] [[HelloThumbnail - Developers]] [[HelloThumbnail - Classic]]" modified="20181229125110642" title="HelloThumbnail" type="text/vnd.tiddlywiki">
@@ -11371,6 +11502,17 @@ The philosophy of [[tiddlers|Tiddlers]] is that we maximise the possibilities fo
 TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of expressing and exploring the relationships between items of information.
 </pre>
 </div>
+<div created="20181231101407804" description="Joe Armstrong, Co-inventor of Erlang" link="https://joearms.github.io/" modified="20181231102037694" tags="[[Quote about TiddlyWiki]]" title="Quote about TiddlyWiki by Joe Armstrong">
+<pre>''The ~TiddlyWiki is the best software I've ever found for organising my ideas.''
+
+It's well worth spending an hour or so playing with it to see how it can help you. This will be time well-spent and will change how you think and how you organise your ideas.</pre>
+</div>
+<div created="20181231101827102" description="Mark Gibbs, Network World" link="http://www.networkworld.com/article/3028098/open-source-tools/tiddlywiki-a-free-open-source-wiki-revisited.html" modified="20181231101944046" tags="[[Quote about TiddlyWiki]]" title="Quote about TiddlyWiki by Mark Gibbs">
+<pre>''~TiddlyWiki gets a Gearhead rating of 6 out of 5 (it's that good).''
+
+Finding code that works flawlessly after just two or three years is magical enough but after seven years?!
+</pre>
+</div>
 <div created="20141226192500000" modified="20150117152552000" tags="[[Improving TiddlyWiki Documentation]]" title="Reference Tiddlers">
 <pre>&lt;&lt;.def &quot;Reference tiddlers&quot;&gt;&gt; offer raw information in a comprehensive interlinked way. The reader is likely to be an intermediate or expert user.
 
@@ -11605,6 +11747,12 @@ The current shadow tiddlers are:
 
 </pre>
 </div>
+<div created="20181231110410334" modified="20181231112529628" tags="" title="Social Media buttons">
+<pre>&lt;$list filter=&quot;[tag[Social Media buttons]]&quot;&gt;
+&lt;$transclude tiddler=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+&lt;/$list&gt;
+</pre>
+</div>
 <div created="20140904090300000" modified="20181216122119246" tags="Beginners HelloThere" title="Some of the things you can do with TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>* Take notes, and use tags and hyperlinking to form relationships between your notes
 * Use tabs, tables, tag-based lists, and tables of contents to get organised
@@ -11637,6 +11785,9 @@ Avoid arbitrarily abbreviating words and sentences. But the following abbreviati
 |i.e. |that is to say |with a dot after each letter |
 |etc |and so on |without a dot |
 </pre>
+</div>
+<div created="20181230102359224" modified="20181230102437456" tags="Mechanisms" title="StateTiddler">
+<pre>See [[StateMechanism]]</pre>
 </div>
 <div created="20150917193906790" modified="20181219103521934" tags="Beginners Concepts" title="Story River" type="text/vnd.tiddlywiki">
 <pre>The &quot;story river&quot; (sometimes abbreviated to &quot;story&quot;) is the sequence of [[tiddlers|Tiddlers]] in the main column of the display.</pre>
@@ -12373,8 +12524,38 @@ People love using ~TiddlyWiki. Because it can be used without any complicated se
 ~TiddlyWiki was originally created by JeremyRuston and is now a thriving [[open source|License]] project with a busy [[Community]] of independent developers.
 </pre>
 </div>
-<div caption="Pre-release" created="20181213141407184" modified="20181213141726250" tags="Releases" title="TiddlyWiki Prerelease" type="text/vnd.tiddlywiki">
-<pre>The pre-release for the next version of ~TiddlyWiki can be found at https://tiddlywiki.com/prerelease/</pre>
+<div created="20181231105513294" modified="20181231110350992" tags="[[Social Media buttons]]" title="TiddlyWiki on Social Media - Forum button">
+<pre>&lt;a href=&quot;http://groups.google.com/group/TiddlyWiki&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#FF8C19;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+{{$:/core/images/help}} Forum
+&lt;/a&gt;
+</pre>
+</div>
+<div created="20181231105920174" modified="20181231110313462" tags="[[Social Media buttons]]" title="TiddlyWiki on Social Media - GitHub button">
+<pre>&lt;a href=&quot;https://github.com/Jermolene/TiddlyWiki5&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#444;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+{{$:/core/images/github}} ~GitHub
+&lt;/a&gt;
+</pre>
+</div>
+<div created="20181231105959018" modified="20181231110259892" tags="[[Social Media buttons]]" title="TiddlyWiki on Social Media - Gitter button">
+<pre>&lt;a href=&quot;https://gitter.im/TiddlyWiki/public&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#753a88;background-image:linear-gradient(to left,#cc2b5e,#753a88);&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+{{$:/core/images/gitter}} Gitter
+&lt;/a&gt;
+</pre>
+</div>
+<div created="20181231105836564" modified="20181231110326550" tags="[[Social Media buttons]]" title="TiddlyWiki on Social Media - Twitter button">
+<pre>&lt;a href=&quot;https://twitter.com/TiddlyWiki&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#5E9FCA;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+{{$:/core/images/twitter}} Twitter
+&lt;/a&gt;</pre>
+</div>
+<div created="20181231105732754" modified="20181231110338170" tags="[[Social Media buttons]]" title="TiddlyWiki on Social Media - YouTube button">
+<pre>&lt;a href=&quot;https://www.youtube.com/c/JeremyRuston&quot; class=&quot;tc-btn-big-green&quot; style=&quot;border-radius:4px;background-color:#e52d27;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+{{$:/core/images/video}} ~YouTube
+&lt;/a&gt;</pre>
+</div>
+<div caption="Pre-release" created="20181213010000000" modified="20190101000000000" tags="Releases" title="TiddlyWiki Prerelease" type="text/vnd.tiddlywiki">
+<pre>This version of ~TiddlyWiki is: &lt;&lt;version&gt;&gt;
+
+The pre-release for the upcoming version can be found at [ext[https://tiddlywiki.com/prerelease/]]</pre>
 </div>
 <div created="20181202063931954" modified="20181202064856474" tags="Beginners" title="TiddlyWiki's Core for Beginners">
 <pre>!!What is ~TiddlyWiki's Core?
