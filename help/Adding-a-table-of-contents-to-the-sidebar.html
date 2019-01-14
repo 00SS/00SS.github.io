@@ -183,6 +183,8 @@ Error message and password prompt
 
 <li>$:/state/tab--2112689675</li>
 
+<li>$:/state/tab--959111941</li>
+
 <li>$:/state/tab-1951067844</li>
 
 <li>$:/state/tab/moresidebar-1850697562</li>
@@ -9875,8 +9877,11 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181229183247608" modified="20181230021248148" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20190104052758546" modified="20190104052758546" title="$:/state/tab--2112689675">
+<div created="20190104052758546" modified="20190114045922102" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
+</div>
+<div created="20190114045923348" modified="20190114045923348" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
 <div created="20181229040735462" modified="20181229040750966" title="$:/state/tab-1951067844">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
@@ -9911,7 +9916,7 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190105081348692" list="[[Lists for Beginners]] Pragma [[Being Aware of Documentation's Userbase]] [[Instruction Tiddlers]] Notes todo [[Widgets for Beginners]] [[Documentation Macros]] [[Modifying Core Macros]] [[WikiText for Beginners]] [[Google Groups - Documentation mentions]] [[Documentation Restructuring Guidelines 2019]] [[Jeremy Ruston on How to Improve Documentation]] [[Notes within Documentation]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Documentation Observations]] [[Documentation - notes]] [[Filters for Beginners]] Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190111013737296" title="$:/StoryList">
+<div created="20190105081348692" list="TiddlerFields [[Fields for Beginners]] [[Lists for Beginners]] Pragma [[Being Aware of Documentation's Userbase]] [[Instruction Tiddlers]] Notes todo [[Widgets for Beginners]] [[Documentation Macros]] [[Modifying Core Macros]] [[WikiText for Beginners]] [[Google Groups - Documentation mentions]] [[Documentation Restructuring Guidelines 2019]] [[Jeremy Ruston on How to Improve Documentation]] [[Notes within Documentation]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Documentation Observations]] [[Documentation - notes]] [[Filters for Beginners]] Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190114054119278" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20181231091352114" title="$:/temp/advancedsearch">
@@ -9971,10 +9976,10 @@ Download Empty {{$:/core/images/save-button}}
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190114041845092" title="$:/temp/search">
+<div created="20181221081025004" modified="20190114054154968" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190114041938394" title="$:/temp/toc/selectedTiddler">
+<div created="20181221081005896" modified="20190114054219098" title="$:/temp/toc/selectedTiddler">
 <pre>Discover TiddlyWiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
@@ -10989,13 +10994,83 @@ Understanding the [[Draft Mechanism|DraftMechanism]] in full detail is for much 
 
 See [[TiddlerFields]]</pre>
 </div>
-<div created="20181213051453496" modified="20190104223859120" tags="todo Beginners Concepts" title="Fields for Beginners">
-<pre>Tiddler Fields are name:value pairs that make up a [[tiddler|Tiddlers for Beginners]]. 
+<div created="20181213051453496" modified="20190114054102908" tags="todo Beginners Concepts" title="Fields for Beginners">
+<pre>Most likely you will want to take advantage of creating your own custom fields within tiddlers, as an organised method of storing information that can then be used in many interesting ways.
 
-Field names must be lowercase letters, digits or the characters `-` (dash), `_` (underscore) and `.` (period).
 
-~TiddlyWiki uses
-TiddlerFields</pre>
+
+The short list below gives you an idea of some common custom field names created by long time users of ~TiddlyWiki.
+
+; Sample of custom field names
+: author
+: category
+: content
+: date
+: definition
+: dependents
+: description
+: due
+: link
+: key-words
+: url
+
+Tiddler Fields are &lt;&lt;.def &quot;name:value&quot;&gt;&gt; pairs that make up a [[tiddler|Tiddlers for Beginners]]. 
+
+!! Field Naming Restrictions
+
+; The field name must include only the following:
+: lowercase letters
+: digits
+: the characters:
+:: `-` (dash)
+::`_` (underscore)
+::`.` (period).
+
+The field value can contain any text.
+
+!! How to Add a Field to a Tiddler
+
+EXPLAIN here how it is done - as TiddlerFields does not do so.
+
+!! Default Fields
+
+; A tiddler will have the following default fields when first created.
+: title
+: tags
+: created
+: modifier
+: text
+
+; Other standard fields are created if required and include:
+
+: modifier
+: creator
+: type
+
+;Fields you might create to take advantage of ~TiddlyWiki's inbuilt features would include:
+
+: caption
+: list
+
+You do not create custom fields of your own that are Universal, meaning, that every tiddler created in any way, will have that custom field. Instead, each time a tiddler is created, the fields it will have can be specified. There are various ways of doing this, which you hopefully will learn later on.
+
+!! List of Field Names used by the ~TiddlyWiki Program
+
+A full list of Standard and Core fields used by ~TiddlyWiki and which you should not use for your own custom field names, are listed here: TiddlerFields
+
+!! A Detailed List of all useful Field Names
+
+A more comprehensive list of fields used in this ~TiddlyWiki can be seen here: 
+&lt;&lt;.button control-panel&gt;&gt; &gt;&gt; &lt;&lt;.controlpanel-tab Info&gt;&gt; tab &gt;&gt; &lt;&lt;.controlpanel-tab Advanced&gt;&gt; sub-tab &gt;&gt; Tiddler Fields tab
+
+!! List Every Single Field Name in the ~TiddlyWiki
+
+To list out every single field name used in this ~TiddlyWiki, including Custom fields, System fields, and Shadow fields used by the core program, create a new tiddler and copy and paste this code as its text, then save the tiddler:
+
+```
+&lt;&lt;list-links &quot;[all[tiddlers+shadows]fields[]sort[title]]&quot;&gt;&gt;
+```
+</pre>
 </div>
 <div created="20130827080000000" list="[[Introduction to filter notation]] [[Filter Syntax]]" modified="20150221225414000" tags="Reference Concepts" title="Filters" type="text/vnd.tiddlywiki">
 <pre>You can think of TiddlyWiki as a database in which the records are tiddlers. A database typically provides a way of discovering which records match a given pattern, and in ~TiddlyWiki this is done with filters.
