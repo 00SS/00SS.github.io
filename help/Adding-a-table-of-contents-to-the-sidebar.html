@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/editions/tw5.com/snippets/download-empty-button</li>
 
+<li>$:/editions/tw5.com/variable-macros</li>
+
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
@@ -175,6 +177,8 @@ Error message and password prompt
 
 <li>$:/state/Download and Get TiddlyWiki</li>
 
+<li>$:/state/Enable the Home button</li>
+
 <li>$:/state/SampleReveal2</li>
 
 <li>$:/state/showeditpreview</li>
@@ -186,6 +190,8 @@ Error message and password prompt
 <li>$:/state/tab--2112689675</li>
 
 <li>$:/state/tab--959111941</li>
+
+<li>$:/state/tab-1163638994</li>
 
 <li>$:/state/tab-1951067844</li>
 
@@ -277,7 +283,11 @@ Error message and password prompt
 
 <li>Download and Get TiddlyWiki</li>
 
+<li>Draft of 'Sidebar'</li>
+
 <li>Draft Tiddlers</li>
+
+<li>Enable the Home button</li>
 
 <li>Field</li>
 
@@ -308,6 +318,8 @@ Error message and password prompt
 <li>HelloThumbnail - Introduction Video</li>
 
 <li>Help</li>
+
+<li>Hidden Setting: Filename for Save Wiki Button</li>
 
 <li>HistoryMechanism</li>
 
@@ -602,7 +614,7 @@ Error message and password prompt
 
 [data-tags=&quot;TableOfContents&quot;] .tc-tabbed-table-of-contents .tc-table-of-contents { max-width: 30% ; } </pre>
 </div>
-<div created="20181112103236036" modified="20181112103236036" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<div created="20181112103236036" modified="20190122102758684" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
 <div created="20181230021324204" modified="20181230021324204" title="$:/config/peek-stylesheets/open/-947092625$:/themes/tiddlywiki/snowwhite/base">
@@ -9908,10 +9920,27 @@ exports.run = function(cond, then, elze) {
 Download Empty {{$:/core/images/save-button}}
 &lt;/$button&gt;</pre>
 </div>
+<div created="20150228114241000" modified="20150228141312000" tags="$:/tags/Macro" title="$:/editions/tw5.com/variable-macros">
+<pre>\define .variable-examples(v,text:&quot;Examples&quot;) &lt;$link to=&quot;$v$ Variable (Examples)&quot;&gt;$text$&lt;/$link&gt;
+\define .macro-examples(m,text:&quot;Examples&quot;) &lt;$link to=&quot;$m$ Macro (Examples)&quot;&gt;$text$&lt;/$link&gt;
+\define .widget-examples(w,text:&quot;Examples&quot;) &lt;$link to=&quot;$w$ Widget (Examples)&quot;&gt;$text$&lt;/$link&gt;
+
+\define .js-macro-link(_) [[$_$|https://tiddlywiki.com/dev/index.html#JavaScript%20Macros]]
+
+\define .this-is-static-link-variable() &lt;&lt;.tip &quot;This variable has no useful effect when ~TiddlyWiki is running in a browser, as the `href` attribute is ignored there -- links between tiddlers are performed by JavaScript instead. The variable comes into play when one is using the [[Node.js configuration|TiddlyWiki on Node.js]] to [[generate a static version|RenderTiddlersCommand]] of a wiki.&quot;&gt;&gt;
+
+\define .this-is-toolbar-config-variable(configTiddler)
+
+It can be set to &lt;&lt;.value yes&gt;&gt; or &lt;&lt;.value no&gt;&gt; prior to transcluding such a button.
+
+The standard page template sets it to the value found in [[$configTiddler$]], with the result that this becomes the default for the whole page. The user can adjust this default by using a tickbox on the &lt;&lt;.controlpanel-tab Settings&gt;&gt; tab of the [[Control Panel|$:/ControlPanel]].
+\end
+</pre>
+</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/editions/tw5.com/if-macro.js]]</pre>
+# [[Hidden Setting: Filename for Save Wiki Button]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9928,8 +9957,11 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181112101707036" modified="20181116043837204" title="$:/SiteTitle">
 <pre>Beginners Help</pre>
 </div>
-<div created="20181229154841532" modified="20181229170705310" title="$:/state/Download and Get TiddlyWiki">
+<div created="20181229154841532" modified="20190121093947934" title="$:/state/Download and Get TiddlyWiki">
 <pre>hide</pre>
+</div>
+<div created="20190122104000026" modified="20190122104000026" title="$:/state/Enable the Home button">
+<pre>show</pre>
 </div>
 <div created="20181229154823906" modified="20181229154919040" title="$:/state/SampleReveal2">
 <pre>hide</pre>
@@ -9940,22 +9972,25 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181230031116820" modified="20190117142938440" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20181229183247608" modified="20190119182316610" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20181229183247608" modified="20190121111938412" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20190104052758546" modified="20190114045922102" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Advanced</pre>
+<div created="20190104052758546" modified="20190122103054488" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20190114045923348" modified="20190114045923348" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
+<div created="20190122164559468" modified="20190122164600940" title="$:/state/tab-1163638994">
+<pre>$:/core/ui/MoreSideBar/Plugins/Theme</pre>
+</div>
 <div created="20181229040735462" modified="20181229040750966" title="$:/state/tab-1951067844">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
 </div>
-<div created="20181229031704868" modified="20190119180129138" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/System</pre>
+<div created="20181229031704868" modified="20190122164556502" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20181225144338180" modified="20190120163753900" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190123013359710" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -9982,11 +10017,11 @@ Download Empty {{$:/core/images/save-button}}
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190119173656146" list="[[Widget Tree for Beginners]] [[Widgets for Beginners]] $:/_tw5.com-styles $:/AdvancedSearch $:/language/EditTemplate/Fields/Add/Value/Placeholder $:/language/EditTemplate/Fields/Add/Dropdown/System $:/language/EditTemplate/Fields/Add/Prompt $:/language/EditTemplate/Fields/Add/Name/Placeholder $:/editions/tw5.com/doc-macros [[Documentation Macros]] $:/editions/tw5.com/doc-styles Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] Sidebar Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190120155036520" title="$:/StoryList">
+<div created="20190119173656146" list="[[Enable the Home button]] [[Make a tiddler right now, right here]] $:/Import [[Hidden Setting: Filename for Save Wiki Button]] [[Widget Tree for Beginners]] [[Widgets for Beginners]] $:/_tw5.com-styles $:/AdvancedSearch $:/language/EditTemplate/Fields/Add/Value/Placeholder $:/language/EditTemplate/Fields/Add/Dropdown/System $:/language/EditTemplate/Fields/Add/Prompt $:/language/EditTemplate/Fields/Add/Name/Placeholder [[Documentation Macros]] Beginners [[Beginners Documentation Saga]] [[Table of Contents for Beginners]] [[Tiddlers for Beginners]] [[Draft of 'Sidebar']] Tabs Field titleField captionField [[Documentation Tiddlers Request]] [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190122120050768" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190119182314120" title="$:/temp/advancedsearch">
-<pre>$:/language/EditTemplate/Fields/Add/</pre>
+<div created="20181229183224518" modified="20190121111934494" title="$:/temp/advancedsearch">
+<pre>$:/editions/tw5.com/variable-macros</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10042,11 +10077,11 @@ Download Empty {{$:/core/images/save-button}}
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190120163751830" title="$:/temp/search">
+<div created="20181221081025004" modified="20190123013411240" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190120155009908" title="$:/temp/toc/selectedTiddler">
-<pre>Widgets for Beginners</pre>
+<div created="20181221081005896" modified="20190122101834150" title="$:/temp/toc/selectedTiddler">
+<pre>Discover TiddlyWiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10206,7 +10241,7 @@ A useful convention is to use the prefix `$:/_` for any system tiddlers that you
 
 [[Shadow Tiddlers for Beginners]]</pre>
 </div>
-<div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[WikiText for Beginners]] [[Widgets for Beginners]] [[Formatting Text using Markdown]] [[Macros for Beginners]] [[Control Panel for Beginners]] [[Save Manually and Keep a Back up Version]] [[Table of Contents for Beginners]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]]" modified="20190107104559586" tags="TableOfContents" title="Beginners">
+<div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[WikiText for Beginners]] [[Widgets for Beginners]] [[Formatting Text using Markdown]] [[Macros for Beginners]] [[Control Panel for Beginners]] [[Save Manually and Keep a Back up Version]] [[Table of Contents for Beginners]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]]" modified="20190122101831138" tags="TableOfContents" title="Beginners">
 <pre>&lt;$macrocall
 	$name=&quot;toc-tabbed-internal-nav&quot;
 	tag=&quot;Beginners&quot;
@@ -11148,12 +11183,68 @@ The most common method of downloading the empty starter edition and of saving an
 
 Next: &lt;$list filter=&quot;[all[current]next[Beginners]]&quot;/&gt;.</pre>
 </div>
+<div created="20181109052603101" draft.of="Sidebar" draft.title="Sidebar" modified="20190122102702944" tags="Beginners Reference" title="Draft of 'Sidebar'">
+<pre>The ''sidebar'' is the menu on the right hand side of this page (top of the page for narrow width devices). Shown below is what the first 3 lines at the top of the sidebar looks like.
+&lt;p&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 class=&quot;tc-site-title&quot;&gt;
+&lt;$transclude tiddler=&quot;$:/SiteTitle&quot; mode=&quot;inline&quot;/&gt;
+&lt;/h1&gt;
+&lt;div class=&quot;tc-site-subtitle&quot;&gt;
+&lt;$transclude tiddler=&quot;$:/SiteSubtitle&quot; mode=&quot;inline&quot;/&gt;
+&lt;/div&gt;
+{{||$:/core/ui/PageTemplate/pagecontrols}}
+
+&lt;hr&gt;
+
+* The first line is the Title of this ~TiddlyWiki
+* The second is the Subtitle
+* The third has the Page Control buttons.
+* Below that is a [[Search bar|Searching in TiddlyWiki]]
+* This is followed by a row of [[tabs|Tabs]] that contain lists of links or buttons.
+
+
+
+
+</pre>
+</div>
 <div created="20181217133318064" modified="20181217134425974" tags="Beginners" title="Draft Tiddlers">
 <pre>~TiddlyWiki considers a tiddler's draft to be a separate tiddler for as long as you are editing it. Thus, while you're editing a tiddler entitled ''Australia'', there will be two tiddlers, ''Australia'' and ''Draft of 'Australia'''. 
 
 When you close the draft by saving your changes, those changes will be applied to the ''Australia'' tiddler and then the draft tiddler will be deleted, leaving just the original tiddler ''Australia''.
 
 Understanding the [[Draft Mechanism|DraftMechanism]] in full detail is for much more advanced users.</pre>
+</div>
+<div created="20190122101329994" modified="20190122104028444" tags="todo Beginners" title="Enable the Home button">
+<pre>On the sidebar to the right of this tiddler, You will see 5 tabs: &lt;&lt;.sidebar-tab Open&gt;&gt; , &lt;&lt;.toc-tab&gt;&gt; , &lt;&lt;.sidebar-tab Recent&gt;&gt; , &lt;&lt;.sidebar-tab Tools&gt;&gt; , &lt;&lt;.sidebar-tab More&gt;&gt;
+
+Click on the &lt;&lt;.sidebar-tab Tools&gt;&gt; tab.
+
+Tick the box next to the &lt;&lt;.button home&gt;&gt; button.
+
+As you do this, note that above the search bar, this &lt;&lt;.button-only home&gt;&gt; button is displayed.
+
+{{||$:/core/ui/PageTemplate/pagecontrols}}
+
+Clicking the &lt;&lt;.button home&gt;&gt; button takes you back to the default &quot;start&quot; page set for when this ~TiddlyWiki first opens.
+
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/Enable the Home button&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/Enable the Home button&quot; setTo=&quot;show&quot;&gt;Show More Information on the Home setting&lt;/$button&gt;&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/Enable the Home button&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;Enable the Home button&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!More Information on configuring the actions of the Home button
+
+Should you want to change the default start setting of which tiddlers are shown, this can be done in the &lt;&lt;.button control-panel&gt;&gt;, on the &lt;&lt;.controlpanel-tab Info&gt;&gt; sub tab, in its ''Basic'' tab in the &lt;&lt;.word &quot;Default tiddlers:&quot;&gt;&gt; section.
+&lt;hr&gt;
+&lt;/$reveal&gt;
+&lt;br&gt;
+Next: &lt;$list filter=&quot;[all[current]next[Beginners]]&quot;/&gt;.
+
+</pre>
 </div>
 <div created="20181109054928786" modified="20181116043621502" tags="todo Concepts" title="Field">
 <pre>What is a field?
@@ -11572,6 +11663,15 @@ This could give tips on ways to search for help within and outside ~TiddlyWiki!
 :Widgets - what does that mean?
 :Customising
 :Features
+
+</pre>
+</div>
+<div created="20181215154811835" modified="20190122120034307" tags="[[Hidden Settings]]" title="Hidden Setting: Filename for Save Wiki Button" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;.from-version &quot;5.1.19&quot;&gt;&gt; When saving a ~TiddlyWiki using the &lt;&lt;.button save-wiki&gt;&gt; button, the default  file name used for saving is constructed using the Title of the ~TiddlyWiki as entered in the [[Control Panel|$:/ControlPanel]], which is stored in the tiddler [[$:/SiteTitle]].
+
+The value used is in the form `{{$:/SiteTitle}}.html`. This causes the filename to be constructed from the site Title with a `.html` extension.
+
+If a tiddler named [[$:/config/SaveWikiButton/Filename]] is created, the text in that tiddler will be used as the default file name used for saving the ~TiddlyWiki.
 
 </pre>
 </div>
