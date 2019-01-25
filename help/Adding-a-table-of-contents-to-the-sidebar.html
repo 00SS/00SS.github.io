@@ -241,6 +241,8 @@ Error message and password prompt
 
 <li>Adopt a Titles Policy</li>
 
+<li>All the Core Image icons</li>
+
 <li>Beginners</li>
 
 <li>Beginners - Reorder ToC list (draggable)</li>
@@ -10002,7 +10004,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181230031116820" modified="20190117142938440" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20181229183247608" modified="20190124112800022" title="$:/state/tab--1498284803">
+<div created="20181229183247608" modified="20190124180402808" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20190104052758546" modified="20190122103054488" title="$:/state/tab--2112689675">
@@ -10020,7 +10022,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181229031704868" modified="20190122164556502" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20181225144338180" modified="20190124122107320" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190124181506840" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10053,11 +10055,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190119173656146" list="[[Check Unprocessed Tiddlers for tagging]] [[Creating and editing tiddlers]] [[Beginners - Reorder ToC list (draggable)]] [[Story River]] [[Documentation Restructuring Guidelines 2019]] [[Beginners Guide to TiddlyWiki]] Beginners [[Beginners Documentation - What goes into it?]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Looking inside a tiddler]] Plugins [[Plugins for Beginners]] [[What is a Shadow Tiddler]] todo [[Where to find plugins]] [[Enable the Home button]] [[Make a tiddler right now, right here]] [[Hidden Setting: Filename for Save Wiki Button]] [[Widget Tree for Beginners]] [[Widgets for Beginners]] $:/_tw5.com-styles $:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/editions/tw5.com/doc-macros [[Beginners Documentation Saga]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] Sidebar Tabs titleField captionField [[Documentation Tiddlers Request]] Field [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190124122131716" title="$:/StoryList">
+<div created="20190119173656146" list="[[Documentation Macros]] [[All the Core Image icons]] [[Check Unprocessed Tiddlers for tagging]] [[Creating and editing tiddlers]] [[Beginners - Reorder ToC list (draggable)]] [[Story River]] [[Documentation Restructuring Guidelines 2019]] [[Beginners Guide to TiddlyWiki]] Beginners [[Beginners Documentation - What goes into it?]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Looking inside a tiddler]] Plugins [[Plugins for Beginners]] [[What is a Shadow Tiddler]] todo [[Where to find plugins]] [[Enable the Home button]] [[Make a tiddler right now, right here]] [[Hidden Setting: Filename for Save Wiki Button]] [[Widget Tree for Beginners]] [[Widgets for Beginners]] $:/_tw5.com-styles $:/AdvancedSearch $:/editions/tw5.com/doc-styles [[Beginners Documentation Saga]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] Sidebar Tabs titleField captionField [[Documentation Tiddlers Request]] Field [[Documentation Macros Request]] [[Making ToC Tutorial - tiddlers needed]] [[Making Toc Tutorial - Default Tiddlers]] [[Google Groups - ToC mentions]] [[How I found this place]] [[My First Encounter]]" modified="20190124180923658" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190124115802238" title="$:/temp/advancedsearch">
-<pre>macro</pre>
+<div created="20181229183224518" modified="20190124180439008" title="$:/temp/advancedsearch">
+<pre>doc mac</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10113,7 +10115,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190124115802240" title="$:/temp/search">
+<div created="20181221081025004" modified="20190124181503990" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190124053525436" title="$:/temp/toc/selectedTiddler">
@@ -10276,6 +10278,15 @@ A useful convention is to use the prefix `$:/_` for any system tiddlers that you
 !!Shadow Tiddlers
 
 [[Shadow Tiddlers for Beginners]]</pre>
+</div>
+<div created="20190124180825308" modified="20190124181425488" tags="" title="All the Core Image icons">
+<pre>&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;&gt;
+&lt;$set name=&quot;image&quot; value=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$list filter=&quot;[&lt;image&gt;removeprefix[$:/core/images/]]&quot;&gt;
+&lt;span class=&quot;doc-button&quot;&gt;&lt;$transclude tiddler=&lt;&lt;image&gt;&gt;/&gt; &lt;&lt;currentTiddler&gt;&gt; |&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$set&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[What TiddlyWiki does with your Data]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[WikiText for Beginners]] [[Variables for Beginners]] [[Macros for Beginners]] [[Widgets for Beginners]] [[Widget Tree for Beginners]] [[Control Panel for Beginners]] [[Table of Contents for Beginners]] [[Draft Tiddlers]] [[Missing Tiddlers]] [[Orphan Tiddlers]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]] [[Filters for Beginners]] [[Lists for Beginners]] [[Plugins for Beginners]] [[Save Manually and Keep a Back up Version]] Help" modified="20190124092236118" tags="include todo TableOfContents" title="Beginners">
 <pre>
@@ -10752,7 +10763,7 @@ Next: [[A Gentle Guide to TiddlyWiki]]
 <pre>Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
 morosanuae opened this Jun 18, 2017</pre>
 </div>
-<div created="20150110182600000" modified="20190124121744326" tags="tiddler-modified include todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
+<div created="20150110182600000" modified="20190124181250660" tags="tiddler-modified include todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
 <pre>The following macros are used throughout ~TiddlyWiki's documentation. Their names start with a dot to keep them out of the way of names that a user might try experimenting with. The CSS file associated with these macros is [[here|$:/editions/tw5.com/doc-styles]]. Their definitions are [[here|$:/editions/tw5.com/doc-macros]].
 
 !General
@@ -10948,9 +10959,13 @@ before you upgrade.&quot;&gt;&gt;
 
 &lt;table style=&quot;width:80%&quot;&gt;
 &lt;tr&gt;
-&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]removeprefix[$:/core/images/]sort[]]&quot;&gt;&lt;$transclude tiddler=&quot;&quot;/&gt;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;
-&lt;/$list&gt;
-&lt;/tr&gt;
+&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;&gt;
+&lt;$set name=&quot;image&quot; value=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$list filter=&quot;[&lt;image&gt;removeprefix[$:/core/images/]]&quot;&gt;
+&lt;span class=&quot;doc-button&quot;&gt;&lt;$transclude tiddler=&lt;&lt;image&gt;&gt;/&gt; &lt;&lt;currentTiddler&gt;&gt; |&lt;/span&gt;
+&lt;/$list&gt;  
+&lt;/$set&gt;
+&lt;/$list&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
 ! Display Macros
@@ -10970,7 +10985,7 @@ before you upgrade.&quot;&gt;&gt;
 |`&lt;&lt;style-guide good=&quot;&quot; bad=&quot;&quot;)&gt;&gt;`|Not used anywhere! |[[$:/editions/tw5.com/style-guide-macros]]|
 
 
-</pre>
+&lt;&lt;.button &quot;fold&quot;&gt;&gt;</pre>
 </div>
 <div created="20181114055704028" modified="20190124115751888" tags="Notes Making-ToC-Tutorial todo" title="Documentation Macros Request">
 <pre>In the [[Documentation Macros]] macro tiddler: $:/editions/tw5.com/doc-macros
