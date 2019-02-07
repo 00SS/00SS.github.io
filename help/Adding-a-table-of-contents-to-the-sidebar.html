@@ -395,6 +395,8 @@ Error message and password prompt
 
 <li>Linking in WikiText</li>
 
+<li>LinkWidget</li>
+
 <li>ListField</li>
 
 <li>Listing Icons</li>
@@ -9602,7 +9604,7 @@ $caption$
 <div created="20181112103147346" modified="20190204164723100" title="$:/DefaultTiddlers">
 <pre>[[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] [[Beginners]]  [[Beginners - Reorder ToC list (draggable)]]  [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]]  [[Beginners Documentation Saga]]</pre>
 </div>
-<div created="20150117152607000" modified="20190203114455892" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
+<div created="20150117152607000" modified="20190207082208828" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
 <pre>\define .concat(1,2,3,4,5) $1$$2$$3$$4$$5$
 
 \define .code-disp(_,xtra) &lt;span class=&quot;doc-code-disp&quot;&gt; &lt;small&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$xtra$&quot; then=&lt;&lt;.code-disp-extra-yes _:[[$_$]]  xtra:&quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt; else=&lt;&lt;.code-disp-extra-no _:[[$_$]] &gt;&gt;/&gt;&lt;/small&gt;&lt;/span&gt;
@@ -9636,15 +9638,15 @@ $caption$
 
 \define .note(_) &lt;dl class=&quot;doc-note&quot;&gt;&lt;dt&gt;Note&lt;/dt&gt;&lt;dd&gt;$_$&lt;/dd&gt;&lt;/dl&gt;
 
-\define .tid(_) &lt;code class=&quot;doc-tiddler&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .tag(_) &lt;code class=&quot;doc-tag&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .field(_) &lt;code class=&quot;doc-field&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .value(_) &lt;code class=&quot;doc-value&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .op(_) &lt;code class=&quot;doc-operator&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .var(_) &lt;code class=&quot;doc-var&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .wid(_) &lt;code class=&quot;doc-widget&quot;&gt;$&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .attr(_) &lt;code class=&quot;doc-attr&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .param(_) &lt;code class=&quot;doc-param&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
+\define .tid(_) &lt;code class=&quot;doc-tiddler&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .tag(_) &lt;code class=&quot;doc-tag&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .field(_) &lt;code class=&quot;doc-field&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .value(_) &lt;code class=&quot;doc-value&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .op(_) &lt;code class=&quot;doc-operator&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .var(_) &lt;code class=&quot;doc-var&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .wid(_) &lt;code class=&quot;doc-widget&quot;&gt;$&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .attr(_) &lt;code class=&quot;doc-attr&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .param(_) &lt;code class=&quot;doc-param&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
 
 \define .mtitle(_) $_$ Macro
 \define .otitle(_) $_$ Operator
@@ -10036,13 +10038,16 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 \end
 </pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[Dictionary How to read Data]]
-# [[Dictionary Macro to Read Data]]
-# [[DictionaryData]]
-# [[Untitled]]</pre>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;Untitled&quot;: {
+            &quot;title&quot;: &quot;Untitled&quot;,
+            &quot;text&quot;: &quot;.wid&quot;,
+            &quot;type&quot;: &quot;text/plain&quot;
+        }
+    }
+}</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10113,7 +10118,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190207014621472" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190207082622232" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10137,7 +10142,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20190108110319730" modified="20190124102815654" title="$:/state/toc/TableOfContents-todo--118161433">
 <pre>close</pre>
 </div>
-<div created="20181229163730106" modified="20190103111412014" title="$:/state/When you make a Tiddler">
+<div created="20181229163730106" modified="20190207061835748" title="$:/state/When you make a Tiddler">
 <pre>show</pre>
 </div>
 <div created="20181229163731620" modified="20181229163750982" title="$:/state/When you make a Tiddlers">
@@ -10146,11 +10151,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190204164819858" list="$:/Import [[Dictionary How to read Data]] [[TiddlyWiki's Core for Beginners]] Tiddlers [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190207014122912" title="$:/StoryList">
+<div created="20190204164819858" list="$:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/editions/tw5.com/doc-macros [[WikiText for Beginners]] [[When you make a Tiddler]] [[Widgets for Beginners]] [[Dictionary How to read Data]] [[TiddlyWiki's Core for Beginners]] Tiddlers [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190207062840458" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190204110634776" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20181229183224518" modified="20190207062837756" title="$:/temp/advancedsearch">
+<pre>doc sty</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10206,7 +10211,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190207014317222" title="$:/temp/search">
+<div created="20181221081025004" modified="20190207062131548" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190205135636912" title="$:/temp/toc/selectedTiddler">
@@ -11499,7 +11504,7 @@ padding: 0.3em 0.3em;
 &lt;/style&gt;
 </pre>
 </div>
-<div created="20181114055704028" modified="20190131051757336" tags="Notes Making-ToC-Tutorial todo" title="Documentation Macros Request">
+<div created="20181114055704028" modified="20190207082616290" tags="Notes Making-ToC-Tutorial todo" title="Documentation Macros Request">
 <pre>In the [[Documentation Macros]] macro tiddler: $:/editions/tw5.com/doc-macros &lt;br&gt;
 and its correspoding Documentation Styles definitions: [[$:/editions/tw5.com/doc-styles]]
 
@@ -11542,15 +11547,15 @@ From: `&lt;code class=&quot;doc-tiddler&quot;&gt;$_$&lt;/code&gt;`
 To: `&lt;code class=&quot;doc-tiddler&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;`
 
 ```
-\define .tid(_) &lt;code class=&quot;doc-tiddler&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .tag(_) &lt;code class=&quot;doc-tag&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .field(_) &lt;code class=&quot;doc-field&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .value(_) &lt;code class=&quot;doc-value&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .op(_) &lt;code class=&quot;doc-operator&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .var(_) &lt;code class=&quot;doc-var&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .wid(_) &lt;code class=&quot;doc-widget&quot;&gt;$&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .attr(_) &lt;code class=&quot;doc-attr&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
-\define .param(_) &lt;code class=&quot;doc-param&quot;&gt;&lt;$text text=&quot;&quot;&quot;$_$&quot;&quot;&quot;/&gt;&lt;/code&gt;
+\define .tid(_) &lt;code class=&quot;doc-tiddler&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .tag(_) &lt;code class=&quot;doc-tag&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .field(_) &lt;code class=&quot;doc-field&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .value(_) &lt;code class=&quot;doc-value&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .op(_) &lt;code class=&quot;doc-operator&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .var(_) &lt;code class=&quot;doc-var&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .wid(_) &lt;code class=&quot;doc-widget&quot;&gt;$&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .attr(_) &lt;code class=&quot;doc-attr&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
+\define .param(_) &lt;code class=&quot;doc-param&quot;&gt;&lt;$text text=$_$/&gt;&lt;/code&gt;
 
 ```
 
@@ -12858,6 +12863,91 @@ You can also use the extended syntax to force an external link:
 
 See the LinkWidget for details of the underlying widget used to implement tiddler links, including macros that can be used to customise its behaviour.
 
+</pre>
+</div>
+<div caption="link" created="20131024141900000" modified="20171212063130159" tags="Widgets" title="LinkWidget" type="text/vnd.tiddlywiki">
+<pre>The `link` widget generates links to tiddlers. (Use the HTML `&lt;a&gt;` element to generate external links).
+
+! Content and Attributes
+
+|!Attribute |!Description |
+|to |The title of the target tiddler for the link (defaults to the [[current tiddler|Current Tiddler]]) |
+|aria-label |Optional accessibility label |
+|tooltip |Optional tooltip WikiText |
+|tabindex |Optional numeric [[tabindex|https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex]] |
+|draggable |&quot;yes&quot; to enable the link to be draggable (defaults to &quot;yes&quot;) |
+|tag |Optional tag to override the default &quot;a&quot; element |
+|class|Optional CSS classes //in addition to// the default classes (see below)|
+|overrideClass|&lt;&lt;.from-version &quot;5.1.16&quot;&gt;&gt; Optional CSS classes //instead of// the default classes |
+
+The content of the link widget is rendered within the `&lt;a&gt;` tag. The draggable functionality is equivalent to using the DraggableWidget with the ''tiddler'' attribute set to the link target.
+
+The default value of the tooltip attribute is supplied by the &lt;&lt;.vlink tv-wikilink-tooltip&gt;&gt; variable.
+
+This means that you can control the text of a link tooltip in several ways:
+
+```
+&lt;$link to=&quot;HelloThere&quot; tooltip=&quot;Custom tooltip&quot;&gt;Link 1&lt;/$link&gt;
+
+&lt;$set name=&quot;tv-wikilink-tooltip&quot; value=&quot;I'm a link to {{!!title}}&quot;&gt;
+&lt;$link to=&quot;HelloThere&quot;&gt;Link 2&lt;/$link&gt;
+&lt;/$set&gt;
+
+```
+
+Renders as:
+
+&lt;$link to=&quot;HelloThere&quot; tooltip=&quot;Custom tooltip&quot;&gt;Link 1&lt;/$link&gt;
+
+&lt;$set name=&quot;tv-wikilink-tooltip&quot; value=&quot;I'm a link to {{!!title}}&quot;&gt;
+&lt;$link to=&quot;HelloThere&quot;&gt;Link 2&lt;/$link&gt;
+&lt;/$set&gt;
+
+Note that the tooltip is rendered with the current tiddler set to the target of the link.
+
+A useful convention is to set the tooltip like this:
+
+```
+\define tv-wikilink-tooltip()
+&lt;$transclude field=&quot;tooltip&quot;&gt;&lt;$transclude field=&quot;title&quot;/&gt;&lt;/$transclude&gt;
+\end
+```
+
+This causes the tooltip to be the ''tooltip'' field of the target tiddler. If the field isn't present, then the title is used instead.
+
+! CSS Classes
+
+The link widget automatically determines and applies the following classes to links:
+
+* `tc-tiddlylink` - applied to all links
+* `tc-tiddlylink-external` - applied to external, non-tiddler links
+* `tc-tiddlylink-internal` - applied to tiddler links
+* `tc-tiddlylink-missing` - applied to tiddler links where the target tiddler doesn't exist
+* `tc-tiddlylink-resolves` - applied to tiddler links when the target tiddler does exist
+
+Use the `class` attribute to specify additional css classes, or `overrideClass` to apply only that but not the above defaults, e.g. when used in a LinkCatcherWidget:
+
+&lt;&lt;wikitext-example-without-html &quot;&quot;&quot;*&lt;$link class=&quot;example&quot;&gt;Here&lt;/$link&gt; the `example` class is added.
+*&lt;$link overrideClass=&quot;example&quot;&gt;Here&lt;/$link&gt; only the `example` class applies.
+*&lt;$link overrideClass=&quot;&quot;&gt;Here&lt;/$link&gt; no class is set.&quot;&quot;&quot;&gt;&gt;
+
+! `href` generation
+
+The following process is used to generate the `href` attribute of the generated HTML `&lt;a&gt;` element:
+
+# If &lt;&lt;.vlink tv-get-export-link&gt;&gt; is defined it is invoked to convert the target tiddler title to the `href` value
+#* In practice, only a [[JavaScript macro|Macros]] can be used
+# &lt;&lt;.from-version &quot;5.1.15&quot;&gt;&gt; If &lt;&lt;.vlink tv-filter-export-link&gt;&gt; is defined it is interpreted as a filter that converts the target tiddler title to the `href` value
+# If &lt;&lt;.vlink tv-wikilink-template&gt;&gt; is defined it is treated as a specialised macro body that can perform limited conversion of the target tiddler title to the `href` value
+# Otherwise, the target tiddler title is URI encoded to create the `href`
+
+! Configuration variables
+
+* &lt;&lt;.vlink tv-wikilinks&gt;&gt;
+* &lt;&lt;.vlink tv-filter-export-link&gt;&gt;
+* &lt;&lt;.vlink tv-wikilink-template&gt;&gt;
+* &lt;&lt;.vlink tv-wikilink-tooltip&gt;&gt;
+* &lt;&lt;.vlink tv-get-export-link&gt;&gt;
 </pre>
 </div>
 <div caption="list" created="20130830092500000" modified="20150124202924000" tags="Fields" title="ListField" type="text/vnd.tiddlywiki">
@@ -14820,7 +14910,7 @@ For installing a plugin, see [[Installing a plugin from the plugin library]] or 
 # [[WikifyWidget]]
 #* ''output'' key-word : widgettree	- Return a formatted JSON representation of the widget tree</pre>
 </div>
-<div created="20190105081846464" modified="20190128050832084" tags="todo Beginners" title="Widgets for Beginners">
+<div created="20190105081846464" modified="20190207082009000" tags="todo Beginners" title="Widgets for Beginners">
 <pre>They could have been called &lt;&lt;.word Tools&gt;&gt; or &lt;&lt;.word Elements&gt;&gt; or &lt;&lt;.word Commands&gt;&gt; or &lt;&lt;.word Identifiers&gt;&gt;, but in ~TiddlyWiki, they are called &lt;&lt;.word Widgets&gt;&gt;
 
 Widgets can be considered ~TiddlyWiki's personalized extension of HTML, to perform tasks specific to the needs of ~TiddlyWiki's user's needs and experience.
@@ -14829,29 +14919,26 @@ Widgets form part of the processing heart of ~TiddlyWiki.
 
 They are used for tasks such as to:
 
-* create, delete, modify, open &amp; close tiddlers etc. - referred to as [[Action Widgets|ActionWidgets]]
 * create internal &amp; external links
-* list and organise both your tiddlers and your material automatically
-* create buttons, check-boxes, radio buttons, input boxes
-* create variables and both simple &amp; complex short cuts (macros)
 * display and manipulate your material (such as text, dates, images, videos)
+* list and organise both your tiddlers and your material automatically
+* create variables and both simple &amp; complex short cuts (macros)
+* create buttons, check-boxes, radio buttons, input boxes
+* create, delete, modify, open &amp; close tiddlers etc. - referred to as [[Action Widgets|ActionWidgets]]
+* and more
 
-* ??
+The same way that the display of a web page refreshes and changes with any change you make to a page, each and every widget that contributes to the display, or is given special instructions, updates whatever it does depending on the change. This is one of the strong and innovative powers of TW.
 
-The same way that the display of a web page refreshes and changes with any change you make to a page, each and every widget that is part of the display, or given special instructions, updates whatever it does depending on the change. This is one of the strong and innovative powers of TW.
-
-CSS and similar things can change the way the wiki looks but they react to the environment that relate to them. Widgets act on their own (or to user input for buttons and similar).
+CSS and similar things can change the way the wiki looks but they react to the environment that relates to them. Widgets act on their own (or to user input for buttons and similar).
 
 
-Widgets most often introduce the kind of functions or processes you may have used javascript for (but cant), however they are also aware of tiddlywiki specific features, and will refresh based on changes elsewhere in your wiki automatically. Update or tag one tiddler anywhere and it will update all tiddlers and widgets that are currently displaying something with the change you just made.
+Widgets most often introduce the kind of functions or processes you may have used javascript for (but cant), however they are also aware of tiddlywiki specific features, and will refresh automatically based on changes elsewhere in your wiki. Update or tag one tiddler anywhere and it will update all tiddlers and widgets that are currently displaying something with the change you just made.
 
 !! Widgets are not ~WikiText
 
 Be careful not to confuse Widgets with [[WikiText|WikiText for Beginners]]. 
 
 ~WikiText is a special markup that secretly, behind the scenes, is actually creating and invoking Widgets. 
-
-It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. [[WikiText|WikiText for Beginners]] can be used inside of Widgets, but Widgets can not be used inside of ~WikiText.
 
 For instance, the ~WikiText for making a link to a tiddler named &lt;&lt;.tid myTiddler&gt;&gt; is:
 
@@ -14865,30 +14952,49 @@ This is actually ~WikiText shorthand for:
 &lt;$link to=&quot;myTiddler&quot;&gt;myTiddler&lt;/$link&gt;
 ```
 
-When looking up documentation on Widgets, it is useful to remember that, for example: A widget named `&lt;$link&gt;` can be found by searching for:  ''~LinkWidget''
+It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. [[WikiText|WikiText for Beginners]] can be used inside of Widgets, but Widgets can not be used inside of ~WikiText. Try and remember this rule, as it is a stumbling block for all new users.
 
-It won't be long before you will want to start using Widgets. The list below are the suggested ones to start with:
+!! Finding the right Widget to use
 
-REVEAL MORE
+The full list is in the [[Widgets]] tiddler.
 
-```
-First 5
+When looking up documentation for say the &lt;&lt;.wid link&gt;&gt; widget, you would search for: ''~LinkWidget''
 
- &lt;$transclude&gt;
-* &lt;$set&gt; (note that &lt;$tiddler&gt; is really just an instance of the &lt;$set&gt; widget)
-* &lt;$list&gt;
-* &lt;$text&gt;
-* &lt;$link&gt;
+It is useful to remember that all information tiddlers for Widgets follow the same naming convention.
 
-Next 5
+It won't be long before you will want to start using Widgets. Click the &lt;&lt;.word &quot;More Information&quot;&gt;&gt; button below to see the the suggested ones to start with.
 
-* &lt;$macrocall&gt;
-* &lt;$edit-text&gt;
-* &lt;$button&gt;
-* &lt;$navigator&gt;
-* &lt;$reveal&gt; 
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/When you make a Tiddler&quot; text=&quot;show&quot;&gt;
 
-```</pre>
+&lt;$button set=&quot;$:/state/When you make a Tiddler&quot; setTo=&quot;show&quot;&gt;Show More Information on Widgets&lt;/$button&gt;&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/When you make a Tiddler&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/When you make a Tiddler&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!More Information on Widgets
+
+Here is the first set of common Widgets you should know about:
+
+* &lt;&lt;.wlink LinkWidget&gt;&gt;
+* &lt;&lt;.wlink ListWidget&gt;&gt;
+* &lt;&lt;.wlink SetWidget&gt;&gt; &amp; the similar &lt;&lt;.wlink VarsWidget&gt;&gt;
+* &lt;&lt;.wlink TranscludeWidget&gt;&gt;
+* &lt;&lt;.wlink TextWidget&gt;&gt;
+
+Then the suggested next set:
+
+* &lt;&lt;.wlink ViewWidget&gt;&gt;
+* &lt;&lt;.wlink MacroCallWidget&gt;&gt;
+* &lt;&lt;.wlink ButtonWidget&gt;&gt;
+* &lt;&lt;.wlink RevealWidget&gt;&gt;
+* &lt;&lt;.wlink EditTextWidget&gt;&gt;
+* &lt;&lt;.wlink NavigatorWidget&gt;&gt;
+
+&lt;hr&gt;
+&lt;/$reveal&gt;
+
+</pre>
 </div>
 <div tags="Concepts" title="Wiki">
 <pre>Groups of uniquely titled tiddlers are contained in WikiStore objects.
