@@ -291,6 +291,12 @@ Error message and password prompt
 
 <li>DefaultTiddlers (Examples)</li>
 
+<li>Dictionary How to read Data</li>
+
+<li>Dictionary Macro to Read Data</li>
+
+<li>DictionaryData</li>
+
 <li>Difficulties with TiddlyWiki</li>
 
 <li>Discover TiddlyWiki</li>
@@ -10033,7 +10039,10 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Using Stylesheets]]</pre>
+# [[Dictionary How to read Data]]
+# [[Dictionary Macro to Read Data]]
+# [[DictionaryData]]
+# [[Untitled]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10101,11 +10110,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20190204111737820" modified="20190204111748624" title="$:/state/tab-857423015">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
 </div>
-<div created="20181229031704868" modified="20190122164556502" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Plugins</pre>
+<div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190204164823940" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20181225144338180" modified="20190207014146128" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
 <pre>hide</pre>
@@ -10137,7 +10146,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190204164819858" list="[[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190204164819858" title="$:/StoryList">
+<div created="20190204164819858" list="$:/Import [[Dictionary How to read Data]] [[TiddlyWiki's Core for Beginners]] Tiddlers [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190207014122912" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190204110634776" title="$:/temp/advancedsearch">
@@ -10197,11 +10206,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190204164817566" title="$:/temp/search">
+<div created="20181221081025004" modified="20190207014317222" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190128031747832" title="$:/temp/toc/selectedTiddler">
-<pre>Make a tiddler right now, right here</pre>
+<div created="20181221081005896" modified="20190205135636912" title="$:/temp/toc/selectedTiddler">
+<pre>Enable the Home button</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10814,6 +10823,228 @@ The current list of startup tiddlers is: &lt;$list filter=&quot;[{$:/DefaultTidd
 The text in that box of $:/DefaultTiddlers is evaluated as a filter, so if you have a tag you want to use just put this in that box: [tag[~MyTag]] 
 
 Everything tagged with MyTag will be displayed.</pre>
+</div>
+<div author="00SS" created="20170304050231503" date="2017-03-04" modified="20190108171423587" related="[[Dictionary Macro to Read Data]] [[DictionaryData]]" tags="data Learning lists macro" title="Dictionary How to read Data">
+<pre>For a given WORD, I wanted to see definitions from different dictionaries and sources.
+
+Fortunately many definition/search sites use the URL form: `http://definition-search.site/WORD` so I believed I could easily make a list of URLS for any given WORD.
+
+I made a DATA tiddler named: [[DictionaryData]]
+
+
+&lt;$transclude tiddler=&quot;DictionaryData&quot; mode=&quot;block&quot;/&gt;
+
+The idea was to add in the WORD to end of the DATA field - and create links. To do this I created 2 macros and put them in the tiddler [[Dictionary Macro to Read Data]] and tagged that tiddler with &lt;&lt;tag $:/tags/Macro&gt;&gt; to make the macros available to other tiddlers.
+
+Basics of [[Macros can be read here|http://tiddlywiki.com/#Macros]].
+
+__''Part 1.''__ The first macro (named `dataLinkCreator` ) does the following:
+
+```
+\define dataLinkCreator(data-file index word)
+&lt;$wikify name=&quot;input&quot; text=&quot;{{$data-file$##$index$}}$word$&quot;&gt;
+&lt;a href=&lt;&lt;input&gt;&gt; target=&quot;_blank&quot;&gt;$index$&lt;/a&gt;
+&lt;/$wikify&gt;
+\end
+```
+Looking at the first line of the macro:
+
+```
+dataLinkCreator(data-file index word)
+```
+Icoming variable: `data-file` will contain the name of the DATA tiddler, in this case: [[DictionaryData]]
+
+Incoming variable: `index` will contain the INDEX part of the data, as data is referenced through its INDEX. Example:
+
+```
+INDEX: data
+Dictionary.com: http://www.dictionary.com/browse/
+```
+
+Incoming variable `word` will contain the WORD being looked up.
+
+```
+text=&quot;{{$data-file$##$index$}}$word$&quot;
+```
+The syntax for looking up the DATA of a given INDEX in a data file ([[Text Reference|http://tiddlywiki.com/#TextReference]]) is shown to us as:
+
+
+&lt;&lt;&lt;
+`{{tiddlerTitle##propertyIndex}}` - extracts a named property from DataTiddlers
+
+&lt;&lt;&lt;
+
+The above would then look like this: `{{DictionaryData##INDEX}}WORD` so if the INDEX being looked up was ''Dictionary.com'' which has the data: 
+ 
+''http'''':''''/''''/www.dictionary.com/browse/ ''
+
+the line shown above from the macro would add the WORD to the end of the data, and so this:  `{{DictionaryData##Dictionary.com}}WORD` __outputs__: 
+
+{{DictionaryData##Dictionary.com}}WORD
+
+This is almost exactly what we want, except that WORD has not become part of the uderlying HTML link.
+
+```
+$wikify name=&quot;input&quot;
+```
+This __output__ above will be stored in the variable named `input` (please see the note below as to why `$wikify` has been used. &lt;small&gt;( In essence, it is to ensure the WORD above properly attaches to the rest of the link, instead of being separate from the link in the underlying HTML. Means it ends up being: http://www.dictionary.com/browse/WORD )&lt;/small&gt;
+
+Next will be creating the link.
+
+```
+&lt;a href=&lt;&lt;input&gt;&gt; target=&quot;_blank&quot;&gt;$index$&lt;/a&gt;
+```
+The above line creates the HTML to display a [[link|http://tiddlywiki.com/#LinkWidget]] which in this case will be:
+
+```
+&lt;a href=&quot;http://www.dictionary.com/browse/WORD&quot; target=&quot;_blank&quot;&gt;Dictionary.com&lt;/a&gt;
+```
+This gives the output: &lt;a href=&quot;http://www.dictionary.com/browse/WORD&quot; target=&quot;_blank&quot;&gt;Dictionary.com&lt;/a&gt; which is exactly what was wanted.
+
+Now __''Part 2.''__ To get the whole list of Dictionary links for sending to Part 1. 
+
+The macro below will provide the whole LIST of INDEX items from the DATA tiddler - along with the other variables needed by the Part 1 macro. The other variables are the ''Name of the DATA tiddler'', and the ''WORD'' being looked up.
+
+
+
+```
+\define dictionary(word datafile:&quot;DictionaryData&quot;)
+&lt;$list filter=&quot;[[$datafile$]indexes[]]&quot; variable=&quot;index&quot;&gt;
+&lt;$macrocall $name=&quot;dataLinkCreator&quot; data-file=&quot;$datafile$&quot; index=&lt;&lt;index&gt;&gt; word=$word$/&gt;
+&lt;/$list&gt;
+\end
+```
+This macro above named ''dictionary'' is used for looking up a WORD in this way: `&lt;&lt;dictionary WORD&gt;&gt;`
+
+Looking at the first line of the macro:
+
+```
+dictionary(word datafile:&quot;DictionaryData&quot;)
+```
+Incoming variable `word` will contain the WORD being looked up.
+
+Incoming variable `datafile` if not given, will default to the data tiddler [[DictionaryData]].
+
+```
+&lt;$list filter=&quot;[[$datafile$]indexes[]]&quot; variable=&quot;index&quot;&gt;
+```
+The above LIST will use the default `datafiles` value od [[DictionaryData]] to give the below list and at each listing, it will store the INDEX word into a variable named `index`:
+
+```
+&lt;$list filter=&quot;[[DictionaryData]indexes[]]&quot; variable=&quot;index&quot;&gt;
+
+&lt;/$list&gt;
+```
+&lt;$list filter=&quot;[[DictionaryData]indexes[]]&quot; variable=&quot;index&quot;&gt;
+
+&lt;/$list&gt;
+
+```
+&lt;$macrocall $name=&quot;dataLinkCreator&quot; data-file=&quot;$datafile$&quot; index=&lt;&lt;index&gt;&gt; word=$word$/&gt;
+```
+The widget ''[[$macrocall|http://tiddlywiki.com/#MacroCallWidget]]'' now will use the first macro ( from Part 1) shown above,  ` dataLinkCreator` , as each item is listed.
+
+In other words, this ''$list'' produces a full list of the INDEX part of the Data Tiddler [[DictionaryData]], listing each INDEX one by one, and as each one is listed, it is sent to the first macro ''dataLinkCreator'' for processing.
+
+The `dictionary` macro needs to send 3 things to `dataLinkCreator` macro.
+
+# The name of the Data Tiddler being used - in this case: ''DictionaryData'' stored in the variable `datafile` - and sent using the variable `data-file`
+# The INDEX item that has just been listed which is contained in the variable `index` - and sent using the variable `index`
+# The ''WORD'' this macro received when it was used, which is stored in the variable `word` and sent using the variable `word`
+
+So in essence, if the first INDEX listed is: //Dictionary.com// - then the following is sent:
+
+```
+&lt;$macrocall $name=&quot;dataLinkCreator&quot; data-file=&quot;DictionaryData&quot; index=&quot;Dictionary.com&quot; word=&quot;WORD&quot;/&gt;
+```
+Giving this result:
+&lt;$macrocall $name=&quot;dataLinkCreator&quot; data-file=&quot;DictionaryData&quot; index=&quot;Dictionary.com&quot; word=&quot;WORD&quot;/&gt;
+
+Then each subsequent INDEX listed out is sent, so the end result of using the macro `&lt;&lt;dictionary WORD&gt;&gt;` is this:
+
+&lt;&lt;dictionary WORD&gt;&gt;
+
+
+
+Notes:
+
+For this example:
+
+* Macros are defined in the tiddler [[Dictionary Macro to Read Data]] - and note that tiddler is tagged &lt;&lt;tag $:/tags/Macro&gt;&gt; making it a Global macro, to ensure the macros within it can be used in other tiddlers
+* The Data Tiddler being used is: [[DictionaryData]] - notice that the Data Tiddler has at the bottom (use Edit mode to see this) - the data type set to: //application/x-tiddler-dictionary//
+* This tiddler is of course called &lt;$link to={{!!title}}&gt;{{!!title}}&lt;/$link&gt;
+
+Explanation for using [[$wikify|http://tiddlywiki.com/#WikifyWidget]]
+
+
+&lt;&lt;&lt;
+The wikify widget parses and renders a string of text and assigns the result to a specified variable. The new value of the variable is available to the content within the wikify widget.
+
+&lt;&lt;&lt;
+
+While producing the full `&lt;a href=&quot;` HTML by joining different variables together, the HTML would not come out properly until this `$wikify` widget was used.
+
+Using this to make the macros work, was found by extensive trial and error - though it may be documented or talked about elsewhere, I could not find it at the time, but came across an explanation of how it works on the [[Google Groups TiddlyWiki 10 Mar 2017|https://groups.google.com/forum/?hl=en#!topic/tiddlywiki/zX-vXippHdI]].
+
+&lt;small&gt; //Related// |
+&lt;$list filter=[all[current]list[!!related]] variable=&quot;name&quot;&gt;
+&lt;$link to=&lt;&lt;name&gt;&gt; &gt; &lt;&lt;name&gt;&gt; 
+&lt;/$link&gt; |
+
+&lt;/$list&gt;
+&lt;/small&gt;
+</pre>
+</div>
+<div author="00SS" created="20170304050040470" date="2017-03-03" modified="20190109121944583" related="[[Dictionary How to read Data]] [[DictionaryData]]" tags="macro data Learning $:/tags/Macro" title="Dictionary Macro to Read Data">
+<pre>\define linkCreator(index link word-encoded)
+&lt;a href=&quot;$link$$word-encoded$&quot; target=&quot;_blank&quot;&gt;&lt;$text text=&quot;&quot;&quot;$index$&quot;&quot;&quot;&gt;&lt;/a&gt;
+\end
+
+\define dictionary(word datafile:&quot;&quot;&quot;DictionaryData&quot;&quot;&quot;)
+&lt;small&gt;
+&lt;$set name=&quot;word-enc&quot; filter=&quot;&quot;&quot;[[$word$]] +[encodeuri[]]&quot;&quot;&quot;&gt;
+&lt;$set name=&quot;ndx&quot; filter=&quot;&quot;&quot;[[$datafile$]indexes[]]&quot;&quot;&quot;&gt;
+&lt;$list filter=&quot;[enlist&lt;ndx&gt;]&quot;&gt;
+&lt;$set name=&quot;link&quot; tiddler=&quot;&quot;&quot;$datafile$&quot;&quot;&quot; index=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$wikify name=&quot;indx&quot; text=&quot;&quot;&quot;&lt;&lt;currentTiddler&gt;&gt;&quot;&quot;&quot;&gt;
+&lt;$macrocall $name=&quot;linkCreator&quot; link=&lt;&lt;link&gt;&gt; index=&lt;&lt;indx&gt;&gt; word-encoded=&lt;&lt;word-enc&gt;&gt;/&gt;
+&lt;/$wikify&gt;&lt;/$set&gt;
+&lt;/$list&gt;
+&lt;/$set&gt;&lt;/$set&gt;
+&lt;small&gt;
+\end
+
+&lt;&lt;dictionary &quot;&quot;&quot;avarice ''\/ &quot; $%^&amp;yes&quot;&quot;&quot;&gt;&gt;
+
+
+&lt;small&gt; //Related// |
+&lt;$list filter=[all[current]list[!!related]] variable=&quot;name&quot;&gt;
+&lt;$link to=&lt;&lt;name&gt;&gt; &gt; &lt;&lt;name&gt;&gt; 
+&lt;/$link&gt; |
+
+&lt;/$list&gt;
+&lt;/small&gt;
+
+
+</pre>
+</div>
+<div author="00SS" created="20170302051330595" date="2017-03-01" modified="20190108171651181" tags="" title="DictionaryData" type="application/x-tiddler-dictionary">
+<pre>Dictionary.com: https://www.dictionary.com/browse/
+The Free Dict.: http://www.thefreedictionary.com/
+Merrium-Webster: https://www.merriam-webster.com/dictionary/
+Collins: https://www.collinsdictionary.com/dictionary/english/
+Oxford: https://en.oxforddictionaries.com/definition/
+Chambers: http://chambers.co.uk/search/?title=21st&amp;query=
+OneLook: http://www.onelook.com/?w=
+American Heritage:https://ahdictionary.com/word/search.html?q=
+Wikipedia: https://en.wikipedia.org/wiki/
+Wiktionary: https://en.wiktionary.org/wiki/
+Etymology: http://www.etymonline.com/index.php?term=
+Google: https://www.google.com/#q=
+DuckDuckGo: https://duckduckgo.com/html/?q=
+Yandex: https://www.yandex.com/search/?lr=10619&amp;text=
+Baidu: http://www.baidu.com/s?wd=
+Qwant: https://www.qwant.com/?q=</pre>
 </div>
 <div created="20170110075337776" modified="20190130084140156" tags="Notes" title="Difficulties with TiddlyWiki">
 <pre>I am a new uesr of TiddyWiki, I decided that the software looked interesting to keep track of extensive notes and lists I have made over the years.
