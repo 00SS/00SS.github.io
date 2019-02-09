@@ -10118,7 +10118,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190207082622232" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190209014636206" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10142,8 +10142,8 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20190108110319730" modified="20190124102815654" title="$:/state/toc/TableOfContents-todo--118161433">
 <pre>close</pre>
 </div>
-<div created="20181229163730106" modified="20190207061835748" title="$:/state/When you make a Tiddler">
-<pre>show</pre>
+<div created="20181229163730106" modified="20190209064001000" title="$:/state/When you make a Tiddler">
+<pre>hide</pre>
 </div>
 <div created="20181229163731620" modified="20181229163750982" title="$:/state/When you make a Tiddlers">
 <pre>hide</pre>
@@ -10151,11 +10151,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190204164819858" list="$:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/editions/tw5.com/doc-macros [[WikiText for Beginners]] [[When you make a Tiddler]] [[Widgets for Beginners]] [[Dictionary How to read Data]] [[TiddlyWiki's Core for Beginners]] Tiddlers [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190207062840458" title="$:/StoryList">
+<div created="20190204164819858" list="Beginners [[Make a tiddler right now, right here]] [[Make your first Tiddler]] [[WikiText for Beginners]] [[When you make a Tiddler]] [[Widgets for Beginners]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190209014541622" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190207062837756" title="$:/temp/advancedsearch">
-<pre>doc sty</pre>
+<div created="20181229183224518" modified="20190208150454968" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10211,11 +10211,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190207062131548" title="$:/temp/search">
+<div created="20181221081025004" modified="20190209064232520" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190205135636912" title="$:/temp/toc/selectedTiddler">
-<pre>Enable the Home button</pre>
+<div created="20181221081005896" modified="20190209014627412" title="$:/temp/toc/selectedTiddler">
+<pre>Discover TiddlyWiki</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -14910,12 +14910,14 @@ For installing a plugin, see [[Installing a plugin from the plugin library]] or 
 # [[WikifyWidget]]
 #* ''output'' key-word : widgettree	- Return a formatted JSON representation of the widget tree</pre>
 </div>
-<div created="20190105081846464" modified="20190207082009000" tags="todo Beginners" title="Widgets for Beginners">
-<pre>They could have been called &lt;&lt;.word Tools&gt;&gt; or &lt;&lt;.word Elements&gt;&gt; or &lt;&lt;.word Commands&gt;&gt; or &lt;&lt;.word Identifiers&gt;&gt;, but in ~TiddlyWiki, they are called &lt;&lt;.word Widgets&gt;&gt;
+<div created="20190105081846464" modified="20190209052834770" tags="todo Beginners" title="Widgets for Beginners">
+<pre>&lt;$macrocall $name=&quot;.preamble&quot; _=&quot;They could have been called &lt;&lt;.word Tools&gt;&gt; or &lt;&lt;.word Elements&gt;&gt; or &lt;&lt;.word Commands&gt;&gt; or &lt;&lt;.word Identifiers&gt;&gt;, but in ~TiddlyWiki, they are called &lt;&lt;.word Widgets&gt;&gt;&quot;/&gt;
 
 Widgets can be considered ~TiddlyWiki's personalized extension of HTML, to perform tasks specific to the needs of ~TiddlyWiki's user's needs and experience.
 
 Widgets form part of the processing heart of ~TiddlyWiki.
+
+!! What are they used for?
 
 They are used for tasks such as to:
 
@@ -14927,12 +14929,13 @@ They are used for tasks such as to:
 * create, delete, modify, open &amp; close tiddlers etc. - referred to as [[Action Widgets|ActionWidgets]]
 * and more
 
+!!  How do they work?
+
 The same way that the display of a web page refreshes and changes with any change you make to a page, each and every widget that contributes to the display, or is given special instructions, updates whatever it does depending on the change. This is one of the strong and innovative powers of TW.
 
 CSS and similar things can change the way the wiki looks but they react to the environment that relates to them. Widgets act on their own (or to user input for buttons and similar).
 
-
-Widgets most often introduce the kind of functions or processes you may have used javascript for (but cant), however they are also aware of tiddlywiki specific features, and will refresh automatically based on changes elsewhere in your wiki. Update or tag one tiddler anywhere and it will update all tiddlers and widgets that are currently displaying something with the change you just made.
+Widgets most often introduce the kind of functions or processes you may have used javascript for (but can't), however they are also aware of tiddlywiki specific features, and will refresh automatically based on changes elsewhere in your wiki. Update or tag one tiddler anywhere and it will update all tiddlers and widgets that are currently displaying something with the change you just made.
 
 !! Widgets are not ~WikiText
 
@@ -14940,21 +14943,43 @@ Be careful not to confuse Widgets with [[WikiText|WikiText for Beginners]].
 
 ~WikiText is a special markup that secretly, behind the scenes, is actually creating and invoking Widgets. 
 
-For instance, the ~WikiText for making a link to a tiddler named &lt;&lt;.tid myTiddler&gt;&gt; is:
+For instance, the ~WikiText for making a link to a tiddler named &lt;&lt;.tid HelloThere&gt;&gt; is:
 
 ```
-[[myTiddler]]
+[[HelloThere]]
 ```
 
 This is actually ~WikiText shorthand for:
 
 ```
-&lt;$link to=&quot;myTiddler&quot;&gt;myTiddler&lt;/$link&gt;
+&lt;$link to=&quot;HelloThere&quot;&gt;HelloThere&lt;/$link&gt;
 ```
 
-It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. [[WikiText|WikiText for Beginners]] can be used inside of Widgets, but Widgets can not be used inside of ~WikiText. Try and remember this rule, as it is a stumbling block for all new users.
+The above &lt;&lt;.wid link&gt;&gt; in essence produces the HTML:
 
-!! Finding the right Widget to use
+```
+&lt;a href=&quot;#HelloThere&quot;&gt;HelloThere&lt;/a&gt;
+```
+
+Which shows up in your browser as:&lt;br&gt;
+&lt;$link to=&quot;HelloThere&quot;&gt;HelloThere&lt;/$link&gt;
+
+It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. ~WikiText can be used inside of Widgets, but Widgets can not be used inside of ~WikiText. Try and remember this rule, as it is a stumbling block for all new users.
+
+!! What do they look like?
+
+All widgets are in lowercase letters, start with a ''$'' sign and are surrounded by angle brackets just like  &lt;$text text=&quot;&lt;HTML&gt;&quot;/&gt; tags.
+
+* They normally come in pairs like `&lt;$view&gt;` and `&lt;/$view&gt;`
+* The first tag in a pair is the opening tag, the second tag is the closing tag
+* The end tag is written like the start tag, but with a forward slash inserted before the tag name 
+
+In cases where nothing is needed between the opening and closing tag, they can be closed as shown below:
+
+```
+&lt;$transclude tiddler=&quot;HelloThere&quot;/&gt;
+```
+!! Find the right one to use
 
 The full list is in the [[Widgets]] tiddler.
 
@@ -14972,15 +14997,19 @@ It won't be long before you will want to start using Widgets. Click the &lt;&lt;
 
 &lt;$button set=&quot;$:/state/When you make a Tiddler&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
 
-!!More Information on Widgets
+!! Use them
+
+Create a [[new tiddler|Make a tiddler right now, right here]] here on this website. Copy and paste one of the examples above into the tiddler and save the tiddler. You will see the result.
+
+!! Detailed information
 
 Here is the first set of common Widgets you should know about:
 
 * &lt;&lt;.wlink LinkWidget&gt;&gt;
-* &lt;&lt;.wlink ListWidget&gt;&gt;
 * &lt;&lt;.wlink SetWidget&gt;&gt; &amp; the similar &lt;&lt;.wlink VarsWidget&gt;&gt;
 * &lt;&lt;.wlink TranscludeWidget&gt;&gt;
 * &lt;&lt;.wlink TextWidget&gt;&gt;
+* &lt;&lt;.wlink ListWidget&gt;&gt;
 
 Then the suggested next set:
 
@@ -14989,7 +15018,10 @@ Then the suggested next set:
 * &lt;&lt;.wlink ButtonWidget&gt;&gt;
 * &lt;&lt;.wlink RevealWidget&gt;&gt;
 * &lt;&lt;.wlink EditTextWidget&gt;&gt;
+* &lt;&lt;.wlink ImageWidget&gt;&gt;
 * &lt;&lt;.wlink NavigatorWidget&gt;&gt;
+
+There is also a set of [[ActionWidgets]] that are used for – creating / deleting / opening / manipulating – tiddlers, often in conjunction with the &lt;&lt;.wlink ButtonWidget&gt;&gt; widget.
 
 &lt;hr&gt;
 &lt;/$reveal&gt;
@@ -15002,8 +15034,10 @@ Then the suggested next set:
 The WikiStore also manages the plugin modules used for widgets, and operations like serializing, deserializing, parsing and rendering tiddlers.
 </pre>
 </div>
-<div created="20190106105514236" modified="20190126184421242" tags="todo Beginners" title="WikiText for Beginners">
-<pre>Wikitext is ~TiddlyWiki's shortcut method of formatting your material for display. It is based on a writing style known as ~MarkDown.
+<div created="20190106105514236" modified="20190209063923826" tags="todo Beginners" title="WikiText for Beginners">
+<pre>!! Introduction
+
+Wikitext is ~TiddlyWiki's shortcut method of formatting your material for display. It is based on a writing style known as ~MarkDown.
 
 &lt;&lt;&lt; John Gruber, the creator of Markdown in 2004, writes:
 
@@ -15018,7 +15052,7 @@ The display of your material in ~TiddlyWiki depends on 5 main factors:
 : Your material (such as text, images, videos)
 : HTML (actually HTML5)
 : CSS (Cascading Style Sheets)
-: Javascript
+: ~JavaScript
 : The Browser (used to view the ~TiddlyWiki)
 
 ~WikiText will greatly simplify the way you can take advantage of HTML and CSS formatting.
@@ -15035,7 +15069,7 @@ HTML tags and CSS codes add lots of in-line noise. They make a document hard to 
 
 ~WikiText gives you simple ways to change the appearance of text and use common web-page display techniques such as:
 
-* bold, italic, underlined, strike-though etc.
+* ''bold'', //italic//, __underlined__, ~~strike-though~~ etc.
 * headings
 * bullet and numbered lists 
 * links to tiddlers and other websites
@@ -15067,10 +15101,10 @@ The HTML code has told your browser to display text in ''bold'' between the open
 
 !! Another Example
 Here is another example. First the HTML way of getting this line:
-&lt;p style=&quot;color:green;&quot;&gt;This is a paragraph of green text with &lt;em&gt;one&lt;/em&gt; word in italics and a link to a &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial.&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;color:green;&quot;&gt;This is a paragraph of green text with &lt;em&gt;one&lt;/em&gt; word in italics and a link to a &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt;.&lt;/p&gt;
 
 ```
-&lt;p style=&quot;color:green;&quot;&gt;This is a paragraph of green text with &lt;em&gt;one&lt;/em&gt; word in italics and a link to a &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial.&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;color:green;&quot;&gt;This is a paragraph of green text with &lt;em&gt;one&lt;/em&gt; word in italics and a link to a &lt;a href=&quot;https://www.w3schools.com/html/&quot;&gt;HTML Tutorial&lt;/a&gt;.&lt;/p&gt;
 ```
 
 
@@ -15079,18 +15113,30 @@ Next, the ~WikiText way of doing the exact same;
 
 ```
 @@color:green;
-This is a paragraph of green text with __one__ word underlined and link to a  [[HTML Tutorial.|https://www.w3schools.com/html/]]
+This is a paragraph of green text with __one__ word underlined and link to a  [[HTML Tutorial|https://www.w3schools.com/html/]].
 @@
 
 ```
 
 @@color:green;
-This is a paragraph of green text with __one__ word underlined and link to a  [[HTML Tutorial.|https://www.w3schools.com/html/]]
+This is a paragraph of green text with __one__ word underlined and link to a  [[HTML Tutorial|https://www.w3schools.com/html/]].
 @@
 
-!! Next
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/When you make a Tiddler&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/When you make a Tiddler&quot; setTo=&quot;show&quot;&gt;Show More Information on ~WikiText&lt;/$button&gt;&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/When you make a Tiddler&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/When you make a Tiddler&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!More Information on ~WikiText
 
 This is where you will find the full list of ~TiddlyWiki's - [[WikiText]] elements.
+
+&lt;hr&gt;
+&lt;/$reveal&gt;
+
 </pre>
 </div>
 
