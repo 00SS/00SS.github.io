@@ -159,9 +159,13 @@ Error message and password prompt
 
 <li>$:/editions/tw5.com/if-macro.js</li>
 
+<li>$:/editions/tw5.com/operator-macros</li>
+
 <li>$:/editions/tw5.com/snippets/download-empty-button</li>
 
 <li>$:/editions/tw5.com/variable-macros</li>
+
+<li>$:/editions/tw5.com/wikitext-macros</li>
 
 <li>$:/Import</li>
 
@@ -444,6 +448,8 @@ Error message and password prompt
 <li>Notes</li>
 
 <li>Notes within Documentation</li>
+
+<li>NT</li>
 
 <li>Open Your TiddlyWiki</li>
 
@@ -9616,28 +9622,8 @@ $caption$
 <div created="20181112103147346" modified="20190204164723100" title="$:/DefaultTiddlers">
 <pre>[[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] [[Beginners]]  [[Beginners - Reorder ToC list (draggable)]]  [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]]  [[Beginners Documentation Saga]]</pre>
 </div>
-<div created="20150117152607000" modified="20190207082208828" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
+<div created="20150117152607000" modified="20190210061031526" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
 <pre>\define .concat(1,2,3,4,5) $1$$2$$3$$4$$5$
-
-\define .code-disp(_,xtra) &lt;span class=&quot;doc-code-disp&quot;&gt; &lt;small&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$xtra$&quot; then=&lt;&lt;.code-disp-extra-yes _:[[$_$]]  xtra:&quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt; else=&lt;&lt;.code-disp-extra-no _:[[$_$]] &gt;&gt;/&gt;&lt;/small&gt;&lt;/span&gt;
-
-\define .code-disp-extra-yes(_,xtra) &lt;$text text=&quot;&quot;&quot;&lt;&lt;$_$ &quot;$xtra$&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
-\define .code-disp-extra-no(_) &lt;$text text=&quot;&quot;&quot;&lt;&lt;$_$&gt;&gt;&quot;&quot;&quot;/&gt;
-
-\define .line4(_,desc,term,xtra)
- &lt;tr&gt;&lt;td&gt;$_$&lt;/td&gt;&lt;td&gt;$desc$&lt;/td&gt;&lt;td&gt;&lt;&lt;$_$ &quot;&quot;&quot;$term$&quot;&quot;&quot; &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$term$&quot; then=&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]] &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;  else=&lt;&lt;.code-disp $_$&gt;&gt;/&gt;&lt;/td&gt;&lt;/tr&gt;
-\end
-
-\define .line3(_,term,xtra) 
-&lt;tr&gt;&lt;td&gt;$term$&lt;/td&gt;&lt;td&gt;&lt;&lt;$_$ &quot;&quot;&quot;$term$&quot;&quot;&quot;&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$term$&quot; then=&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]] &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;  else=&lt;&lt;.code-disp-extra-no $_$&gt;&gt;/&gt;&lt;/td&gt;&lt;/tr&gt;
-\end
-
-\define .line4-start()
-&lt;tr&gt;&lt;th&gt;Macro&lt;/th&gt;&lt;th&gt;Used for&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
-\end
-\define .line3-start()
-&lt;tr&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
-\end
 
 \define .def(_) &lt;dfn class=&quot;doc-def&quot;&gt;$_$&lt;/dfn&gt;
 
@@ -10027,6 +10013,43 @@ exports.run = function(cond, then, elze) {
 })();
 </pre>
 </div>
+<div created="20150117152607000" modified="20150228114306000" tags="$:/tags/Macro" title="$:/editions/tw5.com/operator-macros">
+<pre>\define .operator-examples(op,text:&quot;Examples&quot;) &lt;$link to=&quot;$op$ Operator (Examples)&quot;&gt;$text$&lt;/$link&gt;
+
+\define .operator-example(n,eg,ie)
+&lt;div class=&quot;doc-example&quot;&gt;
+`$eg$`
+&lt;$macrocall $name=&quot;.if&quot; cond=&quot;&quot;&quot;$ie$&quot;&quot;&quot; then=&quot;&quot;&quot;&lt;dd&gt;&amp;rarr; $ie$&lt;/dd&gt;&quot;&quot;&quot;/&gt;
+&lt;$list filter=&quot;[title&lt;.state-prefix&gt;addsuffix{!!title}addsuffix[/]addsuffix[$n$]]&quot; variable=&quot;.state&quot;&gt;
+&lt;$reveal state=&lt;&lt;.state&gt;&gt; type=&quot;nomatch&quot; text=&quot;show&quot;&gt;
+	&lt;dl&gt;
+	&lt;dd&gt;&lt;$button set=&lt;&lt;.state&gt;&gt; setTo=&quot;show&quot;&gt;Try it&lt;/$button&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&lt;&lt;.state&gt;&gt; type=&quot;match&quot; text=&quot;show&quot;&gt;
+	&lt;dl&gt;
+	&lt;dd&gt;&lt;$button set=&lt;&lt;.state&gt;&gt; setTo=&quot;&quot;&gt;Hide&lt;/$button&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;blockquote class=&quot;doc-example-result&quot;&gt;
+	&lt;ul&gt;&lt;$list filter=&quot;&quot;&quot;$eg$&quot;&quot;&quot; emptyMessage=&quot;(empty)&quot;&gt;
+	&lt;li&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/li&gt;
+	&lt;/$list&gt;&lt;/ul&gt;
+	&lt;/blockquote&gt;
+&lt;/$reveal&gt;
+&lt;/$list&gt;
+\end
+
+\define .this-is-operator-example() This example tiddler is used to illustrate some of the [[Filter Operators]].
+\define .using-days-of-week() These examples make use of the [[Days of the Week]] tiddler.
+\define .s-matching-is-case-sensitive() In looking for matches for &lt;&lt;.place S&gt;&gt;, capital and lowercase letters are treated as different.
+
+\define .node-only-operator()
+
+&lt;$macrocall $name=&quot;.note&quot; _=&quot;This operator is &lt;&lt;.em not&gt;&gt; available when ~TiddlyWiki is running in a web browser.&quot;/&gt;
+
+\end
+</pre>
+</div>
 <div title="$:/editions/tw5.com/snippets/download-empty-button">
 <pre>&lt;$button class=&quot;tc-btn-big-green&quot;&gt;
 &lt;$action-sendmessage $message=&quot;tm-download-file&quot; $param=&quot;$:/editions/tw5.com/download-empty&quot; filename=&quot;empty.html&quot;/&gt;
@@ -10050,11 +10073,57 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 \end
 </pre>
 </div>
+<div created="20150117184156000" modified="20150117184616000" tags="$:/tags/Macro" title="$:/editions/tw5.com/wikitext-macros">
+<pre>\define wikitext-example(src)
+&lt;div class=&quot;doc-example&quot;&gt;
+
+&lt;$macrocall $name=&quot;copy-to-clipboard-above-right&quot; src=&lt;&lt;__src__&gt;&gt;/&gt;
+
+```
+$src$
+```
+
+That renders as:
+
+$src$
+
+... and the underlying HTML is:
+
+$$$text/vnd.tiddlywiki&gt;text/html
+$src$
+$$$
+&lt;/div&gt;
+\end
+
+\define wikitext-example-without-html(src)
+&lt;div class=&quot;doc-example&quot;&gt;
+
+&lt;$macrocall $name=&quot;copy-to-clipboard-above-right&quot; src=&lt;&lt;__src__&gt;&gt;/&gt;
+
+```
+$src$
+```
+
+That renders as:
+
+$src$
+&lt;/div&gt;
+\end
+
+\define tw-code(tiddler)
+&lt;$codeblock language={{$tiddler$!!type}} code={{$tiddler$}}/&gt;
+\end
+
+\define tw-code-link(tiddler)
+[[$tiddler$]]:
+
+&lt;&lt;tw-code $tiddler$&gt;&gt;
+\end</pre>
+</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Untitled]]
-# [[Formatting in WikiText]]</pre>
+# [[$:/editions/tw5.com/wikitext-macros]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10128,7 +10197,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190209113815496" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190210143621134" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10158,8 +10227,8 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181229163731620" modified="20181229163750982" title="$:/state/When you make a Tiddlers">
 <pre>hide</pre>
 </div>
-<div created="20190209122929316" modified="20190209180616770" title="$:/state/Widgets for Beginners">
-<pre>hide</pre>
+<div created="20190209122929316" modified="20190210015438586" title="$:/state/Widgets for Beginners">
+<pre>show</pre>
 </div>
 <div created="20190209122747608" modified="20190209122750386" title="$:/state/WikiText for Beginners">
 <pre>hide</pre>
@@ -10167,11 +10236,11 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190209113731664" list="[[Deep Principles of TiddlyWiki5]] [[Looking inside a tiddler]] [[Widgets for Beginners]] [[WikiText for Beginners]] [[How a Tiddler is Stored in a TiddlyWiki file]] IntroductionTocTemplate [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190209172359506" title="$:/StoryList">
+<div created="20190209113731664" list="$:/Import $:/AdvancedSearch $:/editions/tw5.com/doc-macros $:/ControlPanel NT [[Deep Principles of TiddlyWiki5]] [[Looking inside a tiddler]] [[Widgets for Beginners]] [[WikiText for Beginners]] [[How a Tiddler is Stored in a TiddlyWiki file]] IntroductionTocTemplate [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] $:/editions/tw5.com/operator-macros [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190210070043068" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190208150454968" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20181229183224518" modified="20190210060841588" title="$:/temp/advancedsearch">
+<pre>doc mac</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10227,7 +10296,7 @@ The standard page template sets it to the value found in [[$configTiddler$]], wi
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190209180621286" title="$:/temp/search">
+<div created="20181221081025004" modified="20190210085044336" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190209113723040" title="$:/temp/toc/selectedTiddler">
@@ -11135,8 +11204,29 @@ Next: [[A Gentle Guide to TiddlyWiki]]
 <pre>Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
 morosanuae opened this Jun 18, 2017</pre>
 </div>
-<div created="20150110182600000" modified="20190204111011254" tags="tiddler-modified include todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
-<pre>\define doc-link-to-clipboard(parameter) &lt;&lt;.image $(currentTiddler)$&gt;&gt;
+<div created="20150110182600000" modified="20190210145207258" tags="tiddler-modified include todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
+<pre>\define .code-disp(_,xtra) &lt;span class=&quot;doc-code-disp&quot;&gt; &lt;small&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$xtra$&quot; then=&lt;&lt;.code-disp-extra-yes _:[[$_$]]  xtra:&quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt; else=&lt;&lt;.code-disp-extra-no _:[[$_$]] &gt;&gt;/&gt;&lt;/small&gt;&lt;/span&gt;
+
+\define .code-disp-extra-yes(_,xtra) &lt;$text text=&quot;&quot;&quot;&lt;&lt;$_$ &quot;$xtra$&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
+\define .code-disp-extra-no(_) &lt;$text text=&quot;&quot;&quot;&lt;&lt;$_$&gt;&gt;&quot;&quot;&quot;/&gt;
+
+\define .line4(_,desc,term,xtra)
+ &lt;tr&gt;&lt;td&gt;$_$&lt;/td&gt;&lt;td&gt;$desc$&lt;/td&gt;&lt;td&gt;&lt;&lt;$_$ &quot;&quot;&quot;$term$&quot;&quot;&quot; &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$term$&quot; then=&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]] &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;  else=&lt;&lt;.code-disp $_$&gt;&gt;/&gt;&lt;/td&gt;&lt;/tr&gt;
+\end
+
+\define .line3(_,term,xtra)
+\rules except wikilink
+&lt;tr&gt;&lt;td&gt;$term$&lt;/td&gt;&lt;td&gt;&lt;&lt;$_$ &quot;&quot;&quot;$term$&quot;&quot;&quot;&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$term$&quot; then=&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]] &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;  else=&lt;&lt;.code-disp-extra-no $_$&gt;&gt;/&gt;&lt;/td&gt;&lt;/tr&gt;
+\end
+
+\define .line4-start()
+&lt;tr&gt;&lt;th&gt;Macro&lt;/th&gt;&lt;th&gt;Used for&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
+\end
+\define .line3-start()
+&lt;tr&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
+\end
+
+\define doc-link-to-clipboard(parameter) &lt;&lt;.image $(currentTiddler)$&gt;&gt;
 
 \define doc-link-tool-to-clipboard(parameter) &lt;&lt;.image-button $(currentTiddler)$&gt;&gt;
 
@@ -11167,7 +11257,7 @@ Their names start with a dot to keep them out of the way of names that a user mi
 
 The CSS file associated with these macros is [[here|$:/editions/tw5.com/doc-styles]]. The macro definitions file is [[here|$:/editions/tw5.com/doc-macros]].
 
-!General
+!!General
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11178,7 +11268,7 @@ The CSS file associated with these macros is [[here|$:/editions/tw5.com/doc-styl
 &lt;&lt;.line4 .word &quot;a mention of an ordinary word or phrase&quot; &quot;hello world&quot;&gt;&gt;
 &lt;/table&gt;
 
-!Advice
+!!Advice
 
 &lt;table style=&quot;width:80%&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11189,14 +11279,23 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .note &quot;a Note&quot; &quot;Don't forget to click the Add button.&quot;&gt;&gt;
 &lt;/table&gt;
 
-!Blocks
+!!Blocks
 
 &lt;table style=&quot;width:80%&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
 &lt;&lt;.line4 .preamble &quot;an introductory sentence that stands apart from the rest of the tiddler&quot; &quot;This is a good place to begin from.&quot;&gt;&gt;
 &lt;/table&gt;
 
-!Tiddlers and fields
+Note: To use macros inside the ''Advice'' and ''Blocks'' macros, use this method:
+
+```
+&lt;$macrocall $name=&quot;.preamble&quot; _=&quot;This is a good &lt;&lt;.word place&gt;&gt; to begin from.&quot;/&gt;
+
+```
+
+&lt;$macrocall $name=&quot;.preamble&quot; _=&quot;This is a good &lt;&lt;.word place&gt;&gt; to begin from.&quot;/&gt;
+
+!!Tiddlers and fields
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11211,8 +11310,8 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .param &quot;a macro parameter name&quot; &quot;text&quot;&gt;&gt;
 &lt;/table&gt;
 
-!Placeholders
-!! When editing tiddlers:
+!!Placeholders
+!!! When editing tiddlers:
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
 &lt;&lt;.line4 .placeholder-body &quot;display shown in empty ''text'' area&quot; &gt;&gt;
@@ -11222,7 +11321,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .placeholder-fields &quot;display shown in empty ''field value'' area&lt;br&gt;__parameter__: ''Value''&quot; Value&gt;&gt;
 &lt;/table&gt;
 
-!Links
+!!Links
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11241,7 +11340,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .wlink2 &quot;a link to a widget, with specified text&quot; &quot;foo&quot; &quot;ButtonWidget&quot;&gt;&gt;
 &lt;/table&gt;
 
-!User interface
+!!User interface
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11249,7 +11348,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .keycombo &quot;a key combination&quot; Ctrl Enter&gt;&gt;
 &lt;/table&gt;
 
-!Tabs
+!!Tabs
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11262,7 +11361,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .example-tab &quot;an example tab name&quot; &quot;Notes&quot;&gt;&gt;
 &lt;/table&gt;
 
-!!Parameters for .sidebar-tab  (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/SideBar]]&quot;/&gt;)
+!!!Parameters for ''.sidebar-tab''  (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/SideBar]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11271,7 +11370,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!!Parameters for .more-tab (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/MoreSideBar]]&quot;/&gt;)
+!!!Parameters for ''.more-tab'' (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/MoreSideBar]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11280,7 +11379,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!!Parameters for .info-tab (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/TiddlerInfo]]&quot;/&gt;)
+!!!Parameters for ''.info-tab'' (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/TiddlerInfo]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11289,16 +11388,16 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!!Parameters for .controlpanel-tab (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/ControlPanel]]&quot;/&gt;)
+!!!Parameters for ''.controlpanel-tab'' (check=&lt;$count filter=&quot;[all[shadows]prefix[$:/core/ui/ControlPanel/]removeprefix[$:/core/ui/ControlPanel/]splitbefore[/]!suffix[/]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
-&lt;$list filter=&quot;[all[shadows]tag[$:/tags/ControlPanel]removeprefix[$:/core/ui/ControlPanel/]]&quot; variable=&quot;file&quot;&gt;
+&lt;$list filter=&quot;[all[shadows]prefix[$:/core/ui/ControlPanel/]removeprefix[$:/core/ui/ControlPanel/]splitbefore[/]!suffix[/]]&quot; variable=&quot;file&quot;&gt;
 &lt;$macrocall $name=&quot;.line3&quot; _=&quot;.controlpanel-tab&quot; term=&lt;&lt;file&gt;&gt;/&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!!Parameters for .advancedsearch-tab (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/AdvancedSearch]]&quot;/&gt;)
+!!!Parameters for ''.advancedsearch-tab'' (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/AdvancedSearch]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11307,7 +11406,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!Buttons
+!!Buttons
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11315,9 +11414,11 @@ before you upgrade.&quot;&gt;&gt;
 &lt;&lt;.line4 .button-only &quot;a standard button icon only&quot; &quot;new-tiddler&quot;&gt;&gt;
 &lt;/table&gt;
 
-!!Parameters for .button &amp; .button-only
+To display just the button without any accompanying text, amend the below macros by hand to &lt;$text text=&quot;&lt;&lt;.button-only ... &gt;&gt;&quot;/&gt;
 
-!!!Tiddler toolbar (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/ViewToolbar]]&quot;/&gt;)
+!!!Parameters for ''.button'' &amp; ''.button-only''
+
+!!!Tiddler toolbar - (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/ViewToolbar]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11326,7 +11427,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-!!!Edit-mode toolbar (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/EditToolbar]]&quot;/&gt;)
+!!!Edit-mode toolbar - (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/EditToolbar]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11335,9 +11436,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-
-
-!!!Page toolbar (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/PageControls]]&quot;/&gt;)
+!!!Page toolbar - (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/PageControls]]&quot;/&gt;)
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line3-start&gt;&gt;
@@ -11346,8 +11445,7 @@ before you upgrade.&quot;&gt;&gt;
 &lt;/$list&gt;
 &lt;/table&gt;
 
-
-!Images
+!!Images
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
@@ -11361,10 +11459,9 @@ Table layout taken from instructions show in tiddler:
 to get the images in a table width 80% of the tiddler.
 --&gt;
 
-!!Parameters for .image &amp; .image-only
-!!!Images (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;/&gt;)
-Click the image to copy the ''&lt;$text text=&quot;&lt;&lt;.image ... &gt;&gt;&quot;/&gt;'' macro code to the clipboard.&lt;br&gt;
-Amend it by hand to get the ''&lt;$text text=&quot;&lt;&lt;.image-only ... &gt;&gt;&quot;/&gt;'' macro.
+!!!Parameters for ''.image'' &amp; ''.image-only'' - (check=&lt;$count filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;/&gt;)
+Click the image to copy the &lt;$text text=&quot;&lt;&lt;.image ... &gt;&gt;&quot;/&gt; macro code to the clipboard.&lt;br&gt;
+Amend by hand after pasting to get the &lt;$text text=&quot;&lt;&lt;.image-only ... &gt;&gt;&quot;/&gt; macro.
 
 &lt;div class=&quot;doc-dynamic-table doc-buttons&quot;&gt;
 &lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;&gt;
@@ -11380,10 +11477,9 @@ Amend it by hand to get the ''&lt;$text text=&quot;&lt;&lt;.image-only ... &gt;&
 
 &lt;hr&gt;
 
-!!Parameters for .image-button &amp; .image-button-only
-!!!Images (check=&lt;$count filter=&quot;[all[shadows+tiddlers]tag[$:/tags/EditorToolbar]!has[draft.of]]&quot;/&gt;)
-Click the image to copy the ''&lt;$text text=&quot;&lt;&lt;.image-button ... &gt;&gt;&quot;/&gt;'' macro code to the clipboard.&lt;br&gt;
-Amend it by hand to get the ''&lt;$text text=&quot;&lt;&lt;.image-button-only ... &gt;&gt;&quot;/&gt;'' macro.
+!!!Parameters for ''.image-button'' &amp; ''.image-button-only'' - (check=&lt;$count filter=&quot;[all[shadows+tiddlers]tag[$:/tags/EditorToolbar]!has[draft.of]]&quot;/&gt;)
+Click the image to copy the &lt;$text text=&quot;&lt;&lt;.image-button ... &gt;&gt;&quot;/&gt; macro code to the clipboard.&lt;br&gt;
+Amend by hand after pasting to get the &lt;$text text=&quot;&lt;&lt;.image-button-only ... &gt;&gt;&quot;/&gt; macro.
 
 &lt;!-- 
 Table layout taken from instructions show in tiddler:
@@ -11408,21 +11504,28 @@ Removes titles whose icons that use a different icon name than the tiddler title
 
 &lt;hr&gt;
 
-! Display Macros
+!! Display Macros
 
+@@.table
+@@width:80%;
 |!Macro|!Description and usage|!Location|
-|`&lt;&lt;wikitext-example src=&quot;&quot;&gt;&gt;`|Use this for ... |[[$:/editions/tw5.com/wikitext-macros]]|
-|`&lt;&lt;wikitext-example-without-html src&gt;&gt;`|Use for ... | &quot;&quot; |
-|`&lt;&lt;tw-code tiddler&gt;&gt;`|Used in [[GroupedLists]]|  &quot;&quot; |
-|`&lt;&lt;tw-code-link tiddler&gt;&gt;`|Used in [[GroupedLists]]|[[$:/editions/tw5.com/operator-macros]]|
-|`&lt;&lt;.operator-examples op=&quot;&quot; text=&quot;Examples&quot;&gt;&gt;`|Used to create the &quot;Example&quot; link to an Operator definition's example tiddler| &quot;&quot; |
-|`&lt;&lt;.this-is-operator-example&gt;&gt;`| Used in [[Days of the Week]] | &quot;&quot; |
-|`&lt;&lt;.variable-examples v=&quot;&quot; text=&quot;Examples&quot;&gt;&gt;`|Used to create the &quot;Example&quot; link to a Variable definition's example tiddler |[[$:/editions/tw5.com/variable-macros]]|
-|`&lt;&lt;.macro-examples m text=&quot;Examples&quot;&gt;&gt;`|Used to create the &quot;Example&quot; link to a Macro definition's example tiddler | &quot;&quot; |
-|`&lt;&lt;.widget-examples w text=&quot;Examples&quot;&gt;&gt;`|Used to create the &quot;Example&quot; link to a Widget definition's example tiddler | &quot;&quot; |
-|`&lt;&lt;.js-macro-link _=&quot;&quot;&gt;&gt;`|Used in [[Macros]] , [[tv-get-export-path Variable]] | &quot;&quot; |
-|`&lt;&lt;.from-version version=&quot;&quot;&gt;&gt;`|Used to show from which version the new feature was added |[[$:/editions/tw5.com/version-macros]]|
-|`&lt;&lt;style-guide good=&quot;&quot; bad=&quot;&quot;)&gt;&gt;`|Not used anywhere! |[[$:/editions/tw5.com/style-guide-macros]]|
+|||~$:/editions/tw5.com/|
+|&lt;&lt;.code-disp _:'wikitext-example src:&quot;&quot;'&gt;&gt;|For ~WikiText examples when HTML tags &lt;br&gt;need to be shown|[[wikitext-macros|$:/editions/tw5.com/wikitext-macros]]|
+|&lt;&lt;.code-disp _:'wikitext-example-without-html src:&quot;&quot;'&gt;&gt;|For ~WikiText examples when HTML tags &lt;br&gt;do ''not'' need to be shown| &quot;&quot; |
+|&lt;&lt;.code-disp _:'tw-code tiddler:&quot;&quot;'&gt;&gt;| Used in [[GroupedLists]] |  &quot;&quot; |
+|&lt;&lt;.code-disp _:'tw-code-link tiddler:&quot;&quot;'&gt;&gt;| Used in [[GroupedLists]] |[[operator-macros|$:/editions/tw5.com/operator-macros]]|
+|&lt;&lt;.code-disp _:'.operator-examples op:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Creates the &quot;Example&quot; link to&lt;br&gt; an Operator definition's example tiddler| &quot;&quot; |
+|&lt;&lt;.code-disp _:'.operator-example n:&quot;&quot; eg:&quot;&quot; ie:&quot;&quot;'&gt;&gt;|Used in an &quot;Example tiddler&quot; of an Operator.&lt;br&gt;''n'' is the example number&lt;br&gt;''eg'' is the filter&lt;br&gt;''ie'' is an explanation (if needed)| &quot;&quot; |
+|&lt;&lt;.code-disp _:'.this-is-operator-example'&gt;&gt;| Used in tiddler: [[Days of the Week]] | &quot;&quot; |
+|&lt;&lt;.code-disp _:'.variable-examples v:&quot;&quot; text:&quot;Examples&quot; '&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Variable definition's example tiddler |[[variable-macros|$:/editions/tw5.com/variable-macros]]|
+|&lt;&lt;.code-disp _:'.macro-examples m:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Macro definition's example tiddler | &quot;&quot; |
+|&lt;&lt;.code-disp _:'.widget-examples w:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Widget definition's example tiddler | &quot;&quot; |
+|&lt;&lt;.code-disp _:'.js-macro-link _:&quot;&quot;'&gt;&gt;|Used to create a link in tiddlers:&lt;br&gt;[[Macros]] &amp; [[tv-get-export-path Variable]]| &quot;&quot; |
+|&lt;&lt;.code-disp _:'.this-is-static-link-variable'&gt;&gt;|Used to give a tip in tiddlers:&lt;br&gt;[[tv-filter-export-link Variable]] &lt;br&gt; [[tv-get-export-link Variable]] &lt;br&gt; [[tv-wikilink-template Variable]]| &quot;&quot; |
+|&lt;&lt;.code-disp _:'.this-is-toolbar-config-variable configTiddler:&quot;&quot;)'&gt;&gt;|Used to give a message in tiddlers:&lt;br&gt; [[tv-config-toolbar-icons Variable]] &lt;br&gt; [[tv-config-toolbar-text Variable]]| &quot;&quot; |
+|&lt;&lt;.code-disp _:'.from-version version:&quot;&quot;'&gt;&gt;|Shows from which version a new feature was added |[[version-macros|$:/editions/tw5.com/version-macros]]|
+|&lt;&lt;.code-disp _:'style-guide good:&quot;&quot; bad:&quot;&quot;'&gt;&gt;|Not used anywhere! |[[style-guide-macros|$:/editions/tw5.com/style-guide-macros]]|
+@@
 </pre>
 </div>
 <div created="20190129184427736" modified="20190129192935456" tags="" title="Documentation Macros - List all image buttons (Editor Toolbar)">
@@ -13355,6 +13458,9 @@ Thus a request for a guideline and a macro as mentioned in [[Documentation Macro
 
 </pre>
 </div>
+<div created="20190210031155272" modified="20190210031229702" tags="" title="NT">
+<pre>~YeS!</pre>
+</div>
 <div created="20181229171055376" modified="20190103110306012" tags="todo Beginners" title="Open Your TiddlyWiki">
 <pre>After you've downloaded your ~TiddlyWiki, you need to find where you saved your empty.html , or whatever name you renamed it to. The extension should be .htm or .html
 
@@ -14980,7 +15086,7 @@ For installing a plugin, see [[Installing a plugin from the plugin library]] or 
 # [[WikifyWidget]]
 #* ''output'' key-word : widgettree	- Return a formatted JSON representation of the widget tree</pre>
 </div>
-<div created="20190105081846464" modified="20190209180508560" tags="todo Beginners" title="Widgets for Beginners">
+<div created="20190105081846464" modified="20190210015151170" tags="todo Beginners" title="Widgets for Beginners">
 <pre>&lt;$macrocall $name=&quot;.preamble&quot; _=&quot;They could have been called &lt;&lt;.word Tools&gt;&gt; or &lt;&lt;.word Elements&gt;&gt; or &lt;&lt;.word Commands&gt;&gt; or &lt;&lt;.word Identifiers&gt;&gt;, but in ~TiddlyWiki, they are called &lt;&lt;.word Widgets&gt;&gt;&quot;/&gt;
 
 !! Introduction
@@ -14996,8 +15102,9 @@ They are used for tasks such as to:
 * create internal &amp; external links
 * display and manipulate your material (such as text, dates, images, videos)
 * list and organise both your tiddlers and your material automatically
-* create variables and both simple &amp; complex short cuts (macros)
+* create and use variables and both simple &amp; complex short cuts (macros)
 * create buttons, check-boxes, radio buttons, input boxes
+* re-use material from one tiddler in another (known as &lt;&lt;.word transclusion&gt;&gt;)
 * create, delete, modify, open &amp; close tiddlers etc. - referred to as [[Action Widgets|ActionWidgets]]
 * and more
 
@@ -15053,8 +15160,6 @@ In cases where nothing is needed between the opening and closing tag, they can b
 ```
 !! Find the right one to use
 
-The full list is in the [[Widgets]] tiddler.
-
 When looking up documentation for say the &lt;&lt;.wid link&gt;&gt; widget, you would search for: ''~LinkWidget''
 
 It is useful to remember that all information tiddlers for Widgets follow the same naming convention.
@@ -15072,6 +15177,8 @@ It won't be long before you will want to start using Widgets. Click the &lt;&lt;
 !! Use them
 
 Create a [[new tiddler|Make a tiddler right now, right here]] here on this website. Copy and paste one of the examples above into the tiddler and save the tiddler. You will see the result.
+
+Widgets share the same syntax as HTML tags, thus reading about [[HTML in WikiText]] and [[Widgets in WikiText]] will give you ideas how you can use them.
 
 !! Detailed information
 
@@ -15094,6 +15201,8 @@ Then the suggested next set:
 * &lt;&lt;.wlink NavigatorWidget&gt;&gt;
 
 There is also a set of [[ActionWidgets]] that are used for – creating / deleting / opening / manipulating – tiddlers, often in conjunction with the &lt;&lt;.wlink ButtonWidget&gt;&gt; widget.
+
+The full list is in the [[Widgets]] tiddler along with an introduction that is more technically concise.
 
 &lt;hr&gt;
 &lt;/$reveal&gt;
