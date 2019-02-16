@@ -271,6 +271,8 @@ Error message and password prompt
 
 <li>All the Core Image icons</li>
 
+<li>AutoFocus</li>
+
 <li>Beginners</li>
 
 <li>Beginners - Reorder ToC list (draggable)</li>
@@ -381,7 +383,23 @@ Error message and password prompt
 
 <li>Help</li>
 
+<li>Hidden Setting: Empty Story Display</li>
+
 <li>Hidden Setting: Filename for Save Wiki Button</li>
+
+<li>Hidden Setting: Scroll Top Adjustment</li>
+
+<li>Hidden Setting: Search AutoFocus</li>
+
+<li>Hidden Setting: Search Minimum Length</li>
+
+<li>Hidden Setting: Tags Minimum Length</li>
+
+<li>Hidden Setting: Template for Save Wiki Button</li>
+
+<li>Hidden Setting: Typing Refresh Delay</li>
+
+<li>Hidden Settings</li>
 
 <li>HistoryMechanism</li>
 
@@ -424,6 +442,8 @@ Error message and password prompt
 <li>Listing Icons</li>
 
 <li>Lists for Beginners</li>
+
+<li>Lists in WikiText</li>
 
 <li>Looking inside a tiddler</li>
 
@@ -9628,7 +9648,7 @@ $caption$
 <div created="20181112103147346" modified="20190204164723100" title="$:/DefaultTiddlers">
 <pre>[[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] [[Beginners]]  [[Beginners - Reorder ToC list (draggable)]]  [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]]  [[Beginners Documentation Saga]]</pre>
 </div>
-<div created="20150117152607000" modified="20190211160148312" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
+<div created="20150117152607000" modified="20190214110638928" tags="tiddler-modified $:/tags/Macro" title="$:/editions/tw5.com/doc-macros" type="text/vnd.tiddlywiki">
 <pre>\define .concat(1,2,3,4,5) $1$$2$$3$$4$$5$
 
 \define .def(_) &lt;dfn class=&quot;doc-def&quot;&gt;&quot;&quot;&quot;$_$&quot;&quot;&quot;&lt;/dfn&gt;
@@ -9660,14 +9680,14 @@ $caption$
 \define .clink(_,to) &lt;span class=&quot;doc-clink&quot;&gt;&lt;&lt;.link &quot;&quot;&quot;$_$&quot;&quot;&quot; &quot;$to$&quot;&gt;&gt;&lt;/span&gt;
 \define .dlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.def &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;&gt;/&gt;
 \define .dlink-ex(_,to) &lt;a href=&quot;$to$&quot; class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;&lt;.def &quot;$_$&quot;&gt;&gt;&lt;/a&gt;
-\define .flink(to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.field {{$to$!!caption}}&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .flink(to) &lt;$macrocall $name=&quot;.link&quot; _=&quot;&quot;&quot;&lt;code class=&quot;doc-field&quot;&gt;{{$to$!!caption}}&lt;/code&gt;&quot;&quot;&quot; to=&quot;$to$&quot;/&gt;
 \define .mlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.mtitle &quot;$_$&quot;&gt;&gt;/&gt;
 \define .mlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;/&gt;
 \define .olink(_) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.op &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.otitle &quot;$_$&quot;&gt;&gt;/&gt;
 \define .olink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.op &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.otitle &quot;$to$&quot;&gt;&gt;/&gt;
 \define .vlink(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&lt;&lt;.vtitle &quot;$_$&quot;&gt;&gt;/&gt;
 \define .vlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.var &quot;$_$&quot;&gt;&gt; to=&quot;$to$&quot;/&gt;
-\define .wlink(to) &lt;$macrocall $name=&quot;.link&quot; _=&lt;&lt;.wid {{$to$!!caption}}&gt;&gt; to=&quot;$to$&quot;/&gt;
+\define .wlink(to) &lt;$macrocall $name=&quot;.link&quot; _=&quot;&quot;&quot;&lt;code class=&quot;doc-widget&quot;&gt;${{$to$!!caption}}&lt;/code&gt;&quot;&quot;&quot; to=&quot;$to$&quot;/&gt;
 \define .wlink2(_,to) &lt;$macrocall $name=&quot;.link&quot; _=&quot;$_$&quot; to=&quot;$to$&quot;/&gt;
 
 \define .key(_) &lt;span class=&quot;doc-key&quot;&gt;$_$&lt;/span&gt;
@@ -9685,7 +9705,7 @@ $caption$
 
 \define .button(_) &lt;span class=&quot;doc-button&quot;&gt; {{$:/core/ui/Buttons/$_$!!caption}}&lt;/span&gt;
 
-\define .button-only(_) &lt;span class=&quot;doc-images&quot;&gt; {{$:/core/ui/Buttons/$_$}} &lt;/span&gt;
+\define .button-only(_) &lt;span class=&quot;doc-button&quot;&gt; {{$:/core/ui/Buttons/$_$}} &lt;/span&gt;
 
 \define .image(_) &lt;span class=&quot;doc-button&quot;&gt; {{$:/core/images/$_$}} $_$ &lt;/span&gt;
 
@@ -10129,7 +10149,7 @@ $src$
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[HistoryMechanism]]</pre>
+# [[Hidden Settings]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10158,10 +10178,10 @@ $src$
 <div created="20181229154823906" modified="20181229154919040" title="$:/state/SampleReveal2">
 <pre>hide</pre>
 </div>
-<div created="20181221084007454" modified="20181221084007454" title="$:/state/showeditpreview">
+<div created="20181221084007454" modified="20190214101822084" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20181230031116820" modified="20190117142938440" title="$:/state/sidebar">
+<div created="20181230031116820" modified="20190214061809484" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20190130082152158" modified="20190130082204920" title="$:/state/tab--1173737610">
@@ -10209,7 +10229,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190214015342556" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190216031557438" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10248,11 +10268,11 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190211155839310" list="StateTiddler [[Empty Story]] HistoryMechanism StoryView [[Using Stylesheets]] $:/editions/tw5.com/doc-macros [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190214020511598" title="$:/StoryList">
+<div created="20190211155839310" list="[[Hidden Setting: Filename for Save Wiki Button]] [[Hidden Setting: Empty Story Display]] [[Hidden Setting: Scroll Top Adjustment]] [[Hidden Setting: Search AutoFocus]] [[Hidden Setting: Search Minimum Length]] [[Hidden Setting: Tags Minimum Length]] [[Hidden Setting: Template for Save Wiki Button]] [[Hidden Setting: Typing Refresh Delay]] [[Hidden Settings]] [[Deep Principles of TiddlyWiki5]] [[Creating and editing tiddlers]] $:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/ControlPanel StateTiddler [[Empty Story]] HistoryMechanism StoryView [[Using Stylesheets]] $:/editions/tw5.com/doc-macros [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190216024249212" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190210162201324" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20181229183224518" modified="20190214064828634" title="$:/temp/advancedsearch">
+<pre>doc sty</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10308,7 +10328,7 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190214020510136" title="$:/temp/search">
+<div created="20181221081025004" modified="20190216031555416" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190209113723040" title="$:/temp/toc/selectedTiddler">
@@ -10480,6 +10500,9 @@ A useful convention is to use the prefix `$:/_` for any system tiddlers that you
 &lt;/$list&gt;
 &lt;/$set&gt;
 &lt;/$list&gt;</pre>
+</div>
+<div title="AutoFocus">
+<pre></pre>
 </div>
 <div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[What TiddlyWiki does with your Data]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[WikiText for Beginners]] [[Variables for Beginners]] [[Macros for Beginners]] [[Widgets for Beginners]] [[Widget Tree for Beginners]] [[Control Panel for Beginners]] [[Table of Contents for Beginners]] [[Draft Tiddlers]] [[Missing Tiddlers]] [[Orphan Tiddlers]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]] [[Filters for Beginners]] [[Lists for Beginners]] [[Plugins for Beginners]] [[Save Manually and Keep a Back up Version]] Help" modified="20190209111714108" tags="include todo TableOfContents" title="Beginners">
 <pre>&lt;$macrocall
@@ -10868,7 +10891,7 @@ There are &lt;$count filter=&quot;[tag[Examples]]&quot;/&gt; tiddlers tagged wit
 &lt;&lt;&lt;
 </pre>
 </div>
-<div created="20140904140300000" modified="20190129182729580" tags="tiddler-modified todo [[Working with TiddlyWiki]]" title="Creating and editing tiddlers" type="text/vnd.tiddlywiki">
+<div created="20140904140300000" modified="20190214102305674" tags="tiddler-modified todo [[Working with TiddlyWiki]]" title="Creating and editing tiddlers" type="text/vnd.tiddlywiki">
 <pre>! Creating tiddlers
 
 You can create a tiddler by clicking the &lt;&lt;.button new-tiddler&gt;&gt; button in the sidebar, or by clicking on a link to a missing tiddler. Links to missing tiddlers are shown in [[blue italics]].
@@ -10883,7 +10906,7 @@ To edit an existing tiddler, click the &lt;&lt;.button edit&gt;&gt; button at th
 
 !! Draft mode
 
-When you create a new tiddler or edit an existing one, the tiddler will go into draft mode. This presents a control panel for modifying the tiddler in various ways. It has several parts, from top to bottom:
+When you create a new tiddler or edit an existing one, the tiddler will go into [[draft mode|DraftMechanism]]. This presents a control panel for modifying the tiddler in various ways. It has several parts, from top to bottom:
 
 *''The title field'' - Use this to change the title of the tiddler
 *''The tag selector'' - Use this to add or remove tags. As you type a tag name in the box, a dropdown list will show you any existing tags that match. You can pick from this list or create a completely new tag. Then click the ''add'' button or hit the &lt;kbd&gt;Enter&lt;/kbd&gt; key to add the tag to the tiddler. Each tag is shown as a coloured pill. Click the &quot;×&quot; on a pill to remove that tag
@@ -10896,8 +10919,8 @@ When you create a new tiddler or edit an existing one, the tiddler will go into 
 When you have finished editing, click a button at the top right of the tiddler:
 
 *The &lt;&lt;.button &quot;save&quot;&gt;&gt; button stores your changes to this one tiddler and leaves draft mode. If your wiki is configured to [[AutoSave]], your changes will be permanently saved. Otherwise they will only be stored temporarily in your web browser, and you will lose them if you close your ~TiddlyWiki page without first clicking the master  &lt;&lt;.button &quot;save-wiki&quot;&gt;&gt;  button in the sidebar.
-*The &lt;&lt;.button &quot;cancel&quot;&gt;&gt; button discards your changes (after asking you to confirm) and leaves draft mode.
-*The &lt;&lt;.button &quot;delete&quot;&gt;&gt; button deletes the entire tiddler (after asking you to confirm).
+*The &lt;&lt;.button &quot;cancel&quot;&gt;&gt; button discards your changes (after asking for your confirmation) and leaves draft mode.
+*The &lt;&lt;.button &quot;delete&quot;&gt;&gt; button deletes the entire tiddler (after asking for your confirmation).
 </pre>
 </div>
 <div created="20190209170638318" modified="20190209171717938" tags="Notes" title="Deep Principles of TiddlyWiki5">
@@ -11214,7 +11237,7 @@ Next: [[A Gentle Guide to TiddlyWiki]]
 <pre>Github Issue [[Proposal for improving TW Documentation - Structure (part 1)|https://github.com/Jermolene/TiddlyWiki5/issues/2912]] - 
 morosanuae opened this Jun 18, 2017</pre>
 </div>
-<div created="20150110182600000" modified="20190214010855726" tags="tiddler-modified include todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
+<div created="20150110182600000" modified="20190215070945296" tags="tiddler-modified todo [[Improving TiddlyWiki Documentation]]" title="Documentation Macros">
 <pre>\define .code-disp(_,xtra) &lt;span class=&quot;doc-code-disp&quot;&gt; &lt;small&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$xtra$&quot; then=&lt;&lt;.code-disp-extra-yes _:[[$_$]]  xtra:&quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt; else=&lt;&lt;.code-disp-extra-no _:[[$_$]] &gt;&gt;/&gt;&lt;/small&gt;&lt;/span&gt;
 
 \define .code-disp-extra-yes(_,xtra) &lt;$text text=&quot;&quot;&quot;&lt;&lt;$_$ &quot;$xtra$&quot;&gt;&gt;&quot;&quot;&quot;/&gt;
@@ -11229,11 +11252,22 @@ morosanuae opened this Jun 18, 2017</pre>
 &lt;tr&gt;&lt;td&gt;$term$&lt;/td&gt;&lt;td&gt;&lt;&lt;$_$ &quot;&quot;&quot;$term$&quot;&quot;&quot;&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;$macrocall $name=&quot;.if&quot; cond=&quot;$term$&quot; then=&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]] &quot;&quot;&quot;$xtra$&quot;&quot;&quot;&gt;&gt;  else=&lt;&lt;.code-disp-extra-no $_$&gt;&gt;/&gt;&lt;/td&gt;&lt;/tr&gt;
 \end
 
+\define .line3-1(_,desc,location)
+\rules except wikilink
+&lt;tr&gt;&lt;td&gt;&lt;&lt;.code-disp [[$_$ &quot;$term$&quot;]]&gt;&gt;&lt;/td&gt;&lt;td&gt;$desc$&lt;/td&gt;&lt;td&gt;&lt;$link to=&quot;$:/editions/tw5.com/$location$&quot;&gt;$location$&lt;/$link&gt;&lt;/td&gt;&lt;/tr&gt;
+\end
+
+
 \define .line4-start()
 &lt;tr&gt;&lt;th&gt;Macro&lt;/th&gt;&lt;th&gt;Used for&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
 \end
 \define .line3-start()
 &lt;tr&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;th&gt;Code&lt;/th&gt;&lt;/tr&gt;
+\end
+
+\define .line3-1-start()
+&lt;tr&gt;&lt;th&gt;Macro&lt;/th&gt;&lt;th&gt;Description and usage&lt;/th&gt;&lt;th&gt;Location&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;$text text=&quot;$:/editions/tw5.com/&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;
 \end
 
 \define doc-link-to-clipboard(parameter) &lt;&lt;.image $(currentTiddler)$&gt;&gt;
@@ -11248,12 +11282,16 @@ $:/core/images/$(currentTiddler)$
 Notes for ADDING more definitions:
 Below macros are defined in : $:/editions/tw5.com/doc-macros
 
-.line3-start &amp; .line4-start : 
+.line3-start &amp; .line3-1-start &amp; .line4-start : 
     gives the table header cells
 
 .line3 : 
 Used so far for parameters (for .button macro)
     Needs 2+Options 3 : 1) the macro being introduced 2) the parameter
+
+.line3-1 : 
+Used so far for Display Macros (bottom of this tiddler)
+    Needs 3: 1) the macro being introduced &amp; its parameters 2) a description of what it does 3) the tiddler it is located in
 
 .line4 : 
     Needs 3+Optional 4 : 1) the macro being introduced 2) its usage description 3) the example you want to display 4) An extra parameter for example in macros .mlink2 .olink2 .vlink2 .wlink2
@@ -11335,7 +11373,7 @@ Note: To use macros inside the ''Advice'' and ''Blocks'' macros, use this method
 
 &lt;table style=&quot;width:auto&quot;&gt;
 &lt;&lt;.line4-start&gt;&gt;
-&lt;&lt;.line4 .link &quot;a link containing WikiText&quot; &quot;^^an^^ ~~example~~&quot;&gt;&gt;
+&lt;&lt;.line4 .link &quot;a link containing WikiText&quot; &quot;^^an^^ ~~example~~&quot; Example&gt;&gt;
 &lt;&lt;.line4 .clink &quot;a code link&quot;  `&lt;$list&gt;` ListWidget&gt;&gt;
 &lt;&lt;.line4 .dlink &quot;a link on a defining instance of a term&quot; widget Widgets&gt;&gt;
 &lt;&lt;.line4 .dlink-ex &quot;an external link on a defining instance of a term&quot; &quot;Example&quot; &quot;http://example.com/&quot;&gt;&gt;
@@ -11504,7 +11542,7 @@ Removes titles whose icons that use a different icon name than the tiddler title
 &lt;$list   filter=&quot;[all[shadows+tiddlers]tag[$:/tags/EditorToolbar]!has[draft.of]removeprefix[$:/core/ui/EditorToolbar/]] -[[clear]] -[[editor-height]] -[[more]] -[[preview]] -[[preview-type]] [[auto-height]] [[fixed-height]] [[down-arrow]] [[preview-closed]] [[preview-open]] [[chevron-down]]&quot;&gt;
     &lt;$set name=&quot;image&quot; value=&lt;&lt;make-image-link&gt;&gt;&gt;
     &lt;span class=&quot;tc-editor-toolbar&quot;&gt;
-    &lt;$button message=&quot;tm-copy-to-clipboard&quot; param=&lt;&lt;doc-link-tool-to-clipboard&gt;&gt; tooltip=paint class=&quot;tc-btn-invisible&quot;&gt;
+    &lt;$button message=&quot;tm-copy-to-clipboard&quot; param=&lt;&lt;doc-link-tool-to-clipboard&gt;&gt; tooltip=&lt;&lt;currentTiddler&gt;&gt; class=&quot;tc-btn-invisible&quot;&gt;
         &lt;$transclude tiddler=&lt;&lt;image&gt;&gt;/&gt;
     &lt;/$button&gt;
     &lt;/span&gt;
@@ -11516,27 +11554,25 @@ Removes titles whose icons that use a different icon name than the tiddler title
 
 !! Display Macros
 
-@@.table
-@@width:80%;
-|!Macro|!Description and usage|!Location|
-|||~$:/editions/tw5.com/|
-|&lt;&lt;.code-disp _:'.example n:&quot;&quot; eg:&quot;&quot; egvar:&quot;NO-SUCH-VAR&quot; '&gt;&gt;|For Try It examples|[[doc-macros|$:/editions/tw5.com/doc-macros]]|
-|&lt;&lt;.code-disp _:'wikitext-example src:&quot;&quot;'&gt;&gt;|For ~WikiText examples when HTML tags &lt;br&gt;need to be shown|[[wikitext-macros|$:/editions/tw5.com/wikitext-macros]]|
-|&lt;&lt;.code-disp _:'wikitext-example-without-html src:&quot;&quot;'&gt;&gt;|For ~WikiText examples when HTML tags &lt;br&gt;do ''not'' need to be shown| &quot;&quot; |
-|&lt;&lt;.code-disp _:'tw-code tiddler:&quot;&quot;'&gt;&gt;| Used in [[GroupedLists]] |  &quot;&quot; |
-|&lt;&lt;.code-disp _:'tw-code-link tiddler:&quot;&quot;'&gt;&gt;| Used in [[GroupedLists]] |[[operator-macros|$:/editions/tw5.com/operator-macros]]|
-|&lt;&lt;.code-disp _:'.operator-examples op:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Creates the &quot;Example&quot; link to&lt;br&gt; an Operator definition's example tiddler| &quot;&quot; |
-|&lt;&lt;.code-disp _:'.operator-example n:&quot;&quot; eg:&quot;&quot; ie:&quot;&quot;'&gt;&gt;|Used in an &quot;Example tiddler&quot; of an Operator.&lt;br&gt;''n'' is the example number&lt;br&gt;''eg'' is the filter&lt;br&gt;''ie'' is an explanation (if needed)| &quot;&quot; |
-|&lt;&lt;.code-disp _:'.this-is-operator-example'&gt;&gt;| Used in tiddler: [[Days of the Week]] | &quot;&quot; |
-|&lt;&lt;.code-disp _:'.variable-examples v:&quot;&quot; text:&quot;Examples&quot; '&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Variable definition's example tiddler |[[variable-macros|$:/editions/tw5.com/variable-macros]]|
-|&lt;&lt;.code-disp _:'.macro-examples m:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Macro definition's example tiddler | &quot;&quot; |
-|&lt;&lt;.code-disp _:'.widget-examples w:&quot;&quot; text:&quot;Examples&quot;'&gt;&gt;|Create the &quot;Example&quot; link to&lt;br&gt; a Widget definition's example tiddler | &quot;&quot; |
-|&lt;&lt;.code-disp _:'.js-macro-link _:&quot;&quot;'&gt;&gt;|Used to create a link in tiddlers:&lt;br&gt;[[Macros]] &amp; [[tv-get-export-path Variable]]| &quot;&quot; |
-|&lt;&lt;.code-disp _:'.this-is-static-link-variable'&gt;&gt;|Used to give a tip in tiddlers:&lt;br&gt;[[tv-filter-export-link Variable]] &lt;br&gt; [[tv-get-export-link Variable]] &lt;br&gt; [[tv-wikilink-template Variable]]| &quot;&quot; |
-|&lt;&lt;.code-disp _:'.this-is-toolbar-config-variable configTiddler:&quot;&quot;)'&gt;&gt;|Used to give a message in tiddlers:&lt;br&gt; [[tv-config-toolbar-icons Variable]] &lt;br&gt; [[tv-config-toolbar-text Variable]]| &quot;&quot; |
-|&lt;&lt;.code-disp _:'.from-version version:&quot;&quot;'&gt;&gt;|Shows from which version a new feature was added |[[version-macros|$:/editions/tw5.com/version-macros]]|
-|&lt;&lt;.code-disp _:'style-guide good:&quot;&quot; bad:&quot;&quot;'&gt;&gt;|Not used anywhere! |[[style-guide-macros|$:/editions/tw5.com/style-guide-macros]]|
-@@
+&lt;table style=&quot;width:80%&quot;&gt;
+&lt;&lt;.line3-1-start&gt;&gt;
+&lt;&lt;.line3-1 '.example n:&quot;&quot; eg:&quot;&quot; egvar:&quot;NO-SUCH-VAR&quot;' &quot;For Try It examples&quot; doc-macros&gt;&gt;
+&lt;&lt;.line3-1 'wikitext-example src:&quot;&quot;' &quot;For ~WikiText examples when HTML tags &lt;br&gt;need to be shown&quot; wikitext-macros&gt;&gt;
+&lt;&lt;.line3-1 'wikitext-example-without-html src:&quot;&quot;' &quot;For ~WikiText examples when HTML tags &lt;br /&gt;do ''not'' need to be shown&quot; wikitext-macros&gt;&gt;
+&lt;&lt;.line3-1 'tw-code tiddler:&quot;&quot;' &quot;Used in [[GroupedLists]]&quot; wikitext-macros&gt;&gt;
+&lt;&lt;.line3-1 'tw-code-link tiddler:&quot;&quot;' &quot;Used in [[GroupedLists]]&quot; wikitext-macros&gt;&gt;
+&lt;&lt;.line3-1 '.operator-examples op:&quot;&quot; text:&quot;Examples&quot;' &quot;&quot;&quot;Creates the &quot;Example&quot; link to&lt;br&gt; an Operator definition's example tiddler&quot;&quot;&quot; operator-macros&gt;&gt;
+&lt;&lt;.line3-1 '.operator-example n:&quot;&quot; eg:&quot;&quot; ie:&quot;&quot;' &quot;&quot;&quot;Used in an &quot;Example tiddler&quot; of an Operator.&lt;br&gt;''n'' is the example number&lt;br&gt;''eg'' is the filter&lt;br&gt;''ie'' is an explanation (if needed)&quot;&quot;&quot; operator-macros&gt;&gt;
+&lt;&lt;.line3-1 '.this-is-operator-example' &quot;Used in tiddler: [[Days of the Week]]&quot; operator-macros&gt;&gt;
+&lt;&lt;.line3-1 '.variable-examples v:&quot;&quot; text:&quot;Examples&quot;' &quot;&quot;&quot;Create the &quot;Example&quot; link to&lt;br&gt; a Variable definition's example tiddler&quot;&quot;&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1 '.macro-examples m:&quot;&quot; text:&quot;Examples&quot;' &quot;&quot;&quot;Create the &quot;Example&quot; link to&lt;br&gt; a Macro definition's example tiddler&quot;&quot;&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1 '.widget-examples w:&quot;&quot; text:&quot;Examples&quot;' &quot;&quot;&quot;Create the &quot;Example&quot; link to&lt;br&gt; a Widget definition's example tiddler&quot;&quot;&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1 '.js-macro-link _:&quot;&quot;' &quot;Used to create a link in tiddlers:&lt;br&gt;[[Macros]] &amp; [[tv-get-export-path Variable]]&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1 '.this-is-static-link-variable' &quot;Used to give a tip in tiddlers:&lt;br&gt;[[tv-filter-export-link Variable]] &lt;br&gt; [[tv-get-export-link Variable]] &lt;br&gt; [[tv-wikilink-template Variable]]&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1  '.this-is-toolbar-config-variable configTiddler:&quot;&quot;)' &quot;|Used to give a message in tiddlers:&lt;br&gt; [[tv-config-toolbar-icons Variable]] &lt;br&gt; [[tv-config-toolbar-text Variable]]&quot; variable-macros&gt;&gt;
+&lt;&lt;.line3-1 '.from-version version:&quot;&quot;' &quot;Shows from which version a new feature was added&quot; version-macros&gt;&gt;
+&lt;&lt;.line3-1 'style-guide good:&quot;&quot; bad:&quot;&quot;' &quot;Not used anywhere!&quot; style-guide-macros&gt;&gt;
+&lt;/table&gt;
 </pre>
 </div>
 <div created="20190129184427736" modified="20190129192935456" tags="" title="Documentation Macros - List all image buttons (Editor Toolbar)">
@@ -12525,12 +12561,78 @@ This could give tips on ways to search for help within and outside ~TiddlyWiki!
 
 </pre>
 </div>
-<div created="20181215154811835" modified="20190122120034307" tags="[[Hidden Settings]]" title="Hidden Setting: Filename for Save Wiki Button" type="text/vnd.tiddlywiki">
+<div caption="Empty Story Display" created="20190216005914074" description="Contents to show when the [[Story River]] is empty" location="$:/config/EmptyStoryMessage" modified="20190216030710902" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Empty Story Display" type="text/vnd.tiddlywiki">
+<pre>To display content when the [[Story River]] is empty, create [[$:/config/EmptyStoryMessage]] and enter the desired contents. The following content in the text field would show the [[GettingStarted]] tiddler when all others are closed.
+
+```
+{{GettingStarted||$:/core/ui/ViewTemplate}}
+```</pre>
+</div>
+<div caption="Filename for Save Wiki Button" created="20181215154811835" description="Default file name used for saving the TiddlyWiki" location="$:/config/SaveWikiButton/Filename" modified="20190216030639756" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Filename for Save Wiki Button" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;.from-version &quot;5.1.19&quot;&gt;&gt; When saving a ~TiddlyWiki using the &lt;&lt;.button save-wiki&gt;&gt; button, the default  file name used for saving is constructed using the Title of the ~TiddlyWiki as entered in the [[Control Panel|$:/ControlPanel]], which is stored in the tiddler [[$:/SiteTitle]].
 
 The value used is in the form `{{$:/SiteTitle}}.html`. This causes the filename to be constructed from the site Title with a `.html` extension.
 
 If a tiddler named [[$:/config/SaveWikiButton/Filename]] is created, the text in that tiddler will be used as the default file name used for saving the ~TiddlyWiki.
+</pre>
+</div>
+<div caption="Scroll Top Adjustment" created="20180816105911495" description="Scroll position adjustment to take into account a fixed toolbar (by CSS class)" modified="20190216031512566" tags="[[Hidden Settings]] tiddler-modified" title="Hidden Setting: Scroll Top Adjustment" type="text/vnd.tiddlywiki">
+<pre>As part of navigating to a tiddler, ~TiddlyWiki scrolls the page so that the top of the tiddler lines up with the top of the browser window.  This means that the upper part of tiddlers can be obscured when using custom `position:fixed` toolbars at the top of the window.
+
+To adjust the scroll position to allow for the toolbar, add the CSS class `tc-adjust-top-of-scroll` to the toolbar. ~TiddlyWiki's scrolling mechanism will then dynamically adjust the scroll position by the height of that element.
+
+</pre>
+</div>
+<div caption="Search AutoFocus" created="20150619162518761" description="On first opening, toggle whether the search box getting focus" location="$:/config/Search/AutoFocus" modified="20190216030839844" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Search AutoFocus" type="text/vnd.tiddlywiki">
+<pre>When TiddlyWiki first opens in the browser the search box is automatically given the focus by default. If this causes problems, you can change the default by changing the value from ''true'' to ''false'' in [[$:/config/Search/AutoFocus]].
+</pre>
+</div>
+<div caption="Search Minimum Length" created="20161011074235805" description="Minimum length of a search string before results are displayed" location="$:/config/Search/MinLength" modified="20190216030925910" tags="[[Hidden Settings]] tiddler-modified" title="Hidden Setting: Search Minimum Length" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;.from-version &quot;5.1.14&quot;&gt;&gt; Controls the minimum length of a ''search string'' before results are displayed. You can change the default value of &quot;3&quot; in [[$:/config/Search/MinLength]].
+</pre>
+</div>
+<div caption="Tags Minimum Length" created="20171203233100000" description="Minimum length of an input string in the Tag Dropdown before results are displayed" location="$:/config/Tags/MinLength" modified="20190216031004934" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Tags Minimum Length" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;.from-version &quot;5.1.16&quot;&gt;&gt; Controls the minimum length of an input string in the ''Tag Dropdown'' before results are displayed. You can change the default value of &quot;0&quot; in [[$:/config/Tags/MinLength]]
+</pre>
+</div>
+<div caption="Template for Save Wiki Button" created="20181215154811835" description="Template used when saving via the &quot;save wiki&quot; page control button" location="$:/config/SaveWikiButton/Template" modified="20190216031047550" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Template for Save Wiki Button" type="text/vnd.tiddlywiki">
+<pre>Determines the template used when saving via the &quot;save wiki&quot; page control button.
+
+You can change the default value of  `$:/core/save/all` in [[$:/config/SaveWikiButton/Template]] to choose what is saved when the &quot;save wiki&quot; button is clicked.
+</pre>
+</div>
+<div caption="Typing Refresh Delay" created="20150619162409306" description="Timeout value before processing changes to draft tiddlers" location="$:/config/Drafts/TypingTimeout" modified="20190216031125040" tags="tiddler-modified [[Hidden Settings]]" title="Hidden Setting: Typing Refresh Delay" type="text/vnd.tiddlywiki">
+<pre>TiddlyWiki defers processing changes to draft tiddlers until a timeout has elapsed. The default value of 400ms gives a good balance of responsiveness in most cases but isn't always optimal on lower powered mobile devices.
+
+The timeout value (in milliseconds) can be changed in [[$:/config/Drafts/TypingTimeout]].
+</pre>
+</div>
+<div created="20150619162223882" modified="20190216031752636" tags="tiddler-modified [[Customise TiddlyWiki]]" title="Hidden Settings" type="text/vnd.tiddlywiki">
+<pre>\define .list-rows(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;&lt;tr&gt;
+&lt;td&gt;&lt;$link to={{!!title}}&gt;{{!!caption}}&lt;/$link&gt;&lt;/td&gt;
+&lt;td&gt;{{!!description}}&lt;/td&gt;
+&lt;td&gt;&lt;small&gt;&lt;$link&gt;{{!!location}}&lt;/$link&gt;&lt;/small&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/$list&gt;
+\end
+
+\define .list-heading(_)
+&lt;tr class=&quot;doc-table-subheading&quot;&gt;&lt;th align=&quot;center&quot;&gt;$_$&lt;/th&gt;&lt;/tr&gt;
+\end
+
+The most useful configuration settings for TiddlyWiki are exposed in the [[control panel|$:/ControlPanel]] but some more advanced settings do not have a full user interface. Instead, the underlying configuration tiddlers are edited directly.
+
+To change these settings on an empty TiddlyWiki, you can drag the links to the individual configuration tiddlers directly from this wiki into yours.
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Hidden Setting&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Description&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Tiddler&lt;/th&gt;
+&lt;/tr&gt;
+&lt;&lt;.list-rows &quot;[tag[Hidden Settings]sort[]]&quot;&gt;&gt;
+&lt;/table&gt;
+
 
 </pre>
 </div>
@@ -13166,6 +13268,103 @@ E:
 <pre>This one is important!
 
 Start here: [[Introduction to Lists]]</pre>
+</div>
+<div caption="Lists" created="20131205160257619" modified="20190215044226158" tags="tiddler-modified WikiText Lists" title="Lists in WikiText" type="text/vnd.tiddlywiki">
+<pre>! Bulleted Lists
+
+You can create bulleted (unordered) lists with `*` characters. The editor toolbar button is &lt;&lt;.image-button-only list-bullet&gt;&gt;
+
+&lt;&lt;wikitext-example src:&quot;* First list item
+* Second list item
+** A subitem
+* Third list item
+&quot;&gt;&gt;
+
+! Numbered Lists
+
+Numbered (ordered) lists use `#` instead of `*`.The editor toolbar button is &lt;&lt;.image-button-only list-number&gt;&gt;
+
+# First item
+# Second item
+# Third item
+
+You can also mix ordered and unordered list items:
+
+&lt;&lt;wikitext-example src:&quot;* To do today
+*# Eat
+* To get someone else to do
+*# This
+*# That
+*## And the other
+&quot;&gt;&gt;
+
+Here's an example the other way around, with numbers as the first level:
+
+&lt;&lt;wikitext-example src:&quot;# To do today
+#* Eat
+# To get someone else to do
+#* This
+#* That
+#** And the other
+&quot;&gt;&gt;
+
+! CSS Classes
+
+You can also assign a CSS class to an individual member of a list with this notation:
+
+&lt;&lt;wikitext-example src:&quot;* List One
+*.MyClass List Two
+* List Three
+&quot;&gt;&gt;
+
+! Mixing Lists and Block Quotes
+
+Note that [[Block Quotes in WikiText]] can be mixed with lists. For example:
+
+&lt;&lt;wikitext-example src:&quot;* List One
+** List Two
+**&gt; A quote
+**&gt; Another quote
+* List Three
+&quot;&gt;&gt;
+
+! Paragraphs in Lists
+
+Entries in the list are delimited with a linebreak, making it impossible to include linebreaks within a list entry. There are a couple of workarounds.
+
+First, you can transclude paragraph content from another tiddler. For example:
+
+```
+* First entry
+* &lt;$transclude tiddler=&quot;MyTiddler&quot; mode=&quot;block&quot;/&gt;
+* Third entry
+```
+
+Secondly, you can use an HTML &quot;div&quot; element to contain the multiline content. For example:
+
+```
+# Step 1
+# Step 2
+# Step 3&lt;div&gt;
+
+Here is the first of several paragraphs. Note that the double linebreak preceding this paragraph is significant.
+
+And here is the second of several paragraphs.
+&lt;/div&gt;
+# Step 4
+# Step 5
+# Step 6
+```
+You can create other types of bulleted (unordered) lists with * characters and a little styling like this:
+
+ &lt;&lt;wikitext-example src:&quot;@@list-style-type:lower-alpha;
+* apple
+* banana
+* cantaloupe
+@@
+&quot;&gt;&gt;
+
+See other `list-style-type` properties like `upper-alpha` and many more on [[w3schools.com|https://www.w3schools.com/cssref/pr_list-style-type.asp]].</pre>
 </div>
 <div created="20190104032343523" modified="20190209164039906" tags="tiddler-new todo" title="Looking inside a tiddler">
 <pre>Below is how the  tiddler : [[How a Tiddler is Stored in a TiddlyWiki file]] : is stored in this ~TiddlyWiki's html file:
