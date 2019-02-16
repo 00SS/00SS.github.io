@@ -12607,18 +12607,26 @@ You can change the default value of  `$:/core/save/all` in [[$:/config/SaveWikiB
 The timeout value (in milliseconds) can be changed in [[$:/config/Drafts/TypingTimeout]].
 </pre>
 </div>
-<div created="20150619162223882" modified="20190216031752636" tags="tiddler-modified [[Customise TiddlyWiki]]" title="Hidden Settings" type="text/vnd.tiddlywiki">
+<div created="20150619162223882" modified="20190216065906598" tags="tiddler-modified [[Customise TiddlyWiki]]" title="Hidden Settings" type="text/vnd.tiddlywiki">
 <pre>\define .list-rows(filter)
+\rules except wikilink
 &lt;$list filter=&quot;$filter$&quot;&gt;&lt;tr&gt;
-&lt;td&gt;&lt;$link to={{!!title}}&gt;{{!!caption}}&lt;/$link&gt;&lt;/td&gt;
+&lt;td&gt;&lt;$link to={{!!title}}&gt;&lt;$macrocall $name=&quot;unCamelCase&quot; undo={{!!caption}}/&gt;&lt;/$link&gt;&lt;/td&gt;
 &lt;td&gt;{{!!description}}&lt;/td&gt;
 &lt;td&gt;&lt;small&gt;&lt;$link&gt;{{!!location}}&lt;/$link&gt;&lt;/small&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/$list&gt;
 \end
 
+\define unCamelCase(undo)
+\rules except wikilink
+$undo$
+\end
+
 \define .list-heading(_)
 &lt;tr class=&quot;doc-table-subheading&quot;&gt;&lt;th align=&quot;center&quot;&gt;$_$&lt;/th&gt;&lt;/tr&gt;
 \end
+
+&lt;&lt;.make-link&gt;&gt;
 
 The most useful configuration settings for TiddlyWiki are exposed in the [[control panel|$:/ControlPanel]] but some more advanced settings do not have a full user interface. Instead, the underlying configuration tiddlers are edited directly.
 
