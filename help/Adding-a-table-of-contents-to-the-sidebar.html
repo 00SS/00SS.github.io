@@ -10172,8 +10172,8 @@ $src$
 <div created="20190122104000026" modified="20190122104000026" title="$:/state/Enable the Home button">
 <pre>show</pre>
 </div>
-<div created="20190209122502588" modified="20190209122623702" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
-<pre>hide</pre>
+<div created="20190209122502588" modified="20190217004905848" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
+<pre>show</pre>
 </div>
 <div created="20181229154823906" modified="20181229154919040" title="$:/state/SampleReveal2">
 <pre>hide</pre>
@@ -10268,7 +10268,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190211155839310" list="[[Hidden Setting: Filename for Save Wiki Button]] [[Hidden Setting: Empty Story Display]] [[Hidden Setting: Scroll Top Adjustment]] [[Hidden Setting: Search AutoFocus]] [[Hidden Setting: Search Minimum Length]] [[Hidden Setting: Tags Minimum Length]] [[Hidden Setting: Template for Save Wiki Button]] [[Hidden Setting: Typing Refresh Delay]] [[Hidden Settings]] [[Deep Principles of TiddlyWiki5]] [[Creating and editing tiddlers]] $:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/ControlPanel StateTiddler [[Empty Story]] HistoryMechanism StoryView [[Using Stylesheets]] $:/editions/tw5.com/doc-macros [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190216024249212" title="$:/StoryList">
+<div created="20190211155839310" list="[[Being Aware of Documentation's Userbase]] [[Hidden Setting: Filename for Save Wiki Button]] [[Hidden Setting: Empty Story Display]] [[Hidden Setting: Scroll Top Adjustment]] [[Hidden Setting: Search AutoFocus]] [[Hidden Setting: Search Minimum Length]] [[Hidden Setting: Tags Minimum Length]] [[Hidden Setting: Template for Save Wiki Button]] [[Hidden Setting: Typing Refresh Delay]] [[Hidden Settings]] [[Deep Principles of TiddlyWiki5]] [[Creating and editing tiddlers]] $:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/ControlPanel StateTiddler [[Empty Story]] HistoryMechanism StoryView [[Using Stylesheets]] $:/editions/tw5.com/doc-macros [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190217005443606" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190214064828634" title="$:/temp/advancedsearch">
@@ -10328,7 +10328,7 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190216031555416" title="$:/temp/search">
+<div created="20181221081025004" modified="20190217083726130" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190209113723040" title="$:/temp/toc/selectedTiddler">
@@ -12607,20 +12607,21 @@ You can change the default value of  `$:/core/save/all` in [[$:/config/SaveWikiB
 The timeout value (in milliseconds) can be changed in [[$:/config/Drafts/TypingTimeout]].
 </pre>
 </div>
-<div created="20150619162223882" modified="20190216065906598" tags="tiddler-modified [[Customise TiddlyWiki]]" title="Hidden Settings" type="text/vnd.tiddlywiki">
+<div created="20150619162223882" modified="20190217083330924" tags="tiddler-modified [[Customise TiddlyWiki]]" title="Hidden Settings" type="text/vnd.tiddlywiki">
 <pre>\define .list-rows(filter)
 \rules except wikilink
 &lt;$list filter=&quot;$filter$&quot;&gt;&lt;tr&gt;
-&lt;td&gt;&lt;$link to={{!!title}}&gt;&lt;$macrocall $name=&quot;unCamelCase&quot; undo={{!!caption}}/&gt;&lt;/$link&gt;&lt;/td&gt;
+&lt;td&gt;&lt;$link to={{!!title}}&gt;
+&lt;$set name=&quot;tv-wikilinks&quot; value=&quot;no&quot;&gt;
+&lt;$transclude field=&quot;caption&quot;/&gt;
+&lt;/$set&gt;
+&lt;/$link&gt;&lt;/td&gt;
 &lt;td&gt;{{!!description}}&lt;/td&gt;
 &lt;td&gt;&lt;small&gt;&lt;$link&gt;{{!!location}}&lt;/$link&gt;&lt;/small&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/$list&gt;
 \end
 
-\define unCamelCase(undo)
-\rules except wikilink
-$undo$
-\end
+
 
 \define .list-heading(_)
 &lt;tr class=&quot;doc-table-subheading&quot;&gt;&lt;th align=&quot;center&quot;&gt;$_$&lt;/th&gt;&lt;/tr&gt;
