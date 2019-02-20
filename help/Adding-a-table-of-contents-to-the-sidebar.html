@@ -269,6 +269,12 @@ Error message and password prompt
 
 <li>Adopt a Titles Policy</li>
 
+<li>Advanced Lists</li>
+
+<li>Advanced Widgets</li>
+
+<li>Advanced WikiText</li>
+
 <li>All the Core Image icons</li>
 
 <li>AutoFocus</li>
@@ -479,6 +485,8 @@ Error message and password prompt
 
 <li>Orphan Tiddlers</li>
 
+<li>Parsing &amp; Rendering</li>
+
 <li>Philosophy of Tiddlers</li>
 
 <li>Plugins</li>
@@ -559,6 +567,8 @@ Error message and password prompt
 
 <li>Technical Prose Style</li>
 
+<li>Templates for Beginners</li>
+
 <li>TemplateTiddlers</li>
 
 <li>Ten reasons to switch to TiddlyWiki</li>
@@ -606,6 +616,8 @@ Error message and password prompt
 <li>ToC - other versions</li>
 
 <li>todo</li>
+
+<li>Transclusion for Beginners</li>
 
 <li>Typography</li>
 
@@ -10229,7 +10241,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190216031557438" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190220082016254" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10259,16 +10271,16 @@ $src$
 <div created="20181229163731620" modified="20181229163750982" title="$:/state/When you make a Tiddlers">
 <pre>hide</pre>
 </div>
-<div created="20190209122929316" modified="20190210015438586" title="$:/state/Widgets for Beginners">
-<pre>show</pre>
+<div created="20190209122929316" modified="20190220081905990" title="$:/state/Widgets for Beginners">
+<pre>hide</pre>
 </div>
-<div created="20190209122747608" modified="20190209122750386" title="$:/state/WikiText for Beginners">
+<div created="20190209122747608" modified="20190220081914344" title="$:/state/WikiText for Beginners">
 <pre>hide</pre>
 </div>
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190211155839310" list="[[Being Aware of Documentation's Userbase]] [[Hidden Setting: Filename for Save Wiki Button]] [[Hidden Setting: Empty Story Display]] [[Hidden Setting: Scroll Top Adjustment]] [[Hidden Setting: Search AutoFocus]] [[Hidden Setting: Search Minimum Length]] [[Hidden Setting: Tags Minimum Length]] [[Hidden Setting: Template for Save Wiki Button]] [[Hidden Setting: Typing Refresh Delay]] [[Hidden Settings]] [[Deep Principles of TiddlyWiki5]] [[Creating and editing tiddlers]] $:/AdvancedSearch $:/editions/tw5.com/doc-styles $:/ControlPanel StateTiddler [[Empty Story]] HistoryMechanism StoryView [[Using Stylesheets]] $:/editions/tw5.com/doc-macros [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190217005443606" title="$:/StoryList">
+<div created="20190211155839310" list="[[Parsing &amp; Rendering]] [[Advanced Widgets]] [[Advanced Lists]] [[Templates for Beginners]] [[Transclusion for Beginners]] [[WikiText for Beginners]] [[Widgets for Beginners]] [[Being Aware of Documentation's Userbase]] [[Hidden Setting: Filename for Save Wiki Button]] [[Hidden Setting: Empty Story Display]] [[Hidden Setting: Scroll Top Adjustment]] [[Hidden Setting: Search AutoFocus]] [[Hidden Setting: Search Minimum Length]] [[Hidden Setting: Tags Minimum Length]] [[Hidden Setting: Template for Save Wiki Button]] [[Hidden Setting: Typing Refresh Delay]] [[Hidden Settings]] [[Deep Principles of TiddlyWiki5]] [[Creating and editing tiddlers]] $:/AdvancedSearch $:/editions/tw5.com/doc-styles StateTiddler [[Empty Story]] HistoryMechanism [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190220082019052" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190214064828634" title="$:/temp/advancedsearch">
@@ -10328,11 +10340,11 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190217083726130" title="$:/temp/search">
+<div created="20181221081025004" modified="20190220065442078" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190209113723040" title="$:/temp/toc/selectedTiddler">
-<pre>How a Tiddler is Stored in a TiddlyWiki file</pre>
+<div created="20181221081005896" modified="20190219050307444" title="$:/temp/toc/selectedTiddler">
+<pre>Story River</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10492,6 +10504,101 @@ A useful convention is to use the prefix `$:/_` for any system tiddlers that you
 
 [[Shadow Tiddlers for Beginners]]</pre>
 </div>
+<div created="20190219001339426" modified="20190219001451454" tags="Advanced" title="Advanced Lists">
+<pre>Mark S. 	
+Feb 18 2019
+
+List widgets look deceptively like for-next loops in other languages, but they don't work that way (or at least I don't think they do). At the moment you click the button, there is essentially already a list of things -- a snapshot -- that will be activated, and that list is not changed on the fly. So you need to have a complete list of actions you will take before you press the button. Or, another way to look at it, you can't change things in tiddlers that will change the outcome of the filters. From time to time I mention that javascript is easier. This is what I mean. In JS you can run a loop that changes the conditions that terminate the loop.  Oh well.
+
+
+https://groups.google.com/d/msg/tiddlywiki/WsiLG2xTViM/PYkOUeUeBQAJ</pre>
+</div>
+<div created="20190220040845804" modified="20190220080255040" tags="Advanced" title="Advanced Widgets">
+<pre>Jeremy Rustom 
+Feb 7 2019
+
+As background, it might be helpful for me to explain a little of *why* widgets exists…
+
+Consider a simple wiki with two tiddlers, Foo and Bar:
+
+```
+“Foo” contains “I am Foo. {{Bar}}”
+“Bar” contains “I am Bar”
+```
+
+The result of rendering “Foo” should be “I am Foo. I am Bar”. So, a naive algorithm for wikification would take the content of “Foo”,  look for any double braces, and then replace them with the content of the tiddler they refer to. The processing would go something like this:
+
+```
+1. Get “I am Foo. {{Bar}}” from “Foo”
+2. Replace “{{Bar}}” with the content of “Bar” yielding “I am Foo. I am Bar”
+```
+
+Now imagine that the text of “Bar” is changed to “I was Bar”, and we want to update the rendering. We can rerun the algorithm above and get “I am Foo. I was Bar”, but we have to regenerate the entire rendering, even though only one tiddler has changed.
+
+Using TiddlyWiki interactively in the browser depends on making the refresh cycle as fast as possible. For example, when a button is clicked to trigger a dropdown it actually just sets a tiddler value in the store that causes the dropdown to be rendered when the display is refreshed. Thus we want to make the refresh cycle as fast as possible.
+
+In particular, the goal is that, given the example above, when “Bar” changes we don’t need to re-render the entire tiddler “Foo”.
+
+This is accomplished by building a render tree. The render tree for the example above would be:
+
+* Text: “I am Foo. “
+* Transclusion: “Bar”
+** Text: “I am Bar”
+
+Given that render tree, we can efficiently extract the text of the result by scanning the nodes of the tree and accumulating any “Text” nodes that we find.
+
+If the tiddler “Bar” changes, then we need to scan the tree looking for any transclusions that reference that particular tiddler. Those nodes will need to be reconstructed from the new value of the tiddler, but the surrounding nodes can be left untouched.
+
+So, that gives you the basis for a technical, developers explanation of a widget: they are the units by which content is refreshed.
+
+There are a couple of further important details that shape the current design.
+
+First, what we call parsing: this is the basic scanning of a block of text to find bits of wikitext syntax (e.g. finding the `{{Bar}}` transclusion in “Foo” above). The result of parsing is a tree that we then use to construct the render tree. As a basic optimisation, we cache the parse tree for a tiddler, and only regenerate it when the tiddler changes.
+
+Secondly, each node in the render tree may render one or more DOM nodes that are attached to it.
+
+With those details, you’ve got a lightning overview of how widgets work. It’s not suitable for beginners but it might help give you some background.
+
+Best wishes
+
+Jeremy
+
+
+https://groups.google.com/d/msg/tiddlywiki/qgNY0iKRrOU/Osx__UJ0DAAJ
+
+Tony M
+
+20 Feb 2019
+
+TiddlyWiki's way of providing access to execute things is via widgets (which  include javascript)
+
+For example
+
+```
+&lt;button&gt;Inactive button&lt;/button&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;alert('Hello world!')&quot;&gt;Click Me!&lt;/button&gt;
+```
+
+is HTML but we can't get it to execute the alert('Hello world!') in Tiddlywiki and if it did It would bypass some vary useful features of tiddlywiki.
+
+
+```
+Instead we use the tiddlywiki version, the &lt;$button widget
+&lt;$button parameters&gt;
+Click Me!
+&lt;/$button&gt;
+
+```
+
+The point being you will always need widgets to execute things in TiddlyWiki, so behind the scenes TiddlyWiki can keep track of all executions and changes.
+
+Regards
+
+https://groups.google.com/d/msg/tiddlywiki/uW-IU_pMGWU/lq8nLOqBAAAJ</pre>
+</div>
+<div created="20190220065506312" modified="20190220080228942" tags="Advanced" title="Advanced WikiText">
+<pre></pre>
+</div>
 <div created="20190124180825308" modified="20190124181425488" tags="" title="All the Core Image icons">
 <pre>&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot;&gt;
 &lt;$set name=&quot;image&quot; value=&lt;&lt;currentTiddler&gt;&gt;&gt;
@@ -10504,7 +10611,7 @@ A useful convention is to use the prefix `$:/_` for any system tiddlers that you
 <div title="AutoFocus">
 <pre></pre>
 </div>
-<div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[What TiddlyWiki does with your Data]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[WikiText for Beginners]] [[Variables for Beginners]] [[Macros for Beginners]] [[Widgets for Beginners]] [[Widget Tree for Beginners]] [[Control Panel for Beginners]] [[Table of Contents for Beginners]] [[Draft Tiddlers]] [[Missing Tiddlers]] [[Orphan Tiddlers]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]] [[Filters for Beginners]] [[Lists for Beginners]] [[Plugins for Beginners]] [[Save Manually and Keep a Back up Version]] Help" modified="20190209111714108" tags="include todo TableOfContents" title="Beginners">
+<div caption="Beginners Help" created="20181116092351996" list="[[Discover TiddlyWiki]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Introduction Video]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[What TiddlyWiki does with your Data]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[WikiText for Beginners]] [[Variables for Beginners]] [[Macros for Beginners]] [[Widgets for Beginners]] [[Transclusion for Beginners]] [[Templates for Beginners]] [[Widget Tree for Beginners]] [[Control Panel for Beginners]] [[Table of Contents for Beginners]] [[Draft Tiddlers]] [[Missing Tiddlers]] [[Orphan Tiddlers]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]] [[Filters for Beginners]] [[Lists for Beginners]] [[Plugins for Beginners]] [[Save Manually and Keep a Back up Version]] Help" modified="20190219050139316" tags="include todo TableOfContents" title="Beginners">
 <pre>&lt;$macrocall
 	$name=&quot;toc-tabbed-internal-nav&quot;
 	tag=&quot;Beginners&quot;
@@ -10923,8 +11030,11 @@ When you have finished editing, click a button at the top right of the tiddler:
 *The &lt;&lt;.button &quot;delete&quot;&gt;&gt; button deletes the entire tiddler (after asking for your confirmation).
 </pre>
 </div>
-<div created="20190209170638318" modified="20190209171717938" tags="Notes" title="Deep Principles of TiddlyWiki5">
-<pre>The design of TW5 tries to use the minimum number of primitives needed to support the required complexity. If it is determined that two things are sufficiently similar, they can be merged. It's a deep principle in TW5 to endlessly reuse the same mechanisms for everything.
+<div created="20190209170638318" modified="20190217090748506" tags="Notes" title="Deep Principles of TiddlyWiki5">
+<pre>
+~TiddlyWiki  [[Open Source|https://github.com/Jermolene/TiddlyWiki5]]. Anyone can read the code and contribute to its development.
+
+The design of TW5 tries to use the minimum number of primitives needed to support the required complexity. If it is determined that two things are sufficiently similar, they can be merged. It's a deep principle in TW5 to endlessly reuse the same mechanisms for everything.
 
 ~TiddlyWiki wasn't put together and designed for developers. Software developers are already incredibly well catered for by the open source world. This program explores how the non-developer can be empowered.</pre>
 </div>
@@ -13687,6 +13797,14 @@ Next: &lt;$list filter=&quot;[all[current]next[Beginners]]&quot;/&gt;.</pre>
 <div created="20181217132914280" modified="20181217133214138" tags="Beginners" title="Orphan Tiddlers">
 <pre>Orphans lists all the tiddlers that are not directly linked from another tiddler. This is a helpful aid to editing your file - it shows you which tiddlers need to be integrated more carefully with the others.</pre>
 </div>
+<div created="20190220041742826" modified="20190220041833604" tags="todo Notes" title="Parsing &amp; Rendering">
+<pre>The whiole &lt;&lt;.em refresh&gt;&gt; logic of ~TiddlyWiki is based around Widgets.
+
+parsing: this is the basic scanning of a block of text to find bits of wikitext syntax
+rendering: The result of parsing is a tree that we then use to construct the render tree
+
+See: [[Advanced Widgets]]</pre>
+</div>
 <div created="20131128075743966" modified="20181229030955210" tags="Features" title="Philosophy of Tiddlers" type="text/vnd.tiddlywiki">
 <pre>The purpose of recording and organising information is so that it can be used again. The value of recorded information is directly proportional to the ease with which it can be re-used.
 
@@ -14534,6 +14652,29 @@ Documentation often presents two items that are parallel either by similarity or
 Prefer precise instructions over woolly descriptions. If something has a name, use it. If something lacks a name, give it a tiddler.
 </pre>
 </div>
+<div created="20190218110949552" modified="20190218111052252" tags="todo Beginners" title="Templates for Beginners">
+<pre>A Template is ...
+
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/Templates for Beginners&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/Templates for Beginners&quot; setTo=&quot;show&quot;&gt;Show More Information on Templates&lt;/$button&gt;&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/Templates for Beginners&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/Templates for Beginners&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!How do Templates work?
+
+
+!!More Information on Templates
+
+
+
+&lt;hr&gt;
+&lt;/$reveal&gt;
+
+</pre>
+</div>
 <div created="20140107114355828" modified="20150220160920000" tags="Concepts" title="TemplateTiddlers" type="text/vnd.tiddlywiki">
 <pre>A template tiddler is not actually a type of tiddler, it is a role in which a tiddler can be used.
 
@@ -14935,6 +15076,33 @@ Explanation of ''exclude'' parameter of ToC macros by ''Eric Shulman'' from Goog
 <div caption="To Do" created="20190108110250624" modified="20190108110350802" tags="TableOfContents" title="todo">
 <pre></pre>
 </div>
+<div created="20190218110703318" modified="20190219003926536" tags="todo Beginners" title="Transclusion for Beginners">
+<pre>Transclusion means including the contents of a different tiddler -- some content from a tiddler A into another tiddler B by reference. 
+
+The trick with transclusion is, that it shows the content of a different tiddler but by default it does not change the current tiddler. This enables us to create tiddlers with text references and use them as a templates.
+
+Transclusion and templates is one of the most important concepts in TiddlyWiki. It allows us to include other tiddlers using the metadata for our current tiddler. It also allows us to transclude a template tiddler with a third tiddler set as the currentTiddler
+
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/Transclusion for Beginners&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/Transclusion for Beginners&quot; setTo=&quot;show&quot;&gt;Show More Information on Transclusion&lt;/$button&gt;&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/Transclusion for Beginners&quot; text=&quot;show&quot;&gt;
+
+&lt;$button set=&quot;$:/state/Transclusion for Beginners&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!How does Transclusion work?
+
+
+!!More Information on Transclusion
+
+
+
+&lt;hr&gt;
+&lt;/$reveal&gt;
+
+</pre>
+</div>
 <div created="20141226192500000" modified="20190124094647750" tags="tiddler-modified todo [[Improving TiddlyWiki Documentation]]" title="Typography">
 <pre>Use the [[documentation macros|Documentation Macros]] to keep the text maintainable in the face of change.
 
@@ -15321,7 +15489,7 @@ For installing a plugin, see [[Installing a plugin from the plugin library]] or 
 # [[WikifyWidget]]
 #* ''output'' key-word : widgettree	- Return a formatted JSON representation of the widget tree</pre>
 </div>
-<div created="20190105081846464" modified="20190210015151170" tags="todo Beginners" title="Widgets for Beginners">
+<div created="20190105081846464" modified="20190220081859402" tags="todo Beginners" title="Widgets for Beginners">
 <pre>&lt;$macrocall $name=&quot;.preamble&quot; _=&quot;They could have been called &lt;&lt;.word Tools&gt;&gt; or &lt;&lt;.word Elements&gt;&gt; or &lt;&lt;.word Commands&gt;&gt; or &lt;&lt;.word Identifiers&gt;&gt;, but in ~TiddlyWiki, they are called &lt;&lt;.word Widgets&gt;&gt;&quot;/&gt;
 
 !! Introduction
@@ -15378,7 +15546,15 @@ The above &lt;&lt;.wid link&gt;&gt; in essence produces the HTML:
 Which shows up in your browser as:&lt;br&gt;
 &lt;$link to=&quot;HelloThere&quot;&gt;HelloThere&lt;/$link&gt;
 
-It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. ~WikiText can be used inside of Widgets, but Widgets can not be used inside of ~WikiText. Try and remember this rule, as it is a stumbling block for all new users.
+!!
+It's important to keep the concepts of [[WikiText|WikiText for Beginners]] and Widgets separate in your thinking. 
+
+* ~WikiText can generally be used within Widgets.
+
+* In general, Widgets can be used as text within ~WikiText
+** But not as parameter values of ~WikiText. 
+
+Though this sounds cryptic for now, keep it in mind and try and remember this rule, as it is a stumbling block for all new users, specially when using [[macros|Macros for Beginners]].
 
 !! What do they look like?
 
@@ -15413,7 +15589,7 @@ It won't be long before you will want to start using Widgets. Click the &lt;&lt;
 
 Create a [[new tiddler|Make a tiddler right now, right here]] here on this website. Copy and paste one of the examples above into the tiddler and save the tiddler. You will see the result.
 
-Widgets share the same syntax as HTML tags, thus reading about [[HTML in WikiText]] and [[Widgets in WikiText]] will give you ideas how you can use them.
+To make it easier to use them, Widgets share the same syntax as HTML tags, greatly simplifying the learning process. As such, reading about [[HTML in WikiText]] and [[Widgets in WikiText]] will give you ideas how you can use them.
 
 !! Detailed information
 
@@ -15450,7 +15626,7 @@ The full list is in the [[Widgets]] tiddler along with an introduction that is m
 The WikiStore also manages the plugin modules used for widgets, and operations like serializing, deserializing, parsing and rendering tiddlers.
 </pre>
 </div>
-<div created="20190106105514236" modified="20190209171234360" tags="todo Beginners" title="WikiText for Beginners">
+<div created="20190106105514236" modified="20190220081654498" tags="todo Beginners" title="WikiText for Beginners">
 <pre>!! Introduction
 
 Wikitext is ~TiddlyWiki's shortcut method of formatting your material for display. It is based on a writing style known as ~MarkDown.
@@ -15463,6 +15639,8 @@ The idea is that a Markdown-formatted document should be publishable as-is, as p
 
 &lt;&lt;&lt;
 
+On one hand its a text-to-HTML conversion language and on the other hand its used to provide the interactive features of TiddlyWiki. The aim of using ~WikiText is to allow the user of the software to focus on the writing.
+
 The display of your material in ~TiddlyWiki depends on 5 main factors:
 
 : Your material (such as text, images, videos)
@@ -15471,15 +15649,17 @@ The display of your material in ~TiddlyWiki depends on 5 main factors:
 : ~JavaScript
 : The Browser (used to view the ~TiddlyWiki)
 
-~WikiText will greatly simplify the way you can take advantage of HTML and CSS formatting.
+~WikiText will &lt;&lt;.em &quot;greatly simplify&quot;&gt;&gt; the way you can take advantage of HTML and CSS formatting and the power of ~TiddlyWiki's widgets.
 
 !! Purpose of Using ~WikiText
 
 ~TiddlyWiki's ~WikiText's main purpose is to allow you to write using an easy-to-read and easy-to-write plain text format without looking like it has been marked up with tags or formatting instructions.
 
-It also saves you from having to learn and remember commonly used HTML and CSS code. 
+It also saves you from having to learn and remember the more complex rules of commonly used Widgets and HTML &amp; CSS code. 
 
-HTML tags and CSS codes add lots of in-line noise. They make a document hard to compose and edit. For those unfamiliar with HTML, it could be impossible. Writing and editing become easier.
+HTML tags and CSS codes and Widgets add lots of in-line noise. They make a document hard to compose and edit. For those unfamiliar with HTML, it could be impossible. 
+
+Writing and editing become easier.
 
 !! What ~WikiText Does
 
@@ -15506,7 +15686,7 @@ You will see the line below:
 The HTML code has told your browser to display text in ''bold'' between the opening tag `&lt;b&gt;`  and the closing tag `&lt;/b&gt;` and __underlined__ formatting between `&lt;u&gt;` and `&lt;/u&gt;`.
 
 
-~WikiText is a simplified shortcut for typing some common HTML and CSS code. The above shortcuts for creating the exact same HTML is:
+~WikiText is a simplified shortcut for typing some common HTML and CSS code. The below shortcuts for creating the exact same HTML is:
 
 ```
 ''This text is bold'' and __This text is underlined__
@@ -15538,7 +15718,7 @@ This is a paragraph of green text with __one__ word underlined and link to a  [[
 This is a paragraph of green text with __one__ word underlined and link to a  [[HTML Tutorial|https://www.w3schools.com/html/]].
 @@
 
-You may be surprised that HTML can be used directly in ~WikiText. This is because HTML elements are just special cases of widgets! And widgets use the HTML syntax to simplify things.
+Easier to type, understand, and read.
 
 !! Why has it been simplified?
 
@@ -15551,6 +15731,16 @@ You may be surprised that HTML can be used directly in ~WikiText. This is becaus
 &lt;$reveal type=&quot;match&quot; state=&quot;$:/state/WikiText for Beginners&quot; text=&quot;show&quot;&gt;
 
 &lt;$button set=&quot;$:/state/WikiText for Beginners&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+
+!!How does ~WikiText work?
+
+Using ~WikiText is a shorthand method of using Widgets. Each time you use it, the program actually selects the correct [[Widget|Widgets for Beginners]] (or HTML elements which are a special case of Widgets) to use.
+
+By using ~WikiText the user can put markup elements like tables or images in a tiddler. To provide some more sophisticated UI elements, ~WikiText can also contain special widgets like text input fields, checkboxes, dynamic lists etc. 
+
+In most cases, these widgets are used to directly modify or represent the information contained in other tiddlers.
+
+HTML can also be used directly in ~WikiText. This is because HTML elements are just special cases of widgets!
 
 !!More Information on ~WikiText
 
