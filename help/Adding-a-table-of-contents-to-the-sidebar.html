@@ -437,6 +437,8 @@ Error message and password prompt
 
 <li>HTML in WikiText</li>
 
+<li>HTML Links in WikiText</li>
+
 <li>Instruction Tiddlers</li>
 
 <li>Instruction Tiddlers for Introduction Level Material</li>
@@ -654,6 +656,8 @@ Error message and password prompt
 <li>Understanding RevealWidget</li>
 
 <li>Understanding Wikify</li>
+
+<li>Untitled</li>
 
 <li>Using Github to Help with TiddlyWiki</li>
 
@@ -10300,16 +10304,11 @@ $src$
 &lt;&lt;tw-code $tiddler$&gt;&gt;
 \end</pre>
 </div>
-<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;Untitled&quot;: {
-            &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;zoomin&quot;,
-            &quot;type&quot;: &quot;text/plain&quot;
-        }
-    }
-}</pre>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[Untitled]]
+# [[HTML Links in WikiText]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10338,7 +10337,7 @@ $src$
 <div created="20190222061518162" modified="20190222081005884" title="$:/state/folded/Discover TiddlyWiki">
 <pre>show</pre>
 </div>
-<div created="20190209122502588" modified="20190217004905848" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
+<div created="20190209122502588" modified="20190306045339536" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
 <pre>show</pre>
 </div>
 <div created="20190225060958438" modified="20190225062026752" title="$:/state/Links for Beginners">
@@ -10401,8 +10400,8 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190304090559908" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20181225144338180" modified="20190307214838958" title="$:/state/tab/sidebar--595412856">
+<pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
 <pre>hide</pre>
@@ -10440,11 +10439,11 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190304115223114" list="[[Internal Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190304115223114" title="$:/StoryList">
+<div created="20190307010600382" list="[[Internal Links using HTML]] [[Adopt a Titles Policy]] [[Structuring TiddlyWiki]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190307031022410" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20181229183224518" modified="20190222052508596" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20181229183224518" modified="20190304165218536" title="$:/temp/advancedsearch">
+<pre>doc mac</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10500,11 +10499,11 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190304090535448" title="$:/temp/search">
+<div created="20181221081025004" modified="20190307011230658" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190222054539846" title="$:/temp/toc/selectedTiddler">
-<pre>Discover TiddlyWiki</pre>
+<div created="20181221081005896" modified="20190306045144018" title="$:/temp/toc/selectedTiddler">
+<pre>How a Tiddler is Stored in a TiddlyWiki file</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10641,7 +10640,7 @@ Next: [[Some of the things you can do with TiddlyWiki]]</pre>
 &lt;&lt;list-links &quot;[tag[About]]&quot;&gt;&gt;
 </pre>
 </div>
-<div created="20130825103300000" modified="20190124094529506" tags="tiddler-modified todo Beginners" title="Adopt a Titles Policy" type="text/vnd.tiddlywiki">
+<div created="20130825103300000" modified="20190307014925022" tags="tiddler-modified todo Beginners" title="Adopt a Titles Policy" type="text/vnd.tiddlywiki">
 <pre>As the structures within your ~TiddlyWiki get more complex it can be hard to keep the titles of tiddlers consistent. For example, should terms be defined in the plural or the singular? [[CamelCase]] or separate words?
 
 !!Conventions for Title names for your tiddlers
@@ -10654,7 +10653,7 @@ Next: [[Some of the things you can do with TiddlyWiki]]</pre>
 
 Recording a formal titling policy can help to reduce confusion. For example, the titling policies for this wiki are recorded in the [[Documentation Style Guide]].
 
-!! ~System Tiddler Titles
+!! System Tiddler Titles
 
 A useful convention is to use the prefix `$:/_` for any system tiddlers that you create to ensure that they are near the top of the system tiddler listing in the sidebar
 
@@ -13075,7 +13074,7 @@ Clicking on the settings {{$:/core/ui/Buttons/control-panel}} cog to open the co
 
 </pre>
 </div>
-<div caption="HTML" created="20131205160816081" modified="20161021102422842" tags="WikiText" title="HTML in WikiText" type="text/vnd.tiddlywiki">
+<div caption="HTML" created="20131205160816081" modified="20190305030623862" tags="tiddler-modified WikiText" title="HTML in WikiText" type="text/vnd.tiddlywiki">
 <pre>HTML tags and comments can be used directly in WikiText. For example:
 
 ```
@@ -13158,8 +13157,26 @@ This example shows how to add a prefix to a value:
 ```
 &lt;$text text={{{ [&lt;currentTiddler&gt;]addPrefix[$:/myprefix/]] }}}&gt;
 ```
+!!More information
+&lt;&lt;list-links &quot;[tag[HTML in WikiText]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20161021101834041" modified="20190305030842970" tags="tiddler-modified [[HTML in WikiText]]" title="HTML Links in WikiText" type="text/vnd.tiddlywiki">
+<pre>!! External Links
 
-</pre>
+It is often useful to be able to create HTML links to external resources. For example, here the value of the `href` attribute will be set to the value of the tiddler MyLinkDestination:
+
+```
+&lt;a href={{MyLinkDestination}}&gt;link&lt;/a&gt;
+```
+
+However, there is an unexpected security issue that means that most of the time the link should have the `rel` attribute set to `noopener noreferrer` to maintain privacy of the URLs of private TiddlyWiki's (eg on Dropbox). See https://mathiasbynens.github.io/rel-noopener/ for more information.
+
+```
+&lt;a href={{MyLinkDestination}} rel=&quot;noopener noreferrer&quot;&gt;link&lt;/a&gt;
+```
+!!Internal Links
+
+See [[Internal Links using HTML]]</pre>
 </div>
 <div created="20150110101500000" modified="20190130082818814" tags="tiddler-modified [[Improving TiddlyWiki Documentation]]" title="Instruction Tiddlers">
 <pre>&lt;&lt;.def &quot;Instruction tiddlers&quot;&gt;&gt; talk directly to the reader and guide them through a process. The reader is likely to be a beginner or an intermediate user.
@@ -13239,31 +13256,33 @@ The rest of these guidelines are at [[Instruction Tiddlers]].
 
 </pre>
 </div>
-<div created="20190303082448082" modified="20190304123340640" tags="" title="Internal Links using HTML">
+<div created="20190303082448082" modified="20190307215810188" tags="[[HTML in WikiText]]" title="Internal Links using HTML">
 <pre>&lt;h2 id=#Introduction:Internal-Links-using-HTML&gt;Introduction&lt;/h2&gt;
 
-In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker. A a link referencing that marker allows readers to scroll to that specific part of a page. This can be useful when the page is very long. In TiddlyWiki, the navigation process between tiddlers uses code similar to how, in a normal webpage, these special markers are accessed using a link.
+In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker or target. A link referencing that target allows readers to scroll to that specific part of a page. This can be useful when the page is very long. The navigation process between tiddlers in [[TiddlyWiki]] uses code similar to how, in a normal webpage, these special targets are accessed using a link. This means you cannot use internal links without taking this into account.
 
-There is however a way to use these markers in ~TiddlyWiki by the slightly unconventional way of starting the &lt;&lt;.attr id&gt;&gt; attribute marker with a `#` character.
+A way to use these targets in ~TiddlyWiki as an internal link is by the slightly unconventional method of starting the &lt;&lt;.attr id&gt;&gt; attribute with a `#` character.
 
 &lt;h2 id=&quot;#Navigation within a tiddler: Internal Links using HTML&quot;&gt;Navigation within a tiddler&lt;/h2&gt;
 
+Similar to how the &lt;&lt;.attr id&gt;&gt; attribute of an HTML element can be used in a normal webpage, it can be used in ~TiddlyWiki (with some limitations) for navigation within displayed tiddlers.
 
-In ~TiddlyWiki, the &lt;&lt;.attr id&gt;&gt; attribute of an HTML element can also be used as a marker for navigation within displayed tiddlers, similar to how it is used in a normal webpage. To use the HTML &lt;&lt;.attr id&gt;&gt; attribute properly as a navigating tool in ~TiddlyWiki, the following applies:
+The following applies for proper (limited) useage:
 
 &lt;section id=&quot;#section01-Internal%20Links%20using%20HTML&quot;&gt;
 
 ; Naming the &lt;&lt;.attr id&gt;&gt; attribute for internal navigation:
-: starts with a `#` charachter
+: starts with a `#` character
 : is case sensitive
 :;Suggested that:
-:: should not contain any whitespace (see the note below)
-:: each value to be unique in the ~TiddlyWiki  (see the note below)
+:: not to use URI encoding or the `%` character (see the warning below)
+:: preferably not contain any whitespace (see note 1. below) but if it does, the value should be within double quotes
+:: each value to be unique in the ~TiddlyWiki  (see note 2. below)
 
 ; Constructing the link
-: The `&lt;a&gt;` HTML element is used with its `href` attribute
-: The `href` attribute starts with a `#` following by the exact `id` value
-: If the `id` value contains spaces (which it should not), the value should be within double quotes
+: The `&lt;a&gt;` HTML element is used with its &lt;&lt;.attr href&gt;&gt; attribute
+: The &lt;&lt;.attr href&gt;&gt; attribute starts with a `#` following by the exact &lt;&lt;.attr id&gt;&gt; value
+: If the &lt;&lt;.attr href&gt;&gt; value contains spaces, the value should be within double quotes
 
 &lt;h2 id=&quot;&quot;&quot;#&quot;Example&quot;:-InternalLinksUsingHTML&quot;&quot;&quot;&gt;Example:&lt;/h2&gt;
 
@@ -13275,26 +13294,31 @@ In ~TiddlyWiki, the &lt;&lt;.attr id&gt;&gt; attribute of an HTML element can al
 ```
 
 ; Navigating to the reference
-: Will navigate to the proper section of a tiddler that is in the Story River, or displayed in the sidebar, scrolling so that the &lt;&lt;.attr id&gt;&gt; location is at the top of the display area.
-:* Note: The browser's history will be updated with the ID value appended to the URL
-: Will &lt;&lt;.em not&gt;&gt; navigate to the tiddler if the ID is in the Story River or sidebar but:
+: Clicking on the link will scroll to the target section of a tiddler that is
+:: in the Story River, or 
+::displayed in the sidebar, 
+:so that the &lt;&lt;.attr id&gt;&gt; location is at the top of the display area.
+:* Note: The browser's history will be updated with the link's &lt;&lt;.attr href&gt;&gt; value appended to the web page's URL
+: Will &lt;&lt;.em not&gt;&gt; scroll to the target in the tiddler if the target is in the Story River or sidebar but:
 
-:* the tiddler is folded
-:* the ID is within a non-displaying &lt;&lt;.wlink RevealWidget&gt;&gt; widget
-:* the tiddler is not at the top of the story river (not displayed)  when the&lt;&lt;.button &quot;control-panel&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;Appearance&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt; is set to (the single page view)  &lt;&lt;.def zoomin&gt;&gt;
+:: the tiddler is folded
+:: the target is within a non-displaying &lt;&lt;.wlink RevealWidget&gt;&gt; widget
+:: the&lt;&lt;.button &quot;control-panel&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;Appearance&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt; is set to (the single page view)  &lt;&lt;.def zoomin&gt;&gt; and the tiddler is not at the top of the story river (not displayed) 
 
-&lt;&lt;.warning &quot;Some browsers will not navigate to an ''id'' that includes an encoded [ext[URI|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI]] that has a `%` charachter followed by 2 charachters. &quot;&gt;&gt;
+&lt;&lt;.warning &quot;Some browsers will not navigate to an ''id'' that includes an encoded [ext[URI|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI]] that has a `%` character followed by 2 characters. &quot;&gt;&gt;
 
-&lt;$macrocall $name=.note _=&quot;The HTML5 specifications for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an internal navigation marker in ~TiddlyWiki. However it may not work for other code that wants to use the same &lt;&lt;.attr id&gt;&gt;.
+&lt;$macrocall $name=.note _=&quot;&quot;&quot;1. The HTML5 specifications for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an internal navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
 
-If transclusions create multiple instances of the &lt;&lt;.attr id&gt;&gt;, navigation will take place to the first instance found that satisfies the above criteria.&quot;/&gt;
+2. If transclusions create multiple instances of the &lt;&lt;.attr id&gt;&gt;, navigation will take place to the first instance found that satisfies the above criteria.
+
+3. The Keyboard Combination &lt;kbd&gt;Ctrl&lt;/kbd&gt;+ &lt;kbd&gt;Click&lt;/kbd&gt; on such a link will open a new browser window/tab &amp; not the targeted tiddler.&quot;&quot;&quot;  /&gt;
 
 
 &lt;/section&gt;
 
 &lt;h2 id=&quot;#Another%20Example:-Internal%20Links%20using%20HTML&quot;&gt;Another Example:&lt;/h2&gt;
 
-Here is an example using a `&lt;section&gt;` tag, that is generally used to define sections in a HTML document, such as chapters, headers, footers, or any other sections of the document.
+Here is an example using a `&lt;section&gt;` HTML tag, that is generally used to define sections in an HTML document, such as chapters, headers, footers, or any other sections of the document.
 
 ```
 &lt;section id=&quot;#unique001&quot;&gt;
@@ -13325,7 +13349,7 @@ Some suggestions for the HTML element you choose for marking a position using th
 
 | ! Element | ! Sample code | ! Observations |
 |&lt;&lt;.def anchor&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;a id=&quot;#part001-of-TiddlerName&quot;&gt;&lt;/a&gt;&quot;&quot;&quot;/&gt; |Should work perfectly everywhere|
-|&lt;&lt;.def heading&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;h1 id=&quot;#001&quot;&gt;A New Heading&lt;/h1&gt;&quot;&quot;&quot;/&gt;|whitespace is against convention, but works|
+|&lt;&lt;.def heading&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;h2 id=&quot;#0 0 1&quot;&gt;A New Heading&lt;/h2&gt;&quot;&quot;&quot;/&gt;|whitespace is against convention, but works|
 |&lt;&lt;.def section&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;section id=&quot;#sect001%20of%20TiddlerName&quot;&gt;This is a new section&lt;/section&gt;&quot;&quot;&quot;/&gt;|URI encoding may not work in some browsers|
 |&lt;&lt;.def span&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;span id=&quot;#007&quot;&gt;Marker 007 is here!&lt;/span&gt;&quot;&quot;&quot;/&gt;|''id'' values should be unique|
 |&lt;&lt;.def division&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;div id=&quot;#007&quot;&gt;&lt;/div&gt;&quot;&quot;&quot;/&gt;|Not advisable to use the same ''id'' value again|
@@ -13339,7 +13363,7 @@ The links below will take you to specified parts of this tiddler.
 * &lt;a href=&quot;##Another%20Example:-Internal%20Links%20using%20HTML&quot;&gt;Another Example&lt;/a&gt;
 * &lt;a href=&quot;##Suggestions%0&quot;&gt;Suggestions&lt;/a&gt;
 
-!!Hint
+!! Hint
 
 If you want to include an &lt;&lt;.attr id&gt;&gt; attribute to a link in your sidebar Table of Contents, you can include it in your listed tiddler's &lt;&lt;.field caption&gt;&gt; field similar to the way shown below:
 
@@ -13347,7 +13371,7 @@ If you want to include an &lt;&lt;.attr id&gt;&gt; attribute to a link in your s
 &lt;span id=#some-value&gt;Your caption&lt;/span&gt;
 ```</pre>
 </div>
-<div created="20190127031951902" modified="20190225082207318" tags="Notes" title="Introduction Level Documentation - What goes into it?">
+<div created="20190127031951902" modified="20190307005925756" tags="Notes" title="Introduction Level Documentation - What goes into it?">
 <pre>: Collecting already available information - EASY
 : Assigning each collected piece to its place - LESS EASY
 : Writing missing material - QUITE DIFFICULT
@@ -13361,7 +13385,7 @@ Suggest a time frame for going through this introductory material. 1 hour? 2 hou
 
 
 |!Topic|!Tiddlers|
-|^Intro|Discover — Guide — Things you can do with it — Reasons to switch — (maybe too many, so merge these?)|
+|^Intro|Video — Discover — Guide — Things you can do with it — Reasons to switch — (maybe too many, so merge these?)|
 |^Do a few things on tiddlywiki.com |Make some tiddlers — Enable the Home button — WHAT ESLE? |
 |^Download |empty.html — Save — Open |
 |^Tiddlers info #1|Explain what they are — Make some &amp; learn how to find them|
@@ -14885,7 +14909,7 @@ The tiddler [[$:/view]] contains the currently set story view.
 {{Empty Story}}
 </pre>
 </div>
-<div created="20131128090536894" modified="20190124094420492" tags="tiddler-modified todo [[Working with TiddlyWiki]]" title="Structuring TiddlyWiki" type="text/vnd.tiddlywiki">
+<div created="20131128090536894" modified="20190307011405492" tags="tiddler-modified todo [[Working with TiddlyWiki]]" title="Structuring TiddlyWiki" type="text/vnd.tiddlywiki">
 <pre>~TiddlyWiki provides several features to help you structure information as [[tiddlers|Tiddlers]], and model the relationships between them:
 
 
@@ -14894,12 +14918,20 @@ The tiddler [[$:/view]] contains the currently set story view.
 * [[Tagging]]
 * [[Tiddler Fields|TiddlerFields]]
 * [[Data Tiddlers|DataTiddlers]]
+* [[Naming Tiddlers|Adopt a Titles Policy]]
 
 
-:Model the relationships between them
+:Model the relationships between them for display
 * [[Tiddler Links|TiddlerLinks]]
-* Transclusion
-* [[Title Lists|Title List]]</pre>
+* [[Transclusion]]
+* [[Title Lists|Title List]]
+* [[List links|list-links Macro]]
+* [[Tables|Tables in WikiText]]
+* Lists &amp; Filters
+* CSS
+
+
+</pre>
 </div>
 <div created="20181229045427492" modified="20181229045506416" tags="todo Beginners" title="System Tiddlers for Beginners">
 <pre>{{SystemTiddlers}}
@@ -15897,6 +15929,9 @@ parse
 render
 
 etc.</pre>
+</div>
+<div title="Untitled" type="text/plain">
+<pre>zoomin</pre>
 </div>
 <div created="20181210065126622" modified="20181210071102548" tags="github" title="Using Github to Help with TiddlyWiki">
 <pre>Create an account with Github
