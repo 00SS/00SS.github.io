@@ -10400,7 +10400,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190307214838958" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190308105522948" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10439,7 +10439,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190307010600382" list="[[Internal Links using HTML]] [[Adopt a Titles Policy]] [[Structuring TiddlyWiki]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190307031022410" title="$:/StoryList">
+<div created="20190308103005966" list="[[Internal Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190308103005966" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190304165218536" title="$:/temp/advancedsearch">
@@ -13256,7 +13256,7 @@ The rest of these guidelines are at [[Instruction Tiddlers]].
 
 </pre>
 </div>
-<div created="20190303082448082" modified="20190307215810188" tags="[[HTML in WikiText]]" title="Internal Links using HTML">
+<div created="20190303082448082" modified="20190308112603180" tags="[[HTML in WikiText]]" title="Internal Links using HTML">
 <pre>&lt;h2 id=#Introduction:Internal-Links-using-HTML&gt;Introduction&lt;/h2&gt;
 
 In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker or target. A link referencing that target allows readers to scroll to that specific part of a page. This can be useful when the page is very long. The navigation process between tiddlers in [[TiddlyWiki]] uses code similar to how, in a normal webpage, these special targets are accessed using a link. This means you cannot use internal links without taking this into account.
@@ -13276,8 +13276,11 @@ The following applies for proper (limited) useage:
 : is case sensitive
 :;Suggested that:
 :: not to use URI encoding or the `%` character (see the warning below)
-:: preferably not contain any whitespace (see note 1. below) but if it does, the value should be within double quotes
-:: each value to be unique in the ~TiddlyWiki  (see note 2. below)
+:: &lt;span id=&lt;&lt;qualify #note.1-return&gt;&gt;/&gt; preferably not contain any whitespace (see &lt;a href=&lt;&lt;qualify ##note.1&gt;&gt; title=&quot;click to go to note 1.&quot;&gt;note 1.&lt;/a&gt; below) but if it does, the value should be within double quotes 
+:: &lt;span id=&lt;&lt;qualify #note.2-return&gt;&gt;/&gt; each value to be unique in the ~TiddlyWiki  (see &lt;a href=&lt;&lt;qualify ##note.2&gt;&gt; title=&quot;click to go to note 2.&quot;&gt;note 2.&lt;/a&gt; below)
+
+
+
 
 ; Constructing the link
 : The `&lt;a&gt;` HTML element is used with its &lt;&lt;.attr href&gt;&gt; attribute
@@ -13304,15 +13307,13 @@ The following applies for proper (limited) useage:
 :: the tiddler is folded
 :: the target is within a non-displaying &lt;&lt;.wlink RevealWidget&gt;&gt; widget
 :: the&lt;&lt;.button &quot;control-panel&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;Appearance&quot;&gt;&gt; , &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt; is set to (the single page view)  &lt;&lt;.def zoomin&gt;&gt; and the tiddler is not at the top of the story river (not displayed) 
+: &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Click&lt;/kbd&gt; on such a link will open a new browser window/tab &amp; not the targeted tiddler.
 
 &lt;&lt;.warning &quot;Some browsers will not navigate to an ''id'' that includes an encoded [ext[URI|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI]] that has a `%` character followed by 2 characters. &quot;&gt;&gt;
 
-&lt;$macrocall $name=.note _=&quot;&quot;&quot;1. The HTML5 specifications for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an internal navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
+&lt;$macrocall $name=.note _=&quot;&quot;&quot;&lt;span id=&lt;&lt;qualify #note.1&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.1-return&gt;&gt; title=&quot;click to return&quot;&gt;1.&lt;/a&gt;&lt;/span&gt; The HTML5 specifications for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an internal navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
 
-2. If transclusions create multiple instances of the &lt;&lt;.attr id&gt;&gt;, navigation will take place to the first instance found that satisfies the above criteria.
-
-3. The Keyboard Combination &lt;kbd&gt;Ctrl&lt;/kbd&gt;+ &lt;kbd&gt;Click&lt;/kbd&gt; on such a link will open a new browser window/tab &amp; not the targeted tiddler.&quot;&quot;&quot;  /&gt;
-
+&lt;span id=&lt;&lt;qualify #note.2&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.2-return&gt;&gt; title=&quot;click to return&quot;&gt;2.&lt;/a&gt;&lt;/span&gt; If transclusions create multiple instances of the same &lt;&lt;.attr id&gt;&gt; attribute, navigation will take place to the first instance found that satisfies the above criteria. To avoid this, you can use the [[qualify macro|qualify Macro]] in both the &lt;&lt;.attr id&gt;&gt; and the &lt;&lt;.attr href&gt;&gt; attributes in a similar style to the example given below: &lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt; &gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;.&quot;&quot;&quot;  /&gt;
 
 &lt;/section&gt;
 
@@ -13362,6 +13363,18 @@ The links below will take you to specified parts of this tiddler.
 * &lt;a href=&quot;&quot;&quot;##&quot;Example&quot;:-InternalLinksUsingHTML&quot;&quot;&quot;&gt;Example&lt;/a&gt;
 * &lt;a href=&quot;##Another%20Example:-Internal%20Links%20using%20HTML&quot;&gt;Another Example&lt;/a&gt;
 * &lt;a href=&quot;##Suggestions%0&quot;&gt;Suggestions&lt;/a&gt;
+
+&lt;h2 id=&lt;&lt;qualify #qualify-example&gt;&gt;&gt; Avoiding duplicate  IDs when transcluding&lt;/h2&gt;
+The &lt;&lt;.attr id&gt;&gt; and link to this header has been made as follows:
+
+```
+&lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt;&gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;
+
+&lt;h2 id=&lt;&lt;qualify #qualify-example&gt;&gt;&gt;Avoiding duplicate IDs when transcluding&lt;/h2&gt;
+```
+;For this to work:
+: that &lt;&lt;.attr id&gt;&gt; value cannot be surrounded by singe or double quotes
+: both the &lt;&lt;.attr id&gt;&gt; and the link must be in the same tiddler.
 
 !! Hint
 
