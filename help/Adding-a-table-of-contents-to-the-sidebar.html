@@ -10400,7 +10400,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190308105522948" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190311065058912" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10772,8 +10772,8 @@ https://groups.google.com/d/msg/tiddlywiki/uW-IU_pMGWU/lq8nLOqBAAAJ</pre>
 &lt;/$set&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20190303082448082" modified="20190311055947594" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
-<pre>&lt;h2 id=#Introduction:Internal-Links-using-HTML&gt;Introduction&lt;/h2&gt;
+<div created="20190303082448082" modified="20190311064852180" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
+<pre>&lt;h2 id=#Introduction:Anchor-Links-using-HTML&gt;Introduction&lt;/h2&gt;
 
 In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker, target, or anchor. A link referencing an &lt;&lt;.attr id&gt;&gt; that is used as an anchor scrolls to that specific part of a page. This can be useful in a long page. 
 
@@ -10781,13 +10781,13 @@ The navigation process to open and scroll to tiddlers in [[TiddlyWiki]] uses cod
 
 A way to allow an anchor link navigate to an anchor is by the slightly unconventional method of starting the anchor &lt;&lt;.attr id&gt;&gt; attribute with a `#` character.
 
-&lt;h2 id=&quot;#Navigation within a tiddler: Internal Links using HTML&quot;&gt;Navigation within a tiddler&lt;/h2&gt;
+&lt;h2 id=&quot;#Navigation within tiddlers: Anchor Links using HTML&quot;&gt;Navigation within tiddlers&lt;/h2&gt;
 
 Similar to how the &lt;&lt;.attr id&gt;&gt; attribute of an HTML element can be used in a normal webpage, it can be used in ~TiddlyWiki (with some limitations) for navigation within displayed tiddlers.
 
 The following applies for proper (limited) useage:
 
-&lt;section id=&quot;#section01-Internal%20Links%20using%20HTML&quot;&gt;
+&lt;section id=&quot;#section01-Anchor%20Links%20using%20HTML&quot;&gt;
 
 ; Naming the &lt;&lt;.attr id&gt;&gt; attribute as an anchor:
 : starts with a `#` character
@@ -10805,7 +10805,7 @@ The following applies for proper (limited) useage:
 : The &lt;&lt;.attr href&gt;&gt; attribute starts with a `#` following by the exact &lt;&lt;.attr id&gt;&gt; value
 : If the &lt;&lt;.attr href&gt;&gt; value contains spaces, the value should be within double quotes
 
-&lt;h2 id=&quot;&quot;&quot;#&quot;Example&quot;:-InternalLinksUsingHTML&quot;&quot;&quot;&gt;Example:&lt;/h2&gt;
+&lt;h2 id=&quot;&quot;&quot;#&quot;Example&quot;:-AnchorLinksUsingHTML&quot;&quot;&quot;&gt;Example:&lt;/h2&gt;
 
 ```
 &lt;h1 id=&quot;#heading-01&quot;&gt; My Heading&lt;/h1&gt;
@@ -10829,13 +10829,13 @@ The following applies for proper (limited) useage:
 
 &lt;&lt;.warning &quot;Some browsers will not navigate to an ''id'' whose value includes an encoded [ext[URI|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI]] that has a `%` character followed by 2 characters. &quot;&gt;&gt;
 
-&lt;$macrocall $name=.note _=&quot;&quot;&quot;&lt;span id=&lt;&lt;qualify #note.1&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.1-return&gt;&gt; title=&quot;click to return&quot;&gt;1.&lt;/a&gt;&lt;/span&gt; The [ext[HTML5 specifications|https://www.w3schools.com/tags/att_global_id.asp]] for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an internal navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
+&lt;$macrocall $name=.note _=&quot;&quot;&quot;&lt;span id=&lt;&lt;qualify #note.1&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.1-return&gt;&gt; title=&quot;click to return&quot;&gt;1.&lt;/a&gt;&lt;/span&gt; The [ext[HTML5 specifications|https://www.w3schools.com/tags/att_global_id.asp]] for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an anchor navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
 
 &lt;span id=&lt;&lt;qualify #note.2&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.2-return&gt;&gt; title=&quot;click to return&quot;&gt;2.&lt;/a&gt;&lt;/span&gt; If transclusions create multiple instances of the same &lt;&lt;.attr id&gt;&gt; attribute, navigation will take place to the first instance found that satisfies the above criteria. To avoid this, you can use the [[qualify macro|qualify Macro]] in both the &lt;&lt;.attr id&gt;&gt; and the &lt;&lt;.attr href&gt;&gt; attributes in a similar style to the example given below: &lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt; &gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;.&quot;&quot;&quot;  /&gt;
 
 &lt;/section&gt;
 
-&lt;h2 id=&lt;&lt;qualify &quot;#Another Example:-InternalLinks using HTML&quot;&gt;&gt;&gt;Another Example:&lt;/h2&gt;
+&lt;h2 id=&lt;&lt;qualify &quot;#Another Example:-AnchorLinks using HTML&quot;&gt;&gt;&gt;Another Example:&lt;/h2&gt;
 
 Here is an example using a `&lt;section&gt;` HTML tag, that is generally used to define sections in an HTML document, such as chapters, headers, footers, or any other sections of the document.
 
@@ -10875,11 +10875,11 @@ Some suggestions for the HTML element you choose for marking a position using th
 
 The anchor links below will take you to specified parts of this tiddler.
 
-* &lt;a href=##Introduction:Internal-Links-using-HTML&gt;Introduction&lt;/a&gt;
-* &lt;a href=&quot;##Navigation within a tiddler: Internal Links using HTML&quot;&gt;Navigation within a tiddler&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; includes spaces)
-* &lt;a href=&quot;##section01-Internal%20Links%20using%20HTML&quot;&gt;Naming the ''id'' and Constructing the link&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains `%20` so may not work in some browsers) 
-* &lt;a href=&quot;&quot;&quot;##&quot;Example&quot;:-InternalLinksUsingHTML&quot;&quot;&quot;&gt;Example&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains quotation marks)
-* &lt;a href=&lt;&lt;qualify &quot;##Another Example:-InternalLinks using HTML&quot;&gt;&gt;&gt;Another Example&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; constructed using the &lt;&lt;.mlink qualify&gt;&gt; macro)
+* &lt;a href=##Introduction:Anchor-Links-using-HTML&gt;Introduction&lt;/a&gt;
+* &lt;a href=&quot;##Navigation within tiddlers: Anchor Links using HTML&quot;&gt;Navigation within a tiddler&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; includes spaces)
+* &lt;a href=&quot;##section01-Anchor%20Links%20using%20HTML&quot;&gt;Naming the ''id'' and Constructing the link&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains `%20` so may not work in some browsers) 
+* &lt;a href=&quot;&quot;&quot;##&quot;Example&quot;:-AnchorLinksUsingHTML&quot;&quot;&quot;&gt;Example&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains quotation marks)
+* &lt;a href=&lt;&lt;qualify &quot;##Another Example:-AnchorLinks using HTML&quot;&gt;&gt;&gt;Another Example&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; constructed using the &lt;&lt;.mlink qualify&gt;&gt; macro)
 * &lt;a href=&quot;##Suggestions%0&quot;&gt;Suggestions&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; terminates with `%0`)
 
 &lt;h2 id=&lt;&lt;qualify #qualify-example&gt;&gt;&gt; Avoiding duplicate  IDs when transcluding&lt;/h2&gt;
@@ -10899,9 +10899,9 @@ The &lt;&lt;.attr id&gt;&gt; and anchor link to this header has been made as fol
 If you want don't want the link to look like an external link, give the `&lt;a&gt;` element's &lt;&lt;.attr class&gt;&gt; attribute the value &lt;&lt;.def tc-tiddlylink&gt;&gt; and if you want the link to also be italic &amp; bold, give the additional classes &lt;&lt;.def &quot;tc-tiddlylink-missing tc-tiddlylink-shadow&quot;&gt;&gt; like below:
 
 ```
-&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Internal-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Hints&gt;&gt;&gt;Hints&lt;/a&gt;.
+&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Anchor-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Hints&gt;&gt;&gt;Hints&lt;/a&gt;.
 ```
-&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Internal-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Hints&gt;&gt;&gt;Hints&lt;/a&gt;.
+&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Anchor-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Hints&gt;&gt;&gt;Hints&lt;/a&gt;.
 
 If you want to include an &lt;&lt;.attr id&gt;&gt; attribute to a link in your sidebar Table of Contents, you can include it in your listed tiddler's &lt;&lt;.field caption&gt;&gt; field similar to the way shown below:
 
