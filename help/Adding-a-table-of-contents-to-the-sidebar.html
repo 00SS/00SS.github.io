@@ -443,7 +443,7 @@ Error message and password prompt
 
 <li>Instruction Tiddlers</li>
 
-<li>Instruction Tiddlers for Introduction Level Material</li>
+<li>Instruction Tiddlers for Beginners</li>
 
 <li>Introduction Level Documentation - What goes into it?</li>
 
@@ -888,8 +888,8 @@ Error message and password prompt
 <div created="20181230021324204" modified="20181230021324204" title="$:/config/peek-stylesheets/open/-947092625$:/themes/tiddlywiki/snowwhite/base">
 <pre>yes</pre>
 </div>
-<div created="20181117065853250" modified="20181216125850574" title="$:/config/RelinkOnRename">
-<pre>no</pre>
+<div created="20181117065853250" modified="20190313043813900" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.19">
 <pre>{
@@ -10337,8 +10337,8 @@ $src$
 <div created="20190222061518162" modified="20190222081005884" title="$:/state/folded/Discover TiddlyWiki">
 <pre>show</pre>
 </div>
-<div created="20190209122502588" modified="20190306045339536" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
-<pre>show</pre>
+<div created="20190209122502588" modified="20190313044838696" title="$:/state/How a Tiddler is Stored in a TiddlyWiki file">
+<pre>hide</pre>
 </div>
 <div created="20190225060958438" modified="20190225062026752" title="$:/state/Links for Beginners">
 <pre>hide</pre>
@@ -10400,7 +10400,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190311065058912" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190313045712770" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10433,13 +10433,13 @@ $src$
 <div created="20190209122929316" modified="20190221100417028" title="$:/state/Widgets for Beginners">
 <pre>hide</pre>
 </div>
-<div created="20190209122747608" modified="20190221100440048" title="$:/state/WikiText for Beginners">
-<pre>show</pre>
+<div created="20190209122747608" modified="20190313044855348" title="$:/state/WikiText for Beginners">
+<pre>hide</pre>
 </div>
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190308103005966" list="[[Anchor Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] [[Instruction Tiddlers for Introduction Level Material]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190308103005966" title="$:/StoryList">
+<div created="20190308103005966" list="[[Instruction Tiddlers for Beginners]] [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Anchor Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Introduction Level Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190313044449868" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190304165218536" title="$:/temp/advancedsearch">
@@ -10499,11 +10499,11 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190307011230658" title="$:/temp/search">
+<div created="20181221081025004" modified="20190313045711316" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190306045144018" title="$:/temp/toc/selectedTiddler">
-<pre>How a Tiddler is Stored in a TiddlyWiki file</pre>
+<div created="20181221081005896" modified="20190313044848516" title="$:/temp/toc/selectedTiddler">
+<pre>WikiText for Beginners</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10772,7 +10772,7 @@ https://groups.google.com/d/msg/tiddlywiki/uW-IU_pMGWU/lq8nLOqBAAAJ</pre>
 &lt;/$set&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20190303082448082" modified="20190311064852180" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
+<div created="20190303082448082" modified="20190311105205288" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
 <pre>&lt;h2 id=#Introduction:Anchor-Links-using-HTML&gt;Introduction&lt;/h2&gt;
 
 In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker, target, or anchor. A link referencing an &lt;&lt;.attr id&gt;&gt; that is used as an anchor scrolls to that specific part of a page. This can be useful in a long page. 
@@ -10797,9 +10797,6 @@ The following applies for proper (limited) useage:
 :: &lt;span id=&lt;&lt;qualify #note.1-return&gt;&gt;/&gt; preferably not contain any whitespace but if it does, the value should be within double quotes (see &lt;a href=&lt;&lt;qualify ##note.1&gt;&gt; title=&quot;click to go to note 1.&quot;&gt;note 1.&lt;/a&gt; below)
 :: &lt;span id=&lt;&lt;qualify #note.2-return&gt;&gt;/&gt; each value to be unique in the ~TiddlyWiki  (see &lt;a href=&lt;&lt;qualify ##note.2&gt;&gt; title=&quot;click to go to note 2.&quot;&gt;note 2.&lt;/a&gt; below)
 
-
-
-
 ; Constructing the anchor link
 : The `&lt;a&gt;` HTML element is used with its &lt;&lt;.attr href&gt;&gt; attribute
 : The &lt;&lt;.attr href&gt;&gt; attribute starts with a `#` following by the exact &lt;&lt;.attr id&gt;&gt; value
@@ -10811,7 +10808,6 @@ The following applies for proper (limited) useage:
 &lt;h1 id=&quot;#heading-01&quot;&gt; My Heading&lt;/h1&gt;
 
 &lt;a href=&quot;##heading-01&quot;&gt;Link to My Heading&lt;/a&gt;
-
 ```
 
 ; Navigating to the reference
@@ -10859,9 +10855,8 @@ A link to scroll to this section could be made as follows:
 Clicking this anchor link goes to: &lt;a href=&quot;##unique001&quot;&gt;Section 1&lt;/a&gt;
 ```
 Clicking this anchor link goes to: &lt;a href=&quot;##unique001&quot;&gt;Section 1&lt;/a&gt;
-
-
 &lt;hr&gt;
+
 &lt;h2 id=&quot;#Suggestions%0&quot;&gt;Suggestions for HTML elements to use&lt;/h2&gt;
 
 Some suggestions for the HTML element you choose for marking a position using the &lt;&lt;.attr id&gt;&gt; attribute:
@@ -12383,7 +12378,7 @@ Camel Case should be turned off.
 
 </pre>
 </div>
-<div created="20140904164608166" modified="20190130085608958" tags="tiddler-modified [[Improving TiddlyWiki Documentation]]" title="Documentation Style Guide" type="text/vnd.tiddlywiki">
+<div created="20140904164608166" modified="20190313044423848" tags="tiddler-modified [[Improving TiddlyWiki Documentation]]" title="Documentation Style Guide" type="text/vnd.tiddlywiki">
 <pre>The documentation for ~TiddlyWiki tries to follow a consistent editorial style. It has two main areas, each with its own tone and audience:
 
 * [[Instruction Tiddlers]]
@@ -12391,7 +12386,7 @@ Camel Case should be turned off.
 
 We keep the two areas distinct. This avoids overwhelming relative newcomers, while still providing quick access to the information that expert users need.
 
-Parallel to [[Instruction Tiddlers]], is a set of [[Instruction Tiddlers for Introduction Level Material]] that covers the basics for newer users.
+Parallel to [[Instruction Tiddlers]], is a set of [[Instruction Tiddlers for Beginners]] that covers the basics for newer users.
 
 Additional topics:
 
@@ -13352,10 +13347,10 @@ Instruction tiddlers talk directly to the reader as &lt;&lt;.word you&gt;&gt;. T
 But they avoid excessively colloquial language, cultural or topical references and attempts at humour, as these can baffle or even offend the international readership. They also avoid potentially frustrating the reader with descriptions of features as &lt;&lt;.word convenient&gt;&gt; or &lt;&lt;.word easy&gt;&gt;.
 </pre>
 </div>
-<div created="20181219063959890" modified="20190205113243198" tags="tiddler-new [[Improving TiddlyWiki Documentation]]" title="Instruction Tiddlers for Introduction Level Material">
-<pre>The directions for writing &lt;&lt;.def &quot;Instruction tiddlers for Introduction Level Material&quot;&gt;&gt; are in many ways similar to the directions given for writing general [[Instruction Tiddlers]].
+<div created="20181219063959890" modified="20190313045705542" tags="tiddler-new [[Improving TiddlyWiki Documentation]]" title="Instruction Tiddlers for Beginners">
+<pre>The directions for writing &lt;&lt;.def &quot;Instruction Tiddlers for Beginners&quot;&gt;&gt; level material are in many ways similar to the directions given for writing general [[Instruction Tiddlers]].
 
-The main differences are that Intro Level tiddlers should assume that the person reading:
+The main differences are that Beginner Level tiddlers should assume that the person reading:
 
 * is a new visitor to the site
 * has &lt;&lt;.em no&gt;&gt; background information about &lt;&lt;.em any&gt;&gt; part of ~TiddlyWiki
@@ -13368,7 +13363,7 @@ The main differences are that Intro Level tiddlers should assume that the person
 Keeping this in mind, the information and instructions given is written in an informal style that constantly refers to the reader and should:
 
 * use small steps, explaining each procedure in full detail
-* preferably links in the text should be to other Intro level tiddlers if available
+* preferably links in the text should be to other Beginner Level tiddlers if available
 * specify the location of items being referred to such as:
 ** top right side
 ** bottom center
@@ -13381,13 +13376,15 @@ Keeping this in mind, the information and instructions given is written in an in
 
 If links to more advanced tiddlers are given, these should preferably be:
 
-* in the form of a revealable &quot;Find out more&quot; section
-* at the end of the tiddler (or if necessary at the end of a section)
+* in the form of a revealable section under a &quot;Show More Information on ...&quot; button
+** at the end of the tiddler (or if necessary at the end of a section)
 
-To keep navigation easier for wide width devices, [[Introductory|Beginners]] material will be presented in a &lt;&lt;.var toc-tabbed-internal-nav&gt;&gt; Table of Contents. Narrow width devices will have to click on &lt;&lt;.word Next&gt;&gt; or &lt;&lt;.word Previous&gt;&gt; links, or similar.
+* where appropriate, at the bottom of tiddlers there should be
+** a link towards the &lt;&lt;.word Next&gt;&gt; suggested tiddler to read and a &lt;&lt;.word Back&gt;&gt; link to go back a step
+** This should correspond to the order in the &lt;&lt;.field list&gt;&gt; field of the Beginners' Table of Contents tiddler
+** If possible, a &lt;&lt;.word Previous&gt;&gt; link to go back a step (for tiddlers opened out of order)
 
-* Where appropriate, there should be a link at the bottom of tiddlers towards the &lt;&lt;.word next&gt;&gt; suggested tiddler to read (and a &lt;&lt;.word previous&gt;&gt; link to go back a step).
-* This should correspond to the order in the &lt;&lt;.field list&gt;&gt; field of the Introduction's Table of Contents tiddler
+To keep navigation easier for wide width devices, [[Beginners]] material will be presented in a &lt;&lt;.var toc-tabbed-internal-nav&gt;&gt; Table of Contents. Narrow width devices will have to click on &lt;&lt;.word Next&gt;&gt; or &lt;&lt;.word Previous&gt;&gt; links, or similar.
 
 The rest of these guidelines are at [[Instruction Tiddlers]].
 
