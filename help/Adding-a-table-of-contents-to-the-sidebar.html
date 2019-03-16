@@ -291,6 +291,8 @@ Error message and password prompt
 
 <li>All the Core Image icons</li>
 
+<li>Anchor docs</li>
+
 <li>Anchor Links using HTML</li>
 
 <li>AutoFocus</li>
@@ -10305,8 +10307,7 @@ $src$
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Untitled]]
-# [[HTML Links in WikiText]]</pre>
+# [[Anchor docs]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10326,8 +10327,8 @@ $src$
 <div created="20181229154841532" modified="20190121093947934" title="$:/state/Download and Get TiddlyWiki">
 <pre>hide</pre>
 </div>
-<div created="20190122104000026" modified="20190122104000026" title="$:/state/Enable the Home button">
-<pre>show</pre>
+<div created="20190122104000026" modified="20190315100316196" title="$:/state/Enable the Home button">
+<pre>hide</pre>
 </div>
 <div created="20190222061533076" modified="20190222062521052" title="$:/state/folded/A Gentle Guide to TiddlyWiki">
 <pre>show</pre>
@@ -10398,7 +10399,7 @@ $src$
 <div created="20181229031704868" modified="20190207014151912" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20181225144338180" modified="20190313075455138" title="$:/state/tab/sidebar--595412856">
+<div created="20181225144338180" modified="20190316073255086" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
 <div created="20181229162013656" modified="20181229162326708" title="$:/state/Tiddlers for Beginners">
@@ -10422,8 +10423,8 @@ $src$
 <div created="20190108110319730" modified="20190124102815654" title="$:/state/toc/TableOfContents-todo--118161433">
 <pre>close</pre>
 </div>
-<div created="20181229163730106" modified="20190209122501172" title="$:/state/When you make a Tiddler">
-<pre>show</pre>
+<div created="20181229163730106" modified="20190315100222938" title="$:/state/When you make a Tiddler">
+<pre>hide</pre>
 </div>
 <div created="20181229163731620" modified="20181229163750982" title="$:/state/When you make a Tiddlers">
 <pre>hide</pre>
@@ -10437,7 +10438,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190308103005966" list="[[Instruction Tiddlers for Beginners]] [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Anchor Links using HTML]] [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190313075421518" title="$:/StoryList">
+<div created="20190315100246872" list="[[Anchor docs]] [[Anchor Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Instruction Tiddlers for Beginners]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190316055841484" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190304165218536" title="$:/temp/advancedsearch">
@@ -10497,11 +10498,11 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190313075449700" title="$:/temp/search">
+<div created="20181221081025004" modified="20190315100352642" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190313044848516" title="$:/temp/toc/selectedTiddler">
-<pre>WikiText for Beginners</pre>
+<div created="20181221081005896" modified="20190315100231920" title="$:/temp/toc/selectedTiddler">
+<pre>Enable the Home button</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -10769,6 +10770,156 @@ https://groups.google.com/d/msg/tiddlywiki/uW-IU_pMGWU/lq8nLOqBAAAJ</pre>
 &lt;/$list&gt;
 &lt;/$set&gt;
 &lt;/$list&gt;</pre>
+</div>
+<div created="20190311094603013" modified="20190311181534061" tags="" title="Anchor docs">
+<pre>&lt;a id=&quot;#Top&quot;&gt;
+
+&lt;h2 id=&quot;##Introduction:Anchor-Links-using-HTML&quot;&gt;''HTML Anchor Links in Tiddlers''&lt;/h2&gt;
+
+
+
+* &lt;a href=##Introduction:Anchor-Links-using-HTML&gt;What do they do?&lt;/a&gt;
+* &lt;a href=&quot;##Navigation within tiddlers: Anchor Links using HTML&quot;&gt;How do I make them?&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; includes spaces)
+* &lt;a href=&quot;##section01-Anchor%20Links%20using%20HTML&quot;&gt;More examples&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains `%20` so may not work in some browsers) 
+* &lt;a href=&quot;&quot;&quot;##&quot;Example&quot;:-AnchorLinksUsingHTML&quot;&quot;&quot;&gt;Differences to HTML5 and things to look out for&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; contains quotation marks)
+* &lt;a href=&lt;&lt;qualify &quot;##Another Example:-AnchorLinks using HTML&quot;&gt;&gt;&gt;Suggestions for HTML elements to use&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; constructed using the &lt;&lt;.mlink qualify&gt;&gt; macro)
+* &lt;a href=&quot;##Suggestions%0&quot;&gt;Avoiding duplicate IDs when transcluding&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; terminates with `%0`)
+* &lt;a href=&quot;##Suggestions%0&quot;&gt;Style Hints&lt;/a&gt; (&lt;&lt;.attr id&gt;&gt; terminates with `%0`)
+
+''What do they do?''
+
+In Tiddlywiki anchor links can help us link to target points and distinct sections within rendered tiddlers. They help the reader navigate longer tiddler content.
+ 
+
+For example this link, &lt;a href=&quot;##Bottom_of_tiddler&quot;&gt;Bottom&lt;/a&gt;, should take you to the bottom of this tiddler. The 'Top' link you find there should return you back to the top.
+
+''How do I make them?''
+
+There are only 2 steps to making anchor links.
+
+* First, create the target point where you want it.
+* Second, add a link to it where the reader might need it.
+
+That's it. 
+
+
+''Step 1: Create a 'Target point' '' 
+
+```
+&lt;a id=&quot;#Bottom_of_tiddler&quot;&gt;
+```
+
+*Add an &lt;&lt;.attr id&gt;&gt; attribute to any HTML5 tag and place a single `#` before the 'address' value. &lt;a href=&quot;##Suggestions%0&quot;&gt;Here are some suggestions of tags you can use.&lt;/a&gt;
+* Place this code at the target location. E.g. bottom of the page.
+
+''Step 2: 'Link' code''
+
+```
+&lt;a href=&quot;##Bottom_of_tiddler&quot;&gt;Bottom&lt;/a&gt;
+```
+*Create an a href link using exactly the same 'address' value as the target but with double `#``#` characters preceding it.
+*Place this code where it will most help the reader.
+
+Is it really that simple? 
+
+Yes, it's that simple BUT...  in TiddlyWiki there are some small differences to standard HTML5 anchor links and some tiddlywiki limitations. 
+
+The above example can be adapted to work for many simple situations in tiddlywiki. Read on if you need more...
+
+&lt;a href=&quot;##Top&quot;&gt;Back to the top&lt;/a&gt;
+
+&lt;h2 id=&quot;#More_Examples&quot;&gt;''More Examples:''&lt;/h2&gt;
+In each case the target code is placed at the destination the reader navigates to, the link code is placed where it will help the reader navigate from.
+
+''Heading''
+
+```
+&lt;h1 id=&quot;#heading-01&quot;&gt; My Target Heading&lt;/h1&gt;
+
+&lt;a href=&quot;##heading-01&quot;&gt;Link to My Target Heading&lt;/a&gt;
+
+```
+
+&lt;section id=&quot;#unique001&quot;&gt;''Section''&lt;/section&gt;
+
+```
+&lt;section id=&quot;#unique001&quot;&gt;
+My Target section
+&lt;/section&gt;
+```
+
+```
+Clicking this anchor link goes to: &lt;a href=&quot;##unique001&quot;&gt;Link to My Target Section&lt;/a&gt;
+```
+Clicking this anchor link goes to: &lt;a href=&quot;##unique001&quot;&gt;Link to My Target Section&lt;/a&gt;
+
+A `&lt;section&gt;` HTML tag is generally used to define sections in an HTML document, such as chapters, headers, footers, or any other sections of the document.
+
+
+&lt;h2&gt;''Differences to HTML5 and things to look out for''&lt;/h2&gt;
+
+''Step 1:'' Creating the target point
+
+* Unlike standard HTML5 tiddlywiki puts a `#` character in front of the target address value that follows the &lt;&lt;.attr id&gt;&gt; attribute.  (Notice the single `#` character used in the #Bottom_of_page in Example 1.)
+* Unlike standard HTML5 tiddlywiki anchor links are case sensitive. In the example above #Bottom_of_tiddler works, but #bottom_of_Tiddler wouldn't.
+
+* Avoid using URI encoding or the % character (see the warning below) in your link.
+* Avoid using any whitespace in your link. If it cannot be avoided the value should be within double quotes (see note 1. below)
+* Each link address should be unique in the TiddlyWiki.  If transclusions create multiple instances of the same &lt;&lt;.attr id&gt;&gt; attribute, navigation will take place to the first instance found that satisfies the above criteria. To avoid this, you can use the [[qualify macro|qualify Macro]] in both the &lt;&lt;.attr id&gt;&gt; and the &lt;&lt;.attr href&gt;&gt; attributes in a similar style to the example given below: &lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt; &gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;.
+
+
+''Step 2:'' Creating the Link to the target
+
+*Anchor links in Tiddlywiki do not work if the tiddler is not  in the Story River, or is not displayed in the sidebar.
+*Anchor links in Tiddlywiki do not work if the anchor marked target point is in the Story River or sidebar but the tiddler is folded or the anchor is within a non-displaying $reveal widget. (Ctrl+Click on such an anchor link will open a new browser window/tab loading the base web page &amp; not navigate to the expected tiddler.)
+*Anchor links in Tiddlywiki do not work if Control panel &gt; Appearance &gt; Story View is set to Zoomin (the single page view) and the tiddler is not at the top of the story river (i.e. not displayed).
+*When an anchor link is clicked the browser's history will be updated with the link's href value appended to the web page's URL
+
+&lt;a href=&quot;##Top&quot;&gt;Back to the top&lt;/a&gt;
+
+&lt;h2 id=&quot;#Suggestions%0&quot;&gt;''Suggestions for HTML elements to use''&lt;/h2&gt;
+
+Some suggestions for the HTML element you choose for marking a position using the &lt;&lt;.attr id&gt;&gt; attribute:
+
+| ! Element | ! Sample code | ! Observations |
+|&lt;&lt;.def anchor&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;a id=&quot;#part001-of-TiddlerName&quot;&gt;&lt;/a&gt;&quot;&quot;&quot;/&gt; |Should work perfectly everywhere|
+|&lt;&lt;.def heading&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;h2 id=&quot;#0 0 1&quot;&gt;A New Heading&lt;/h2&gt;&quot;&quot;&quot;/&gt;|whitespace is against convention, but works|
+|&lt;&lt;.def section&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;section id=&quot;#sect001%20of%20TiddlerName&quot;&gt;This is a new section&lt;/section&gt;&quot;&quot;&quot;/&gt;|URI encoding may not work in some browsers|
+|&lt;&lt;.def span&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;span id=&quot;#007&quot;&gt;Marker 007 is here!&lt;/span&gt;&quot;&quot;&quot;/&gt;|''id'' values should be unique|
+|&lt;&lt;.def division&gt;&gt; |&lt;$text text=&quot;&quot;&quot;&lt;div id=&quot;#007&quot;&gt;&lt;/div&gt;&quot;&quot;&quot;/&gt;|Not advisable to use the same ''id'' value again|
+
+
+&lt;h2 id=&lt;&lt;qualify #qualify-example&gt;&gt;&gt; ''Avoiding duplicate  IDs when transcluding''&lt;/h2&gt;
+The &lt;&lt;.attr id&gt;&gt; and anchor link to this header has been made as follows:
+
+```
+&lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt;&gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;
+
+&lt;h2 id=&lt;&lt;qualify #qualify-example&gt;&gt;&gt;Avoiding duplicate IDs when transcluding&lt;/h2&gt;
+```
+;For this to work:
+
+*the &lt;&lt;.attr id&gt;&gt; value cannot be surrounded by single or double quotes.
+*both the &lt;&lt;.attr id&gt;&gt; and the anchor link must be in the same tiddler.
+
+&lt;h2 id=&lt;&lt;qualify #Style_Hints&gt;&gt;&gt;''Style Hints'' &lt;/h2&gt;
+
+If you don't want the link to look like an external link, give the `&lt;a&gt;` element's &lt;&lt;.attr class&gt;&gt; attribute the value &lt;&lt;.def tc-tiddlylink&gt;&gt; and if you want the link to also be italic &amp; bold, give the additional classes &lt;&lt;.def &quot;tc-tiddlylink-missing tc-tiddlylink-shadow&quot;&gt;&gt; like below:
+
+```
+&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Anchor-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Hints&gt;&gt;&gt;Hints&lt;/a&gt;.
+```
+&lt;a class=&quot;tc-tiddlylink&quot; href=&quot;##Introduction:Anchor-Links-using-HTML&quot;&gt;Back to the top&lt;/a&gt; or just back to &lt;a class=&quot;tc-tiddlylink tc-tiddlylink-missing tc-tiddlylink-shadow&quot; href=&lt;&lt;qualify ##Style_Hints&gt;&gt;&gt;Style Hints&lt;/a&gt;.
+
+If you want to include an &lt;&lt;.attr id&gt;&gt; attribute to a link in your sidebar Table of Contents, you can include it in your listed tiddler's &lt;&lt;.field caption&gt;&gt; field similar to the way shown below:
+
+```
+&lt;span id=#some-value&gt;Your caption&lt;/span&gt;
+```
+
+&lt;a id=&quot;#Bottom_of_tiddler&quot;&gt;
+
+&lt;a href=&quot;##Top&quot;&gt;Back to the top&lt;/a&gt;</pre>
 </div>
 <div created="20190303082448082" modified="20190311105205288" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
 <pre>&lt;h2 id=#Introduction:Anchor-Links-using-HTML&gt;Introduction&lt;/h2&gt;
@@ -12536,7 +12687,7 @@ Understanding the [[Draft Mechanism|DraftMechanism]] in full detail is for much 
 {{GettingStarted||$:/core/ui/ViewTemplate}}
 ```</pre>
 </div>
-<div created="20190122101329994" modified="20190122104028444" tags="todo Beginners" title="Enable the Home button">
+<div created="20190122101329994" modified="20190315100351028" tags="todo Beginners" title="Enable the Home button">
 <pre>On the sidebar to the right of this tiddler, You will see 5 tabs: &lt;&lt;.sidebar-tab Open&gt;&gt; , &lt;&lt;.toc-tab&gt;&gt; , &lt;&lt;.sidebar-tab Recent&gt;&gt; , &lt;&lt;.sidebar-tab Tools&gt;&gt; , &lt;&lt;.sidebar-tab More&gt;&gt;
 
 Click on the &lt;&lt;.sidebar-tab Tools&gt;&gt; tab.
@@ -12551,11 +12702,11 @@ Clicking the &lt;&lt;.button home&gt;&gt; button takes you back to the default &
 
 &lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/Enable the Home button&quot; text=&quot;show&quot;&gt;
 
-&lt;$button set=&quot;$:/state/Enable the Home button&quot; setTo=&quot;show&quot;&gt;Show More Information on the Home setting&lt;/$button&gt;&lt;/$reveal&gt;
+&lt;$button set=&quot;$:/state/Enable the Home button&quot; setTo=&quot;show&quot;&gt;Show More Information on the Home button&lt;/$button&gt;&lt;/$reveal&gt;
 
 &lt;$reveal type=&quot;match&quot; state=&quot;$:/state/Enable the Home button&quot; text=&quot;show&quot;&gt;
 
-&lt;$button set=&quot;Enable the Home button&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
+&lt;$button set=&quot;$:/state/Enable the Home button&quot; setTo=&quot;hide&quot;&gt;Close More Information&lt;/$button&gt;
 
 !!More Information on configuring the actions of the Home button
 
