@@ -373,6 +373,8 @@ Error message and password prompt
 
 <li>Draft of 'Beginners - Reorder ToC list (draggable)'</li>
 
+<li>Draft of 'Beginners'</li>
+
 <li>Draft Tiddlers</li>
 
 <li>Empty Story</li>
@@ -10444,7 +10446,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190315100246872" list="$:/Import Tabs [[tabs Macro]] [[Enable the Home button]] $:/AdvancedSearch $:/temp/toc/selectedTiddler Beginners [[Draft of 'Beginners - Reorder ToC list (draggable)']] [[Anchor docs]] [[Anchor Links using HTML]] [[Beginners Documentation - What goes into it?]] [[Instruction Tiddlers for Beginners]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190322062024766" title="$:/StoryList">
+<div created="20190315100246872" list="[[Anchor docs]] [[Anchor Links using HTML]] $:/temp/toc/selectedTiddler [[Draft of 'Beginners']] [[Draft of 'Beginners - Reorder ToC list (draggable)']] [[Beginners Documentation - What goes into it?]] [[Instruction Tiddlers for Beginners]] [[Documentation Macros Request]] [[Documentation Macros]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190407110512424" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190322054257890" title="$:/temp/advancedsearch">
@@ -10504,7 +10506,7 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190322062034776" title="$:/temp/search">
+<div created="20181221081025004" modified="20190407114451036" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190320135409326" title="$:/temp/toc/selectedTiddler">
@@ -10927,7 +10929,7 @@ If you want to include an &lt;&lt;.attr id&gt;&gt; attribute to a link in your s
 
 &lt;a href=&quot;##Top&quot;&gt;Back to the top&lt;/a&gt;</pre>
 </div>
-<div created="20190303082448082" modified="20190311105205288" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
+<div created="20190303082448082" modified="20190407114256214" tags="[[HTML in WikiText]]" title="Anchor Links using HTML">
 <pre>&lt;h2 id=#Introduction:Anchor-Links-using-HTML&gt;Introduction&lt;/h2&gt;
 
 In a general webpage, an &lt;&lt;.attr id&gt;&gt; attribute of an HTML element acts as a marker, target, or anchor. A link referencing an &lt;&lt;.attr id&gt;&gt; that is used as an anchor scrolls to that specific part of a page. This can be useful in a long page. 
@@ -10980,7 +10982,7 @@ The following applies for proper (limited) useage:
 
 &lt;&lt;.warning &quot;Some browsers will not navigate to an ''id'' whose value includes an encoded [ext[URI|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI]] that has a `%` character followed by 2 characters. &quot;&gt;&gt;
 
-&lt;$macrocall $name=.note _=&quot;&quot;&quot;&lt;span id=&lt;&lt;qualify #note.1&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.1-return&gt;&gt; title=&quot;click to return&quot;&gt;1.&lt;/a&gt;&lt;/span&gt; The [ext[HTML5 specifications|https://www.w3schools.com/tags/att_global_id.asp]] for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Mar 2019)^^ as an anchor navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt;.
+&lt;$macrocall $name=.note _=&quot;&quot;&quot;&lt;span id=&lt;&lt;qualify #note.1&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.1-return&gt;&gt; title=&quot;click to return&quot;&gt;1.&lt;/a&gt;&lt;/span&gt; The [ext[HTML5 specifications|https://www.w3schools.com/tags/att_global_id.asp]] for the &lt;&lt;.attr id&gt;&gt; attribute  says that its value should not contain any whitespace. However a value with whitespace that is surrounded by double-quotes (or triple double-quotes) works ^^(Apr 2019)^^ as an anchor navigation marker in ~TiddlyWiki. However it may not work for other code that wants to reference the same &lt;&lt;.attr id&gt;&gt; and in future, if a [[WikiText]] method of creating and accessing anchor links is implemented, it is likely that &lt;&lt;.attr id&gt;&gt; attributes with spaces will not work.
 
 &lt;span id=&lt;&lt;qualify #note.2&gt;&gt;&gt;&lt;a href=&lt;&lt;qualify ##note.2-return&gt;&gt; title=&quot;click to return&quot;&gt;2.&lt;/a&gt;&lt;/span&gt; If transclusions create multiple instances of the same &lt;&lt;.attr id&gt;&gt; attribute, navigation will take place to the first instance found that satisfies the above criteria. To avoid this, you can use the [[qualify macro|qualify Macro]] in both the &lt;&lt;.attr id&gt;&gt; and the &lt;&lt;.attr href&gt;&gt; attributes in a similar style to the example given below: &lt;a href=&lt;&lt;qualify ##qualify-example&gt;&gt; &gt;Avoiding duplicate IDs when transcluding&lt;/a&gt;.&quot;&quot;&quot;  /&gt;
 
@@ -12721,6 +12723,55 @@ Next: &lt;$list filter=&quot;[all[current]next[Beginners]]&quot;/&gt;.</pre>
 
 </pre>
 </div>
+<div back="[[Introduction Video]] [[A Gentle Guide to TiddlyWiki]]" caption="Beginners Help" created="20181116092351996" draft.of="Beginners" draft.title="Beginners" list="[[Discover TiddlyWiki]] [[Introduction Video]] [[A Gentle Guide to TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] [[Make a tiddler right now, right here]] [[Enable the Home button]] [[Download and Get TiddlyWiki]] [[Open Your TiddlyWiki]] [[Tiddlers for Beginners]] [[Make your first Tiddler]] [[The First Rule of Using TiddlyWiki]] [[Save Manually Often as a Habit]] [[How a Tiddler is Stored in a TiddlyWiki file]] [[Adopt a Titles Policy]] [[What TiddlyWiki does with your Data]] [[Searching in TiddlyWiki]] Sidebar Tabs [[Story River]] [[Tags for Beginners]] [[Fields for Beginners]] [[Formatting Text using Markdown]] [[WikiText for Beginners]] [[Links for Beginners]] [[Variables for Beginners]] [[Macros for Beginners]] [[Widgets for Beginners]] [[Transclusion for Beginners]] [[Templates for Beginners]] [[Widget Tree for Beginners]] [[Control Panel for Beginners]] [[Table of Contents for Beginners]] [[Draft Tiddlers]] [[Missing Tiddlers]] [[Orphan Tiddlers]] [[System Tiddlers for Beginners]] [[Shadow Tiddlers for Beginners]] [[Core and Shadow Tiddlers for Beginners]] [[TiddlyWiki's Core for Beginners]] [[Filters for Beginners]] [[Lists for Beginners]] [[Plugins for Beginners]] [[Save Manually and Keep a Back up Version]] Help" modified="20190328111747838" tags="include todo TableOfContents" title="Draft of 'Beginners'">
+<pre>\define add-link-actions()
+&lt;$action-listops $field=back $subfilter=&quot;[{$:/temp/toc/selectedTiddler}]&quot;/&gt;
+\end
+
+\define remove-link-actions()
+&lt;$action-listops $field=back $subfilter=&quot;-[enlist{!!back}last[1]]&quot;/&gt;
+\end
+
+@@text-align: right;
+&lt;$linkcatcher  actions=&lt;&lt;add-link-actions&gt;&gt; to=&quot;$:/temp/toc/selectedTiddler&quot;&gt;
+&lt;$list filter=&quot;[{$:/temp/toc/selectedTiddler}previous[Beginners]]&quot;&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;Previous&lt;/$link&gt;&lt;/$list&gt; &lt;$list filter=&quot;[{$:/temp/toc/selectedTiddler}previous[Beginners]]&quot;&gt; | &lt;/$list&gt;&lt;$list filter=&quot;[{$:/temp/toc/selectedTiddler}next[Beginners]]&quot;&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;Next&lt;/$link&gt;&lt;/$list&gt;
+&lt;/$linkcatcher&gt;
+&lt;$list filter=&quot;[enlist{!!back}butlast[]last[1]]&quot; variable=&quot;remove&quot;&gt;
+&lt;$linkcatcher   to=&quot;$:/temp/toc/selectedTiddler&quot; actions=&lt;&lt;remove-link-actions&gt;&gt;&gt;
+&lt;$link to=&lt;&lt;remove&gt;&gt;&gt; | BACK&lt;/$link&gt;
+&lt;/$linkcatcher&gt;
+&lt;/$list&gt;
+@@
+
+&lt;!-- --&gt;&lt;$list filter=&quot;[all[current]enlist{!!back}]&quot;&gt;&lt;&lt;currentTiddler&gt;&gt; | &lt;/$list&gt; 
+
+&lt;hr&gt;
+&lt;$linkcatcher to=&quot;$:/temp/toc/selectedTiddler&quot; actions=&lt;&lt;add-link-actions&gt;&gt;&gt;
+&lt;$macrocall
+	$name=&quot;toc-tabbed-internal-nav&quot;
+	tag=&quot;Beginners&quot;
+        template=&quot;IntroductionTocTemplate&quot;
+	selectedTiddler=&quot;$:/temp/toc/selectedTiddler&quot;
+	unselectedText=&quot;&lt;p&gt;Select a topic in the table of contents. Click the arrow to expand a topic.&lt;/p&gt;&quot;
+	missingText=&quot;&lt;p&gt;Missing tiddler.&lt;/p&gt;&quot;
+/&gt;
+&lt;/$linkcatcher&gt;
+&lt;hr&gt;
+
+@@text-align: center;
+&lt;$linkcatcher to=&quot;$:/temp/toc/selectedTiddler&quot;&gt;
+&lt;$list filter=&quot;[{$:/temp/toc/selectedTiddler}previous[Beginners]]&quot;&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;Previous&lt;/$link&gt;&lt;/$list&gt; | &lt;$list filter=&quot;[{$:/temp/toc/selectedTiddler}next[Beginners]]&quot;&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;Next&lt;/$link&gt;&lt;/$list&gt;
+&lt;/$linkcatcher&gt;
+@@
+&lt;hr&gt;
+
+This is a TEMPORARY area - below link opens a ''list-links-draggable'' so that the order above can be tweaked repeatedly. (&lt;$count filter=&quot;[tag[Beginners]]&quot;/&gt; tiddlers)
+
+
+[[Beginners - Reorder ToC list (draggable)]]
+
+</pre>
+</div>
 <div created="20181217133318064" modified="20181217134425974" tags="Beginners" title="Draft Tiddlers">
 <pre>~TiddlyWiki considers a tiddler's draft to be a separate tiddler for as long as you are editing it. Thus, while you're editing a tiddler entitled ''Australia'', there will be two tiddlers, ''Australia'' and ''Draft of 'Australia'''. 
 
@@ -12771,10 +12822,8 @@ Next: &lt;$list filter=&quot;[all[current]next[Beginners]]&quot;/&gt;.
 
 See [[TiddlerFields]]</pre>
 </div>
-<div created="20181213051453496" modified="20190114054102908" tags="todo Beginners Concepts" title="Fields for Beginners">
-<pre>Most likely you will want to take advantage of creating your own custom fields within tiddlers, as an organised method of storing information that can then be used in many interesting ways.
-
-
+<div created="20181213051453496" modified="20190404004049432" tags="todo Beginners Concepts" title="Fields for Beginners">
+<pre>Most likely you will want to take advantage of creating your own custom fields within tiddlers. It is an organised method of storing information that can then be used in many interesting ways.
 
 The short list below gives you an idea of some common custom field names created by long time users of ~TiddlyWiki.
 
@@ -12789,6 +12838,7 @@ The short list below gives you an idea of some common custom field names created
 : due
 : link
 : key-words
+: related
 : url
 
 Tiddler Fields are &lt;&lt;.def &quot;name:value&quot;&gt;&gt; pairs that make up a [[tiddler|Tiddlers for Beginners]]. 
@@ -12804,6 +12854,8 @@ Tiddler Fields are &lt;&lt;.def &quot;name:value&quot;&gt;&gt; pairs that make u
 ::`.` (period).
 
 The field value can contain any text.
+
+If by chance you do create a field name starting with a capital letter, it will be renamed to a lower case letter when the ~TiddlyWiki is saved and reloaded.
 
 !! How to Add a Field to a Tiddler
 
