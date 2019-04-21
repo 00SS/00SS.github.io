@@ -13552,13 +13552,10 @@ The downside to this trick is that you can't apply a reverse sort based on just 
 
 </pre>
 </div>
-<div created="20161208000000000" modified="20190421085751102" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
+<div created="20161208000000000" modified="20190421091807452" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
 <pre>Be aware that the choices you make will affect how the TiddlyWiki will display on devices with different screen widths.
 
-To change the width of the main column of tiddlers (also known as the story river):
-
-Click on the Control Panel {{$:/core/ui/Buttons/control-panel}} icon&lt;br&gt;
- In the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.example-tab {{$:/themes/tiddlywiki/vanilla/themetweaks!!caption}}&gt;&gt; tab
+To change the width of the main column of tiddlers (also known as the [[Story River]]), click on the Control Panel {{$:/core/ui/Buttons/control-panel}} icon. Then in the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.example-tab {{$:/themes/tiddlywiki/vanilla/themetweaks!!caption}}&gt;&gt; tab.
 
 !! Options
 
@@ -13573,7 +13570,7 @@ will give you a layout with a much wider Story River.
 !! Sizes
 
 To tweak the layout further, scroll down till you reach the setting for Sizes.&lt;br&gt;
-Some settings can take values as either pixels (px) or percentage of  screen width (%) or a relative width (% relative).
+Some settings can take values as either pixels (px) or percentage of  screen width (%), or a relative width (% relative).
 
 Your screen width presently is: {{$:/info/browser/screen/width}} px
 
@@ -13600,11 +13597,13 @@ The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarBreakpoint}}&g
 
 !! Sidebar layout : ''Fixed story''
 
+This means the width of the [[Story River]] is fixed, while the [[sidebar|Sidebar]]  can expand to fill in the remaining space.
+
 The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; value does not affect the display. Still, choose a value of about 300px ~ 400px so that if you change the Sidebar layout to &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Options/SidebarLayout/Fluid-Fixed}}&gt;&gt;, the settings comes into use. Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}
 
 Choose a &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; width that is about two thirds to three quarters of your screen width: ( 2/3 ~ 3/4 ). Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/storywidth}}
 
-In general, &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; and &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; should be the same size. Avoid making &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; the larger value.
+In general, &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; and &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; should be the same size. Avoid making &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; the larger value or else you will not be able to click on any [[Sidebar]] areas on its left side that overlap the area given to the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;.
 
 The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; should be a little bit smaller than the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Note that if you use a percentage value for the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt;, it will be a percentage of the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Thus 90% ~ 95% is fine. Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth}}
 
