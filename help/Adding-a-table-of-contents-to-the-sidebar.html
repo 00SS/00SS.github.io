@@ -13552,8 +13552,8 @@ The downside to this trick is that you can't apply a reverse sort based on just 
 
 </pre>
 </div>
-<div created="20161208000000000" modified="20190421082537118" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
-<pre>Be aware that the choices you make will affect how the TiddlyWiki displays on devices with different screen widths.
+<div created="20161208000000000" modified="20190421085751102" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
+<pre>Be aware that the choices you make will affect how the TiddlyWiki will display on devices with different screen widths.
 
 To change the width of the main column of tiddlers (also known as the story river):
 
@@ -13572,8 +13572,8 @@ will give you a layout with a much wider Story River.
 
 !! Sizes
 
-To tweak the layout further, scroll down till you reach the setting for Sizes.
-Some settings can take values as either pixels (px) or percentage of screen width (%)
+To tweak the layout further, scroll down till you reach the setting for Sizes.&lt;br&gt;
+Some settings can take values as either pixels (px) or percentage of  screen width (%) or a relative width (% relative).
 
 Your screen width presently is: {{$:/info/browser/screen/width}} px
 
@@ -13581,7 +13581,7 @@ The settings to change are:
 
 : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; (px or %)
 : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; (px or %)
-: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; (px or %)
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; (px or % relative)
 : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarBreakpoint}}&gt;&gt; (px only)
 : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; (px or %)
 
@@ -13596,17 +13596,17 @@ Ususally the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth
 :  300px ~ 400px
 : 20% ~ 30%
 
-The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; setting defaults to {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}} (it cannot have a % value)
+The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarBreakpoint}}&gt;&gt;  initial value is {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}} (it cannot have a % value)
 
 !! Sidebar layout : ''Fixed story''
 
-Choose a : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; of about 300px ~ 400px
+The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; value does not affect the display. Still, choose a value of about 300px ~ 400px so that if you change the Sidebar layout to &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Options/SidebarLayout/Fluid-Fixed}}&gt;&gt;, the settings comes into use. Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}}
 
-Choose a &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; width that is about two thirds to three quarters of your screen width: ( 2/3 ~ 3/4 ).
+Choose a &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; width that is about two thirds to three quarters of your screen width: ( 2/3 ~ 3/4 ). Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/storywidth}}
 
 In general, &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; and &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; should be the same size. Avoid making &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; the larger value.
 
-The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; should be a little bit smaller than the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Note that if you use a percentage value for the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt;, it will be a percentage of the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Thus 90% ~ 95% is fine. 
+The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; should be a little bit smaller than the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Note that if you use a percentage value for the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt;, it will be a percentage of the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Thus 90% ~ 95% is fine. Its initial value is {{$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth}}
 
 Avoid making the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; larger than the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt;. It may overlap and cover the Sidebar.
 
