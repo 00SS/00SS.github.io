@@ -277,6 +277,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth</li>
+
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
 <li>$:/themes/tiddlywiki/vanilla/settings/fontfamily</li>
@@ -10478,7 +10480,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190418074738116" list="$:/AdvancedSearch [[How to widen tiddlers (aka storyriver)]] [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190421041943882" title="$:/StoryList">
+<div list="[[How to widen tiddlers (aka storyriver)]] [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190421035430878" title="$:/temp/advancedsearch">
@@ -10652,6 +10654,9 @@ $src$
         }
     }
 }</pre>
+</div>
+<div created="20190421065513590" modified="20190421065519596" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth">
+<pre>350px</pre>
 </div>
 <div created="20181116104353664" modified="20181116104353664" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
@@ -13547,36 +13552,64 @@ The downside to this trick is that you can't apply a reverse sort based on just 
 
 </pre>
 </div>
-<div created="20161208000000000" modified="20190421063031586" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
-<pre>You can change the width of the main column of tiddlers (also known as the story river):
+<div created="20161208000000000" modified="20190421074124468" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
+<pre>Be aware that the choices you make will affect how the TiddlyWiki displays on devices with different screen widths.
+
+To change the width of the main column of tiddlers (also known as the story river):
 
 Click on the Control Panel {{$:/core/ui/Buttons/control-panel}} icon&lt;br&gt;
  In the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.example-tab {{$:/themes/tiddlywiki/vanilla/themetweaks!!caption}}&gt;&gt; tab
 
 !! Options
 
-Ensure the Sidebar layout is : ''{{$:/language/ThemeTweaks/Options/SidebarLayout/Fluid-Fixed}}''
+Often just changing the &lt;&lt;.example-tab &quot;Sidebar layout&quot;&gt;&gt; from:
 
-This means the width of the [[sidebar|Sidebar]] is a fixed, while the [[Story River]] can expand to fill in the remaining space.
+: ''{{$:/language/ThemeTweaks/Options/SidebarLayout/Fixed-Fluid}}'' &lt;br&gt; to
+: ''{{$:/language/ThemeTweaks/Options/SidebarLayout/Fluid-Fixed}}''
+
+will give you a layout with a much wider Story River.
+
 
 !! Sizes
 
-Scroll down till you reach the setting for Sizes.
+To tweak the layout further, scroll down till you reach the setting for Sizes.
+Some settings can take values as either pixels (px) or percentage of screen width (%)
 
-The settings related to this tweak are: 
+Your screen width presently is: {{$:/info/browser/screen/width}} px
 
-: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt;
-: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;
-: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt;
-: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarBreakpoint}}&gt;&gt;
+The settings to change are:
 
-; Under Theme tweaks, scroll down. 
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; (px or %)
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; (px or %)
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; (px or %)
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarBreakpoint}}&gt;&gt; (px only)
+: &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; (px or %)
 
-:There you will see settings for `story right`, `story width`, and `tiddler width`. By setting these numbers to something larger, you can widen the tiddlers. 
+!! Sidebar layout : ''Fluid story''
 
-: In general, `story right` and `story width` should be the same size, and `tiddler width` a little bit smaller. You could even use percentages for tiddler width. 
+This means the width of the [[sidebar|Sidebar]] is fixed, while the [[Story River]] can expand to fill in the remaining space.
 
-You will want to ensure that sidebar breakpoint is somewhat less than your browser width ({{$:/info/browser/screen/width}}px), unless you don't mind the sidebar floating to the top of the page.
+Here you only concern yourself with 2 settings:
+
+Ususally the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; setting is in the range of:
+
+:  300px ~ 400px
+: 20% ~ 30%
+
+The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; setting defaults to {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}} (it cannot have a % value)
+
+!! Sidebar layout : ''Fixed story''
+
+Choose a : &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/SidebarWidth}}&gt;&gt; of about 300px ~ 400px
+
+Choose a &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; width that is about two thirds to three quarters of your screen width: ( 2/3 ~ 3/4 ).
+
+In general, &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryRight}}&gt;&gt; and &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt; should be the same size.
+
+The &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt; is usually a little bit smaller than the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Note that if you use a percentage value for the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/TiddlerWidth}}&gt;&gt;, it will be a percentage of the &lt;&lt;.example-tab {{$:/language/ThemeTweaks/Metrics/StoryWidth}}&gt;&gt;. Thus 90% ~ 95% is fine.
+
+
+&lt;&lt;.note &quot;You will want to ensure that the Sidebar breakpoint is somewhat less than your browser width ({{$:/info/browser/screen/width}}px), unless you don't mind the sidebar floating to the top of the page.&quot;&gt;&gt;
 
 
 </pre>
