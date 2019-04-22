@@ -10480,7 +10480,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="[[How to widen tiddlers (aka storyriver)]] [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" title="$:/StoryList">
+<div created="20190421121938312" list="[[Documentation Macros]] [[How to widen tiddlers (aka storyriver)]] [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190422051101554" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190421035430878" title="$:/temp/advancedsearch">
@@ -10540,11 +10540,11 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190421063020784" title="$:/temp/search">
+<div created="20181221081025004" modified="20190422052132344" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20181221081005896" modified="20190421063051430" title="$:/temp/toc/selectedTiddler">
-<pre>Make a tiddler right now, right here</pre>
+<div created="20181221081005896" modified="20190421121917250" title="$:/temp/toc/selectedTiddler">
+<pre>Story River</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -13552,10 +13552,10 @@ The downside to this trick is that you can't apply a reverse sort based on just 
 
 </pre>
 </div>
-<div created="20161208000000000" modified="20190421091807452" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
+<div created="20161208000000000" modified="20190422052341640" tags="include todo Learning [[Customise TiddlyWiki]]" title="How to widen tiddlers (aka storyriver)" type="text/vnd.tiddlywiki">
 <pre>Be aware that the choices you make will affect how the TiddlyWiki will display on devices with different screen widths.
 
-To change the width of the main column of tiddlers (also known as the [[Story River]]), click on the Control Panel {{$:/core/ui/Buttons/control-panel}} icon. Then in the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.example-tab {{$:/themes/tiddlywiki/vanilla/themetweaks!!caption}}&gt;&gt; tab.
+To change the width of the main column of tiddlers (also known as the [[Story River]]), click on the &lt;&lt;.button &quot;control-panel&quot;&gt;&gt; icon. Then in the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.example-tab {{$:/themes/tiddlywiki/vanilla/themetweaks!!caption}}&gt;&gt; tab.
 
 !! Options
 
@@ -15337,22 +15337,30 @@ Avoid arbitrarily abbreviating words and sentences. But the following abbreviati
 
 For more details see [[StateMechanism]].</pre>
 </div>
-<div created="20150917193906790" modified="20190421033727436" tags="todo Beginners Concepts" title="Story River" type="text/vnd.tiddlywiki">
-<pre>The &quot;story river&quot; (sometimes abbreviated to &quot;story&quot;) is the sequence of [[tiddlers|Tiddlers]] in the main column of the display.
+<div created="20150917193906790" modified="20190422052623592" tags="todo Beginners Concepts" title="Story River" type="text/vnd.tiddlywiki">
+<pre>The &quot;story river&quot; (sometimes abbreviated to &quot;story&quot;) is the sequence of [[tiddlers|Tiddlers for Beginners]] in the main column of the display.
 
-They are usually in the order you open them, and this is the are for viewing and editing tiddlers.
+They are usually in the order you open them. This is the area for viewing and editing tiddlers.
+
+!! Different Story Views
+
+To change the story view of the main column of tiddlers, click on the &lt;&lt;.button &quot;control-panel&quot;&gt;&gt; icon. Then in the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt; tab.
+
+These are some of the different views select from:
+
+* &lt;&lt;.image-only storyview-classic&gt;&gt; ''classic'' (multi page view) renders the list as an ordered sequence of tiddlers (the default)
+
+* &lt;&lt;.image-only storyview-pop&gt;&gt; ''pop'' (multi page view) shrinks items in and out of place
+
+* &lt;&lt;.image-only storyview-zoomin&gt;&gt; ''zoomin'' (single page view) just renders the current tiddler from the list, with a zoom animation for navigating between tiddlers
 
 !! Widen the Story View
 
-[[How to widen tiddlers (aka storyriver)]]
+A tutorial on [[How to widen tiddlers (aka storyriver)]].
 
-!! Different Stroy Views
+&lt;&lt;.note &quot;The tiddler $:/view holds the currently selected story view.&quot;&gt;&gt;
 
-There are different views
-
-&lt;$list filter=&quot;[storyviews[]]&quot;&gt;
-
-&lt;/$list&gt;</pre>
+</pre>
 </div>
 <div created="20190213152454092" modified="20190214015735384" tags="[[Customise TiddlyWiki]] Mechanisms tiddler-new" title="StoryView">
 <pre>There are &lt;$count filter=[storyviews[]]/&gt; choices for how tiddlers are opened and added to the [[Story River]].
