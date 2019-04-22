@@ -10480,7 +10480,7 @@ $src$
 <div created="20181209170344264" creator="S" modified="20181217133123846" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20190421121938312" list="[[Documentation Macros]] [[How to widen tiddlers (aka storyriver)]] [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190422051101554" title="$:/StoryList">
+<div created="20190421121938312" list="[[Empty Story]] StoryView [[Story River]] Tabs [[Instruction Tiddlers]] [[Documentation Style Guide]] [[Instruction Tiddlers for Beginners]] [[Tiddlers for Beginners]] [[What is a Tiddler?]] [[When you make a Tiddler]] [[Make a tiddler right now, right here]] [[Download and Get TiddlyWiki]] Begin [[Beginners Documentation - What goes into it?]] Beginners [[Beginners - Reorder ToC list (draggable)]] [[Documentation Macros Request]] [[Documentation Tiddlers Request]] [[Beginners Documentation Saga]]" modified="20190422054459404" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20181229183224518" modified="20190421035430878" title="$:/temp/advancedsearch">
@@ -10540,7 +10540,7 @@ $src$
     }
 }</pre>
 </div>
-<div created="20181221081025004" modified="20190422052132344" title="$:/temp/search">
+<div created="20181221081025004" modified="20190422054711478" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20181221081005896" modified="20190421121917250" title="$:/temp/toc/selectedTiddler">
@@ -12786,8 +12786,13 @@ When you close the draft by saving your changes, those changes will be applied t
 
 Understanding the [[Draft Mechanism|DraftMechanism]] in full detail is for much more advanced users.</pre>
 </div>
-<div created="20190214015051932" modified="20190214015846656" tags="[[Customise TiddlyWiki]] tiddler-new" title="Empty Story">
-<pre>To display content when the story is empty, create [[$:/config/EmptyStoryMessage]] and enter the desired contents. The following would show the GettingStarted tiddler when all others are closed.
+<div created="20190214015051932" modified="20190422054517444" tags="[[Customise TiddlyWiki]] tiddler-new" title="Empty Story">
+<pre>To display content when the [[Story River]] is empty:
+
+: Create a tiddler named: [[$:/config/EmptyStoryMessage]] 
+: Enter the desired contents in its text field. 
+
+Example: The following content would show the [[GettingStarted]] tiddler when all others tiddlers are closed.
 
 ```
 {{GettingStarted||$:/core/ui/ViewTemplate}}
@@ -15337,16 +15342,26 @@ Avoid arbitrarily abbreviating words and sentences. But the following abbreviati
 
 For more details see [[StateMechanism]].</pre>
 </div>
-<div created="20150917193906790" modified="20190422052623592" tags="todo Beginners Concepts" title="Story River" type="text/vnd.tiddlywiki">
-<pre>The &quot;story river&quot; (sometimes abbreviated to &quot;story&quot;) is the sequence of [[tiddlers|Tiddlers for Beginners]] in the main column of the display.
+<div created="20150917193906790" modified="20190422054619044" tags="todo Beginners Concepts" title="Story River" type="text/vnd.tiddlywiki">
+<pre>!!Introduction
+
+The &quot;story river&quot; (sometimes abbreviated to &quot;story&quot;) is the sequence of [[tiddlers|Tiddlers for Beginners]] in the main column of the display.
 
 They are usually in the order you open them. This is the area for viewing and editing tiddlers.
 
-!! Different Story Views
+{{StoryView}}
 
-To change the story view of the main column of tiddlers, click on the &lt;&lt;.button &quot;control-panel&quot;&gt;&gt; icon. Then in the control panel select the &lt;&lt;.controlpanel-tab Appearance&gt;&gt; tab, then the &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt; tab.
+!! Widen the Story View
 
-These are some of the different views select from:
+A tutorial on [[How to widen tiddlers (aka storyriver)]].
+</pre>
+</div>
+<div created="20190213152454092" modified="20190422054605062" tags="[[Customise TiddlyWiki]] Mechanisms tiddler-new" title="StoryView">
+<pre>!! Different Story Views
+
+There are &lt;$count filter=[storyviews[]]/&gt; choices for how tiddlers are opened and added to the [[Story River]].
+
+You can select your preference in the &lt;&lt;.button &quot;control-panel&quot;&gt;&gt;, under tab &lt;&lt;.controlpanel-tab &quot;Appearance&quot;&gt;&gt;, sub-tab &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt;.
 
 * &lt;&lt;.image-only storyview-classic&gt;&gt; ''classic'' (multi page view) renders the list as an ordered sequence of tiddlers (the default)
 
@@ -15354,27 +15369,9 @@ These are some of the different views select from:
 
 * &lt;&lt;.image-only storyview-zoomin&gt;&gt; ''zoomin'' (single page view) just renders the current tiddler from the list, with a zoom animation for navigating between tiddlers
 
-!! Widen the Story View
-
-A tutorial on [[How to widen tiddlers (aka storyriver)]].
-
-&lt;&lt;.note &quot;The tiddler $:/view holds the currently selected story view.&quot;&gt;&gt;
-
-</pre>
-</div>
-<div created="20190213152454092" modified="20190214015735384" tags="[[Customise TiddlyWiki]] Mechanisms tiddler-new" title="StoryView">
-<pre>There are &lt;$count filter=[storyviews[]]/&gt; choices for how tiddlers are opened and added to the [[Story River]].
-
-You can select your preference in the &lt;&lt;.button &quot;control-panel&quot;&gt;&gt;, under sub-tab &lt;&lt;.controlpanel-tab &quot;Appearance&quot;&gt;&gt;, sub-tab &lt;&lt;.controlpanel-tab &quot;StoryView&quot;&gt;&gt;.
 
 
-
-* &lt;&lt;.image storyview-classic&gt;&gt; (multi page view) renders the list as an ordered sequence of tiddlers
-* &lt;&lt;.image storyview-pop&gt;&gt; ((multi page view) shrinks items in and out of place
-* &lt;&lt;.image storyview-zoomin&gt;&gt; (single page view) just renders the current tiddler from the list, with a zoom animation for navigating between tiddlers
-
-
-The tiddler [[$:/view]] contains the currently set story view.
+&lt;&lt;.note &quot;The tiddler [[$:/view]] contains the currently set story view.&quot;&gt;&gt;
 
 !! Empty Story
 
